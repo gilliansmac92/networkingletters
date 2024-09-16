@@ -1,4 +1,4 @@
-SENDER,RECEIVER,TYPE,DATE,KEYWORDS
+Person_ID_1,Person_ID_2,TYPE,DATE,KEYWORDS
 3,1,Instructions,3/7/1689,"war, castles, invasion, religion"
 3,108,Instructions,3/7/1689,"war, Scotland, Presbyterian, safety"
 4,1,Letter,3/23/1689,"money, Ireland, invasion, Convention, Scotland"
