@@ -1,0 +1,124 @@
+People_ID,People_Label,Weight,Full name,Loyalty,Position
+1,Melville ,510/ 593,"George Melville, Earl of Melville",Williamite,Secretary of State for Scotland
+2,Hamilton ,55/593,"William Hamilton, Duke of Hamilton",Williamite,High Commissioner for Scotland
+3,King William ,43/593,"Willem Hendrick, Prince of Orange-Nassau",Williamite,"King of England, Ireland, and Scotland"
+4,James Dalrymple,17/ 593,Sir James Dalrymple of Stair ,Williamite,Principal Advisor on Scottish Affairs
+5,John Dalrymple ,44/ 593 ,Sir John Dalrymple of Stair ,Williamite,Lord Advocate
+6,Crawford,88/593,"William Lindsay, Earl of Crawford",Williamite,President of Session
+7,Portland,9/593,"Willem Bentick, Earl of Portland",Williamite,Principal Advisor to the King
+8,Queensberry,2/593,"James Douglas, Duke of Queensberry",Williamite,
+9,Dundee,2/593,"John Graham of Claverhouse, Viscount of Dundee",Jacobite,Jacobite Military General
+10,Mar,1/593,"Charles Erskine, Earl of Mar",Jacobite,Jacobite Commissoner
+11,Atholl,7/ 593 ,"John Murray, Marquess of Atholl",Jacobite,Parliamentray commissioner
+12,James Stewart ,3/593,Sir James Stewart ,Williamite,Lord Advocate
+13,Polwarth,20/ 593 ,"Sir Patrick Hume of Polwarth, Earl of Marchmont",Williamite,Military General
+14,Mackenzie ,4/ 593,George MacKenzie of Rosehaugh,Jacobite,
+15,Viscount Tarbat ,38/593 ,"George MacKenzie, Earl of Cromarty",Jacobite,
+16,Hay of Park ,4/593,John Hay of Park ,Williamite,
+17,Lady Auchinbreck ,1/593,Harriet Campbell? Lady Auchinbreck,Williamite,
+18,David Nairne,6/ 593,Mr. David Nairne,Jacobite,
+19,Eglinton ,3/593,"Alexander Montgomerie, Earl of Eglinton",Williamite,
+20,Lockhart ,39/593,Sir William Lockhart ,Williamite,Solicitor General for Scotland
+21,Belhaven,1/593,"John Hamilton, Lord Belhaven",Williamite,
+22,Kennedy of Cloburne ,2/593,Andrew Kennedy of Cloburne ,Williamite,Commissioner of Supply for Lanark
+23,Lady Polwarth ,2/593,Grizel Hume? Lady Polwarth,Williamite,
+24,Lothian ,6/593,"Robert Kerr, Earl of Lothian",Williamite,
+25,Anderson of Dowhill ,2/593,John Anderson of Dowhill ,Williamite,Provost of Glasgow
+26,Argyll ,8/593,"Archibald Campbell, Earl of Argyll",Williamite,
+27,Balcarres ,1/593,"Colin Lindsay, Earl of Balcarres",Jacobite,Advisor for King James
+28,Ross ,6/ 593,"William Ross, Lord Ross",Williamite,"Club, conspirator"
+29,Baird of Newbyth ,1/593,Sir John Baird of Newbyth ,Williamite,Commissioner for Aberdeenshire
+30,Elliot ,7/593,Mr. Gilbert Elliot,Williamite,Advocate
+31,Countess of Balcarres,1/593,"Margaret Lindsay, Countess Balcarres",Jacobite,
+32,Blantyre ,1/593,"Alexander Stewart, Lord Blantyre",Williamite,Militia Officer for Renfrewshire
+33,Stewart of Coltness,1/593,Sir Thomas Stewart of Coltness,Williamite,Burgh commissioner for North Berwick
+34,Murray ,6/593,"Sir James Murray, Lord Philliphaugh",Williamite,Lord of the Session; Commissioner for Supply
+35,Captain Johnston ,1/593,Captain John Johnston,Jacobite,Military Captain
+36,Cardross ,13/593,"Henry Erskine, Lord Cardross",Williamite,Parliamentary Commissioner
+37,Countess of Mar ,1/593,"Margaret Erskine, Countess of Mar",Jacobite,
+38,Queen Mary ,18/593,"Mary Stuart, Princess of Orange",Williamite,King William's Wife & Queen
+39,Skelmorlie,4/593,Sir James Montgomery of Skelmorlie,Williamite,Commissioner for Ayrshire
+40,Blair ,1/ 593,Sir Adam Blair,Jacobite,Vinter
+41,Mackay ,5/593,Major General Hugh Mackay,Williamite,Commander-in-Chief of Armed Forces
+42,Leven ,16/593,"David Melville, Earl of Leven",Williamite,Military General
+43,Colonel Balfour ,1/593,Colonel Bartholemew Balfour,Williamite,Military General
+44,Denham ,3/593,"William Denham of Westfield, London",Williamite,
+45,James Melville ,4/593,Mr. James Melville ,Williamite,Melville's fourth son
+46,Anstruther ,5/593,William Anstruther of Anstruther,Williamite,Commissioner for Fife
+47,The Privy Council ,19/593,,Williamite,
+48,Officers of Dumbarton's Regiment,1/593,-,Jacobite,Prisoners at Bury
+49,Cassillis ,3/593,"John Kennedy, Earl of Cassillis",Williamite,"Privy Council Member, Lord of Treasury"
+50,Cunningham,1/593,William Cunningham,Williamite,
+51,Council in Relation to ministers,1/593,-,Williamite,
+52,Mr. Graham ,1/593,,Jacobite,Vinter
+53,Mr. John Law,1/593,,Williamite,church minister
+54,Mr. Alexander Pitcairne,1/593,Mr. Alexander Pitcairne,Williamite,Minister for the Church of Scotland
+55,Blackbarrony,1/593,Sir Archibald Murray of Blackbarrony,Williamite,Parliamentary Commissioner and Privy Council Member
+56,Douglas ,1/593,"James Douglas, Marquess of Douglas",Williamite,Parliamentary Commissioner and Privy Council Member
+57,Dunbar of Grange ,1/593,Mr. Thomas Dunbar of Grange ,Williamite,Parliamentary Commissioner 
+58,Buchan ,1/593 ,Lieutenant-Colonel Thomas Buchan,Jacobite,Jacobite General
+59,Swinton ,1/593,"Alexander Swinton, Lord Mersington",Williamite,Lord of the Session
+60,Livingston of Kilsyth,1/593,Mr. William Livingston of Kilsyth,Williamite,Lord of the Session
+61,P. Murray ,1/593,Sir Patrick Murray,Williamite,Commissioner for Excise
+62,Kintore ,4/593,"John Keith, Earl of Kintore",Williamite,"Parliamentary Commissioner, Commissoner of Supply"
+63,Moncrieff,1/593,Sir Thomas Moncrieff,Williamite,Commissioner for Excise
+64,Bruce ,1/593,Sir Alexander Bruce ,Williamite,Privy Councillor
+65,Livingston (Linlithgow),1/593,"George Livingston, Lord Livingston later Earl of Linlithgow",Williamite,
+66,Walter Corbets ,1/593,Walter Corbetts,Williamite,Governor of Blair Castle
+67,Lundy,1/593,Robert Lundy,Williamite,Governor of Londonderry
+68,Hall,2/593,Sir John Hall of Dunglass,Williamite,Provost of Edinburgh
+69,Schomberg,1/593,"Frederick Herman de Schomberg, first duke of Schomberg",Williamite,Williamite Military General
+70,Falconer of Phesdo ,1/593,Sir James Falconer of Phesdo ,Williamite,Senator of the College of Justice
+71,Presbyterian Ministers ,4/593,Presbyterian Ministers in Edinburgh,Williamite,Members of the General Assembly of the Church of Scotland
+72,Campbell of Auchenbreck,1/593,Sir Duncan Campbell of Auchenbreck,Williamite,Member of Parliament for Argyllshire
+73,King James,2/593,James Stewart,Jacobite,Exiled Monarch
+74,Cannon,1/593,"Alexander Cannon, Colonel Cannon",Jacobite,Jacobite General
+75,Stevenston,1/593,Sir Robert Sinclair of Stevenston,Williamite,"Member of Parliament for Haddington, Privy Councillor"
+76,McNaughten ,1/593,Laird of McNaughten ,Jacobite,Jacobite General
+77,Shrewsberry,2/593,"Charles Talbot, Duke of Shrewsbury",Williamite,"Secretary of State, England"
+78,Fountainhall,1/593,Sir John Lauder of Fountainhall,Williamite,Judge
+79,Lord Neil Campbell ,1/593,Lord Neil Campbell ,Williamite,Governor of Dumbarton Castle
+80,Carmichael,9/593,"John Carmichael, Lord Carmichael",Williamite,"Member of Committee of Estates, Privy Councillor, Lord of the Privy Seal"
+81,Forbes,4/593,Duncan Forbes of Culloden,Williamite,Member of Parliament for Inverness-shire
+82,Hill ,19/593,Colonel John Hill,Williamite,Governor of Fort William
+83,Burrough of Belfast ,1/593,,Williamite,
+84,Ranelagh ,1/593,"Richard Jones, Earl of Ranelagh",Williamite,English Privy Councillor
+85,Breadalbane ,4/593,"John Campbell, Earl of Breadalbane",Jacobite,
+86,Thomas Livingston,9/593,"Thomas Livingston, Viscount Teviot",Williamite,Military General
+87,Nottingham ,9/593,"Daniel Finch, Earl of Nottingham",Williamite,"Secretary of State, England"
+88,George Stirling ,1/593,Mr. George Stirling ,Williamite,Parliamentary commissioner
+89,Carstares ,3/593,Mr. William Carstares ,Williamite,Church of Scotland minister and political adviser
+90,D'Allone ,3/593,Monsieur D'Allone ,Williamite,
+91,Pottinger,2/593,Captain Edward Pottinger,Williamite,Royal Navy Admiral
+92,Billingsley ,4/593,Colonel Rupert Billingsley,Williamite,Deputy Governor of Berwick
+93,Annandale ,4/593,"William Johnston, Earl of Annandale",Williamite,Parliamentary Commissioner
+94,Alexander Johnston ,1/593,Mr. Alexander Johnston ,Williamite,
+95,Pittarro ,1/593,David Carnegie of Pitcarrow,Williamite,
+96,Payne,1/593,Henry Neville Payne,Jacobite ,Jacobite spy
+97,Drumlanrig ,2/593,"James Douglas, Earl of Drumlanrig, Second Duke of Queensberry",Williamite,Privy Councillor
+98,Countess of Seaforth ,1/593,"Frances Herbert, Countess of Seaforth",Jacobite,
+99,Mr. Hugh Kennedy ,1/593,Mr. Hugh Kennedy ,Williamite,Church minister
+100,Mr. James Kirkton ,1/593,Mr. James Kirkton ,Williamite,Church minister
+101,Dr Rule ,1/593,Dr. Gilbert Rule,Williamite,Church minister
+102,Fraser of Brae ,1/593,Mr. Fraser of Brae ,Williamite,Church minister
+103,Gabriel Cuningham ,1/593,Mr. Gabriel Cuningham ,Williamite,Church minister
+104,General Assembly ,1/593,The General Assembly of the Church of Scotland,Williamite,
+105,Duchess of Queensberry ,1/593,"Lady Mary Boyle, Duchess of Queensberry",Williamite,
+106,Arran ,1/593,"James Hamilton, Earl of Arran",Jacobite,Duke of Hamilton's son
+107,Raith ,3/593,"Alexander Melville, Master of Melville and Lord Raith",Williamite,Melville's third son
+108,Convention of Estates,,Body of Government,Williamite,
+109,William Dunlop,,Mr. William Dunlop,Williamite,
+110,Mr. David Williamson,,Mr. David Williamson,Williamite,
+111,Mr. Robert Spruell,,Mr. Robert Spruell,Williamite,
+112,Duchess of Hamilton,,,Williamite,
+113,Heritors in Atholl,,Heritors in Atholl,Williamite,
+114,Magistrates of Edinburgh,,Magistrates of Edinburgh,Williamite,
+115,Colonel Arrott,,,Williamite,
+116,Lords of the Treasury,,Lords of the Treasury,Williamite,
+117,The Town Council of Edinburgh,,The Town Council of Edinburgh,Williamite,
+118,Commissioners of Supply of Lanarkshire,,Commissioners of Supply of Lanarkshire,Williamite,
+119,Judges of the Court of Session,,Judges of the Court of Session,Williamite,
+120,Master of Forbes,,,Williamite,
+121,[uncertain],,-,-,
+122,Convention of Royal Burghs,,Convention of Royal Burghs,Williamite,
+123,Lord James Murray,,,Jacobite,
