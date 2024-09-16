@@ -1,4 +1,4 @@
-ID,PLACE,LAT_LON,
+Place_ID,PLACE,LAT_LON,
 1,Hampton Court,"51.403332, -0.337500",https://en.wikipedia.org/wiki/Hampton_Court_Palace
 2,London,"51.50673486004276, -0.12083646321188168",https://en.wikipedia.org/wiki/London
 3,Ham,"51.36421, -1.52739","https://en.wikipedia.org/wiki/Ham,_London"
