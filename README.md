@@ -10,5 +10,8 @@ Our project seeks to analyze and understand and explore how communication respon
 
 The project is spearheaded in LEADR and will be hosted on Github for open access purposes. The letters exchanged in this period are more than just networks of correspondence; people were bound together through community, print, and dialogue. Exchanging letters in a period of chaotic and often violent warfare was even more complex. Given this, understanding the relationships is paramount to visualizing the data. Context is everything in understanding people, groups, identity, and behavior in the early modern world. Behavior, relationships, and identity changed over the course of the Revolution and Networking Letters of the Revolution traces those changes and connects historical networks with visual interpretation by building a new database and visual representation of the interconnected nature of communication. 
 
+![Networking_Letters](https://github.com/user-attachments/assets/1a36acd3-a038-41ee-a80f-f7bf240fb5a5)
+
+
 ## Networking Data
 The data for the project is in the data folder. If you are going to use the data please cite: G. S. Macdonald and M. Fox, "Networking Letters of the Revolution, 1689-91 - dataset". GitHub Respopsitory, 2024.
