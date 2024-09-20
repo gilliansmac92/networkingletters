@@ -1,0 +1,600 @@
+ID_Letter,KEYWORDS 1,KEYWORDS 2,KEYWORDS 3,KEYWORDS 4,KEYWORDS 5,KEYWORDS 6
+1,war,castles,invasion,religion,,
+2,war,Scotland,presbyterian,safety,,
+3,money,Ireland,invasion,Convention,Scotland,
+4,Ireland,invasion,Scotland,Derry,church,
+5,danger,settlement,Scotland,Ross,,
+6,church,Scotland,hazard,coast,,
+7,Scotland,Ireland,Derry,church,,
+8,Irish,Scots,Mackay,invasion,churchmen,
+9,coronation,Scotland,Ireland,invasion,allegiance,
+10,Convention,Protestant,Crown,security,,
+11,Protestant,religion,petition of right,justice,,
+12,Major Graham,,,,,
+13,Portland,Mackay,royal proclamation,,,
+14,Scotland,Convention,highlanders,Mackay,Ireland,
+15,Scotland,Argyll,Londonderry,Ireland,,
+16,Estates,parliament,peace,,,
+17,secretary,Portsmouth,Convention,Scotland,informer,
+18,service,interest,Portland,Kin,Court,
+19,Perth,Ireland,Scotland,Dundee,Mackay,
+20,Privy Council,Great Seal,parliament,,,
+21,distracted kingdom,solicit,friendship,,,
+22,public interest,friendship,honor,,,
+23,Presbyterians,King's interest,Tarbat,Ireland,,
+24,God,King,mistakes,friendship,,
+25,Privy Council,Estates,parliament,divisions,,
+26,Dundee,Mackay,regiments,mistakes,,
+27,Estates ajourned,King's service,,,,
+28,country,debate,strife,Dukes,,
+29,public interest,God,friendship,,,
+30,magazines,powder,arms,,,
+31,parliament,bigotry,Tarbat,Scotland,King,
+32,honor,interest,nation,,,
+33,securing the nation,Tarbat,Mackay,,,
+34,friendship,reputation,honesty,God,,
+35,enemies,ecclesiastics,Scotland,highlanders,,
+36,Mackay,Highlanders,Scotland,security,invasion,rebellion
+37,nominations,council,commissioners,Dundee,Mackay,
+38,weakness,grateful,appointment,,,
+39,Tarbat,military affairs,oppressions,,,
+40,Lockhart,favor,friendship,security,,
+41,Great Seall,Estates,parliament,,,
+42,husband,condition,mercy,Argyll,,
+43,Estates,Scotland,Claim of Right,,,
+44,Schomberg,Mackay,war,King,service,
+45,Mackay,Ireland,intelligence,French fleet,Dundee,
+46,health,service,Scotland,,,
+47,safety,parliament,issues,,,
+48,Dundee,brother,prison,,,
+49,officiating,King,favor,,,
+50,friendship,truth,public,trust,,
+51,Edinburgh Castle,Mackay,intelligence,,,
+52,Mackay,Edinburgh Castle,Gordon,parliament,,
+53,Hamilton,King William,service,,,
+54,parliament,allegiance,service,Great Seal,navy,portmaster
+55,honor,regiments,station,,,
+56,parliament,articles,debate,Lord Stair,,
+57,articles,Club,King,prerogative,,
+58,Mackay,Ireland,France,,,
+59,Castle,parliament,judges,,,
+60,articles,allegiance,attendance,Club,,
+61,North,Holland,Protestant religion,,,
+62,Great Seall,King,prerogative,Skelmorlie,,
+63,articles,officers,state,King,prerogative,
+64,Kirke,Rooke,Londonderry,service,,
+65,service,interest,Lady Hilton,,,
+66,Lady Hilton,children,beggars,,,
+67,trouble,enemies,honor,,,
+68,warfare,affairs,parliament,,,
+69,King,service,present,danger,,
+70,Hamilton,displeasure,parliament,commissions,,
+71,articles,Scotland,Club,Hamilton,presbyterians,
+72,Glasgow,public,safety,elections,,
+73,brother,revolution,cause,,,
+74,grievances,church,government,Secretary,war,
+75,articles,parliament,church affairs,,,
+76,service,false stories,Protestant religion,,,
+77,animosity,parliament,presbytery,presbyterian,crown,
+78,imprisonment,Dundee,liberty,prison,,
+79,crown,Dalrymple,committees,parliament,,
+80,articles,Dalrymple,King James,,,
+81,Tarbat,offices,state,Lord Stair,positions,
+82,church,government,revolution,settlement,,
+83,proposals,Culloden,affairs,,,
+84,Perth,popery,allegiance,,,
+85,church government,King,reformers,,,
+86,parliament,Dalrymple,loyalty,,,
+87,articles,loyalty,protection,,,
+88,greivances,circumstances,character,,,
+89,church,government,presbyterians,,,
+90,clerks,hornings,clerk,,,
+91,testimony,service,reputation,,,
+92,King,Hamilton,Club,,,
+93,incapacity,K. James,threat,castles,Scotland,
+94,presbytery,clergy,dangerous,Park,,
+95,articles,bishops,parliament,chancellor,,
+96,Scotland,money,coins,customs,trade,
+97,parliament,ministers,presbyterian,General Assembly,,
+98,friendship,service,King,,,
+99,circumstances,diapleasure,corresondence,,,
+100,forfeitures,King,authority,,,
+101,council,Dundee,allegiance,,,
+102,debts,guards,revenue,,,
+103,articles,church,Dundee,Mackay,Inverlochie,
+104,prisoners,Edinburgh Castle,Dundee,Irish,Mackay,
+105,church,government,presbytery,patronage,,
+106,parliament,public,trust,,,
+107,parliament,council,presbytery,church,government,
+108,regiments,Dundee,Leven,highlands,,
+109,parliament,church,government,Aberdeen,K. James,
+110,Dundee,Blair,council,imprisonment,Edinburgh Castle,
+111,Londonderry,Kirk,Edinburgh Castle,Balcarres,K. James,Dundee
+112,parliament,articles,Glasgow,Dundee,Mackay,Inverlochie
+113,church,government,officers,state,presbytery,
+114,Hamilton,articles,parliament,,,
+115,regiment,service,Dalrymple,,,
+116,church,Club,Ireland,Mackay,highlands,prisoners
+117,articles,church,parliament,Irishmen,prisoners,
+118,dragoons,Mackay,Dundee,Skelmorlie,parliament,
+119,Ross,Skelmorlie,Stair,Melville,Annandale,
+120,Argyll,Annandale,parliament,Club,Inverlochie,
+121,church government,parliament,forfeitures,,,
+122,Morton,petition,parliament,,,
+123,church,parliament,articles,army,obstructions,
+124,parliament,Club,forces,King,Ireland,fleet
+125,Kirkconnell,excise,customs,,,
+126,prisoners,council,Tarras,Leven,,
+127,committees,church,Claim of Right,prisoners,plot,
+128,church,parliament,Club,forces,regiments,
+129,church,government,coronation oath,Portland,Club,
+130,church,claim of right,forfeitures,Scotland,Kintyre,Irish
+131,French fleet,coast,Mackay,Ireland,Dalrymple,
+132,parliament,Holland,Mint,,,
+133,Lady Drum,parliament,church,government,council,
+134,devastation,property,highlands,Atholl,,
+135,church,Dundee,Mackay,Stirling Castle,war,
+136,parliament,church,rebellion,Mackay,militia,
+137,Selkirk,Schomberg,Ireland,,,
+138,sickness,concern,imprisonment,,,
+139,church,Mackay,K. James,Ireland,landings,
+140,church,Mackay,Club,invasion,Ireland,conspiracy
+141,Club,council,religion,Skelmorlie,parliament,Mackay
+142,Scotland,Stirling Castle,,,,
+143,parliament,Rooke,Dundee,prisoners,,
+144,parliament,presbytery,church,Dundee,postmaster,
+145,vote,Signet,parliament,Dalrymple,friendship,
+146,articles,K. James,Dundee,Irish landings,Mackay,Bass
+147,highlands,Inverlochie,church,Rooke,French fleet,Mull
+148,Club,parliament,dragoons,Mackay,Provinciall,Blair
+149,parliament,Mackay,Hamilton,Belhaven,,
+150,church,Advocate,parliament,,,
+151,Hamilton,Buchan,Stirling Castle,Perth,France,Ireland
+152,Club,Mackay,articles,,,
+153,Mackay,Atholl,Dundee,Killiecrankie,security,Berwick
+154,Killiecrankie,Dundee,,,,
+155,Killiecrankie,Dundee,Stirling,,,
+156,Killiecrankie,Mackay,highlanders,Stirling,Carlisle,Schomberg
+157,Killiecrankie,Dutch dragoons,Dundee,Mackay,Leven,
+158,Killiecrankie,Mackay,loss,,,
+159,Mackay,Dundee,Stirling,Canon,Angus,
+160,Leven,Mackay,Drummond Castle,Murray,,
+161,parliament,church,government,divisions,,
+162,parliament,Dalrymple,evil,politics,,
+163,Leven,intelligence,Cessnock,,,
+164,Mackay,Stirling,Dundee,Club,Claim of Right,Scrimziemor
+165,Balfour,Killiecrankie,intelligence,Mackay,Club,articles
+166,Leven,Signet,parliament,dragoons,Dinwoodie,
+167,church,government,parliament,General Assembly,,
+168,Ireland,coast,highlanders,Mackay,Presbyterian,Test Act
+169,Presbyterian,claim of right,church,K. James,King,
+170,Dundee,Blair Castle,K. James,Killiecrankie,highlanders,
+171,K. James,Atholl,Melfort,French fleet,Schomberg,Ireland
+172,French fleet,Blair Castle,Dublin,Mackay,,
+173,Mackay,Tay,allegiance,,,
+174,army,Highlanders,frigates,Ireland,coast,Mackay
+175,K. James,highlands,Mackay,Club,church,Skelmorlie
+176,army,pay,Mackay,intelligence,prisoners,
+177,treason,war,trial,guilty,petition,mercy
+178,Forfar,Mackay,council,,,
+179,parliament,Ross,council,membership,,
+180,Dundee,Mackay,Killiecrankie,news,,
+181,Mackay,K. James,King,Hamilton,Club,
+182,Ireland,K. James,intelligence,Rooke,coast,dragoons
+183,letters,Court,providence,church,Scotland,
+184,magistrate,council,bishopric,cathedral,,
+185,church,Derry,K. James,highlands,French fleet,Club
+186,Balfour,Mackay,Lowlands,forces,invasion,
+187,Mackay,Dundee,Scotland,frigates,coast,Londonderry
+188,Schomberg,rebels,Dundee,Ireland,Dublin,K. James
+189,King,Court,return,,,
+190,Club,parliament,Hamilton,Lochaber,Mackay,
+191,troops,movements,churches,,,
+192,Stair,church settlement,presbytery,,,
+193,indemnity,Mackay,Dalrymple,Kirk,Derry,prisoners
+194,Ireland,Scotland,Schomberg,Irish,,
+195,Raith,Hamilton,politics,,,
+196,Hamilton,council,Mackay,Culloden,Skelmorlie,
+197,church affairs,prelacy,government,,,
+198,grievances,privileges,parliament,,,
+199,English army,Lochfergus,Kirk,Shrewsbury,,
+200,Schomberg,Bangor Bay,Mackay,Privy council,,
+201,Leven,favor,troops,Tweeddale,,
+202,Schomberg,Bangor,Hamilton,Breadalbane,highlands,
+203,church,presbytery,Edinburgh,General Assembly,parliament,committee
+204,church government,protestant religion,letters,Israel,,
+205,England,son,Drumlanrig,,,
+206,Court,Ruthven,service,Council,,
+207,King,council,troops,,,
+208,ship,Glasgow,French man-of-war,trade,,
+209,Irish,army,Edinburgh Castle,reputation,,
+210,Castle Blair,Dunkeld,forces,,,
+211,station,service,council,,,
+212,Court,church,England,ministers,,
+213,Leven,Edinburgh Castle,Treasury,Carrickfergus,Israel,
+214,council,castle,adjournment,Crawford,,
+215,Ross,Provost,Edinburgh,enemies,,
+216,Mackay,highlands,wife,parliament,,
+217,Mackay,provisions,garrisons,starving,troops,
+218,church,parliament,presbytery,service,,
+219,Mackay,Portland,soldiers,pay,Slezer,Highlands
+220,regiment,information,payment,,,
+221,civil government,contravention,ministers,rebels,,
+222,mercy,bounty,favor,,,
+223,trade,wartime,Holland,Council,Treasury,appointments
+224,prisoners,rebels,Mackay,,,
+225,indemnity,Hamilton,christendom,,,
+226,Court,black box,service,,,
+227,treasury,customs,foreign excise,Hamilton,,
+228,Privy Council,indemnity,Queensberry,,,
+229,officers,council,Crawford,dragoons,Mint,parliament
+230,Sutherland,Lord Duffus,highlands,Crawford,rebels,
+231,Queensbury,Hamilton,mismanagement,Club,,
+232,Queensbury,Hamilton,friendship,Jereswood,,
+233,provisions,Blair Castle,quartering,,,
+234,Hamilton,Dalrymple,Melville,church,country,
+235,ministers,stipends,funds,,,
+236,petition,Londonderry,hazard,Monmouth,Shrewsbury,
+237,Leven,Scotland,King,,,
+238,Jacobite,prisoners,Mackay,Portland,Club,Claim of Right
+239,ministers,church,enemies,presbyterians,episcopalians,
+240,Edinburgh,town council,magistrates,,,
+241,army,reinforcements,Dublin,Danish,,
+242,Presbyterians,church,postmaster,Ireland,letters,
+243,Scotland,Lords of Session,Stair,King,,
+244,Protestantism,parliament,K. James,Hamilton,Dundee,ministers
+245,Signet,information,King,,,
+246,clergy,King,post,,,
+247,Annandale,Scotland,service,,,
+248,Court,Scotland,French fleet,,,
+249,Signet,Lords of Session,Christianity,,,
+250,College of Justice,commissions,chancellor,,,
+251,Leven,Episcopal clergy,deprivations,gospel,,
+252,religion,service,lords of session,,,
+253,church,treasury,garrisons,Mint,admiralty,
+254,petition,King William,church government,,,
+255,gratitude,parliament,favor,,,
+256,parliament,proceedings,Crawfurd,allegiance,Holland,Ireland
+257,Lady Maitland,papists,,,,
+258,Scrimizer,Elphinson,Dalrymple,,,
+259,episcopal ministers,prelacy,presbyterians,Glasgow,,
+260,council,information,,,,
+261,english forces,K. James,Church of Scotland,popery,presbyterians,Ireland
+262,Advocate,session,Club,K. James,England,
+263,Advocate,Club,parliament,,,
+264,concern,favor,King,,,
+265,skipper,admiralty,ship,scotsman,,
+266,episcopal,prelacy,ministers,bishops,papists,protestants
+267,service,drudgery,vacant,,,
+268,Court,ministers,parliament,Kirkudbright,Carstares,
+269,episcopal,privy council,presbyterians,church of scotland,widows,children
+270,Bishop of Salisbury,ministers,church,Jews,presbyterians,
+271,Castle,Balcarres,Gilbert Elliot,Anderson,tollbooth,prisoner
+272,forces,service,Seaforth,Berwick,religion,rebellion
+273,Dundee,enemies,Seaforth,unnatural rebellion,,
+274,Stinson,John Lauder,Scotland,Scrimizer,Nairns,Edinburgh
+275,Bishoop of Salisbury,Scotland,Holland-House,Captain Kennedy,Postmaster General,
+276,David Drummond,prison,Munro's papers,,,
+277,Bishop of Salisbury,nonconfromists,Scotland,Holland House,Edinburgh Castle,garrisons
+278,Presbyterian,church matters,ministers,,,
+279,Court,Club,service,Cardross,Cathcart,
+280,commissions,privy seall,chancellory,Treasury,Justice,
+281,presbyterian interest,Episcopal clergy,Ishmael,Hagar,Isaac,
+282,pamphlet,Stair,Carstares,Schomberg,,
+283,Hamilton,parliament,judiciary,,,
+284,Hamilton,council,oath de fideli,excise,Leven,
+285,service,council,Hamilton,King,,
+286,Hamilton,oath de fideli,presbyterian,Dumfries,Kirkudbright,
+287,Captain Hugh Campbell,spy,England,,,
+288,service,God,Hamilton,religion,parliament,oath de fideli
+289,Kennedy,enemy,garrison,Enniskillen,Lisburn Castle,Ireland
+290,Bishop of Salisbury,church,commissioner,government,,
+291,duty,God,prince,Lockhart,,
+292,allegiance,borders,highlands,frigates,coast,weather
+293,Aberdeen,Hamilton,church,episcopal clergy,ministers,K. James
+294,service,council,commissions,,,
+295,governors,government,council,Club,army supplies,
+296,Danish troops,Dr. Pitcair,horses,,,
+297,Pitlever,Club,methods,,,
+298,customs,presbyterian,government,Christ,presbytery,Israel
+299,King,Jacobites,Club,Ireland,,
+300,letter,King William,station,,,
+301,dragoons,rebels,Menteith,,,
+302,Hamilton,Tweeddale,Club,highland clans,Edinburgh,regiments
+303,King,favor,parliament,,,
+304,commissions,presentations,,,,
+305,favor,malversations,presbyterians,Hamilton,,
+306,Mackay,Portland,King,firearms,ammunition,
+307,Club,Inverlochy,rebels,Ireland,highlands,presbyterians
+308,council,divisions,prisoner,highlands,,
+309,Club,Portland,England,church,presbyterians,Hamilton
+310,Captain Kennedy,Ireland,Glasgow,Schomberg,supplies,
+311,Club,prebyterians,Ireland,Inverlochy,Balcarres,K. James
+312,Tarbat,session,Club,service,ministers,jacobites
+313,Gordon,Arburchell,estate,,,
+314,Arburchell,Gordon,friendship,,,
+315,patronage,parliament,,,,
+316,episcopal ministers,judges,government,church,Scotland,Irish prisoners
+317,friendship,libel,King,Aberuchell,,
+318,service,friendship,Ayr,ministers,council,Hamilton
+319,arms,ammunition,Holland,France,difficulties,King
+320,duties,troop of guards,service,,,
+321,interest,service,King,,,
+322,printer,prison,Crawford,parliament,Club,
+323,Scotland,trouble,printer,Club,Hamilton,Crawford
+324,treasury,revenue,Holyrood House,printer,prison,
+325,Scotland,King,visit,Christ,Prince,Israel
+326,King,Sumptary Act,Ayr,Club,English,
+327,Club,Hamilton,Jacobites,presbyterians,commission,
+328,Jacobites,King,Scotland,presbyterian,church,nonconformists
+329,coronation,Ireland,Club,Hamilton,parliament,
+330,King,Cameronians,Ayr,government,Jacobites,sumptary
+331,Ireland,Buchan,King,Club,Jacobites,
+332,King,Scotland,troops,kingdom,,
+333,Skelmorlie,Belfast,intelligence,frigates,Ireland,parliament
+334,Peter Frazer,Scotland,character,observe,,
+335,seamen,service,fleet,Treasury,,
+336,King,Hamilton,council,,,
+337,Annandale,Club,Hamilton,,,
+338,troop of guards,royal bounty,,,,
+339,scots guards,service,King,,,
+340,Arburchell,King,Leven,money,,
+341,dissatification,parliament,Jacobites,"""dark clouds""",,
+342,health,progress,King's service,,,
+343,council,King,parliament,,,
+344,Hamilton,council,parliament,,,
+345,security,divisions,parliament,session,,
+346,divisions,Scotland,King's service,danger,,
+347,Strachan,Ireland,K. James,Erroll,French fleet,Schomberg
+348,K. James,Strachan,papist,Dublin,Greenock,letters
+349,Strachan,Erroll,letters,Seaforth,Ireland,French fleet
+350,prisoner,presbyterian,episcopal,western shires,,
+351,Scotland,K. James,Ireland,,,
+352,elections,Presbyterian ministers,church,supply,rebels,oath de fideli
+353,Belfast,Colonel Hill,Irish,King William,,
+354,secret council,security,government,Mackay,forces,
+355,security,Mackay,grievances,intelligence,presbyterians,
+356,Hamilton,service,Breadalbane,Berwick,Carlisle,borders
+357,service,commissioner,parliament,Scotland,,
+358,Breadalbane,rebels,parliament,Scotland,frigates,
+359,council,kingdom,deserters,garrisons,,
+360,highlanders,Scotland,duty,entreat,,
+361,parliament,instructions,,,,
+362,letters,parliament,Carstares,information,,
+363,Captain Kennedy,Melville,Scotland,,,
+364,imprisoned,apprehend,disaffected,,,
+365,highlands,K. James,Ireland,French ships,highlanders,coast
+366,service,regiment,Ireland,scots guards,,
+367,Carstares,presbyterians,Club,Ireland,France,letters
+368,Breadalbane,Highlanders,submission,security,,
+369,presbytery,King,parliament,scrizimor,,
+370,committees,elections,parliament,,,
+371,Crawford,security,religion,knighthood,,
+372,Drumlanrig,public affairs,King,treasurer depute,Raith,
+373,Breadalbane,Melville,Pottinger,ships,forces,
+374,officers,soldiers,government,army,,
+375,service,crimes,treason,Prince,remission,
+376,King,Carstares,presbyterians,Inverlochy,Mackay,
+377,church,presbytery,popery,reformation,protestant religion,
+378,public oath,fines,capital crimes,civil debt,Edinburgh,trade
+379,indemnity,,,,,
+380,Raith,,,,,
+381,Holyrood House,Haddington,rent,,,
+382,Mackay,correspondence,Lockhart,Scotland,Ireland,Carstares
+383,Carstares,Inverlochy,Mackay,borders,friendship,security
+384,highlake,Ireland,Scotland,Queen,,
+385,Ferguson,imprisonment,Leven,Gibson,,
+386,Drumlanrig,Abbey,Raith,gazettes,,
+387,enemies,health,kingdom,,,
+388,health,King,government,,,
+389,Lockhart,Scotland,Cochran,Ferguson,discharged,
+390,enemies,prisoner,health,kindness,,
+391,Edinburgh,plots,parliament,imprisoned,England,
+392,plot,protestant religion,information,enemies,,
+393,Court,service,conspiracy,church government,,
+394,Ireland,Lockhart,Ross,service,Monsier D'Allone,
+395,French fleet,coast,Torrington,Ferguson,Cochran,treason
+396,news,Ross,Hume,battalion,disaffected,
+397,presbytery,Inverlochy,garrisons,security,highlands,prisoners
+398,K. James,Skelmorlie,Edinburgh,presbyterians,Carstares,French
+399,plot,evidence,Lockhart,Ireland,King,service
+400,plot,protestant religion,information,enemies,,
+401,Lockhart,Ross,French fleet,intelligence,Skelmorlie,evidence
+402,Flanders,French,Waldeck,London,Westminster,Ireland
+403,mail,moncreiff,service,,,
+404,Lockhart,dangers,King,,,
+405,King,Protestant,Dublin,K. James,Carstares,Boyne
+406,French fleet,channel,mail,,,
+407,Inverlochy,Lochiel,coast,French,Breadalbane,Ireland
+408,highlands,borders,Torrington,Ireland,Boyne,Schomberg
+409,Lockhart,Nottingham,intelligence,highlands,Jacobites,England
+410,Raith,provisions,garrison,army,weather,Highlands
+411,borders,maxwell,Scotland,,,
+412,highlanders,Canon,Stirling,Arran,Lockhart,Ross
+413,disaffected,borders,Scotland,Berwick,Carlisle,
+414,Greenock,blockade,coast,Seaforth,highlanders,Inverlochy
+415,flying packets,black box,Home,borders,militia,Scotland
+416,Hill,Dunstaffnage,seamen,Greenock,Douglas,frigate
+417,express,mistake,postmaster,delay,,
+418,invasion,Dublin,Mackay,Inverlochy,garrisons,Ireland
+419,Lockhart,Highlanders,mail,Ross,Skelmorlie,plot
+420,pay,muster rolls,Mackay,service,,
+421,supplies,soldiers,pay,ships,,
+422,conspiracy,honesty,indemnity,,,
+423,indemnity,evidence,legal witness,London,Queen,secret
+424,Skelmorlie,Ross,secret,service,Lockhart,K.James
+425,Skelmorlie,plot,information,clemency,Mr. Jones,counterfeit
+426,Ross,plot,Carstares,evidence,Skelmorlie,St. Germain
+427,exemption,taxation,royal precedent,Christendom,,
+428,Mary Modena,letters,secrecy,Ross,Skelmorlie,security
+429,supply,reports,service,,,
+430,Ireland,enemies,Annandale,Skelmorlie,Irish,French
+431,highlands,rebels,security,Skelmorlie,Ross,Annandale
+432,highland army,Cunningham,disaffected,ruined property,loyal,
+433,highlanders,Dunnotter,Buchan,K. James,servant,
+434,trouble,kindness,testimony,,,
+435,Inverlochy,K. James,landings,Mull,Lochiel,Irish
+436,thanks,church government,posterity,servant,,
+437,health,servants,error,,,
+438,Skelmorlie,Limerick,ships,Portsmouth,French coast,
+439,Inverness,prisoner,banishment,Mackay,,
+440,K. James,plot,Club,Neville Payne,France,Ireland
+441,Lockhart,Annandale,plot,treason,information,
+442,K. James,prison,Neville Payne,Ireland,Jacobites,rebels
+443,Neville Payne,Scotland,border,Annandale,Skelmorlie,
+444,Skelmorlie,Annandale,K. James,Neville Payne,,
+445,Annandale,plot,Neville Payne,Ireland,Mackay,Scotland
+446,Ross,Skelmorlie,K. James,Berwick,Neville Payne,
+447,informer,K. James,parliament,service,Neville Payne,
+448,Melville,Skelmorlie,plot,K. James,discovery,
+449,Skelmorlie,Scotland,K. James,Annandale,Ross,invasion
+450,regiments,service,Colonel Hill,,,
+451,son,council,King,mercy,,
+452,Skelmorlie,K. James,Ireland,Scotland,French,Irish
+453,health,Ramsay,news,Ireland,Edinburgh,Perth
+454,vessels,Glasgow,secured,,,
+455,Queen,council,Scotland,Nottingham,Pottinger,
+456,Limerick,Portland,Ireland,Holland,Queen,England
+457,Stirling,intelligence,season,rebels,Argyll,Montieth
+458,council,Highlanders,achallader,Edinburgh,,
+459,Ireland,success,religion,Christendom,Melville,Leven
+460,Buchanan,garrison,ships,company,Treasury,
+461,Scotland,parliament,affairs,,,
+462,King,Ireland,evil-minded men,Christian,Scotland,Melville
+463,administration,church,honor,enemies,government,
+464,highland,rebels,arms,Kintore,Ireland,
+465,Buchan,Canon,highlands,Ireland,K. James,France
+466,Edinburgh,oath of allegiance,parliament,,,
+467,friendship,kindness,grateful,,,
+468,council,presbyterian,highland,coast,frigates,Dunkirk
+469,General Assembly,King,clergy,Universities,Bishop,
+470,General Assembly,church,service,,,
+471,General Assembly,church,God,Prince,,
+472,General Assembly,public interest,,,,
+473,religion,King,General Assembly,enemies,,
+474,General Assembly,session,safety,,,
+475,Protestant,General Assembly,presbytery,parliament,King,
+476,Melville,Scotland,Hampton Court,Hamilton,Kensington,
+477,General Assembly,Carmichael,ministers,government,,
+478,General Assembly,King,ministers,court,elder,
+479,rebels,highlands,Argyll,Isles,Mackay,
+480,General Assembly,session,Carmichael,King,,
+481,Crawford,King,General Assembly,,,
+482,King,enemies,son,mercy,,
+483,General Assembly,Protestant,religion,service,Kirkton,
+484,General Assembly,King,instructions,,,
+485,Mackay,clans,submission,Colonel Hill,Ireland,
+486,Colonel Hill,security,highland,highlanders,peace,
+487,General Assembly,information,parliament,,,
+488,General Assembly,King's business,,,,
+489,religion,King,christian,kingdoms,Carstares,
+490,Leith Road,Bellenden,Buchan,parliament,danger,trouble
+491,Bellenden,vessel,Holland,enemies,family,
+492,ecclesiastics,highlands,presbyterian,Scotland,England,
+493,letters,Bellenden,murder,family,,
+494,Carstares,England,Glasgow,Dumfries,bishoprics,Mackay
+495,General Assembly,enemies,Glasgow,St. Andrews,Mackay,London
+496,General Assembly,piety,King,judgement,,
+497,Colonel Hill,highlands,Argyll,Inverlochy,Mackay,Mull
+498,General Assembly,proceedings,servant,,,
+499,Lady Mary MacDonald,starving,condition,friends,Skye,
+500,Colonel Hill,highlands,garrison,General Assembly,Seaforth,
+501,church,General Assembly,gospel,highlands,popery,God
+502,General Assembly,Edinburgh,committee,presbyterian,government,Carstares
+503,reform,church,regiment,government,God,
+504,General Assembly,presbyterian,King,Lady Mary MacDonald,,
+505,Carstares,account,service,moderator,,
+506,Carstares,presbyterians,enemies,Mackay,Stirling Castle,treasury
+507,Morton,Orkney,Captain Bruce,Edinburgh,Claim of Right,
+508,colleges,judges,principals,university,,
+509,Bruce,Berwick,Claim of Right,Glasgow,Inverlochy,Colonel Hill
+510,post,London,Morton,,,
+511,Argyll,Isles,highlands,Colonel Hill,,
+512,Captain Bruce,Edinburgh,discovery,,,
+513,Archibald Sinclair,Bargeny,parliament,,,
+514,church,family,bishoprics,Carstares,King,Thomas Livingston
+515,miserable,parent,favor,,,
+516,Neville Payne,information,K. James,London,Scotland,
+517,Annandale,papers,K. James,Edinburgh Castle,Melville,
+518,Neville Payne,torture,evidence,religion,Holland,
+519,King,Inverlochy,Colonel Hill,provisions,garrison,security
+520,Colonel Hill,Lochiel,highlanders,Inverlochy,climate,presbytery
+521,son,health,bail,,,
+522,highlands,Colonel Hill,indemnity,enemies,war,Scotland
+523,secrecy,money,missing,Perth,,
+524,treasury,Stirling,Mar,difficulty,,
+525,King,service,abroad,comissions,,
+526,London,prestonhall,Ross,pamphlets,,
+527,Neville Payne,prisoner,Edinburgh Castle,trial,,
+528,army,Cassillis,exchequor,bishoprics,Carstares,
+529,Scotland,council,King,,,
+530,clergy,God,nation,division,,
+531,Scotland,news,General Assembly,episcopacy,presbytery,season
+532,parliament,King,Livingston,army,regiment,
+533,church,ministers,God,enemies,Perth,King
+534,French,liars,Leven,Raith,,
+535,John Blair,William Mein,letters,security,informer,church
+536,execution,Holland,King,quiet,,
+537,Perth,Wigton,prisoner,France,money,service
+538,french invasion,borders,provisions,Inverlochy,letters,
+539,church,arms,episcopal,enemies,Presbyterian,General Assembly
+540,King,return,London,,,
+541,Holland,ammunition,abroad,Inverlochy,Colonel Hill,letters
+542,King,Edinburgh,church,Lockhart,secrecy,whispers
+543,nomination,Colonel Hill,servant,,,
+544,council,kingdom,Slezer,provisions,army,pay
+545,Duart Castle,highlands,France,Ireland,Edinburgh,Lamb
+546,highlanders,Duart Castle,Jacobites,France,Ireland,weather
+547,highlanders,Livingston,France,Ireland,Glencoe,Gordon
+548,letters,council,highlanders,Lochiel,fortifications,
+549,Hamilton of Halsyd,secretary depute,communicate,,,
+550,reprieve,son,Raith,security,,
+551,Colonel Hill,enemies,Edinburgh Castle,invasion,Ireland,France
+552,Colonel Hill,King,country,,,
+553,Queen,Stair,prisoners,Edinburgh Castle,Jacobites,invasion
+554,highlanders,arms,Mull,Atholl,Lochiel,Skye
+555,letters,health,indisposed,,,
+556,Breadalbane,London,danger,service,Ireland,
+557,King,ministers,Duke of Berwick,Scotland,French army,
+558,French fleet,Skye,Berwick,Ireland,Mull,intelligence
+559,Arran,prison,french frigates,provisions,,
+560,French fleet,Skye,provisions,highlanders,Breadalbane,Bass
+561,intelligence,Isle Donan,Skye,highlanders,frigates,
+562,Pembroke,Clyde,troublesome,obedience,Pottinger,
+563,King,Argyll,correspondence,broken,service,
+564,Pembroke,French privateer,kingdom,Clyde,coasts,
+565,Breadalbane,highlands,Lochiel,rebellion,Buchan,garrison
+566,Perth,health,Flanders,Ireland,bishopric,
+567,church,Christians,protestants,,,
+568,Irish army,borders,highlands,Livingston,Colonel Hill,Breadalbane
+569,Lockhart,church,parliament,presbytery,,
+570,troops,borders,highlands,hostility,,
+571,Colonel Hill,soldiers,Inverlochy,peace,France,
+572,treasury,precept,King,Lockhart,,
+573,borders,highlands,Duke of Leinster,rebels,Inverlochy,Glasgow
+574,Colonel Hill,Livingston,prisoners,,,
+575,Argyll,news,Scotland,Perth,Livingston,Breadalbane
+576,Livingston,forces,kingdom,,,
+577,Queen,army,Stair,Berwick,Nottingham,
+578,Queen,horses,Yorkshire,peace,,
+579,King,Flanders,enemies,Breadalbane,Mackay,highlanders
+580,Queen,Hill,Livingston,Leinster,forces,Scotland
+581,son,imprisoned,K. James,Leven,,
+582,battalion,fortifications,Treasury,church,,
+583,Mr Gillis,cover,affairs,,,
+584,treasury,French,march,Loo,Hague,
+585,Livingston,Bass,Stair,,,
+586,letters,council,adjourned,,,
+587,French,friends,falsehoods,K. James,Breadalbane,
+588,King,parliament,indemnity,,,
+589,Breadalbane,Hill,highlanders,France,presbyterians,enemies
+590,Maxwell,Fife,highlanders,theifs,,
+591,Raith,church,peace,,,
+592,Edinburgh,King,London,,,
+593,Flanders,gossip,letters,Hill,,
+594,King,journey,winter,favor,,
+595,garrison,service,highlands,K. James,Buchan,
+596,Canon,K. James,Highland clans,Berwick,Gordon,
+597,King,peace,Carmichael,Stair,,
+598,treasury,parliament,news,,,
+599,stranger,scots affairs,Livingston,highlanders,,
