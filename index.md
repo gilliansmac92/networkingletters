@@ -1,4 +1,3 @@
-<div style="float: center">
 <div class="home">
     <h1>Networking the Letters of Revolution</h1>
 </div>
