@@ -1,3 +1,11 @@
+<div class="home">
+    <h1>Networking Letters of the Revolution</h1>
+</div>
+
+<div style= "float: right">
+<img src="Visscher_Map.jpg" width=450 height=400>
+</div>
+
 ## About the Project
 The recent publication of Tudor Networks and Stanford's Mapping the Republic of Letters project are important contributions to the growing field of network analysis in the early modern world. These datasets have asked important questions about early modern communication systems and social networks. Networking Letters of the Revolution seeks to add to this conversation in terms of communication during conflict and regime change. The project uses one of the main corpora of letters: the Leven and Melville Papers. Networking Letters of the Revolution seeks to visualize and connect the world of letters, communication, and networks from disparate collections of manuscript and print sources to understand communication patterns and the distribution of information during wartime. By using network analysis, we can uncover the world of the information trade, diplomatic correspondence patterns, and the anomalies. It also helps in prosopographical analysis of the time period, why certain people group together, and understand the dynamics of group identities. Networking Letters of the Revolution allows further access to critical information about seventeenth century British history and this pivotal period which shaped much of the modern British state. Perhaps more importantly, the project democratizes the pursuit of knowledge and expands the potential for research in the field.
 
