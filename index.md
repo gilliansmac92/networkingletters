@@ -1,8 +1,14 @@
+<div class="home">
+    <h1>Welcome to Networking the Letters of Revolution</h1>
+</div>
 <div style= "float: right">
 <img src="data/A_new_map_of_Scotland_with_the_roads_(8643653080) (1).jpg" width=450 height=400>
 </div>
 
-## About the Project
+## Networking the Letters of Revolution (1689-1691)
+
+Networking the Letters of Revolution is a 2024 [DH@MSU](https://digitalhumanities.msu.edu/) seed grant funded project. Inspired by more recent developments in the field of network science and early modern studies, _Networking_ is an open access digital repository of code and data specifically related to relationships and networks of people in Scotland during the Revolution. 
+
 The recent publication of Tudor Networks and Stanford's Mapping the Republic of Letters project are important contributions to the growing field of network analysis in the early modern world. These datasets have asked important questions about early modern communication systems and social networks. Networking Letters of the Revolution seeks to add to this conversation in terms of communication during conflict and regime change. The project uses one of the main corpora of letters: the Leven and Melville Papers. Networking Letters of the Revolution seeks to visualize and connect the world of letters, communication, and networks from disparate collections of manuscript and print sources to understand communication patterns and the distribution of information during wartime. By using network analysis, we can uncover the world of the information trade, diplomatic correspondence patterns, and the anomalies. It also helps in prosopographical analysis of the time period, why certain people group together, and understand the dynamics of group identities. Networking Letters of the Revolution allows further access to critical information about seventeenth century British history and this pivotal period which shaped much of the modern British state. Perhaps more importantly, the project democratizes the pursuit of knowledge and expands the potential for research in the field.
 
 Our project seeks to analyze and understand and explore how communication responded to warfare. Letters are important for more than just their contents. They also have the power to tell us more than just who was writing to who. More importantly, they can tell us who was connected with who, how often letters went missing, the frequency of communication between parties, where networks existed over time and space, and how these evolved over the course of wartime. We seek to develop an open-access project which researchers and the public at large can access to visualize the world of letters in the seventeenth century. Through the wireframing of network analysis, this project hopes to reveal the complex world of communication in late seventeenth century Scotland. Networking Letters of the Revolution is a nascent prototype project with potential to grow considerably. Melville and Leven’s corpus of letters alone constitute approximately 650 pages of material and there are several manuscript counterparts.
