@@ -1,5 +1,6 @@
+<div style="float: center">
 <div class="home">
-    <h1>Welcome to Networking the Letters of Revolution</h1>
+    <h1>Networking the Letters of Revolution</h1>
 </div>
 <div style= "float: right">
 <img src="data/A_new_map_of_Scotland_with_the_roads_(8643653080) (1).jpg" width=450 height=400>
