@@ -1,6 +1,4 @@
-# Networking Letters of Revolution
-
-Networking the Letters of the Scottish Revolution (1689-1691)
+# Networking Letters of Revolution (1689-91)
 
 The recent publication of _Tudor Networks_ and Stanford's _Mapping the Republic of Letters_ project are important contributions to the growing field of network analysis in the early modern world. These datasets have asked important questions about early modern communication systems and social networks. The communications revolution between 1450 and 1700 transformed the capacity for Europeans–and those in the British Isles–to communicate and engage with each other. Gutenberg’s printing press and the network of universities around Europe provided useful channels for books, ideas, and letters to travel from country to country. During the late seventeenth century, the evolution of newsletters and newspapers allowed information to travel more quickly along those networks. 
 
