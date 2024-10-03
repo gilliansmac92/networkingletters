@@ -1,5 +1,3 @@
 title: mycustomtitle
 theme: jekyll-theme-slate
-.home h1 {
-    color: white;
-}
+
