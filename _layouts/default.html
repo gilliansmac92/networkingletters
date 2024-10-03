@@ -20,7 +20,7 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           
-          <h1 id="site_title"> Slate theme >{{ title | default: mycustomtitle }}</h1>
+          <h1 id="site_title"> {{ title | default: mycustomtitle }}</h1>
           <h2 id="site_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
           
           {% if site.show_downloads %}
