@@ -18,7 +18,7 @@
         <header class="inner">
           
           <h1 id="site_title" style="color: white;"> {{ title | default: mycustomtitle }}</h1>
-          <h2 id="site_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+          <h2 id="site_tagline" style="color: white;">{{ site.description | default: site.github.project_tagline }}</h2>
           
           {% if site.show_downloads %}
             <section id="downloads">
