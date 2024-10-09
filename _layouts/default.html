@@ -18,11 +18,18 @@
         <header class="inner">
           <h1 id="site_title" style="color: white;"> {{ title | default: mycustomtitle }}</h1>
           <h2 id="site_tagline" style="color: white;">{{ site.description | default: site.github.project_tagline }}</h2>
-               <nav>
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a> | <a href="{{ '/people/' | relative_url }}">People</a> | <a href="{{ '/visualizations/' | relative_url }}">Visualizations</a> | <a href="{{ '/map/' | relative_url }}">Map</a> | <a href="{{ '/contact/' | relative_url }}">Contact</a> | </li>
-            </ul>
-        </nav>
+    <nav>
+    <ul>
+        <li>
+            <a href="{{ '' | relative_url }}">Home</a> |
+            <a href="{{ 'people/' | relative_url }}">People</a> |
+            <a href="{{ 'visualizations/' | relative_url }}">Visualizations</a> |
+            <a href="{{ 'map/' | relative_url }}">Map</a> |
+            <a href="{{ 'contact/' | relative_url }}">Contact</a>
+        </li>
+    </ul>
+</nav>
+
 
           {% if site.show_downloads %}
             <section id="downloads">
