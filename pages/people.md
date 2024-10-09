@@ -1,8 +1,3 @@
----
-title: Project Collaborators
-permalink: /people/
----
-
 ## Project Collaborators
 
 
