@@ -1,3 +1,11 @@
 title: Networking Letters of Revolution
 theme: jekyll-theme-slate
 baseurl: "/networkingletters"
+
+# List of links in the navogation bar
+navbar-links:
+Home: ""
+People: "people"
+Visualizations: "visualizations"
+Map: "map"
+Contact: "contact"
