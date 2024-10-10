@@ -1,6 +1,7 @@
 title: Networking Letters of Revolution
 theme: jekyll-theme-slate
 baseurl: "/networkingletters"
+markdown: kramdown
 
 # List of links in the navigation bar
 navbar-links:
