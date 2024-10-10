@@ -1,3 +1,10 @@
+---
+layout: default
+title: People
+permalink: /people/
+---
+
+
 ## Project Collaborators
 
 
