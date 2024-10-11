@@ -3,23 +3,10 @@ theme: jekyll-theme-slate
 baseurl: "/networkingletters"
 markdown: kramdown
 
-# List of links in the navigation bar
-navbar-links:
-Home: ""
-People: "people"
-Visualizations: "visualizations"
-Map: "map"
-Contact: "contact"
 
 # Main Navigation
 nav:
-- text: Home
-  url: /networkingletters/
-- text: People
-  url: /networkingletters/pages/people.md/
-- text: Visualizations
-  url: /networkingletters/pages/visualizations.md/
-- text: Map
-  url: /networkingletters/pages/map.md/
-- text: Contact
-  url: /networkingletters/pages/contact.md/
+- introduction: introduction.md
+- people: people.md
+- networks: networks.md
+- map: map.md
