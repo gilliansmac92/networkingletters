@@ -3,8 +3,12 @@ header .site-title {
     color: white;
 }
 
+nav a,
+nav a:visited {
+    color: white;
+}
 
-.navbar a {
+nav a:hover {
     color: white; 
 }
 
