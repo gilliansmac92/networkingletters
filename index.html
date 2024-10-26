@@ -3,6 +3,9 @@
     <head>
     <!--This is an HTML comment This is all placeholder info - can edit-->
 
+    <!-- Add icon library -->
+    <link rel="style.sheet.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- import the Leaflet.js CSS and JavaScript files -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -33,7 +36,7 @@
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
             <div class="container">
                 <a class="navbar-brand" href="#!">Networking Letters of Revolution</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -46,6 +49,10 @@
                         <li class="nav-item"><a class="nav-link" href="map.html">Network Map</a></a>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></a>
                     </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
                 </div>
             </div>
         </nav>
