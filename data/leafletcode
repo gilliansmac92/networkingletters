@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking the Revolution Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+
+<h3>Networking the Revolution Map</h3>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script>
+    // Initialize the map centered on an approximate location
+    var map = L.map('map').setView([52.0, -0.1], 5);
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Marker cluster group
+    var markerCluster = L.markerClusterGroup();
+
+    // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
+    fetch('data/networkdata.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(function(row) {
+                var fromCoords = row.From.split(',').map(Number);
+                var toCoords = row.To.split(',').map(Number);
+
+                var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
+                var toPopup = "ID: " + row.ID + "<br>Reciever: " + row.Reciever;
+
+                // Add markers for 'From' and 'To' locations
+                var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
+                var toMarker = L.marker(toCoords).bindPopup(toPopup);
+
+                // Add markers to the cluster group
+                markerCluster.addLayer(fromMarker);
+                markerCluster.addLayer(toMarker);
+
+                // Add polyline between 'From' and 'To'
+                L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
+            });
+
+            // Add the marker cluster group to the map
+            map.addLayer(markerCluster);
+        })
+        .catch(error => console.error("Error loading JSON:", error));
+</script>
+
+</body>
+</html>
+
