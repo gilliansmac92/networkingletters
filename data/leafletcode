@@ -19,7 +19,7 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 <script>
-    // Initialize the map centered on the calculated average latitude and longitude
+    // Initialize the map centered on an approximate location
     var map = L.map('map').setView([52.0, -0.1], 5);
 
     // Add OpenStreetMap tile layer
@@ -30,33 +30,36 @@
     // Marker cluster group
     var markerCluster = L.markerClusterGroup();
 
-    // Example data, replace these with your actual data points
-    var data = [
-        {id: 1, from: [51.5, -0.1], to: [52.0, -0.1], sender: 'Person A', receiver: 'Person B'},
-        {id: 2, from: [50.5, -1.0], to: [53.0, -1.0], sender: 'Person C', receiver: 'Person D'},
-        // Add more data points here...
-    ];
+    // Load data from JSON file
+    fetch('networkdata.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(function(row) {
+                // Parse coordinates from the "From" and "To" fields
+                var fromCoords = row.From.split(',').map(Number);
+                var toCoords = row.To.split(',').map(Number);
 
-    // Loop through the data to create markers and polylines
-    data.forEach(function(row) {
-        var fromPopup = "ID: " + row.id + "<br>Sender: " + row.sender;
-        var toPopup = "ID: " + row.id + "<br>Receiver: " + row.receiver;
+                var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
+                var toPopup = "ID: " + row.ID + "<br>Receiver: " + row.Reciever;
 
-        // Add markers for 'From' and 'To' locations
-        var fromMarker = L.marker(row.from).bindPopup(fromPopup);
-        var toMarker = L.marker(row.to).bindPopup(toPopup);
+                // Add markers for 'From' and 'To' locations
+                var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
+                var toMarker = L.marker(toCoords).bindPopup(toPopup);
 
-        // Add markers to the cluster group
-        markerCluster.addLayer(fromMarker);
-        markerCluster.addLayer(toMarker);
+                // Add markers to the cluster group
+                markerCluster.addLayer(fromMarker);
+                markerCluster.addLayer(toMarker);
 
-        // Add polyline between 'From' and 'To'
-        L.polyline([row.from, row.to], { color: 'red', weight: 2 }).addTo(map);
-    });
+                // Add polyline between 'From' and 'To'
+                L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
+            });
 
-    // Add the marker cluster group to the map
-    map.addLayer(markerCluster);
+            // Add the marker cluster group to the map
+            map.addLayer(markerCluster);
+        })
+        .catch(error => console.error("Error loading JSON:", error));
 </script>
 
 </body>
 </html>
+
