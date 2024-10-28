@@ -91,4 +91,83 @@
 
 </body>
 </html>
+                
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Map</title>
+    <style>
+        /* Optional: CSS styling for the page */
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <h1>Network Map</h1>
+    <p>This map visualizes connections between locations based on the provided dataset.</p>
+
+    <!-- Embedding the saved map -->
+    <iframe src="network_map_colored.html" width="700" height="500"></iframe>
+
+    <!-- Python Code used to generate the map -->
+    <pre><code>
+import pandas as pd
+import folium
+from folium.plugins import MarkerCluster
+
+# Using pandas to read in the dataset
+data = pd.read_csv('Copy of Networking_the_Revolution - INFO (2).csv')
+
+# Filter data by dropping rows with NaN values in the 'From' or 'To' columns
+data_cleaned = data.dropna(subset=['From', 'To']).copy()
+
+# Convert coordinates to tuple from a string for better data structure
+def convert_to_tuple(coord):
+    if isinstance(coord, str):
+        if ',' in coord:
+            return tuple(map(float, coord.split(',')))
+        elif ' ' in coord:
+            return tuple(map(float, coord.split()))
+    raise ValueError(f"Unexpected coordinate format: {coord}")
+
+# Applying the conversion function to the 'From' and 'To' columns
+data_cleaned['From'] = data_cleaned['From'].apply(convert_to_tuple)
+data_cleaned['To'] = data_cleaned['To'].apply(convert_to_tuple)
+
+# Creating a base map centered around an average location with a colored tile style
+center_lat = data_cleaned['From'].apply(lambda x: x[0]).mean()
+center_lon = data_cleaned['From'].apply(lambda x: x[1]).mean()
+m = folium.Map(location=[center_lat, center_lon], zoom_start=5, tiles="OpenStreetMap")
+
+# Adding a MarkerCluster for clustering markers
+marker_cluster = MarkerCluster().add_to(m)
+
+# Adding markers and lines to the map with ID, sender, or receiver in the popups
+for i, row in data_cleaned.iterrows():
+    from_popup = f"ID: {row['ID']}<br>Sender: {row['Sender']}"
+    to_popup = f"ID: {row['ID']}<br>Reciever: {row['Reciever']}"
+    
+    # Add marker for the 'From' location with ID and sender, and add it to the marker cluster
+    folium.Marker(location=row['From'], popup=from_popup).add_to(marker_cluster)
+    
+    # Add marker for the 'To' location with ID and receiver, and add it to the marker cluster
+    folium.Marker(location=row['To'], popup=to_popup).add_to(marker_cluster)
+    
+    # Add a red line between 'From' and 'To' locations
+    folium.PolyLine(locations=[row['From'], row['To']], color='red', weight=2).add_to(m)
+
+# Save to HTML file 
+map_file_path = 'network_map_colored.html' 
+m.save(map_file_path)
+
+# Confirm file path to make sure it saved 
+print(f"Map saved to: {map_file_path}")
+
+from IPython.display import IFrame
+IFrame(src='network_map_colored.html', width=700, height=500)
+    </code></pre>
+</body>
+</html>
+                
