@@ -126,7 +126,7 @@
     var markerCluster = L.markerClusterGroup();
 
     // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
-    fetch('https://your-jsonbin-or-github-url.com/networkdata.json')
+    fetch('data/networkdata.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(function(row) {
