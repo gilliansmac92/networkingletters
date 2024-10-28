@@ -30,12 +30,11 @@
     // Marker cluster group
     var markerCluster = L.markerClusterGroup();
 
-    // Load data from JSON file
-    fetch('networkdata.json')
+    // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
+    fetch('https://your-jsonbin-or-github-url.com/networkdata.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(function(row) {
-                // Parse coordinates from the "From" and "To" fields
                 var fromCoords = row.From.split(',').map(Number);
                 var toCoords = row.To.split(',').map(Number);
 
