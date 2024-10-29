@@ -8,15 +8,22 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     ).addTo(map);
+    
+    var marker = L.marker([markerfromCoord, markertoCoord]).addTo(map);
 
     // Marker cluster group
     var markerCluster = L.markerClusterGroup();
 
     // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
     fetch('https://github.com/gilliansmac92/networkingletters/blob/main/data/networkdata.json')
-        .then(
-            response = response.json())
-        .then(data = {
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Process the data and add markers to the map
             data.forEach(function(row) {
                 var fromCoords = row.From.split(',').map(Number);
                 var toCoords = row.To.split(',').map(Number);
