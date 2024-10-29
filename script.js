@@ -47,4 +47,4 @@
             // Add the marker cluster group to the map
             map.addLayer(markerCluster);
         .catch(error = console.error("Error loading JSON:", error));
-</srcipt>
+</script>
