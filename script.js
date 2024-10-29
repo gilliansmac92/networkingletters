@@ -15,7 +15,7 @@
     var markerCluster = L.markerClusterGroup();
 
     // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
-    fetch('https://github.com/gilliansmac92/networkingletters/blob/main/data/networkdata.json')
+    fetch('hhttps://github.com/gilliansmac92/networkingletters/blob/main/data/networkdata.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
