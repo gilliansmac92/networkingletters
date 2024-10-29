@@ -1,6 +1,6 @@
 // Create a base map object 
 //https://leafletjs.com/reference.html#map
-<srcipt>
+<script>
 // Initialize the map centered on an approximate location
     var map = L.map('map').setView([52.0, -0.1], 5);
 
