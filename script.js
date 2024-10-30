@@ -1,5 +1,4 @@
-// Create a base map object 
-//https://leafletjs.com/reference.html#map
+// Create a base map object
 let map = L.map('map').setView([52.0, -0.1], 5); 
 
 // Add OpenStreetMap tile layer
@@ -7,14 +6,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Replace the URL below with the correct link to your JSON file
+// Initialize marker cluster group
+let markerCluster = L.markerClusterGroup();
+
+// Fetch JSON data
 fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/data/networkdata.json')
-    .then(
-        function(u){return u.json();}
-    ).then(
-        function(json){
-            data = json;
-            })
+    .then(response => response.json())
     .then(data => {
         // Process the data and add markers to the map
         data.forEach(function(row) {
@@ -40,4 +37,3 @@ fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/da
         map.addLayer(markerCluster);
     })
     .catch(error => console.error("Error loading JSON:", error));
-
