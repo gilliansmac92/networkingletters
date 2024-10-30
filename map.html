@@ -29,26 +29,25 @@
         // Initialize a marker cluster group
         var markerCluster = L.markerClusterGroup();
 
-        // Fetch the JSON data
-        fetch('networkdata.json')
+        // Fetch the JSON data from the pages directory
+        fetch('pages/networkdata.json')
             .then(response => response.json())
             .then(data => {
-                // Process the data to add markers and lines
                 data.forEach(item => {
-                    // Convert coordinates from strings to arrays of floats
+                    // Skip entries without valid coordinates
+                    if (!item.From || !item.To) return;
                     var fromCoords = item.From.split(',').map(Number);
                     var toCoords = item.To.split(',').map(Number);
 
-                    // Create the "From" marker with a popup
+                    // Check if coordinates are valid numbers
+                    if (isNaN(fromCoords[0]) || isNaN(fromCoords[1]) || isNaN(toCoords[0]) || isNaN(toCoords[1])) return;
+
+                    // Create markers and lines
                     var fromMarker = L.marker(fromCoords).bindPopup(`<b>ID:</b> ${item.ID}<br><b>Sender:</b> ${item.Sender}`);
                     markerCluster.addLayer(fromMarker);
-
-                    // Create the "To" marker with a popup
                     var toMarker = L.marker(toCoords).bindPopup(`<b>ID:</b> ${item.ID}<br><b>Receiver:</b> ${item.Reciever}`);
                     markerCluster.addLayer(toMarker);
-
-                    // Draw a red line between "From" and "To" locations
-                    var line = L.polyline([fromCoords, toCoords], {color: 'red', weight: 2});
+                    var line = L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 });
                     line.addTo(map);
                 });
 
@@ -59,4 +58,3 @@
     </script>
 </body>
 </html>
-
