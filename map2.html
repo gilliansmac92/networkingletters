@@ -59,58 +59,54 @@
     </section>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
-    <script src="https://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="/script.js" defer></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-<script>
-    // Initialize the map centered on an approximate location
-    var map = L.map('map').setView([52.0, -0.1], 5);
+    
+    <script>
+        // Initialize the map centered on an approximate location
+        var map = L.map('map').setView([52.0, -0.1], 5);
 
-    // Add OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-    // Marker cluster group
-    var markerCluster = L.markerClusterGroup();
+        // Marker cluster group
+        var markerCluster = L.markerClusterGroup();
 
-    // Replace with the raw URL to your JSON file
-    fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/data/networkdata.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            data.forEach(function(row) {
-                var fromCoords = row.From.split(',').map(Number);
-                var toCoords = row.To.split(',').map(Number);
+        // Fetch data from JSON
+        fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/data/networkdata.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                data.forEach(function(row) {
+                    var fromCoords = row.From.split(',').map(Number);
+                    var toCoords = row.To.split(',').map(Number);
 
-                var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
-                var toPopup = "ID: " + row.ID + "<br>Receiver: " + row.Receiver; // Corrected spelling
+                    var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
+                    var toPopup = "ID: " + row.ID + "<br>Receiver: " + row.Receiver; // Corrected spelling
 
-                // Add markers for 'From' and 'To' locations
-                var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
-                var toMarker = L.marker(toCoords).bindPopup(toPopup);
+                    // Add markers for 'From' and 'To' locations
+                    var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
+                    var toMarker = L.marker(toCoords).bindPopup(toPopup);
 
-                // Add markers to the cluster group
-                markerCluster.addLayer(fromMarker);
-                markerCluster.addLayer(toMarker);
+                    // Add markers to the cluster group
+                    markerCluster.addLayer(fromMarker);
+                    markerCluster.addLayer(toMarker);
 
-                // Add polyline between 'From' and 'To'
-                L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
-            });
+                    // Add polyline between 'From' and 'To'
+                    L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
+                });
 
-            // Add the marker cluster group to the map
-            map.addLayer(markerCluster);
-        })
-        .catch(error => console.error("Error loading JSON:", error));
-</script>
-
+                // Add the marker cluster group to the map
+                map.addLayer(markerCluster);
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+    </script>
 </body>
 </html>
-
