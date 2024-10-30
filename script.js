@@ -19,7 +19,7 @@ fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/da
             var toCoords = row.To.split(',').map(Number);
 
             var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
-            var toPopup = "ID: " + row.ID + "<br>Receiver: " + row.Receiver;
+            var toPopup = "ID: " + row.ID + "<br>Reciever: " + row.Reciever;
 
             // Add markers for 'From' and 'To' locations
             var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
