@@ -45,3 +45,4 @@ fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/da
         map.addLayer(markerCluster);
     })
     .catch(error => console.error("Error loading JSON:", error));
+</script>
