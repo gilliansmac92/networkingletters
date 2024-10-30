@@ -83,7 +83,7 @@
             var markerCluster = L.markerClusterGroup();
 
             // Fetch data from JSON
-            fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/data/networkdata.json')
+            fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/refs/heads/main/data/networkdata.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
