@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking the Revolution Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Networking the Revolution Map</h1>
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map centered on the UK
+        var map = L.map('map').setView([54.5, -3.0], 5);
+
+        // Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data © OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Initialize a marker cluster group
+        var markerCluster = L.markerClusterGroup();
+
+        // Fetch the JSON data
+        fetch('networkdata.json')
+            .then(response => response.json())
+            .then(data => {
+                // Process the data to add markers and lines
+                data.forEach(item => {
+                    // Convert coordinates from strings to arrays of floats
+                    var fromCoords = item.From.split(',').map(Number);
+                    var toCoords = item.To.split(',').map(Number);
+
+                    // Create the "From" marker with a popup
+                    var fromMarker = L.marker(fromCoords).bindPopup(`<b>ID:</b> ${item.ID}<br><b>Sender:</b> ${item.Sender}`);
+                    markerCluster.addLayer(fromMarker);
+
+                    // Create the "To" marker with a popup
+                    var toMarker = L.marker(toCoords).bindPopup(`<b>ID:</b> ${item.ID}<br><b>Receiver:</b> ${item.Reciever}`);
+                    markerCluster.addLayer(toMarker);
+
+                    // Draw a red line between "From" and "To" locations
+                    var line = L.polyline([fromCoords, toCoords], {color: 'red', weight: 2});
+                    line.addTo(map);
+                });
+
+                // Add the marker cluster group to the map
+                map.addLayer(markerCluster);
+            })
+            .catch(error => console.error('Error loading JSON data:', error));
+    </script>
+</body>
+</html>
 
