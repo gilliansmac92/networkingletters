@@ -30,35 +30,43 @@
     // Marker cluster group
     var markerCluster = L.markerClusterGroup();
 
-    // Replace the URL below with the JSONBin or direct GitHub URL to your JSON file
+    // Fetch data from JSON
     fetch('data/networkdata.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log(data); // Check data structure
+
             data.forEach(function(row) {
                 var fromCoords = row.From.split(',').map(Number);
                 var toCoords = row.To.split(',').map(Number);
 
+                // Create popups
                 var fromPopup = "ID: " + row.ID + "<br>Sender: " + row.Sender;
-                var toPopup = "ID: " + row.ID + "<br>Reciever: " + row.Reciever;
+                var toPopup = "ID: " + row.ID + "<br>Receiver: " + row.Reciever;
 
-                // Add markers for 'From' and 'To' locations
+                // Create markers
                 var fromMarker = L.marker(fromCoords).bindPopup(fromPopup);
                 var toMarker = L.marker(toCoords).bindPopup(toPopup);
 
-                // Add markers to the cluster group
+                // Add markers to the cluster
                 markerCluster.addLayer(fromMarker);
                 markerCluster.addLayer(toMarker);
 
-                // Add polyline between 'From' and 'To'
+                // Add polyline between the two points
                 L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
             });
 
             // Add the marker cluster group to the map
             map.addLayer(markerCluster);
+            map.fitBounds(markerCluster.getBounds()); // Adjust map view to show all markers
         })
         .catch(error => console.error("Error loading JSON:", error));
 </script>
 
 </body>
 </html>
-
