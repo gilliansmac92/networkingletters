@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
-    <script>
-        L_NO_TOUCH = false;
-        L_DISABLE_3D = false;
-    </script>
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
     
-    <style>html, body {width: 100%; height: 100%; margin: 0; padding: 0;}</style>
-    <style>#map {position:absolute; top:0; bottom:0; right:0; left:0;}</style>
-    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3a65d0ddc6356202ee9481e6ce5ed511 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>
-        #map_3a65d0ddc6356202ee9481e6ce5ed511 {
-            position: relative;
-            width: 100%;
-            height: 80vh; /* Adjust height for navbar space */
-            left: 0;
-            top: 0;
-        }
-    </style>
 </head>
 <body>
-    <!-- Responsive navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
-        <div class="container">
-            <a class="navbar-brand" href="#!">Networking Letters of Revolution</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="people.html">Collaborators</a></li>
-                    <li class="nav-item"><a class="nav-link" href="introduction.html">Introduction</a></li>
-                    <li class="nav-item"><a class="nav-link" href="visualizations.html">Visualizations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Container for the map -->
-    <div class="container-fluid">
-        <div id="map_3a65d0ddc6356202ee9481e6ce5ed511"></div>
+    
+    
+            <div class="folium-map" id="map_3a65d0ddc6356202ee9481e6ce5ed511" ></div>
+        
+</body>
   
         
     <script>
@@ -39559,7 +39540,6 @@
 
         poly_line_b5c323d8eec8e567d6b3b3acae10551e.bindPopup(popup_d60cf74dab9b2c199c0128122cdd63ec)
         ;    
-    </body>
-        </div>
+
 </script>
 </html>
