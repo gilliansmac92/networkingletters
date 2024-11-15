@@ -12,4 +12,4 @@ The project is spearheaded in LEADR and will be hosted on Github for open access
 
 
 ## Networking Data
-The data for the project is in the data folder. If you are going to use the data please cite: G. S. Macdonald and M. Fox, "Networking Letters of the Revolution, 1689-91 - dataset". GitHub Respopsitory, 2024.
+The data for the project is in the data folder. If you are going to use the data please cite: G. S. Macdonald and M. Fox, "Networking Letters of the Revolution, 1689-91 - dataset". GitHub Respopsitory, 2024, doi: doi.org/10.5281/zenodo.14171107
