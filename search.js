@@ -11,5 +11,7 @@ for (let i = 0; i < links.length; i++) { const text = links[i].textContent.toLow
     } });
 
 search.addEventListener('input', function() {
-    this.style.width = (this.value.length * 10 + 100) + 'px'; 
+    let minWidth = 100; 
+    let newWidth = Math.max(this.value.length * 8 + 50, minWidth);
+    this.style.width = newWidth + 'px';
 });
