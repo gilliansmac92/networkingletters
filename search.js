@@ -9,3 +9,7 @@ for (let i = 0; i < links.length; i++) { const text = links[i].textContent.toLow
         links[i].style.display = 'none';
       }
     } });
+
+search.addEventListener('input', function() {
+    this.style.width = (this.value.length * 10 + 100) + 'px'; 
+});
