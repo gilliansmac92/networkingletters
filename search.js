@@ -12,6 +12,6 @@ for (let i = 0; i < links.length; i++) { const text = links[i].textContent.toLow
 
 search.addEventListener('input', function() {
     let minWidth = 100; 
-    let newWidth = Math.max(this.value.length * 8 + 50, minWidth);
+    let newWidth = Math.max(this.value.length * 8 + 30, minWidth);
     this.style.width = newWidth + 'px';
 });
