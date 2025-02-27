@@ -10,8 +10,12 @@ for (let i = 0; i < links.length; i++) { const text = links[i].textContent.toLow
       }
     } });
 
-search.addEventListener('input', function() {
-    let minWidth = 100; 
-    let newWidth = Math.max(this.value.length * 8 + 30, minWidth);
-    this.style.width = newWidth + 'px';
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.querySelector('.form-control');
+
+    searchInput.style.width = "150px";
+    searchInput.style.height = "25px";
+    searchInput.style.fontSize = "12px";
+    searchInput.style.padding = "3px 6px";
+    searchInput.style.borderRadius = "3px";
 });
