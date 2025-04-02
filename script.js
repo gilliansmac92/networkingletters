@@ -33,6 +33,10 @@ fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/da
             L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
         });
 
+        function clearPolylines() {
+            map.removeLayer(polylines);
+        }
+
         // Add the marker cluster group to the map
         map.addLayer(markerCluster);
     })
