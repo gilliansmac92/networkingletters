@@ -4,7 +4,5 @@ During the late seventeenth century, the evolution of newsletters and newspapers
 
 Letters are important for more than just their contents. They also have the power to tell us more than just who was writing to who. More importantly, they can tell us who was connected with who, how often letters went missing, the frequency of communication between parties, where networks existed over time and space, and how these evolved over the course of wartime. We seek to develop an open-access project which researchers and the public at large can access to visualize the world of letters in the seventeenth century. Through the wireframing of network analysis, this project hopes to reveal the complex world of communication in late seventeenth century Scotland. The letters exchanged in this period are more than just networks of correspondence; people were bound together through community, print, and dialogue.
 
-![Networking_Letters](https://github.com/user-attachments/assets/1a36acd3-a038-41ee-a80f-f7bf240fb5a5)
-
 ## Networking Data
-The data for the project is in the data folder. If you are going to use the data please cite: G. S. Macdonald and M. Fox, "Networking Letters of the Revolution, 1689-91 - dataset". GitHub Respopsitory, 2024, doi: doi.org/10.5281/zenodo.14171107
+The data for the project is in the data folder. If you are going to use the data please cite: Gillian S. Macdonald and M. Fox, "Networking Letters of the Revolution, 1689-91 - dataset". GitHub Respopsitory, 2024, doi: doi.org/10.5281/zenodo.14171107
