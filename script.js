@@ -29,13 +29,7 @@ fetch('https://raw.githubusercontent.com/gilliansmac92/networkingletters/main/da
             markerCluster.addLayer(fromMarker);
             markerCluster.addLayer(toMarker);
 
-            // Add polyline between 'From' and 'To'
-            L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
         });
-
-        function clearPolylines() {
-            map.removeLayer(polylines);
-        }
 
         // Add the marker cluster group to the map
         map.addLayer(markerCluster);
