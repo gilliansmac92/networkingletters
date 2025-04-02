@@ -1,0 +1,2 @@
+            // Add polyline between 'From' and 'To'
+            L.polyline([fromCoords, toCoords], { color: 'red', weight: 2 }).addTo(map);
