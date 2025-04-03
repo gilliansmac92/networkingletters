@@ -1,5 +1,7 @@
 // dropdown menu
-$('.dropdown-toggle').dropdown()
+$(document).ready(function() {
+    $('.dropdown-toggle').dropdown();
+});
 
 // Create a base map object
 let map = L.map('map').setView([52.0, -0.1], 5); 
