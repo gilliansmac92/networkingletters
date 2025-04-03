@@ -1,8 +1,5 @@
 // dropdown menu
-var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-  return new bootstrap.Dropdown(dropdownToggleEl)
-})
+$('.dropdown-toggle').dropdown()
 
 // Create a base map object
 let map = L.map('map').setView([52.0, -0.1], 5); 
