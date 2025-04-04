@@ -3,6 +3,12 @@ $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
 });
 
+// buttons
+document.querySelectorAll('.btn').forEach(buttonElement => {
+    const button = bootstrap.Button.getOrCreateInstance(buttonElement)
+    button.toggle()
+  })
+
 // Create a base map object
 let map = L.map('map').setView([52.0, -0.1], 5); 
 
