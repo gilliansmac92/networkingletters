@@ -10,6 +10,13 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ html, body {
+  height: 100%;  /* Ensure the full height of the page */
+  margin: 0;     /* Remove any default margin */
+  padding: 0;    /* Remove any default padding */
+  display: flex;
+  flex-direction: column;
+}
  footer {
   position: absolute;
   bottom: 0;
