@@ -5,3 +5,9 @@
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
               </form>
+
+// background image code
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('assets/visuals/Scottish-handwriting.png')">
+            <div style="height: 11rem"></div>
+        </div>
