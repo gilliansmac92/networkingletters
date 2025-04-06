@@ -26,6 +26,16 @@
   padding: 1rem 0;
   text-align: center;
 }
+.banner-background {
+  display: inline-block;
+  background-color: rgba(248, 245, 245, 0.412);  /* Semi-transparent white */
+  padding: 40px 40px 40px 40px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center the text itself */
+  border-radius: 10px;  /* Optional: for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  /* Optional: shadow for better contrast */
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
