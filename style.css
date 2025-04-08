@@ -17,15 +17,17 @@
   display: flex;
   flex-direction: column;
 }
+
  footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #343a40 !important;
   color: white;
-  padding: 1rem 0;
+  padding: 30px;
   text-align: center;
 }
+
 .banner-background {
   display: inline-block;
   background-color: rgba(248, 245, 245, 0.412);  /* Semi-transparent white */
@@ -35,6 +37,7 @@
   text-align: center; /* Center the text itself */
   border-radius: 10px;  /* Optional: for rounded corners */
 }
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
