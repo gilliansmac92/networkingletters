@@ -18,14 +18,8 @@
   flex-direction: column;
 }
 
- footer {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  background-color: #343a40 !important;
-  color: white;
-  padding-bottom: 0;
-  text-align: center;
+footer {
+  flex-shrink: 0;
 }
 
 .banner-background {
