@@ -39590,5 +39590,11 @@
         poly_line_b5c323d8eec8e567d6b3b3acae10551e.bindPopup(popup_d60cf74dab9b2c199c0128122cdd63ec)
         ;    
 
+map_3a65d0ddc6356202ee9481e6ce5ed511.eachLayer(function(layer) {
+    if (layer instanceof L.Polyline && !(layer instanceof L.Polygon)) {
+        map_3a65d0ddc6356202ee9481e6ce5ed511.removeLayer(layer);
+    }
+});
+
 </script>
 </html>
