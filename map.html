@@ -85,6 +85,12 @@
         </div>
     </nav>
     <div id="mymap"></div>
+<!-- MarkerCluster CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+<!-- MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <script>
     var map = L.map('mymap').setView([56.4907, -4.2026], 5.5);
@@ -1263,10 +1269,14 @@
   { coords: [51.50673486004276, -0.12083646321188168], popup: "Sender: Duke of Hamilton<br>Receiver: Lord Melville<br>Date: December 26, 1691<br>Keywords: stranger, scots affairs, Livingston, highlanders" },
   ];
 
+ var markerCluster = L.markerClusterGroup();
+
   markers.forEach(function(entry) {
-    var m = L.marker(entry.coords).addTo(map);
-    m.bindPopup(entry.popup);
+    var marker = L.marker(entry.coords).bindPopup(entry.popup);
+    markerCluster.addLayer(marker);
   });
+
+  map.addLayer(markerCluster);
   </script>
 
 <footer class="py-4 bg-dark" style="background-color: #343a40 !important;">
