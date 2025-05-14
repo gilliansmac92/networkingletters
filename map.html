@@ -123,7 +123,7 @@
 
     const added = new Set(); // avoid duplicate markers at the same place with same label
 
-    fetch('js/networkdata.json')
+    fetch('data/networkdata.json')
       .then(response => response.json())
       .then(data => {
         data.forEach(entry => {
