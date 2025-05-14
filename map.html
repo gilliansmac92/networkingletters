@@ -118,8 +118,6 @@
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    const marker = L.marker([55.861717, -4.2417]).addTo(map);
-    marker.bindPopup("<b><center>Strathclyde University</center></b>I'm a great place :).");
 
     const added = new Set(); // avoid duplicate markers at the same place with same label
 
@@ -137,13 +135,13 @@
 
           if (!added.has(senderKey)) {
             L.marker(fromCoords).addTo(map)
-              .bindPopup(`<b>${entry.Sender}</b><br>Sent letters from here.`);
+              .bindPopup(`<b>${entry.Sender}</b>;
             added.add(senderKey);
           }
 
           if (!added.has(receiverKey)) {
             L.marker(toCoords).addTo(map)
-              .bindPopup(`<b>${entry.Reciever}</b><br>Received letters here.`);
+              .bindPopup(`<b>${entry.Reciever}</b>);
             added.add(receiverKey);
           }
         });
