@@ -1,0 +1,338 @@
+From Type,From Name,Edge Type,To Type,To Name,Weight
+Person,Duchess of Hamilton,Letter,Person,Unknown,2
+Person,Duchess of Hamilton,Letter,Person,Arran,11
+Person,Duchess of Hamilton,Letter,Person,Countess of Arran,1
+Person,Duchess of Hamilton,Letter,Person,Thomas Rokeby,1
+Person,Sunderland,Letter,Person,Arran,8
+Person,Sunderland,Letter,Person,Hamilton,3
+Person,Charles Spencer,Letter,Person,Arran,1
+Person,George MacKenzie,Letter,Person,Arran,1
+Person,George Mackenzie,Letter,Person,Sheriff Depute Lanark,1
+Person,Breadalbane,Letter,Person,Arran,1
+Person,Unknown,Business,Person,Hamilton,1
+Person,Unknown,Letter,Person,Unknown,1
+Person,Unknown,Letter,Person,Hamitlon,1
+Person,Unknown,Letter,Person,Madam Harcourt,17
+Person,Unknown,Letter,Person,Martha Ward,1
+Person,Unknown,Letter,Person,Argyll,1
+Person,Unknown,Letter,Person,Arran,10
+Person,Unknown,Letter,Person,Hamilton,5
+Person,Unknown,Letter,Person,James Graham,1
+Person,Unknown,Letter,Person,David Crawford,3
+Person,Unknown,Letter,Person,Lady Gerard,6
+Person,John Hamilton,Letter,Person,Hamilton,1
+Person,John Hamilton,Letter,Person,John Baillie,1
+Person,John Hamilton,Letter,Person,David Crawford,10
+Person,John Hamilton,Letter,Person,John Robertson,1
+Person,John Hamilton,Letter,Person,John Clark,2
+Person,Walter Cornwall,Letter,Person,Hamilton,1
+Person,J. Macleane,Letter,Person,Hamilton,1
+Person,Melfort,Intercepted Letter,Person,Perth,1
+Person,Melfort,Intercepted Letter,Person,Mr. Brodie,1
+Person,Melfort,Letter,Person,Unknown,1
+Person,Melfort,Letter,Person,Balcarres,1
+Person,Melfort,Letter,Person,Dundee,1
+Person,Feversham,Letter,Person,Major General Kirk,2
+Person,Feversham,Letter,Person,Arran,5
+Person,Feversham,Letter,Group,Lichfield's regiment & Arran's regiment,1
+Person,King James,Letter,Person,Feversham,1
+Person,King James,Letter,Person,Hamilton,1
+Person,King James,Letter,Person,Atholl,1
+Person,King James,Letter,Person,Balcarres,1
+Person,King James,Letter,Person,Dundee,1
+Person,H,Letter,Person,Mr. Robert Craig,1
+Person,H. Peyre,Letter,Person,Mr. Billott,1
+Person,H. Perye,Letter,Person,Lady Gerard,5
+Person,Thomas Moncrieff,Letter,Person,Hamilton,1
+Person,William Hamilton,Account,Person,Arran,1
+Person,William Hamilton,Letter,Person,Cap. James Hamilton,1
+Person,William Hamilton,Letter,Person,Arran,14
+Person,William Hamilton,Letter,Person,David Crawford,7
+Person,William Hamilton,Letter,Person,John Clark,2
+Person,Robert Webb,Letter,Person,Hamilton,1
+Person,Robert Webb,Letter,Person,David Crawford,4
+Person,Lie. Col. John Buchan,Letter,Person,Sir Charles Graham,1
+Person,Alice Smith,Letter,Person,Lady Gerard,1
+Person,George Skirving,Letter,Person,Arran,2
+Person,George Skirving,Letter,Person,John Clark,3
+Person,James Hamilton,Letter,Person,Arran,2
+Person,James Hamilton,Letter,Person,David Crawford,1
+Person,James Hamilton,Letter,Person,Hamilton,1
+Person,Lady Belhaven,Letter,Person,Duchess of Hamilton,1
+Person,Sir George Lockhart,Letter,Person,Arran,1
+Person,W. Chetwynd,Letter,Person,Edward Hungerford,1
+Person,W. Chetwynd,Letter,Person,Lady Gerard,3
+Person,W. Chetwynd,Letter,Person,Madam Harcourt,1
+Person,James Stewart,Letter,Person,Arran,1
+Person,W. W.,Letter,Person,Lady Gerard,2
+Person,J. Bourdenane,Letter,Person,Charles Roberts,1
+Person,Hamilton,Letter,Person,Sunderland,1
+Person,Hamilton,Letter,Person,Arran,19
+Person,Hamilton,Letter,Person,Melville,32
+Person,Hamilton,Letter,Person,Unknown,3
+Person,Hamilton,Letter,Person,John Dalrymple,1
+Person,Hamilton,Letter,Person,King William,9
+Person,Hamilton,Letter,Person,Duchess of Hamilton,44
+Person,Hamilton,Letter,Person,James Johnston,1
+Person,Hamilton,Order,Person,George Clerk,1
+Person,Hamilton,Letter,Person,King James,1
+Person,Hamilton,Letter,Person,Queen Mary,1
+Person,Hamilton,Letter,Person,Portland,3
+Person,J. Duncan,Letter,Person,Mr. Crawford,1
+Person,James Dalrymple,Letter,Person,Hamilton,3
+Person,John Dalrymple,Letter,Person,Hamilton,13
+Person,John Dalrymple,Letter,Person,Arran,2
+Person,John Dalrymple,Letter,Person,David Crawford,1
+Person,John Dalrymple,Letter,Person,Lieutenant Colonel Hamilton,9
+Person,D. Bellot,Letter,Person,Edward Hungerford,1
+Person,D. Bellot,Letter,Person,Mrs. Astbury,1
+Person,Robert Cunningham,Letter,Person,James Hamilton,1
+Person,D. Nairne,Intercepted Letter,Person,Melfort,1
+Person,George Middleton,Intercepted Letter,Person,Major Robert Middleton,1
+Person,A. Kennedy,Intercepted Letter,Person,Balcarres,1
+Person,Lord Drummond,Intercepted Letter,Person,Perth,1
+Person,"Servant, Lord Drummond",Intercepted Letter,Person,Perth,1
+Person,David Cairnes,Letter,Person,Argyll,1
+Person,Dugal Campbell,Letter,Person,Argyll,1
+Person,John Campbell,Letter,Person,Argyll,1
+Person,William Campbell,Letter,Person,Mr. Davgall Campbell,1
+Person,Angus Campbell,Letter,Person,Unknown,1
+Person,Glencairn,Letter,Person,Hamilton,1
+Person,Tweeddale,Letter,Person,Hamilton,5
+Person,Tweeddale,Letter,Organization,Commissioners of Supply Lanarkshire,1
+Person,Shrewsbury,Letter,Person,Hamilton,1
+Person,Tarbat,Letter,Person,Hamilton,1
+Person,Tarbat,Petition,Organization,Privy Council ,1
+Person,Schomberg,Letter,Person,Hamilton,2
+Person,Schomberg,Letter,Person,Arran,1
+Person,Madam de Schomberg,Letter,Person,Arran,1
+Ship,Swallow,Memorandum,Person,Hamilton,1
+Group,George Walker & John Michelburn,Letter,Person,Major General Kirk,1
+Person,Robert Brotherson,Letter,Person,Thomas,1
+Person,William Fullerton,Letter,Person,Hamilton,1
+Person,Major General Kirk,Letter,Person,Hamilton,3
+Person,Major General Kirk,Proclamation,Group,Protestant Subjects,1
+Person,Captain George Rooke,Instructions,Person,Hamilton,1
+Person,Captain George Rooke,Letter,Person,Hamilton,8
+Person,Argyll,Letter,Person,Arran,1
+Person,Argyll,Letter,Person,Hamilton,7
+Person,Argyll,Letter,Person,Skelmorlie,1
+Group,"Argyll, Glencairn, Eglinton & others",Opinion,Person,Hamilton,1
+Person,Master of Forbes,Letter,Person,Hamilton,2
+Person,Polwarth,Letter,Person,Hamilton,4
+Person,Mackay,Letter,Person,Hamilton,12
+Person,Melville,Letter,Organization,Privy Council,1
+Person,Melville,Letter,Person,Hamilton,40
+Person,King William,Letter,Organization,Convention of Estates,2
+Person,King William,Letter,Organization,Privy Council ,8
+Person,King William,Warrant,Person,Hamilton,1
+Person,King William,Letter,Organization,Parliament,2
+Person,King William,Letter,Person,Hamilton,8
+Person,King William,Letter,Group,Noblemen and Gentlemen of Scotland,1
+Person,Ester de Varengeville,Letter,Person,Duchess of Hamilton,1
+Person,Dundonald,Letter,Person,Hamilton,1
+Organization,Privy Council ,Warrant,Organization,Parliament,1
+Person,J. Crawford,Letter,Person,David Crawford,1
+Person,James Marshall,Letter,Person,David Crawford,1
+Person,Dudley Vanbrugh,Letter,Person,David Crawford,1
+Person,Thomas Ailborne,Letter,Person,Duchess of Hamilton,1
+Person,D.C.,Letter,Person,David Crawford,1
+Person,Arran,Letter,Person,David Crawford,2
+Person,Arran,Letter,Person,Hamilton,3
+Person,Arran,Letter,Person,Unknown,2
+Person,Arran,Letter,Person,Duchess of Hamilton,3
+Person,Arran,Letter,Person,Mr. Robert Murray of Tippermuir,2
+Person,Arran,Letter,Person,Lady Elizabeth Clancarty,1
+Person,Arran,Letter,Person,Clare,1
+Person,Arran,Letter,Person,Robert Murray,1
+Person,Arran,Letter,Person,George Skirving,1
+Person,James Foulis,Letter,Person,David Crawford,1
+Person,James Foulis,Letter,Person,Hamilton,2
+Person,William Stirling,Letter,Person,David Crawford,1
+Person,Lady Elizabeth Clancarty,Letter,Person,Arran,2
+Person,Lady Elizabeth Clancarty,Letter,Person,Lady Anne Spencer,2
+Person,Robert Murray,Letter,Person,Arran,2
+Person,Robert Murray,Letter,Person,Selkirk,1
+Person,John Anderson,Letter,Person,Polwarth,1
+Person,Charles Fielding,Letter,Person,Duchess of Hamilton,1
+Person,Rupert Billingsley,Letter,Person,Unknown,1
+Person,Rupert Billingsley,Letter,Person,Hamilton,1
+Person,Daniel Hamilton,Letter,Person,David Crawford,1
+Person,W. Fanshawe,Letter,Person,Arran,1
+Person,Marie Macdonald,Letter,Person,Duchess of Hamilton,3
+Person,Robert Darloe,Letter,Person,David Crawford,7
+Person,Saltoun,Letter,Person,Hamilton,1
+Person,John Munro,Letter,Person,Hamilton,1
+Person,John Caldwell,Letter,Person,David Crawford,1
+Person,Colonel Codrington,Letter,Organization,Lords of Committee for Plantations,1
+Person,Colonel Kendall,Letter,Organization,Lords of Committee for Plantations,1
+Person,Hew Wood,Letter,Person,David Crawford,6
+Person,"Archibald, Bishop of the Isles",Letter,Person,David Crawford,1
+Person,M. Fearn,Letter,Person,David Crawford,1
+Person,Count Leslie,Letter,Person,Hamilton,1
+Person,J. Smith,Letter,Person,David Crawford,1
+Person,J. Smith,Letter,Person,Hamilton,1
+Person,Rothes,Letter,Person,Hamilton,1
+Person,James Ogilvie,Letter,Person,William Black,1
+Person,George Simpson,Letter,Person,David Crawford,1
+Person,J. Bunteine,Letter,Person,David Crawford,1
+Person,Robert Johnston,Letter,Person,David Crawford,1
+Person,J. C. Dumfries,Letter,Person,David Crawford,1
+Person,E.J.,Letter,Person,David Crawford,1
+Person,"Susan Howard, Panmure",Letter,Person,David Crawford,1
+Person,Arthur Naismith,Letter,Person,David Crawford,1
+Person,Arthur Naismith,Letter,Person,John Small,1
+Person,Arthur Naismith,Letter,Person,Baillie Clerk,1
+Group,John Baillie & Arthur Naismith,Letter,Person,David Crawford,1
+Person,John Baillie,Letter,Person,William Cleland,1
+Person,John Baillie,Letter,Person,John Clark,1
+Person,James Coltart,Letter,Person,David Crawford,1
+Person,Thomas Wilson,Letter,Person,David Crawford,1
+Person,John Saunders,Letter,Person,William Fullerton,1
+Person,Selkirk,Letter,Person,David Crawford,1
+Person,Selkirk,Letter,Person,Arran,10
+Person,Selkirk,Letter,Person,Hamilton,28
+Person,John Robertson,Letter,Person,David Crawford,1
+Person,John Laing,Letter,Person,David Crawford,1
+Person,George Hamilton,Letter,Person,Unknown,1
+Person,George Hamilton,Letter,Person,Arran,5
+Person,Lilias Rutherford,Letter,Person,Duchess of Hamilton,1
+Person,Carstares,Letter,Person,Hamilton,2
+Person,W. Annan,Letter,Person,David Crawford,1
+Person,Richard Beavvoir,Letter,Person,David Crawford,1
+Person,James Deanes,Letter,Person,Arran,1
+Group,Patrick Moray & Walter Cornwall,Letter,Person,Hamilton,1
+Person,Gilbert Eliot,Letter,Person,Hamilton,6
+Person,Lady Katherine Ranelagh,Letter,Person,Duchess of Hamilton,1
+Person,James Johnston,Letter,Person,Hamilton,1
+Person,W. J.,Letter,Person,David Crawford,1
+Person,Katherine Polat,Letter,Person,Arran,6
+Person,J. Parker,Letter,Person,Arran,1
+Person,Countess of Sunderland,Letter,Person,Arran,5
+Person,Countess of Sunderland,Letter,Person,Duchess of Hamilton,2
+Person,James St. Clair,Letter,Person,Hamilton,1
+Person,Frank,Letter,Person,Lady Anne Spencer,1
+Person,Robert Spencer,Letter,Person,Countess of Arran,1
+Person,V. de Vallace,Letter,Person,Hamilton,1
+Person,James Hay,Letter,Person,Hamilton,1
+Person,Countess of Arran,Letter,Person,Arran,8
+Person,Marquis of Hamilton,Letter,Person,Hamilton of Orbiston,1
+Person,Countess of Cassillis,Letter,Person,Arran,2
+Person,Countess of Cassillis,Letter,Person,Duchess of Hamilton,2
+Person,Atholl,Letter,Person,Unknown,1
+Person,Archibald Hamilton,Letter,Person,Arran,3
+Person,Archibald Hamilton,Letter,Person,Duchess of Hamilton,2
+Person,Archibald Hamilton,Letter,Person,John Clark,2
+Person,Tullibardine,Letter,Person,Arran,1
+Person,Marlborough,Letter,Person,Arran,1
+Person,W. Livingston,Letter,Person,Hamilton,1
+Person,Gilbert Burnet,Letter,Person,Hamilton,1
+Group,"George Lockhart, Carnwarth",Letter,Person,Hamilton,1
+Thing,Newsletter,Communicated,Person,Hamilton,2
+Person,Barrellon,Letter,Person,Arran,1
+Person,John Summerville,Letter,Person,Hamilton,3
+Person,John Summerville,Letter,Person,Perth,2
+Person,Perth,Letter,Person,Hamilton,1
+Person,Perth,Letter,Person,Unknown,1
+Person,Thomas Rokeby,Letter,Person,Duchess of Hamilton,1
+Person,Bishop of Glasgow,Letter,Person,Hamilton,1
+Person,Thomas Livingston,Letter,Person,Lieutenant Colonel Hamilton,1
+Person,Countess of Dundonald,Letter,Person,Hamilton,1
+Group,Ross & William Cochran of Kilmarnock,Letter,Person,Hamilton,1
+Person,William Bruce,Letter,Person,Hamilton,1
+Person,David Crawford,Letter,Person,Hamilton,1
+Person,Thomas Morton,Letter,Person,Arran,1
+Person,Sinkelton Richmond,Letter,Person,Unknown,1
+Person,John Chetwynd,Letter,Person,Lady Gerard,1
+Person,Robert Lloyd,Letter,Person,Madam Harcourt,3
+Person,Robert Lloyd,Letter,Person,Lady Gerard,2
+Person,J. Deverell,Letter,Person,Mr. Pulford,1
+Person,J. B.,Letter,Person,Madam Harcourt,6
+Person,John V,Letter,Person,Lady Gerard,3
+Person,E. Foden,Letter,Person,Mr. Emery,1
+Person,Queen Mary,Letter,Person,Hamilton,1
+Person,David Scrimseour,Letter,Person,Robert Rodman,1
+Person,Robert Rodman,Letter,Person,Unknown,1
+Person,Patrick Mein,Letter,Person,Hamilton,1
+Person,Patrick Mein,Memorandum,Person,Hamilton,1
+Person,Crawford,Letter,Person,Hamilton,1
+Person,John Lochore,Letter,Person,Mr. Baillie,1
+Person,John [Kirk],Letter,Person,Hamilton,1
+Person,Marie Arskin,Letter,Person,Arran,1
+Person,James Coull,Letter,Person,Unknown,1
+Person,A. Crawford,Letter,Person,James Nisbit,1
+Person,Portland,Letter,Person,Hamilton,3
+Organization,Synod of Aberdeen,Letter,Person,Hamilton,1
+Person,Mary Caren,Letter,Person,Lady Gerard,1
+Person,R. Jevon,Letter,Person,Lady Gerard,4
+Person,Jane Barker,Letter,Person,Elizabeth Barker,1
+Person,Anthony Hungerford,Letter,Person,Lady Gerard,1
+Person,Lady Gerard,Letter,Person,Mr. Milton,1
+Person,Lady Gerard,Letter,Person,Unknown,1
+Person,Lady Gerard,Letter,Person,Mr. Seargent Birch,1
+Person,Charles Roberts,Letter,Person,Lady Gerard,1
+Person,Charles Roberts,Letter,Person,Mr. Billott,1
+Person,M. St Leger,Letter,Person,Edward Hungerford,1
+Person,M. St Leger,Letter,Person,Lady Gerard,3
+Person,M. St Leger,Letter,Person,Madam Harcourt,1
+Person,P. Muirhead,Letter,Person,David Crawford,1
+Person,Ann Ferrers,Letter,Person,Madam Harcourt,3
+Person,Anne Ferrers,Letter,Person,Lady Gerard,2
+Person,S. Maxwell,Letter,Person,Hamilton,1
+Person,John Underwood,Letter,Person,Lady Gerard,4
+Person,John Underwood,Letter,Person,Mr. Ward,1
+Person,R. Bristol,Letter,Person,Lady Gerard,1
+Person,G. Muirhead,Letter,Person,John Robertson,1
+Person,Archibald Rae,Letter,Person,John Robertson,1
+Person,John Atchinson,Letter,Person,John Robertson,1
+Person,J. Young ,Letter,Person,John Robertson,1
+Person,Andrew Brown,Letter,Person,Laird of Spittell,1
+Person,William Stewart,Letter,Person,Laird of Spittell,1
+Person,E. Lake,Letter,Person,Lady Gerard,1
+Person,Edward Hungerford,Letter,Person,Lady Gerard,1
+Person,Edward Hungerford,Letter,Person,Mr. Bellott,2
+Person,Edward Hungerford,Letter,Person,"Edward Hungerford, younger",1
+Person,Edward Hungerford,Letter,Person,John Underwood,1
+Person,Viscount Bolingbroke,Letter,Person,Lady Gerard,1
+Person,E. Foden,Letter,Person,Lady Gerard,1
+Person,E. Foden,Letter,Person,Mr. Ward,1
+Person,F. K. ,Report,Person,Hamilton,1
+Person,F. K. ,Letter,Person,Lady Gerard,2
+Person,F. Saunders,Letter,Person,Lady Gerard,1
+Person,Abigail White,Letter,Person,Lady Gerard,2
+Person,Thomas Husband,Letter,Person,Mr. Ward,1
+Person,Miss Gilbert,Letter,Person,Lady Gerard,1
+Person,A. Brackin,Letter,Person,Madam Harcourt,1
+Person,Mary Caren,Letter,Person,Lady Gerard,2
+Person,Joseph Plymley,Letter,Person,Lady Gerard,2
+Person,Edward Pulford,Letter,Person,Edward Hungerford,1
+Person,Fran Phillips,Letter,Person,Madam Harcourt,1
+Person,Edmund Hector,Letter,Person,Lady Gerard,1
+Person,Edmund Sawtell,Letter,Person,Lady Gerard,1
+Person,Edmund Sawtell,Letter,Person,Madam Harcourt,2
+Person,Jonathan Norman,Letter,Person,Mr. Robert Kinearre,1
+Person,John Locke,Letter,Person,Mrs. Lockhart,1
+Person,David Masham,Letter,Person,Mrs. Lockhart,1
+Person,Alexander Hamilton,Letter,Person,Arthur Naismith,1
+Person,A. B.,Letter,Person,Lady Gerard,1
+Person,Anthony Mayne,Letter,Person,Lady Gerard,1
+Person,J. Nisbet,Letter,Person,John Clark,2
+Person,William Crawford,Letter,Person,John Clark,1
+Person,Charles Hamilton,Letter,Person,John Hamilton,2
+Person,Patrick Bellenden,Letter,Person,James Nisbet,1
+Person,James,Letter,Person,John Clark,1
+Person,David Marshall,Letter,Person,John Clark,1
+Person,William Scott,Letter,Person,John Clark,1
+Person,John Clark,Letter,Person,"John Clark, younger",4
+Person,"John Clark, younger",Letter,Person,John Clark,1
+Person,James Colthart,Letter,Person,Patrick Cockburn,1
+Organization,Convention of Estates,Letter,Person,King William,1
+Organization,Commissioners of Supply Lanarkshire,Letter,Person,Tweeddale,1
+Person,Robert Naismith,Letter,Person,Unknown,1
+Person,John Craig,Letter,Person,His wife,1
+Person,John Craig,Letter,Person,Unknown,1
+Person,John Craig,Letter,Person,John Clark,1
+Person,Andrew Schaw,Letter,Person,John Clark,1
+Person,John Naismith,Letter,Person,John Clark,1
+Person,Alexander Smith,Letter,Person,Mrs. Tylor,1
+Person,W. B.,Letter,Person,Mr. Ward,1
