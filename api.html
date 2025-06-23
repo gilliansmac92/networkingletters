@@ -1,143 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Networking the Revolution - API</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
-    <!-- Bootstrap + Custom Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  </head>
-
-  <body>
-    <!-- Navbar (same as your current one) -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
-      <div class="container px-3">
-        <a class="navbar-brand" href="index.html">Networking the Revolution</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
-              <div class="dropdown-menu m-0">
-                <a class="dropdown-item" href="team.html">Team</a>
-                <a class="dropdown-item" href="about.html">Project</a>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="context.html">Context</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Visuals</a>
-              <div class="dropdown-menu m-0">
-                <a class="dropdown-item" href="melville.html">Melville</a>
-                <a class="dropdown-item" href="hamilton.html">Hamilton</a>
-                <a class="dropdown-item" href="privycouncil.html">Privy Council</a>
-                <a class="dropdown-item" href="committeeplantations.html">Committee For Plantations</a>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Data</a>
-              <div class="dropdown-menu m-0">
-                <a class="dropdown-item" href="methods.html">Methods</a>
-                <a class="dropdown-item" href="repository.html">Data</a>
-                <a class="dropdown-item" href="api.html">API</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <section class="py-5">
-      <div class="container my-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h1 class="mb-4">Letter Network Viewer</h1>
-            <p class="lead">Select a dataset to view:</p>
-
-            <!-- Toggle Buttons -->
-            <div class="mb-4">
-              <button class="btn btn-outline-primary me-2" onclick="loadDataset('melville')">Melville Letters</button>
-              <button class="btn btn-outline-success" onclick="loadDataset('hamilton')">Hamilton Letters</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Networking the Revolution - API</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
+    <div class="container px-3">
+      <a class="navbar-brand" href="index.html">Networking the Revolution</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+            <div class="dropdown-menu m-0">
+              <a class="dropdown-item" href="team.html">Team</a>
+              <a class="dropdown-item" href="about.html">Project</a>
             </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="context.html">Context</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Visuals</a>
+            <div class="dropdown-menu m-0">
+              <a class="dropdown-item" href="melville.html">Melville</a>
+              <a class="dropdown-item" href="hamilton.html">Hamilton</a>
+              <a class="dropdown-item" href="privycouncil.html">Privy Council</a>
+              <a class="dropdown-item" href="committeeplantations.html">Committee For Plantations</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Data</a>
+            <div class="dropdown-menu m-0">
+              <a class="dropdown-item" href="methods.html">Methods</a>
+              <a class="dropdown-item" href="repository.html">Data</a>
+              <a class="dropdown-item" href="api.html">API</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Data Output -->
-            <div id="letterData"></div>
-          </div>
+  <!-- Main Content -->
+  <section class="py-5">
+    <div class="container my-5">
+      <h1 class="mb-4">Letter Network Viewer</h1>
+      <p class="lead">Select a dataset and apply filters:</p>
+
+      <!-- Dataset Buttons -->
+      <div class="mb-4">
+        <button class="btn btn-outline-primary me-2" onclick="loadDataset('melville')">Melville Letters</button>
+        <button class="btn btn-outline-success" onclick="loadDataset('hamilton')">Hamilton Letters</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-3">
+          <label for="filterSender" class="form-label">Sender</label>
+          <select id="filterSender" class="form-select"></select>
+        </div>
+        <div class="col-md-3">
+          <label for="filterRecipient" class="form-label">Recipient</label>
+          <select id="filterRecipient" class="form-select"></select>
+        </div>
+        <div class="col-md-3">
+          <label for="filterDate" class="form-label">Date</label>
+          <select id="filterDate" class="form-select"></select>
+        </div>
+        <div class="col-md-3">
+          <label for="filterKeywords" class="form-label">Keywords / Reference</label>
+          <select id="filterKeywords" class="form-select"></select>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-dark">
-      <div class="container text-center text-white">
-        <p class="m-0">Copyright &copy; <i>Networking the Revolution</i> 2024–2025</p>
-        <p class="m-0">Michigan State University</p>
-      </div>
-    </footer>
+      <button class="btn btn-secondary mb-4" onclick="resetFilters()">Reset Filters</button>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Data Output -->
+      <div id="letterData"></div>
+    </div>
+  </section>
 
-    <!-- JSON Loading Logic -->
-    <script>
-      const paths = {
-        melville: 'data/melville/networkdata.json',
-        hamilton: 'data/hamilton/hamilton.json'
+  <!-- Footer -->
+  <footer class="py-4 bg-dark">
+    <div class="container text-center text-white">
+      <p class="m-0">© Networking the Revolution 2024–2025</p>
+      <p class="m-0">Michigan State University</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main Script -->
+  <script>
+    const paths = {
+      melville: 'data/melville/networkdata.json',
+      hamilton: 'data/hamilton/hamilton.json'
+    };
+
+    let currentData = [];
+    let currentDataset = 'melville';
+
+    const fields = {
+      melville: {
+        sender: 'Sender',
+        recipient: 'Reciever',
+        date: 'Date',
+        keywords: 'Keywords'
+      },
+      hamilton: {
+        sender: 'From Name',
+        recipient: 'To Name',
+        date: 'Date',
+        keywords: 'NRS Reference'
+      }
+    };
+
+    function populateFilter(selectId, values) {
+      const select = document.getElementById(selectId);
+      select.innerHTML = '<option value="">All</option>';
+      [...new Set(values)].sort().forEach(value => {
+        if (value) {
+          const opt = document.createElement('option');
+          opt.value = value;
+          opt.textContent = value;
+          select.appendChild(opt);
+        }
+      });
+    }
+
+    function resetFilters() {
+      ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      displayData(currentData);
+    }
+
+    function applyFilters() {
+      const filters = {
+        sender: document.getElementById('filterSender').value.toLowerCase(),
+        recipient: document.getElementById('filterRecipient').value.toLowerCase(),
+        date: document.getElementById('filterDate').value.toLowerCase(),
+        keywords: document.getElementById('filterKeywords').value.toLowerCase()
       };
 
-      function loadDataset(name) {
-        const url = paths[name];
-        const container = document.getElementById('letterData');
-        container.innerHTML = '<p>Loading data...</p>';
+      const f = fields[currentDataset];
+      const filtered = currentData.filter(entry => {
+        const s = (entry[f.sender] || '').toLowerCase();
+        const r = (entry[f.recipient] || '').toLowerCase();
+        const d = (entry[f.date] || '').toLowerCase();
+        const k = (entry[f.keywords] || '').toLowerCase();
 
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            container.innerHTML = '';
+        return (!filters.sender || s === filters.sender) &&
+               (!filters.recipient || r === filters.recipient) &&
+               (!filters.date || d === filters.date) &&
+               (!filters.keywords || k === filters.keywords);
+      });
 
-            data.forEach((entry, index) => {
-              const div = document.createElement('div');
-              div.className = 'border rounded p-3 mb-3';
+      displayData(filtered);
+    }
 
-              // Melville format
-              if (name === 'melville') {
-                div.innerHTML = `
-                  <div><strong>ID #${entry.ID}</strong></div>
-                  <div><strong>${entry.Sender}</strong> → <strong>${entry.Reciever}</strong></div>
-                  <div><em>${entry.Keywords || 'No keywords'}</em></div>
-                  <div><small>${entry.Date || 'Unknown date'}</small></div>
-                `;
-              }
+    function displayData(data) {
+      const f = fields[currentDataset];
+      const container = document.getElementById('letterData');
+      container.innerHTML = '';
 
-              // Hamilton format
-              if (name === 'hamilton') {
-                div.innerHTML = `
-                  <div><strong>${entry["From Name"]}</strong> → <strong>${entry["To Name"]}</strong></div>
-                  <div><em>${entry["Date"] || 'No date given'}</em></div>
-                  <div><small>Ref: ${entry["NRS Reference"] || 'N/A'}</small></div>
-                `;
-              }
-
-              container.appendChild(div);
-            });
-          })
-          .catch(error => {
-            container.innerHTML = '⚠️ Failed to load data.';
-            console.error('Fetch error:', error);
-          });
+      if (data.length === 0) {
+        container.innerHTML = '<p>No results found.</p>';
+        return;
       }
 
-      // Load Melville by default
-      loadDataset('melville');
-    </script>
-  </body>
+      data.forEach(entry => {
+        const div = document.createElement('div');
+        div.className = 'border rounded p-3 mb-3';
+
+        if (currentDataset === 'melville') {
+          div.innerHTML = `
+            <div><strong>ID #${entry.ID}</strong></div>
+            <div><strong>${entry[f.sender]}</strong> → <strong>${entry[f.recipient]}</strong></div>
+            <div><em>${entry[f.keywords] || 'No keywords'}</em></div>
+            <div><small>${entry[f.date] || 'Unknown date'}</small></div>
+          `;
+        } else {
+          div.innerHTML = `
+            <div><strong>${entry[f.sender]}</strong> → <strong>${entry[f.recipient]}</strong></div>
+            <div><em>${entry[f.date] || 'No date'}</em></div>
+            <div><small>Ref: ${entry[f.keywords] || 'N/A'}</small></div>
+          `;
+        }
+
+        container.appendChild(div);
+      });
+    }
+
+    function loadDataset(name) {
+      currentDataset = name;
+      const url = paths[name];
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          currentData = data;
+          const f = fields[name];
+          populateFilter('filterSender', data.map(d => d[f.sender]));
+          populateFilter('filterRecipient', data.map(d => d[f.recipient]));
+          populateFilter('filterDate', data.map(d => d[f.date]));
+          populateFilter('filterKeywords', data.map(d => d[f.keywords]));
+          displayData(data);
+        });
+    }
+
+    // Hook up filters
+    ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(id => {
+      document.getElementById(id)?.addEventListener('change', applyFilters);
+    });
+
+    // Load Melville by default
+    loadDataset('melville');
+  </script>
+</body>
 </html>
+
 
