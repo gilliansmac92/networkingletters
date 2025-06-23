@@ -1,0 +1,7812 @@
+[
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3049"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3189"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Spencer",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Oct 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3213"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George MacKenzie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3363"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Breadalbane",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3371"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamitlon",
+    "Date":"1688, Oct 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3388"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Aug 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3389"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Walter Cornwall",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Oct 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3390"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Macleane",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3391"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melfort",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1689, Apr 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3392"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Major General Kirk",
+    "Date":"1688, Nov 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3393"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Nov 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3394"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Major General Kirk",
+    "Date":"1688, Nov 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3395"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Nov 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3396"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Nov 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3397"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Nov 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3398"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Dec 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3399"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Feversham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lichfield's regiment and Arran's regiment",
+    "Date":"1688, Dec 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3400"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Feversham",
+    "Date":"1688, Dec 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3401"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1689, Nov 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3402"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Peyre",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Billott",
+    "Date":"1689, Jan 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3403"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mrs. Martha Ward",
+    "Date":"1689, Feb 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3404"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Moncrieffe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Feb 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3405"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Cap. James Hamilton",
+    "Date":"1689, Feb 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3407"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Hamilton",
+    "Edge Type":"Account",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Feb 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3408"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Robert Craig",
+    "Date":"1689, Mar 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3409"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Webb",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3410"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lie. Col. John Buchan",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Sir Charles Graham",
+    "Date":"1689, Jun 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3411"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Alice Smith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3412"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Skirving",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Aug 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3413"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Webb",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1689, Sep 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3415"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Penge",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Jan 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3416"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3418"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Oct 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3419"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3423"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Oct 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3424"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Mar 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3461"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Feb 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3462"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Mar 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3463"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Belhaven",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3477"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3478"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3479"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sir George Lockhart",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3480"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3481"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3482"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Edward Hungerford",
+    "Date":"1688, Jun 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3483"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Perye",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3484"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3485"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Stewart",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3486"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W.W",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, Jun 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3487"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W.W",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, Jun 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3488"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Bourdenane",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Charles Roberts",
+    "Date":"1688, Feb 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3489"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Feb 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3490"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Sunderland",
+    "Date":"1688, Feb 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3491"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Duncan",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Crawford",
+    "Date":"1688, Mar 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3492"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3493"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"D. Bellot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mrs. Astbury",
+    "Date":"1688, June",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3494"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, Jun 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3495"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"D. Bellot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Edward Hungerford",
+    "Date":"1688, Jul 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3497"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Perye",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, Aug 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3499"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Cunningham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"James Hamilton",
+    "Date":"1688, Jul 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3500"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3502"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":null,
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3503"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Dec 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3504"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Dec 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3505"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3506"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"D. Nairne",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Melfort",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3507"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melfort",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Perth",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3508"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melfort",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Mr. Brodie",
+    "Date":"c1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3509"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Middleton",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Major Robert Middleton",
+    "Date":"1689, Mar 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3510"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A. Kennedy",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Balcarres",
+    "Date":"1689, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3511"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lord Drummond",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Perth",
+    "Date":"1689, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3512"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Servant, Lord Drummond",
+    "Edge Type":"Intercepted Letter",
+    "To Type":"Person",
+    "To Name":"Perth",
+    "Date":"1689, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3513"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"David Cairnes",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Argyll",
+    "Date":"1689, Jul 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3514"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Dugal Campbell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Argyll",
+    "Date":"1689, Jul 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3515"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Campbell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Argyll",
+    "Date":"1689, Jul 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3516"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Campbell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Davgall Campbell",
+    "Date":"1689, Jul 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3517"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Angus Campbell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1689, Jul 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3518"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Glencairn",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3519"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3520"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Shrewsbury",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Apr 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3521"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Viscount Tarbat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3522"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Viscount Tarbat",
+    "Edge Type":"Petition",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1689, Jun 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3523"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Schomberg",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3524"
+  },
+  {
+    "From Type":"Ship",
+    "From Name":"Swallow",
+    "Edge Type":"Memorandum",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3525"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Schomberg",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3526"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Walker & John Michelburn",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Major General Kirk",
+    "Date":"1689, Jul 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3527"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Brotherson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"His cousin Thomas",
+    "Date":"1689, Jul 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3528"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Fullerton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3529"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Kirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3530"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Kirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3531"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Kirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3532"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Kirk",
+    "Edge Type":"Proclamation",
+    "To Type":"Group",
+    "To Name":"Protestant Subjects",
+    "Date":"1689, Jul 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3533"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3534"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3535"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3536"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"Instructions",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3537"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3538"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3539"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3540"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3541"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Captain George Rooke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3542"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3543"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3544"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3545"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3546"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jan 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3547"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jul",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3548"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamitlon",
+    "Date":"1691, Oct 6-16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3549"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Mar 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3550"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1692",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3551"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3552"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug 17-27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3553"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Feb 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3554"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3555"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Mar 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3556"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3557"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3558"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3559"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3560"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll, Glencairn, Eglinton & others",
+    "Edge Type":"Opinion",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3561"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Argyll",
+    "Date":"1689, Jul 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3562"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3564"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3565"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3566"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Skelmorlie",
+    "Date":"1689, May 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3567"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3568"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Master of Forbes",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3569"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Master of Forbes",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3570"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Polwarth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3571"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Polwarth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3572"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Polwarth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3573"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, May 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3574"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, May 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3575"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melvile",
+    "Date":"1689, May 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3576"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, May 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3577"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3578"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3579"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3580"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3581"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3582"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3583"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3584"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3585"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jun 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3586"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3587"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3588"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3589"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3590"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3591"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3592"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3593"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3594"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3595"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Jul 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3596"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3597"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3598"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3599"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3600"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3601"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3602"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Aug 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3603"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"1689, Dec 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3604"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3605"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3606"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3607"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3608"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3609"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3610"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3611"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3612"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3613"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3614"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3616"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Major General Mackay",
+    "Edge Type":"Paper",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3617"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3618"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Convention of Estates",
+    "Date":"1689, May 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3619"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3620"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3621"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3622"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3623"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1689, Jun 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3624"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3625"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"Warrant",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3626"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3627"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3628"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3629"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3630"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3631"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Parliament",
+    "Date":"1689, Jul 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3632"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3633"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. James Graham",
+    "Date":"1689, Jul 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3634"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1689, Jul 10",
+    "Weight":2.0,
+    "NRS Reference":"GD406\/1\/3635"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3636"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3637"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3638"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3639"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3640"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3641"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3642"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1689, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3643"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3644"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3645"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3646"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3647"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3648"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Dec 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3649"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jan 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3650"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jan 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3651"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jan 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3652"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3653"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Feb 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3654"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1690, Feb 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3655"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jul 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3657"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3658"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3659"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"1691, Aug 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3660"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3661"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3662"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Sep 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3663"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council ",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3664"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3665"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Nov 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3666"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3667"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3668"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3671"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Parliament",
+    "Date":"1690, Apr 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3672"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Ester de Varengeville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, Nov 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3674"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Dundonald",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Apr 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3675"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Jul 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3676"
+  },
+  {
+    "From Type":"Organization",
+    "From Name":"Privy Council ",
+    "Edge Type":"Warrant",
+    "To Type":"Organization",
+    "To Name":"Parliament",
+    "Date":"1690, Dec 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3677"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Crawford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Nov 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3678"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Marshall",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Aug 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3679"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Dudley Vanbrugh",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Aug 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3680"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3681"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3682"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Ailborne",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3683"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"D.C.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Apr 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3684"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, May 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3685"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, May 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3686"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Foulis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1690, Apr 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3687"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jan 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3688"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Stirling",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Apr 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3689"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Webb",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Feb 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3691"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Elizabeth, Countess of Clancarthy",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3692"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, May 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3693"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Murray",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Nov 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3694"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Murray",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Selkirk",
+    "Date":"1691, Oct 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3695"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Anderson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Polwarth",
+    "Date":"1691, May 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3696"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Fielding",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Anne, Duchess of Hamilton",
+    "Date":"1692, Jan 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3697"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Rupert Billingsley",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1691, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3698"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Dec 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3699"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, May 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3700"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Mar 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3701"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Daniel Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Nov 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3706"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Fanshawe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Apr 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3707"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marie Macdonald",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1692, Jan 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3708"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Apr 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3709"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3710"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Murray",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Arran",
+    "Date":"1692, Jan 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3712"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Webb",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Feb 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3713"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Jan 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3714"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marie Macdonald",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1691, Jun 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3716"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marie Macdonald",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1691, Aug 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3717"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Saltoun",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Apr 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3718"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Munro",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3719"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Caldwell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692,Nov 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3720"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1692, Jul 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3721"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Mar 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3722"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Colonel Cordrington",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Lords of Committee for Plantations",
+    "Date":"1691, Jul 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3723"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Colonel Kendall",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Lords of Committee for Plantations",
+    "Date":"1691, Jul 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3724"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, June 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3725"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald, Bishop of the Isles",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3726"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. Fearn",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3727"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3728"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jul 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3729"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Count Leslie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3730"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, May 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3731"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, June 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3732"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Sep 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3733"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, May 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3734"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jan 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3735"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Oct 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3736"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3737"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Smith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Sep 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3738"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Rothes",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3739"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jun 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3740"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Ogilvie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"William Black",
+    "Date":"1691, Aug 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3741"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Simpson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3742"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jul 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3743"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3744"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jun 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3745"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Bunteine",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Mar 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3746"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Johnston",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3747"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3748"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3749"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. C. Dumfries",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3750"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"E. J.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Jun 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3751"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Susan Howard, Panmure",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3752"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3753"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A. Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3754"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Coltart",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3755"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Wilson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Aug 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3756"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Jan 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3757"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Saunders",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"William Fullerton",
+    "Date":"1691, Jul 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3758"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Dec 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3759"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Feb 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3760"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3761"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Robertson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"c. 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3762"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Laing",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Sep 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3763"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3764"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Baillie and A. Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Mar 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3765"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"G. Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1692, May 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3766"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lilias Rutherford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1692, Nov 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3767"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Carstares",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Dec 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3768"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Carstares",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3773"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Annan",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3778"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Feb 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3779"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Richard Beavvoir",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Sep 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3780"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Deanes",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Aug 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3781"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Webb",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Mar 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3782"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Darloe",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Feb 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3783"
+  },
+  {
+    "From Type":"Group",
+    "From Name":"Patrick Moray and Walter Cornwall",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3784"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Nov 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3785"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Jan 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3786"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3787"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Feb 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3788"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Oct 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3789"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Nov 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3790"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3791"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3792"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3793"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3794"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3795"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Eliot",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Nov 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3796"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Katherine Ranelagh",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, Aug 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3797"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3798"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Dec 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3799"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Aug 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3802"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Jul 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3803"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Dec 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3804"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Melville",
+    "Date":"c Jan 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3806"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Dalrymple",
+    "Date":"1691, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3807"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1691, Jun 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3808"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1691, Nov 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3809"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1690, Jan 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3810"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Johnston",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Dec 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3814"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"James Johnston",
+    "Date":"1692, Dec 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3815"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. J.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":null,
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3850"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hew Wood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1692, Nov 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3879"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/3881"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Apr 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4082"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Mar 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4083"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Feb 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4084"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Aug 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4085"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Dec 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4086"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Katherine Polat",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Oct 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4087"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Apr 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4089"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, Jul 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4090"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Parker",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Apr 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4094"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690s",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4096"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Elizabeth Clancarty",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4157"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/4226"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Elizabeth Clancarty",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Anne Spencer",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/5105"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Elizabeth Clancarty",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Anne Spencer",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/5106"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sutherland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/5505"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1688, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6210"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Oct 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6218"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d. [c 1689]",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6226"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6225"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Mar 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6227"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6252"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6253"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6254"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James St. Clair",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jan 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6257"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Apr 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6258"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Apr 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6259"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"n.d. [c 1689]",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6274"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Frank",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Anne Spencer",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6298"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lord George Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Feb 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6299"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Feb 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6306"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Aug 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6337"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Aug 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6338"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6339"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6340"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6341"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6342"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6343"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6344"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6345"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6346"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Sep 30-Oct 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6391"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6392"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6393"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6394"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6395"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6396"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6397"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6416"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6417"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6446"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6447"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6448"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6449"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Oct 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6450"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6451"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6483"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6525"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6526"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6567"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6568"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6569"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6587"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6588"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 25-26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6589"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Spencer",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Countess of Arran",
+    "Date":"1687\/1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6615"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"Business",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6621"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"V. de Vallace",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6622"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Hay",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Mar 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6624"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6630"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marquis of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton of Orbiston",
+    "Date":"1688, Nov 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6631"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6920"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Cassillis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6927"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Cassillis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6929"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6970"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6974"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, Jun",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6975"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6988"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6989"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6990"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6991"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Aug 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/6993"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7005"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Feb 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7028"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Jul 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7139"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7311"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7553"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Feb 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7554"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7555"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7556"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7557"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7558"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Mar 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7592"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7593"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7594"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7595"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, May 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7596"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7597"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jun 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7599"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Aug 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7600"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7602"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Robert Murray of Tippermuir",
+    "Date":"1691, Nov 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7613"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Elizabeth Clancarty",
+    "Date":"c 1692",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7615"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Robert Murray of Tippermuir",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7616"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7633"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Mar 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7635"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7636"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Atholl",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1690, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7637"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7639"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Nov 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7640"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1690, Feb 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7641"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Feb 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7658"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Mar 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7659"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Feb 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7660"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Dec 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7685"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Nov 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7686"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7687"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7688"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7689"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Jan 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7690"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Feb 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7691"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Oct 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7692"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Oct 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7693"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tullibardine",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7696"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Clare",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7716"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7718"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Robert Murray",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7719"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Feb 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7742"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Feb 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7746"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"Order",
+    "To Type":"Person",
+    "To Name":"George Clerk",
+    "Date":"1691, Sep 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7758"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7765"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7806"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7807"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7808"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7809"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7810"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7811"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Feb 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7812"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1689, Jun 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7813"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7814"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1692, Mar 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7827"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7832"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Feb",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/7941"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marlborough",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8185"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Argyll",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8258"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Livingston",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8366"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8378"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Cassillis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1690, May 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8384"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8443"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Nov 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8454"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1691-1693, Dec 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8465"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Cassillis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1689, Jul 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8578"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8799"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8803"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Countess of Arran",
+    "Date":"1688, Jan 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8804"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8828"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Gilbert Burnet",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8862"
+  },
+  {
+    "From Type":"Group",
+    "From Name":"George Lockhart, Carnwarth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jun 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8916"
+  },
+  {
+    "From Type":"Thing",
+    "From Name":"Newsletter",
+    "Edge Type":"Communicated",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, May 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8941"
+  },
+  {
+    "From Type":"Thing",
+    "From Name":"Newsletter",
+    "Edge Type":"Communicated",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, May 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8967"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Madam de Schomberg",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8987"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Schomberg",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8989"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Barrellon",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Nov 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/8990"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melfort",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Balcarres",
+    "Date":"1689, Mar 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9138"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melfort",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Dundee",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9139"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Summerville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jul 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9155"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Summerville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Perth",
+    "Date":"1688, Jul 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9156"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Summerville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jun 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9157"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Summerville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jun 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9158"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Summerville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Perth",
+    "Date":"1688, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9159"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Perth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Jun 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9233"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Rokeby",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9374"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Thomas Rokeby",
+    "Date":"1688, May 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9376"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Bishop of Glasgow",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9438"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Livingston",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lieutenant Colonel Hamilton",
+    "Date":"1692, Jan 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9679"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Dalrymple",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lieutenant Colonel Hamilton",
+    "Date":"1691, Dec 1-1692, Jan 30",
+    "Weight":9.0,
+    "NRS Reference":"GD406\/1\/9680"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Dundonald",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Sep 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9689"
+  },
+  {
+    "From Type":"Group",
+    "From Name":"Lord Ross; William Cochran of Kilmarnock",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Oct 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9690"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9691"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Baylie",
+    "Date":"1688, Jul 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9757"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Bruce",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Mar 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9760"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Baillie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"William Cleland",
+    "Date":"1688, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/9766"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"David Crawford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Aug 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10040"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Morton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Aug 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10042"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sinkelton Richmond",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1692, Mar 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10047"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1692, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10142"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Lloyd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Mar 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10227"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Deverell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Pulford",
+    "Date":"1689, Oct 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10259"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Oct 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10268"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. V.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Dec 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10306"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Feb 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10307"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"E. Foden",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Emery",
+    "Date":"1690, Nov 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10312"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arran",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. George Skirving",
+    "Date":"1689, Jun 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10369"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Jun 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10371"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Feb 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10606"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"KIing James",
+    "Date":"1688, Feb 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10607"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, Mar 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10608"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Apr 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10609"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, Apr 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10610"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Apr 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10611"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10612"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, May 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10613"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, May 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10614"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, Jun 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10615"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, Jun 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10616"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10617"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10618"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Jul 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10619"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10620"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1690, Feb 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10621"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Queen Mary",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jul 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10622"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Queen Mary",
+    "Date":"1691, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10623"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"David Scrimseour",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Robert Rodman",
+    "Date":"1691, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10634"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Rodman",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1691, Jul 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10635"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Patrick Mein",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Mar 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10636"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Patrick Mein",
+    "Edge Type":"Memorandum",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690, Feb 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10637"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marquis Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Sep 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10638"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1688, Oct 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10639"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Perth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1688, Oct",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10640"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Crawford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Sep 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10641\/1"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Lochore",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Baillie",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10640"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lord Stair",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10647"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Rupert Billingsley",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10648"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Melville",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Privy Council",
+    "Date":"1691, Jun 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10651"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John [Kirk]",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Nov 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10660"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arthur Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Small",
+    "Date":"1692, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10685"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Duchess of Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1688, Jan 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10688"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10698"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10703"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"n.d.",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10705"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Foulis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1690. Dec 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10707"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Foulis",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jan 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10708"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1690, May 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10715"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Marie Arskin",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Nov 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10716"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Nov 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10717"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Jun 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10733"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Coull",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1692, Dec 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10746"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Skirving",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1691, Oct 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10759"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A. Crawford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"James Nisbit",
+    "Date":"1689, Dec 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10771\/1"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arran",
+    "Date":"1689, Oct 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10772"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10838"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Portland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Feb",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10882"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Portland",
+    "Date":"1692, Mar 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10883"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Portland",
+    "Date":"1692, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10911"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Portland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Jun",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10931"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Portland",
+    "Date":"1692, Nov 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10932"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Portland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1692",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10933"
+  },
+  {
+    "From Type":"Organization",
+    "From Name":"Synod of Aberdeen",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/10953\/1"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11028"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11029"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11030"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11031"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11032"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11033"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11034"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Dec 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11035"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11036"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11037"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11038"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11039"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11040"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11041"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11042"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11043"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11044"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Jan 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11045"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Feb 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11046"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Feb 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11047"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Feb 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11048"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Feb 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11049"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Mar 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11050"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Apr 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11051"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Apr 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11052"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11053"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11054"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Selkirk",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, May 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11055"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Smith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Feb 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11101"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Mary Caren",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Jun 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11110"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"R. Jevon",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, Mar 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11111"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Jane Barker",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Elizabeth Barker",
+    "Date":"1690, Jun 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11112"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Anthony Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, Jun 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11113"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Gerard",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Milton",
+    "Date":"1688, Jan 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11117"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J.B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Aug 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11125A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J.B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1689, Jul 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11126"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J.B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1689, Jul 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11127"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Roberts",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689, Feb 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11128A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. St Leger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Edward Hungerford",
+    "Date":"c 1688",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11129"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Peyre",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, Oct 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11129A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J.B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Apr 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11132"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"P. Muirhead",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"David Crawford",
+    "Date":"1691, Sep 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11137"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Ann Ferrers",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Jul 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11139B"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"S. Maxwell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1691, Aug 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11146A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Anne Ferrers",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Jul 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11155A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Oct 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11160A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Underwood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Oct 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11169A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Sep 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11171"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Gerard",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1691, Sep 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11172"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"H. Peyre",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Oct 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11176A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Feb 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11181A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Oct 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11192A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"R. Bristol",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, Apr 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11194"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Apr 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11198A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"G. Muirhead",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Robertson",
+    "Date":"1688, Sep 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11199"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Rae",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Robertson",
+    "Date":"1688, Sep 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11200"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Atchinson",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Robertson",
+    "Date":"1688, Sep 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11201"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Robertson",
+    "Date":"1688, Sep 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11202"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Young ",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Robertson",
+    "Date":"1688, Sep 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11203"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Andrew Brown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Laird of Spittell",
+    "Date":"1688, Jul 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11204"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Stewart",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Laird of Spittell",
+    "Date":"1688, Oct 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11205"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"E. Lake",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, May 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11205A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, May 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11206A"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Mar 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11210"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1689, Nov 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11212"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Viscount Bolingbroke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Jun 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11214"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"E. Foden",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1692, Jan 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11215"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Lloyd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, Jun 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11311"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11313"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Feb 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11314"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"F. K. ",
+    "Edge Type":"Report",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1689, Sep 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11315"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"F. K. ",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11316"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"F. K. ",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689, October 5",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11317"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11318"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11319"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1689, June 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11320"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"F. Saunders",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689, September 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11321"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"E. Foden",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Ward",
+    "Date":"1690, January 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11322"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Bellott",
+    "Date":"1689, December 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11323"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11324"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Abigail White",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, May 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11325"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Underwood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Ward",
+    "Date":"1689, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11326"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Thomas Husband",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Ward",
+    "Date":"1689, June 6",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11327"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Roberts",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Billott",
+    "Date":"1690, March 20",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11328"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Chetwynd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11329"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Miss Gilbert",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689, June 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11330"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John V",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11331"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A. Brackin",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, April 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11332"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Anne Ferrers",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, February 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11333"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. St Leger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, May 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11334"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Edward Hungerford, younger",
+    "Date":"1690, January 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11335"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Mary Caren",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, February 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11336"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Joseph Plymley",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, April 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11337"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Anne Ferrers",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, January 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11338"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. St Leger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11339"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"R. Jevon",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, May 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11340"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. St Leger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11341"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11342"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Underwood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11343"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Pulford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Edward Hungerford",
+    "Date":"1690, February 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11344"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Bellott",
+    "Date":"1690, February 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11345"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. V.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, March 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11346"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"R. Jevon",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11347"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, February 28",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11348"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Fran Phillips",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, May 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11349"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edmund Hector",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11350"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"R. Jevon",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, March 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11353"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edmund Sawtell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, April 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11354"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edmund Sawtell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, May 26",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11355"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, May 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11356"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edmund Sawtell",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11360"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Edward Hungerford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Underwood",
+    "Date":"1691, May 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11361"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"M. St Leger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, January 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11362"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, June 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11363"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1691, May 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11364"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11365"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Jonathan Norman",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Robert Kinearre",
+    "Date":"1689, February 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11366"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11367"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"c 1691",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11368"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Locke",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mrs. Lockhart",
+    "Date":"1691, September 15",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11371"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"David Masham",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mrs. Lockhart",
+    "Date":"1690, August 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11379"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Alexander Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Arthur Naismith",
+    "Date":"1688, April 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11408"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"A. B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1688, April 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11581"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, November 13",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11583"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, April 4",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11590"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Anthony Mayne",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, January 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11705"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Lady Gerard",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Seargent Birch",
+    "Date":"1691, May 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11706"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Unknown",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, May 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11707"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Ann Ferrers",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11711"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Underwood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1691, May 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11712"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Lloyd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Madam Harcourt",
+    "Date":"1690, Jan 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11714"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Joseph Plymley",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Jun 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11715"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Abigail White",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11716"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Mary Caren",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, Apr 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11718"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Underwood",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11722"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Lloyd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 18",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11742"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Nisbet",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Sep 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11745"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Crawford",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Aug 1",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11746"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Hamilton",
+    "Date":"1690, Dec 31",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11748"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Charles Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Hamilton",
+    "Date":"1690, Nov 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11750"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Patrick Bellenden",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"James Nisbit",
+    "Date":"1691, Dec 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11752"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Feb 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11760"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Baillie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Jul 8",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11761"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Feb 12",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11762"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Clark",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark, younger",
+    "Date":"1690, Jan 11",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11763"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W. Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1689, Dec 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11764"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1689, Dec 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11765"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Feb 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11767"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"David Marshall",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1691, Mar 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11770"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"William Scott",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Jun 16",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11771"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Clark",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark, younger",
+    "Date":"1689, Nov 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11783"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Clark",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark, younger",
+    "Date":"1689, Dec 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11784"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Clark",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark, younger",
+    "Date":"1690, Feb 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11785"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Clark, younger",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1692, Jun 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11786"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Polwarth",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Hamilton",
+    "Date":"1692, Sep 21",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11792"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Archibald Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Nov 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11795"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Countess of Sunderland",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Duchess of Hamilton",
+    "Date":"1688, Feb 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11797"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"James Colthart",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Patrick Cockburn",
+    "Date":"1691, May 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11828"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Convention of Estates",
+    "Date":"c 1689",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11842"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Atholl",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11843"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Balcarres",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11844"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King James",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Dundee",
+    "Date":"1689, Mar 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11845"
+  },
+  {
+    "From Type":"Organization",
+    "From Name":"Convention of Estates",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"King William",
+    "Date":"1689, Apr 22",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11846"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"King William",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Group",
+    "To Name":"Noblemen and Gentlemen of Scotland",
+    "Date":"1689, Jan 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11847"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Tweeddale",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Organization",
+    "To Name":"Commissioners of Supply Lanarkshire",
+    "Date":"1692, Apr 30",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11851"
+  },
+  {
+    "From Type":"Organization",
+    "From Name":"Commissioners of Supply Lanarkshire",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Tweeddale",
+    "Date":"1692, May 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11852"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Skirving",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"c 1690",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11858"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1690, Jan 3",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11859"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Arthur Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Baillie Clerk",
+    "Date":"1689, Jul 10",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11860"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Jan 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11861"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Craig",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"His wife",
+    "Date":"1689, Jul 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11862"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Andrew Schaw",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Mar 25",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11863"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Hamilton",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Jan 14",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11864"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"J. Nisbet",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Oct 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11865"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Craig",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1689, Sep 9",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11866"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Skirving",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, May 17",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11867"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Skirving",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1691, Jul 2",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11868"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Naismith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"John Clark",
+    "Date":"1690, Feb 24",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11869"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Alexander Smith",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mrs. Tylor",
+    "Date":"1690, May 27",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11959"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"Robert Lloyd",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Lady Gerard",
+    "Date":"1690, May 23",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11988"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"George Mackenzie",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Sheriff Depute Lanark",
+    "Date":"1688, Sep 19",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11989\/1"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"W.B.",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Mr. Ward",
+    "Date":"1691, May 7",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11990"
+  },
+  {
+    "From Type":"Person",
+    "From Name":"John Craig",
+    "Edge Type":"WROTE LETTER TO",
+    "To Type":"Person",
+    "To Name":"Unknown",
+    "Date":"1688, Oct 29",
+    "Weight":null,
+    "NRS Reference":"GD406\/1\/11992"
+  }
+]
