@@ -53,13 +53,14 @@
   <!-- Main Content -->
   <section class="py-5">
     <div class="container my-5">
-      <h1 class="mb-4">Letter Network Viewer</h1>
-           <p>
-      Explore the <em>Melville Letters</em> and <em>Hamilton Letters</em> datasets. 
-      Filter by sender, recipient, date, or keywords, then download your results as a CSV for further analysis.
-    </p>
-      
-    <p class="lead">Select a dataset and apply filters:</p>
+      <h1 class="mb-2">Letter Network Viewer</h1>
+      <p class="mb-4">
+        Explore the <em>Melville Letters</em> and <em>Hamilton Letters</em> datasets. 
+        Filter by sender, recipient, date, or keywords, then download your results as a CSV for further analysis.
+      </p>
+      <p class="text-muted small mb-4">
+        Tip: You can select multiple values in each filter. Hold <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> to toggle items, or <kbd>Shift</kbd> to select a range.
+      </p>
 
       <!-- Dataset Buttons -->
       <div class="mb-4">
@@ -71,19 +72,19 @@
       <div class="row g-3 mb-3">
         <div class="col-md-3">
           <label for="filterSender" class="form-label">Sender</label>
-          <select id="filterSender" class="form-select"></select>
+          <select id="filterSender" class="form-select" multiple size="8" aria-label="Filter by sender"></select>
         </div>
         <div class="col-md-3">
           <label for="filterRecipient" class="form-label">Recipient</label>
-          <select id="filterRecipient" class="form-select"></select>
+          <select id="filterRecipient" class="form-select" multiple size="8" aria-label="Filter by recipient"></select>
         </div>
         <div class="col-md-3">
           <label for="filterDate" class="form-label">Date</label>
-          <select id="filterDate" class="form-select"></select>
+          <select id="filterDate" class="form-select" multiple size="8" aria-label="Filter by date"></select>
         </div>
         <div class="col-md-3">
           <label for="filterKeywords" class="form-label">Keywords / Reference</label>
-          <select id="filterKeywords" class="form-select"></select>
+          <select id="filterKeywords" class="form-select" multiple size="8" aria-label="Filter by keywords"></select>
         </div>
       </div>
 
@@ -117,6 +118,7 @@
     let currentData = [];
     let currentDataset = 'melville';
 
+    // Field names per dataset (Melville uses "Reciever")
     const fields = {
       melville: {
         sender: 'Sender',
@@ -132,45 +134,62 @@
       }
     };
 
+    // Populate a multiselect with unique, sorted values
     function populateFilter(selectId, values) {
       const select = document.getElementById(selectId);
-      select.innerHTML = '<option value="">Any</option>';
-      [...new Set(values)].sort().forEach(value => {
-        if (value) {
-          const opt = document.createElement('option');
-          opt.value = value;
-          opt.textContent = value;
-          select.appendChild(opt);
-        }
-      });
+      const uniques = [...new Set(values.filter(v => v != null && v !== ''))].sort();
+      select.innerHTML = '';
+      for (const v of uniques) {
+        const opt = document.createElement('option');
+        opt.value = v;
+        opt.textContent = v;
+        select.appendChild(opt);
+      }
+    }
+
+    // Get lowercased selections from a multiselect; empty array = no filter
+    function getSelectedValues(selectId) {
+      const select = document.getElementById(selectId);
+      return Array.from(select.selectedOptions).map(o => (o.value || '').toLowerCase());
+    }
+
+    // Clear all selections in a multiselect
+    function clearSelect(selectId) {
+      const select = document.getElementById(selectId);
+      Array.from(select.options).forEach(o => (o.selected = false));
     }
 
     function resetFilters() {
-      ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(id => {
-        document.getElementById(id).value = '';
-      });
+      ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(clearSelect);
       displayData(currentData);
     }
 
+    function entryField(entry, key) {
+      return (entry[key] ?? '').toString().toLowerCase();
+    }
+
+    // Apply multi-select filters: each facet is OR within, AND across facets
     function applyFilters() {
-      const filters = {
-        sender: document.getElementById('filterSender').value.toLowerCase(),
-        recipient: document.getElementById('filterRecipient').value.toLowerCase(),
-        date: document.getElementById('filterDate').value.toLowerCase(),
-        keywords: document.getElementById('filterKeywords').value.toLowerCase()
+      const f = fields[currentDataset];
+      const sel = {
+        sender: getSelectedValues('filterSender'),
+        recipient: getSelectedValues('filterRecipient'),
+        date: getSelectedValues('filterDate'),
+        keywords: getSelectedValues('filterKeywords')
       };
 
-      const f = fields[currentDataset];
       const filtered = currentData.filter(entry => {
-        const s = (entry[f.sender] || '').toLowerCase();
-        const r = (entry[f.recipient] || '').toLowerCase();
-        const d = (entry[f.date] || '').toLowerCase();
-        const k = (entry[f.keywords] || '').toLowerCase();
+        const s = entryField(entry, f.sender);
+        const r = entryField(entry, f.recipient);
+        const d = entryField(entry, f.date);
+        const k = entryField(entry, f.keywords);
 
-        return (!filters.sender || s === filters.sender) &&
-               (!filters.recipient || r === filters.recipient) &&
-               (!filters.date || d === filters.date) &&
-               (!filters.keywords || k === filters.keywords);
+        const passSender    = sel.sender.length    === 0 || sel.sender.includes(s);
+        const passRecipient = sel.recipient.length === 0 || sel.recipient.includes(r);
+        const passDate      = sel.date.length      === 0 || sel.date.includes(d);
+        const passKeywords  = sel.keywords.length  === 0 || sel.keywords.includes(k);
+
+        return passSender && passRecipient && passDate && passKeywords;
       });
 
       displayData(filtered);
@@ -193,13 +212,13 @@
         if (currentDataset === 'melville') {
           div.innerHTML = `
             <div><strong>ID #${entry.ID}</strong></div>
-            <div><strong>${entry[f.sender]}</strong> → <strong>${entry[f.recipient]}</strong></div>
+            <div><strong>${entry[f.sender] || ''}</strong> → <strong>${entry[f.recipient] || ''}</strong></div>
             <div><em>${entry[f.keywords] || 'No keywords'}</em></div>
             <div><small>${entry[f.date] || 'Unknown date'}</small></div>
           `;
         } else {
           div.innerHTML = `
-            <div><strong>${entry[f.sender]}</strong> → <strong>${entry[f.recipient]}</strong></div>
+            <div><strong>${entry[f.sender] || ''}</strong> → <strong>${entry[f.recipient] || ''}</strong></div>
             <div><em>${entry[f.date] || 'No date'}</em></div>
             <div><small>Ref: ${entry[f.keywords] || 'N/A'}</small></div>
           `;
@@ -211,17 +230,16 @@
 
     function loadDataset(name) {
       currentDataset = name;
-      const url = paths[name];
-      fetch(url)
+      fetch(paths[name])
         .then(res => res.json())
         .then(data => {
           currentData = data;
           const f = fields[name];
-          populateFilter('filterSender', data.map(d => d[f.sender]));
+          populateFilter('filterSender',    data.map(d => d[f.sender]));
           populateFilter('filterRecipient', data.map(d => d[f.recipient]));
-          populateFilter('filterDate', data.map(d => d[f.date]));
-          populateFilter('filterKeywords', data.map(d => d[f.keywords]));
-          displayData(data);
+          populateFilter('filterDate',      data.map(d => d[f.date]));
+          populateFilter('filterKeywords',  data.map(d => d[f.keywords]));
+          resetFilters(); // clears selections & shows all rows
         });
     }
 
@@ -231,29 +249,31 @@
         ? ['ID', f.sender, f.recipient, f.keywords, f.date]
         : [f.sender, f.recipient, f.date, f.keywords];
 
-      const filters = {
-        sender: document.getElementById('filterSender').value.toLowerCase(),
-        recipient: document.getElementById('filterRecipient').value.toLowerCase(),
-        date: document.getElementById('filterDate').value.toLowerCase(),
-        keywords: document.getElementById('filterKeywords').value.toLowerCase()
+      const sel = {
+        sender: getSelectedValues('filterSender'),
+        recipient: getSelectedValues('filterRecipient'),
+        date: getSelectedValues('filterDate'),
+        keywords: getSelectedValues('filterKeywords')
       };
 
       const filtered = currentData.filter(entry => {
-        const s = (entry[f.sender] || '').toLowerCase();
-        const r = (entry[f.recipient] || '').toLowerCase();
-        const d = (entry[f.date] || '').toLowerCase();
-        const k = (entry[f.keywords] || '').toLowerCase();
+        const s = entryField(entry, f.sender);
+        const r = entryField(entry, f.recipient);
+        const d = entryField(entry, f.date);
+        const k = entryField(entry, f.keywords);
 
-        return (!filters.sender || s === filters.sender) &&
-               (!filters.recipient || r === filters.recipient) &&
-               (!filters.date || d === filters.date) &&
-               (!filters.keywords || k === filters.keywords);
+        const passSender    = sel.sender.length    === 0 || sel.sender.includes(s);
+        const passRecipient = sel.recipient.length === 0 || sel.recipient.includes(r);
+        const passDate      = sel.date.length      === 0 || sel.date.includes(d);
+        const passKeywords  = sel.keywords.length  === 0 || sel.keywords.includes(k);
+
+        return passSender && passRecipient && passDate && passKeywords;
       });
 
       const rows = filtered.map(entry => {
         return headers.map(h => {
-          const val = entry[h] || '';
-          return `"${val.toString().replace(/"/g, '""')}"`;
+          const val = (entry[h] ?? '').toString().replace(/"/g, '""');
+          return `"${val}"`;
         }).join(',');
       });
 
@@ -267,11 +287,14 @@
       URL.revokeObjectURL(url);
     }
 
+    // Bind change listeners (multiselects still fire 'change')
     ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(id => {
       document.getElementById(id)?.addEventListener('change', applyFilters);
     });
 
+    // Initial load
     loadDataset('melville');
   </script>
 </body>
 </html>
+
