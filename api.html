@@ -7,6 +7,30 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
+  <style>
+    /* Compact dropdown menus with a scroll area */
+    .ms-menu {
+      max-height: 320px;
+      overflow: auto;
+      padding: .5rem .75rem;
+      width: 320px; /* keeps long keyword lines readable */
+    }
+    .ms-header {
+      position: sticky; top: 0; background: #fff; padding-bottom:.25rem; margin-bottom:.5rem;
+    }
+    .ms-footer {
+      position: sticky; bottom: 0; background:#fff; padding-top:.5rem; margin-top:.5rem;
+    }
+    .btn-filter {
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    .form-check { margin-bottom: .25rem; }
+    .dropdown-toggle::after{ float:right; margin-top:.5rem; }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -56,10 +80,7 @@
       <h1 class="mb-2">Letter Network Viewer</h1>
       <p class="mb-4">
         Explore the <em>Melville Letters</em> and <em>Hamilton Letters</em> datasets. 
-        Filter by sender, recipient, date, or keywords, then download your results as a CSV for further analysis.
-      </p>
-      <p class="text-muted small mb-4">
-        Tip: You can select multiple values in each filter. Hold <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> to toggle items, or <kbd>Shift</kbd> to select a range.
+        Filter by sender, recipient, date, or keywords, then download your results as a CSV.
       </p>
 
       <!-- Dataset Buttons -->
@@ -68,29 +89,37 @@
         <button class="btn btn-outline-success" onclick="loadDataset('hamilton')">Hamilton Letters</button>
       </div>
 
-      <!-- Filters -->
+      <!-- Filters (dropdown multiselects with "Any") -->
       <div class="row g-3 mb-3">
         <div class="col-md-3">
-          <label for="filterSender" class="form-label">Sender</label>
-          <select id="filterSender" class="form-select" multiple size="8" aria-label="Filter by sender"></select>
+          <div class="dropdown w-100">
+            <button class="btn btn-light border btn-filter dropdown-toggle" id="btnSender" data-bs-toggle="dropdown" aria-expanded="false">Sender: Any</button>
+            <div class="dropdown-menu ms-menu" aria-labelledby="btnSender" id="menuSender"></div>
+          </div>
         </div>
         <div class="col-md-3">
-          <label for="filterRecipient" class="form-label">Recipient</label>
-          <select id="filterRecipient" class="form-select" multiple size="8" aria-label="Filter by recipient"></select>
+          <div class="dropdown w-100">
+            <button class="btn btn-light border btn-filter dropdown-toggle" id="btnRecipient" data-bs-toggle="dropdown" aria-expanded="false">Recipient: Any</button>
+            <div class="dropdown-menu ms-menu" aria-labelledby="btnRecipient" id="menuRecipient"></div>
+          </div>
         </div>
         <div class="col-md-3">
-          <label for="filterDate" class="form-label">Date</label>
-          <select id="filterDate" class="form-select" multiple size="8" aria-label="Filter by date"></select>
+          <div class="dropdown w-100">
+            <button class="btn btn-light border btn-filter dropdown-toggle" id="btnDate" data-bs-toggle="dropdown" aria-expanded="false">Date: Any</button>
+            <div class="dropdown-menu ms-menu" aria-labelledby="btnDate" id="menuDate"></div>
+          </div>
         </div>
         <div class="col-md-3">
-          <label for="filterKeywords" class="form-label">Keywords / Reference</label>
-          <select id="filterKeywords" class="form-select" multiple size="8" aria-label="Filter by keywords"></select>
+          <div class="dropdown w-100">
+            <button class="btn btn-light border btn-filter dropdown-toggle" id="btnKeywords" data-bs-toggle="dropdown" aria-expanded="false">Keywords / Reference: Any</button>
+            <div class="dropdown-menu ms-menu" aria-labelledby="btnKeywords" id="menuKeywords"></div>
+          </div>
         </div>
       </div>
 
       <!-- Buttons -->
-      <div class="mb-4">
-        <button class="btn btn-secondary me-2" onclick="resetFilters()">Reset Filters</button>
+      <div class="mb-4 d-flex gap-2">
+        <button class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
         <button class="btn btn-outline-dark" onclick="downloadCSV()">Download CSV</button>
       </div>
 
@@ -120,47 +149,130 @@
 
     // Field names per dataset (Melville uses "Reciever")
     const fields = {
-      melville: {
-        sender: 'Sender',
-        recipient: 'Reciever',
-        date: 'Date',
-        keywords: 'Keywords'
-      },
-      hamilton: {
-        sender: 'From Name',
-        recipient: 'To Name',
-        date: 'Date',
-        keywords: 'NRS Reference'
-      }
+      melville: { sender: 'Sender', recipient: 'Reciever', date: 'Date', keywords: 'Keywords' },
+      hamilton: { sender: 'From Name', recipient: 'To Name', date: 'Date', keywords: 'NRS Reference' }
     };
 
-    // Populate a multiselect with unique, sorted values
-    function populateFilter(selectId, values) {
-      const select = document.getElementById(selectId);
+    // Multiselect model for each facet
+    const facets = [
+      { id: 'Sender',   key: 'sender',   btnId: 'btnSender',   menuId: 'menuSender',   label: 'Sender' },
+      { id: 'Recipient',key: 'recipient',btnId: 'btnRecipient',menuId: 'menuRecipient',label: 'Recipient' },
+      { id: 'Date',     key: 'date',     btnId: 'btnDate',     menuId: 'menuDate',     label: 'Date' },
+      { id: 'Keywords', key: 'keywords', btnId: 'btnKeywords', menuId: 'menuKeywords', label: 'Keywords / Reference' }
+    ];
+
+    // Build a checkbox item
+    function checkbox(id, value, text) {
+      const safeId = `${id}-${btoa(unescape(encodeURIComponent(value))).replace(/=/g,'')}`;
+      return `
+        <div class="form-check">
+          <input class="form-check-input ms-input" type="checkbox" value="${value.replace(/"/g, '&quot;')}" id="${safeId}">
+          <label class="form-check-label" for="${safeId}">${text}</label>
+        </div>`;
+    }
+
+    // Render a menu with "Any", options, and footer controls
+    function renderMenu(menuId, title, values) {
+      const menu = document.getElementById(menuId);
       const uniques = [...new Set(values.filter(v => v != null && v !== ''))].sort();
-      select.innerHTML = '';
-      for (const v of uniques) {
-        const opt = document.createElement('option');
-        opt.value = v;
-        opt.textContent = v;
-        select.appendChild(opt);
+
+      menu.innerHTML = `
+        <div class="ms-header">
+          <strong>${title}</strong>
+          <div class="form-check mt-2 mb-1">
+            <input class="form-check-input ms-any" type="checkbox" id="${menuId}-any" checked>
+            <label class="form-check-label" for="${menuId}-any">Any</label>
+          </div>
+          <hr class="my-2">
+        </div>
+        <div class="ms-options">
+          ${uniques.map(v => checkbox(menuId, v, v)).join('')}
+        </div>
+        <div class="ms-footer d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-secondary" data-action="select-all">Select all</button>
+            <button class="btn btn-sm btn-outline-secondary" data-action="clear">Clear</button>
+          </div>
+          <button class="btn btn-sm btn-primary" data-action="apply">Apply</button>
+        </div>
+      `;
+
+      // Wire up behavior for Any / Select all / Clear / Apply
+      const any = menu.querySelector('.ms-any');
+      const inputs = menu.querySelectorAll('.ms-input');
+
+      function setAnyState() {
+        const anyChecked = Array.from(inputs).every(i => !i.checked);
+        any.checked = anyChecked;
       }
+
+      any.addEventListener('change', () => {
+        if (any.checked) inputs.forEach(i => i.checked = false);
+      });
+
+      inputs.forEach(i => i.addEventListener('change', () => {
+        if (Array.from(inputs).some(i => i.checked)) any.checked = false;
+        else any.checked = true;
+      }));
+
+      menu.querySelector('[data-action="select-all"]').addEventListener('click', () => {
+        inputs.forEach(i => i.checked = true);
+        any.checked = false;
+      });
+
+      menu.querySelector('[data-action="clear"]').addEventListener('click', () => {
+        inputs.forEach(i => i.checked = false);
+        any.checked = true;
+      });
+
+      menu.querySelector('[data-action="apply"]').addEventListener('click', () => {
+        setAnyState();
+        updateButtons();
+        applyFilters();
+        // close dropdown programmatically
+        const dp = bootstrap.Dropdown.getOrCreateInstance(menu.previousElementSibling || document.querySelector(`[aria-controls="${menuId}"]`));
+        const btn = document.querySelector(`[aria-labelledby="${menuId}"]`) || document.getElementById(menuId).parentElement.querySelector('.dropdown-toggle');
+        const dropdown = bootstrap.Dropdown.getOrCreateInstance(btn);
+        dropdown.hide();
+      });
+
+      setAnyState();
     }
 
-    // Get lowercased selections from a multiselect; empty array = no filter
-    function getSelectedValues(selectId) {
-      const select = document.getElementById(selectId);
-      return Array.from(select.selectedOptions).map(o => (o.value || '').toLowerCase());
+    // Update button labels (e.g., "Sender: Any" / "Sender: 3 selected")
+    function updateButtons() {
+      const f = fields[currentDataset];
+      facets.forEach(facet => {
+        const menu = document.getElementById(facet.menuId);
+        const btn = document.getElementById(facet.btnId);
+        const inputs = menu.querySelectorAll('.ms-input');
+        const any = menu.querySelector('.ms-any').checked;
+        const count = Array.from(inputs).filter(i => i.checked).length;
+        if (any || count === 0) {
+          btn.textContent = `${facet.label}: Any`;
+        } else {
+          btn.textContent = `${facet.label}: ${count} selected`;
+        }
+      });
     }
 
-    // Clear all selections in a multiselect
-    function clearSelect(selectId) {
-      const select = document.getElementById(selectId);
-      Array.from(select.options).forEach(o => (o.selected = false));
+    // Get selected (lowercased) values for a facet; empty array = Any
+    function getFacetSelections(menuId) {
+      const menu = document.getElementById(menuId);
+      const any = menu.querySelector('.ms-any').checked;
+      if (any) return [];
+      return Array.from(menu.querySelectorAll('.ms-input:checked')).map(i => i.value.toLowerCase());
     }
 
     function resetFilters() {
-      ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(clearSelect);
+      facets.forEach(facet => {
+        const menu = document.getElementById(facet.menuId);
+        if (!menu) return;
+        menu.querySelectorAll('.ms-input').forEach(i => i.checked = false);
+        const any = menu.querySelector('.ms-any');
+        if (any) any.checked = true;
+      });
+      updateButtons();
       displayData(currentData);
     }
 
@@ -168,14 +280,14 @@
       return (entry[key] ?? '').toString().toLowerCase();
     }
 
-    // Apply multi-select filters: each facet is OR within, AND across facets
+    // Apply OR within facet, AND across facets
     function applyFilters() {
       const f = fields[currentDataset];
       const sel = {
-        sender: getSelectedValues('filterSender'),
-        recipient: getSelectedValues('filterRecipient'),
-        date: getSelectedValues('filterDate'),
-        keywords: getSelectedValues('filterKeywords')
+        sender:   getFacetSelections('menuSender'),
+        recipient:getFacetSelections('menuRecipient'),
+        date:     getFacetSelections('menuDate'),
+        keywords: getFacetSelections('menuKeywords')
       };
 
       const filtered = currentData.filter(entry => {
@@ -235,11 +347,15 @@
         .then(data => {
           currentData = data;
           const f = fields[name];
-          populateFilter('filterSender',    data.map(d => d[f.sender]));
-          populateFilter('filterRecipient', data.map(d => d[f.recipient]));
-          populateFilter('filterDate',      data.map(d => d[f.date]));
-          populateFilter('filterKeywords',  data.map(d => d[f.keywords]));
-          resetFilters(); // clears selections & shows all rows
+
+          // Populate each dropdown menu
+          renderMenu('menuSender',    'Sender',    data.map(d => d[f.sender]));
+          renderMenu('menuRecipient', 'Recipient', data.map(d => d[f.recipient]));
+          renderMenu('menuDate',      'Date',      data.map(d => d[f.date]));
+          renderMenu('menuKeywords',  'Keywords / Reference', data.map(d => d[f.keywords]));
+
+          updateButtons();
+          displayData(data);
         });
     }
 
@@ -250,10 +366,10 @@
         : [f.sender, f.recipient, f.date, f.keywords];
 
       const sel = {
-        sender: getSelectedValues('filterSender'),
-        recipient: getSelectedValues('filterRecipient'),
-        date: getSelectedValues('filterDate'),
-        keywords: getSelectedValues('filterKeywords')
+        sender:   getFacetSelections('menuSender'),
+        recipient:getFacetSelections('menuRecipient'),
+        date:     getFacetSelections('menuDate'),
+        keywords: getFacetSelections('menuKeywords')
       };
 
       const filtered = currentData.filter(entry => {
@@ -270,12 +386,9 @@
         return passSender && passRecipient && passDate && passKeywords;
       });
 
-      const rows = filtered.map(entry => {
-        return headers.map(h => {
-          const val = (entry[h] ?? '').toString().replace(/"/g, '""');
-          return `"${val}"`;
-        }).join(',');
-      });
+      const rows = filtered.map(entry =>
+        headers.map(h => `"${(entry[h] ?? '').toString().replace(/"/g, '""')}"`).join(',')
+      );
 
       const csvContent = [headers.join(','), ...rows].join('\n');
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -287,14 +400,10 @@
       URL.revokeObjectURL(url);
     }
 
-    // Bind change listeners (multiselects still fire 'change')
-    ['filterSender', 'filterRecipient', 'filterDate', 'filterKeywords'].forEach(id => {
-      document.getElementById(id)?.addEventListener('change', applyFilters);
-    });
-
     // Initial load
     loadDataset('melville');
   </script>
 </body>
 </html>
+
 
