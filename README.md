@@ -7,8 +7,8 @@ During the late seventeenth century, the evolution of newsletters and newspapers
 Letters are important for more than just their contents. They also have the power to tell us more than just who was writing to who. More importantly, they can tell us who was connected with who, how often letters went missing, the frequency of communication between parties, where networks existed over time and space, and how these evolved over the course of wartime. We seek to develop an open-access project which researchers and the public at large can access to visualize the world of letters in the seventeenth century. Through the wireframing of network analysis, this project hopes to reveal the complex world of communication in late seventeenth century Scotland. The letters exchanged in this period are more than just networks of correspondence; people were bound together through community, print, and dialogue.
 
 ## Authors
-Gillian Macdonald, Director of the Lab for the Education and Advancement in Digital Research (LEADR)
-Morgan Fox, Senior Undergraduate Student, Michigan State University
+- Gillian Macdonald, Director of the Lab for the Education and Advancement in Digital Research (LEADR), Michigan State University
+- Morgan Fox, Senior Undergraduate Student, Michigan State University
 
 ## LICENSE
 MIT License
