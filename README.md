@@ -27,4 +27,4 @@ Guide for people who might want to contribute to the project:
 ## Citations
 The data for the project is in the data folder. 
 - If you are going to use the data please cite: Gillian S. Macdonald and M. Fox, "Networking the Revolution, 1688-92, (insert dataset title here)". GitHub Respopsitory, 2025, doi: doi.org/10.5281/zenodo.14171107
-- For referencing the project:  Gillian S. Macdonald and M. Fox, _Networking the Revolution, 1688-92_, accessible at: https://networkingtherveolution.org, https://doi.org/10.5281/zenodo.14171107
+- For referencing the project:  Gillian S. Macdonald and M. Fox, _Networking the Revolution, 1688-92_, accessible at: https://networkingtherveolution.org, [![DOI](https://zenodo.org/badge/853395889.svg)](https://doi.org/10.5281/zenodo.14171107)
