@@ -10943,3 +10943,49 @@ textarea.form-control-lg {
   from {opacity: .4;}
   to {opacity: 1;}
 }
+.gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 15px; 
+        max-width: 800px; 
+        text-align: center;
+        }
+.gallery img {
+        width: 50%; 
+        height: 50%; 
+        margin-left: 280px;
+        margin-bottom: 10px;
+        margin-top: 50px
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+        }
+.gallery img:hover {
+        transform: scale(1.05);
+}
+.figure-caption {
+        margin-top: 10px;
+        font-size: medium;
+        color: #000;
+        }
+.content-box {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #f8f9fa;
+       transition: transform 0.3s, box-shadow 0.3s;
+            }
+.content-box:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+.content-box a {
+       text-decoration: none;
+       color: #007bff;
+       font-weight: bold;
+            }
+.content-box a:hover {
+       text-decoration: underline;
+            }
