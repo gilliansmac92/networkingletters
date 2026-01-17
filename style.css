@@ -3804,7 +3804,7 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 .navbar .navbar-brand img {
-        width: 50px; 
+        max-width: 40px; 
         height: auto;
         margin-right: 10px;
 }
