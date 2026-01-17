@@ -18,7 +18,6 @@
 --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
 --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
 --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-
 --#{$prefix}nav-link-padding-x: 0;
 --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
 @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
@@ -26,7 +25,6 @@
 --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
 --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
 --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
-
 --#{$prefix}navbar-color: #{$navbar-dark-color};
 --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
 --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
