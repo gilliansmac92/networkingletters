@@ -11014,3 +11014,18 @@ textarea.form-control-lg {
             position: relative;
             z-index: 1;
         }
+       .btn-primary {
+            background-color: #8B9D83;
+            border-color: #8B9D83;
+        }
+        
+        .btn-primary:hover {
+            background-color: #7A8C72;
+            border-color: #7A8C72;
+        }
+        
+        .btn-primary:active,
+        .btn-primary:focus {
+            background-color: #6B7A63;
+            border-color: #6B7A63;
+        }
