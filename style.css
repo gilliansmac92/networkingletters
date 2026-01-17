@@ -11029,16 +11029,16 @@ textarea.form-control-lg {
             background-color: #6B7A63;
             border-color: #6B7A63;
         }
-        .navbar-nav .nav-link {
-    font-size: 1.2rem; 
-    font-weight: bold; 
+
+.navbar-nav .nav-link {
+    font-size: 1.5rem !important; /* Increase the font size and add !important */
+    font-weight: bold !important; /* Optional if you want the text to appear bold */
 }
 
-.nav-link-big {
-    font-size: 1.25rem; 
-    font-weight: bold; 
+.navbar-nav .dropdown-item {
+    font-size: 1.25rem !important; /* Adjust the size as needed */
 }
 
-.navbar-toggler {
-    font-size: 1.25rem; 
+.navbar-nav .nav-item {
+    margin-right: 1rem;
 }
