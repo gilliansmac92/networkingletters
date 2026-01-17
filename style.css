@@ -3825,6 +3825,10 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Adjust to your preferred font size */
+    font-weight: bold; /* Optional: Makes the font bold */
+}
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
