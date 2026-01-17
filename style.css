@@ -3825,10 +3825,6 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .nav-link {
-    font-size: 1.2rem; /* Adjust to your preferred font size */
-    font-weight: bold; /* Optional: Makes the font bold */
-}
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
@@ -11033,3 +11029,16 @@ textarea.form-control-lg {
             background-color: #6B7A63;
             border-color: #6B7A63;
         }
+        .navbar-nav .nav-link {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+}
+
+.nav-link-big {
+    font-size: 1.25rem; 
+    font-weight: bold; 
+}
+
+.navbar-toggler {
+    font-size: 1.25rem; 
+}
