@@ -2,18 +2,28 @@
 
 This is the repository for the collection of data related to letters during the Scottish Revolution 1688-1692. The project wil primarily be use for a study of relationships during revolution and chaos--it will also map out where went and came from. This repository allows further access to critical information about seventeenth century British history and this pivotal period which shaped much of the modern British state. The project is open-access and the data can be reused. 
 
+## Background
+
 During the late seventeenth century, the evolution of newsletters and newspapers allowed information to travel more quickly along those networks. _Networking the Revolution_ seeks to add to this conversation in terms of communication during conflict and regime change. The project uses corpuses of letters including: the Leven and Melville Papers, Hamilton Manuscripts, Jacobite Letters, and eventually will also contain letters from military commanders, the plantation committee, and the privy council. _Networking_ seeks to visualize and connect the world of letters, communication, and networks from disparate collections of manuscript and print sources to understand communication patterns and the distribution of information during wartime. 
 
 By using network analysis, we can uncover the world of the information trade, diplomatic correspondence patterns, and the anomalies. It also helps in prosopographical analysis of the time period, why certain people group together, and understand the dynamics of group identities. Letters are important for more than just their contents. They also have the power to tell us more than just who was writing to who. More importantly, they can tell us who was connected with who, how often letters went missing, the frequency of communication between parties, where networks existed over time and space, and how these evolved over the course of wartime. Through the wireframing of network analysis, this project hopes to reveal the complex world of communication in late seventeenth century Scotland. The letters exchanged in this period are more than just networks of correspondence; people were bound together through community, print, and dialogue.
 
+## The Letters
+
+The letters used in this project are taken from several places, but all of the main collections are housed at the [National Records for Scotland](https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/welcome.aspx) in Edinburgh. Letters are ubiquitous in early modern archives across the British Isles (within personal papers and many other local archives) and important sources that many historians have used extensively to study the period especially for diplomacy and communication. As physical objects, they range from high-quality professional products using calligraphy to scrawled scraps of paper, reflecting the diversity of writers and literacy. Letters often contained other paper products including instructions, petitions, orders, warrants, etc and that has been reflected in the networks created from the manuscripts. The sheer numbe rof letters exchanged during this moment of chaos is what makes them such a rich resource for studying the period. Each of the letters has been catalogued using metadata and that information is present in the CSVs. 
+
+## The Data
+
+All of the data sheets are in the _data folder and are easily dowloadable. Please be aware these datasets are in the midst of updates at this moment (Spring 2026). New datasets will be added as data is collected and cleaned including data from the Colonial Papers and the Privy Council Records from 1688-92. The aim is to create a digital resource that houses many/if not all the letter collections that interacted with each other in this period.
+
 ## Authors
-- Gillian Macdonald, Director of the Lab for the Education and Advancement in Digital Research (LEADR), Michigan State University
+- Gillian Macdonald, Director of the [Lab for the Education and Advancement in Digital Research](leadr.msu.edu) (LEADR), Michigan State University
 - Morgan Fox, Senior Undergraduate Student, Michigan State University
 
 ## LICENSE
 MIT License
 
-Copyright (c) 2025 Gillian Macdonald & Morgan Fox
+Copyright (c) 2026 Gillian Macdonald & Morgan Fox
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this data and associated documentation files (the "data"), to deal in the data without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the data, and to permit persons to whom the data is furnished to do so, subject to the following conditions:
 
@@ -24,10 +34,13 @@ THE DATA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
 ## CONTRIBUTING
 Guide for people who might want to contribute to the project:
 
-- if you wish to contribute or gave suggestions for the project please reach out.
+- If you wish to contribute or give suggestions for the project please reach out.
+- Report bugs or inconsistencies in the data/datasets.
+- Suggest enhancements to the data or further research in collections.
+- Fill out the contact form on the team page on the website!
 
-## Citations
-The data for the project is in the data folder. 
+## Suggested Citations
+The data for the project is in the _data folder. 
 - If you are going to use the data please cite: Gillian S. Macdonald and M. Fox, "Networking the Revolution, 1688-92, (insert dataset title here)". GitHub Respopsitory, 2025, doi: doi.org/10.5281/zenodo.14171107
 - For referencing the project:  Gillian S. Macdonald and M. Fox, _Networking the Revolution, 1688-92_, accessible at: https://networkingtherveolution.org
 
