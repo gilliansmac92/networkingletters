@@ -10,20 +10,20 @@ By using network analysis, we can uncover the world of the information trade, di
 
 ## The Letters
 
-The letters used in this project are taken from several places, but all of the main collections are housed at the [National Records for Scotland in Edinburgh](https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/welcome.aspx). Letters are ubiquitous in early modern archives across the British Isles (within personal papers and many other local archives) and important sources that many historians have used extensively to study the period especially for diplomacy and communication. As physical objects, they range from high-quality professional products using calligraphy to scrawled scraps of paper, reflecting the diversity of writers and literacy. Letters often contained other paper products including instructions, petitions, orders, warrants, etc and that has been reflected in the networks created from the manuscripts. The sheer numbe rof letters exchanged during this moment of chaos is what makes them such a rich resource for studying the period. Each of the letters has been catalogued using metadata and that information is present in the CSVs. 
+The letters used in this project are taken from several places, but all of the main collections are housed at the [National Records for Scotland](https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/welcome.aspx) in Edinburgh. Letters are ubiquitous in early modern archives across the British Isles (within personal papers and many other local archives) and important sources that many historians have used extensively to study the period especially for diplomacy and communication. As physical objects, they range from high-quality professional products using calligraphy to scrawled scraps of paper, reflecting the diversity of writers and literacy. Letters often contained other paper products including instructions, petitions, orders, warrants, etc and that has been reflected in the networks created from the manuscripts. The sheer numbe rof letters exchanged during this moment of chaos is what makes them such a rich resource for studying the period. Each of the letters has been catalogued using metadata and that information is present in the CSVs. 
 
 ## The Data
 
 All of the data sheets are in the _data folder and are easily dowloadable. Please be aware these datasets are in the midst of updates at this moment (Spring 2026). New datasets will be added as data is collected and cleaned including data from the Colonial Papers and the Privy Council Records from 1688-92. The aim is to create a digital resource that houses many/if not all the letter collections that interacted with each other in this period.
 
 ## Authors
-- Gillian Macdonald, Director of the Lab for the Education and Advancement in Digital Research (LEADR), Michigan State University
+- Gillian Macdonald, Director of the [Lab for the Education and Advancement in Digital Research](leadr.msu.edu) (LEADR), Michigan State University
 - Morgan Fox, Senior Undergraduate Student, Michigan State University
 
 ## LICENSE
 MIT License
 
-Copyright (c) 2025 Gillian Macdonald & Morgan Fox
+Copyright (c) 2026 Gillian Macdonald & Morgan Fox
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this data and associated documentation files (the "data"), to deal in the data without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the data, and to permit persons to whom the data is furnished to do so, subject to the following conditions:
 
@@ -36,8 +36,8 @@ Guide for people who might want to contribute to the project:
 
 - if you wish to contribute or gave suggestions for the project please reach out.
 
-## Citations
-The data for the project is in the data folder. 
+## Suggested Citations
+The data for the project is in the _data folder. 
 - If you are going to use the data please cite: Gillian S. Macdonald and M. Fox, "Networking the Revolution, 1688-92, (insert dataset title here)". GitHub Respopsitory, 2025, doi: doi.org/10.5281/zenodo.14171107
 - For referencing the project:  Gillian S. Macdonald and M. Fox, _Networking the Revolution, 1688-92_, accessible at: https://networkingtherveolution.org
 
