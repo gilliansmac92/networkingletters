@@ -8,9 +8,13 @@ During the late seventeenth century, the evolution of newsletters and newspapers
 
 By using network analysis, we can uncover the world of the information trade, diplomatic correspondence patterns, and the anomalies. It also helps in prosopographical analysis of the time period, why certain people group together, and understand the dynamics of group identities. Letters are important for more than just their contents. They also have the power to tell us more than just who was writing to who. More importantly, they can tell us who was connected with who, how often letters went missing, the frequency of communication between parties, where networks existed over time and space, and how these evolved over the course of wartime. Through the wireframing of network analysis, this project hopes to reveal the complex world of communication in late seventeenth century Scotland. The letters exchanged in this period are more than just networks of correspondence; people were bound together through community, print, and dialogue.
 
+## The Letters
+
+The letters used in this project are taken from several places, but all of the main collections are housed at the National Records for Scotland in Edinburgh. Letters are ubiquitous in early modern archives across the British Isles (within personal papers and many other local archives) and important sources that many historians have used extensively to study the period especially for diplomacy and communication. As physical objects, they range from high-quality professional products using calligraphy to scrawled scraps of paper, reflecting the diversity of writers and literacy. Letters often contained other paper products including instructions, petitions, orders, warrants, etc and that has been reflected in the networks created from the manuscripts. The sheer numbe rof letters exchanged during this moment of chaos is what makes them such a rich resource for studying the period. Each of the letters has been catalogued using metadata and that information is present in the CSVs. 
+
 ## The Data
 
-All of the data sheets are in the _data folder and are easily dowloadable. Please be aware these datasets are in the midst of updates at this moment (Spring 2026).
+All of the data sheets are in the _data folder and are easily dowloadable. Please be aware these datasets are in the midst of updates at this moment (Spring 2026). New datasets will be added as data is collected and cleaned including data from the Colonial Papers and the Privy Council Records from 1688-92. The aim is to create a digital resource that houses many/if not all the letter collections that interacted with each other in this period.
 
 ## Authors
 - Gillian Macdonald, Director of the Lab for the Education and Advancement in Digital Research (LEADR), Michigan State University
