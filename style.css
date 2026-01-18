@@ -119,7 +119,7 @@ footer {
 
 body {
   margin: 0;
-  font-family: "Quattrocento", serif !important;
+  font-family: "Quattrocento", serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -131,7 +131,7 @@ body {
 }
 
 hr {
-  font-family: "Quattrocento", serif !important;
+  font-family: "Quattrocento", serif;
   margin: 1rem 0;
   color: inherit;
   border: 0;
@@ -140,7 +140,7 @@ hr {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  font-family: "Quattrocento", serif !important;
+  font-family: "Quattrocento", serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -193,7 +193,7 @@ h6, .h6 {
 }
 
 p {
- font-family: "Quattrocento", serif !important;
+ font-family: "Quattrocento", serif;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -385,7 +385,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quattrocento", serif !important;
+  font-family: "Quattrocento", serif;
   font-size: inherit;
   line-height: inherit;
 }
@@ -518,7 +518,7 @@ progress {
 }
 
 .lead {
-  font-family: "Quattrocento", serif !important;
+  font-family: "Quattrocento", serif;
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -3783,7 +3783,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1rem; 
+  padding: 1rem 1rem; 
   background-color: #18453B !important;
 }
 
