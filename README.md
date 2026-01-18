@@ -34,7 +34,10 @@ THE DATA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
 ## CONTRIBUTING
 Guide for people who might want to contribute to the project:
 
-- if you wish to contribute or gave suggestions for the project please reach out.
+- If you wish to contribute or give suggestions for the project please reach out.
+- Report bugs or inconsistencies in the data/datasets.
+- Suggest enhancements to the data or further research in collections.
+- Fill out the contact form on the team page on the website!
 
 ## Suggested Citations
 The data for the project is in the _data folder. 
