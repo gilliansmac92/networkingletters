@@ -10871,7 +10871,7 @@ textarea.form-control-lg {
 }
 *{ box-sizing:border-box }
 .carousel-container {
-  max-width: 100%; /Adjust this as needed/
+  max-width: 100%; 
   position: relative;
   margin: auto; 
 }
@@ -10962,11 +10962,12 @@ textarea.form-control-lg {
         height: 50%; 
         margin-left: 280px;
         margin-bottom: 10px;
-        margin-top: 50px
+        margin-top: 50px;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         transition: transform 0.2s;
         }
+
 .gallery img:hover {
         transform: scale(1.05);
 }
@@ -11038,12 +11039,12 @@ textarea.form-control-lg {
         }
 
 .navbar-nav .nav-link {
-    font-size: 1.5rem !important; /* Increase the font size and add !important */
-    font-weight: bold !important; /* Optional if you want the text to appear bold */
+    font-size: 1.5rem !important; 
+    font-weight: bold !important; 
 }
 
 .navbar-nav .dropdown-item {
-    font-size: 1.25rem !important; /* Adjust the size as needed */
+    font-size: 1.25rem !important; 
 }
 
 .navbar-nav .nav-item {
