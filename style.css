@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  html, body {
+  font-family: "Quattrocento", serif !important;
   height: 100%;  /* Ensure the full height of the page */
   margin: 0;     /* Remove any default margin */
   padding: 0;    /* Remove any default padding */
@@ -116,7 +117,7 @@ footer {
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: "Quattrocento", serif !important;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -136,6 +137,7 @@ hr {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: Quattrocento, serif !important;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -11041,4 +11043,16 @@ textarea.form-control-lg {
 
 .navbar-nav .nav-item {
     margin-right: 1rem;
+}
+
+.quattrocento-regular {
+  font-family: "Quattrocento", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quattrocento-bold {
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-style: normal;
 }
