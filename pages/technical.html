@@ -67,25 +67,74 @@
                     <br></br>
                         <h4>Website Build</h4>
                         <p>This project was built using a combination of HTML, CSS, JavaScript, and various libraries and frameworks to create an interactive and visually appealing experience. The website is designed to be responsive, ensuring that it functions well on both desktop and mobile devices. The primary technologies and tools used in the development of this project include:</p>
-                        <ul>
-                            <li><b>Github + Github Pages:</b> for hosting the data and open-access web sharing</li>
-                            <li><b>Bootstrap 5:</b> for responsive design and layout</li>
-                            <li><b>HTML5:</b> for structuring and presenting content on the web</li>
-                            <li><b>CSS3:</b> for styling</li>
-                            <li><b>JavaScript:</b> for the interactive elements</li>
-                            <li><b>Leaflet.js:</b> mapping libraries and visualization</li>
-                            <li><b>graphcommons:</b> for networks and their analysis</li>
-                            <li><b>Python:</b> for data processing and analysis</li>
-                            <li><b>Jupyter Notebooks:</b> for coding and computing</li>
-                            <li><b>OpenRefine:</b> for data cleaning and transformation</li>
-                            <li><b>Flourish:</b> for data visualization</li>
-                        </ul>
+<table style="border-collapse: collapse; width: 100%; text-align: left;">
+    <thead>
+        <tr style="border: 1px solid black; background-color: #10144A; color: white;">
+            <th style="border: 1px solid black; padding: 8px;">Technology</th>
+            <th style="border: 1px solid black; padding: 8px;">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Github + Github Pages</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for hosting the data and open-access web sharing</td>
+        </tr>
+        <tr class="alt-row" style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Bootstrap 5</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for responsive design and layout</td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>HTML5</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for structuring and presenting content on the web</td>
+        </tr>
+        <tr class="alt-row" style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>CSS3</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for styling</td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>JavaScript</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for the interactive elements</td>
+        </tr>
+        <tr class="alt-row" style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Leaflet.js</b></td>
+            <td style="border: 1px solid black; padding: 8px;">mapping libraries and visualization</td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>graphcommons</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for networks and their analysis</td>
+        </tr>
+        <tr class="alt-row" style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Python</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for data processing and analysis</td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Jupyter Notebooks</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for coding and computing</td>
+        </tr>
+        <tr class="alt-row" style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>OpenRefine</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for data cleaning and transformation</td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black; padding: 8px;"><b>Flourish</b></td>
+            <td style="border: 1px solid black; padding: 8px;">for data visualization</td>
+        </tr>
+    </tbody>
+</table>
+
+<style>
+    /* Style for the alternate table rows */
+    .alt-row {
+        background-color: rgba(220, 163, 214, 0.1); /* Transparent version of button color */
+    }
+</style>
+<br></br>
                         <h4>Methods</h4>
                         <p>In the last 25 years, there has been a noticeable shift from historical records remaining piecemeal or fragmented in boxes in archives to a sea of digitized images and texts in the form of PDFs, JPEGS, CSVs, or PNGs. A number of manuscripts are now available online. This project takes advantage of this new digital landscape to reconstruct the networks of correspondence and communication that underpinned political and military efforts during the Williamite-Jacobite conflict in Scotland from 1688 to 1692.</p>
                         <p>The initial report from the project can be found <a class="link" href="https://digitalhumanities.msu.edu/seed-funding/networking-letters-of-revolution/">here</a>. This project is a marriage of early modern Scottish, and in fact British imperial history and computational data science. It brings together methods of network science, prosopography, and traditional early modern political history surrounding communication. The visualizations show a story of connectivity over time. We chose this conflict because the sources do a very good job at capturing the difficulties in the reconstruction and administration of Scottish governance during such a chaotic period.</p>
-                        <p>Phase one required turning qualitative data into quantitative data. We started by recording all of the pertinent data from the PDF versions of documents. We then turned this data into spreadsheet data, here we used categories: Id, Sender, Receiver, Location from, Location to, Latitude and Longitude, Type and Date. The data was then cleaned using OpenRefine to split up latitude and longitude and keywords into different columns; we also made sure there were no blank tiles and duplicates. After creating a master spreadsheet information file, we then set about creating different sheets for different visualizations including people, places, keywords, nodes, and then edges (relationships). Given the large dataset of letters, it allowed for exploratory data analysis and investigation on different digital tools to identify the best representation of the relationships presented in the papers. One of the main tools we ended up using was the programming language Python; which contains a large number of libraries that extend the capabilities of the language, allowing for complex visualizations of the network data. One of the most prominent libraries used was networkx, which allowed the creation of network graphs along with the application of the Girvan-Newman algorithm to detect communities within the network. This algorithm works by repeatedly removing edges on the shortest path within the network. Additionally, the nodes are given corresponding colors to highlight their community, enabling an easier identification of groups in the network. The algorithm is important for understanding the network graph because a node with higher betweenness centrality would have more control over the network, since more information will pass through that node. The implementation of these libraries and creation of visuals were carried out on Jupyter notebook, which is an open-source software for interactive computing. In addition, we experimented with tools such as Leaflet, Flourish, and Gephi for further analysis of the letters.</p>
-                        <p>Later we converted this data into different relational tables for graphcommons which included: Nodes (node type, node ID, description, loyalty) and Edges (from type, from name, from location, edge type, to type, to name, to location, date, weight). This allowed us to parse the networking data differently and have it ready for exploration. 
-                        <p>In expanding our dataset we're now working with a network of 611 distinct nodes. The question we faced was: How can we make use of this metadata and work which is in a qualitative state of around 529 people?</p>
+                        <p>Phase one required turning qualitative data into quantitative data. We started by recording all of the pertinent data from the PDF versions of documents. We then turned this data into spreadsheet data, here we used categories: Id, Sender, Receiver, Location from, Location to, Latitude and Longitude, Type and Date. The data was then cleaned using OpenRefine to split up latitude and longitude and keywords into different columns; we also made sure there were no blank tiles and duplicates. After creating a master spreadsheet information file, we then set about creating different sheets for different visualizations including people, places, keywords, nodes, and then edges (relationships). Given the large dataset of letters, it allowed for exploratory data analysis and investigation on different digital tools to identify the best representation of the relationships presented in the papers.</p> 
+                        <p>One of the main tools we ended up using was the programming language Python; which contains a large number of libraries that extend the capabilities of the language, allowing for complex visualizations of the network data. One of the most prominent libraries used was networkx, which allowed the creation of network graphs along with the application of the Girvan-Newman algorithm to detect communities within the network. This algorithm works by repeatedly removing edges on the shortest path within the network. Additionally, the nodes are given corresponding colors to highlight their community, enabling an easier identification of groups in the network. The algorithm is important for understanding the network graph because a node with higher betweenness centrality would have more control over the network, since more information will pass through that node. The implementation of these libraries and creation of visuals were carried out on Jupyter notebook, which is an open-source software for interactive computing. In addition, we experimented with tools such as Leaflet, Flourish, and Gephi for further analysis of the letters.</p>
+                        <p>Later we converted this data into different relational tables for graphcommons which included: Nodes (node type, node ID, description, loyalty) and Edges (from type, from name, from location, edge type, to type, to name, to location, date, weight). This allowed us to parse the networking data differently and have it ready for exploration. In expanding our dataset we're now working with a network of 611 distinct nodes. The question we faced was: How can we make use of this metadata and work which is in a qualitative state of around 529 people?</p>
                     </div>
                 </div>
             </div>
