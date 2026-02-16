@@ -1,0 +1,99 @@
+From Type,From Name,Edge Type,To Type,To Name,Weight
+Person,Unknown,Letter,Person,Dunfermline,3
+Person,Robert Gordon,Letter,Person,Countess Dunfermline,1
+Person,Alexander Innes,Letter,Person,Dunfermline,1
+Person,David Burnet,Letter,Person,Dunfermline,1
+Person,G. Gordon,Letter,Person,Dunfermline,1
+Person,James VII,Proclamation,Group,Scottish Subjects,1
+Person,Charles Oliphant,Letter,Person,Dunfermline,1
+Person,George Milne,Letter,Person,Unknown,1
+Person,Countess Dunfermline,Letter,Person,Dunfermline,8
+Person,Unknown,Letter,Person,Unknown,2
+Person,Janet Brodie,Letter,Person,Alexander Chisholm,1
+Person,James VII,Proclamation,Group,Scottish Subjects,2
+Person,James VII,Letter,Person,Dundee,1
+Person,Viscount Massereene,Letter,Person,John How,1
+Person,J. Hay,Letter,Person,Melville,1
+Person,Unknown,Letter,Person,Melville,1
+Person,"McNaughton, younger",Letter,Person,Lady McNaughton,1
+Person,Alexander McLean,Letter,Person,McNaughton,1
+Person,Lt. Col. Achenbruc,Warrant,Person,Lt. Fairful,1
+Person,Unknown,Warrant,Person,McNaughton,1
+Person,Adam Blair,Letter,Person,Mr. Graham,1
+Person,Jacobite,Report,Group,Jacobites,1
+Group,Highland Chieftains,Report,Person,James VII,1
+Person,James Hamilton,Letter,Person,Unknown,1
+Person,Gilbert Elliot,Letter,Person,Melville,1
+Person,John Drummond,Letter,Person,Unknown,1
+Person,Colin McKenzie,Letter,Person,Melfort,1
+Person,Colin McKenzie,Letter,Person,Seaforth,1
+Group,Tenants of Cardross,Letter,Person,Melville,1
+Person,Alexander McLean,Letter,Person,Melfort,1
+Person,Alexander McLean,Letter,Person,Countess Antrim,1
+Person,David Graham,Letter,Person,Cannon,2
+Person,McNaughton,Letter,Person,James Crawford,1
+Person,Alexander McDowall,Letter,Person,"John McNaughton, Sheriff Depute Argyll",1
+Person,Sir Hugh Campbell of Cawdor,Letter,Person,Cameron of Lochiell,1
+Group,Highland Chieftains,Declaration,Person,James VII,1
+Group,James Fountain + William Douglas,Letter,Person,Cannon,1
+Person,Thomas Bass,Letter,Person,Melville,1
+Person,Peter McCulloch,Letter,Person,John McCulloch,1
+Person,Alexander McLean,Letter,Person,Cannon,3
+Person,James Winchester,Letter,Person,Dunfermline,3
+Person,Alexander McDowall,Letter,Person,Cannon,5
+Person,John Grant,Letter,Person,Unknown,1
+Person,Balcarres,Letter,Person,Anderson,1
+Person,Unknown,Letter,Person,Langton,1
+Person,Jacobite Agent,Letter,Person,Doctor Fall,1
+Person,Alexander McDowall,Letter,Person,Unknown,1
+Person,McDougall of Dunolich,Letter,Person,Cannon,1
+Person,McGregor,Letter,Person,Dunfermline,1
+Person,Alexander McDowall,Letter,Person,Dunfermline,1
+Person,Robert Stewart of Appin,Letter,Person,Dunfermline,1
+Person,Jane Wallace,Report,Person,Mayor of Carlisle,1
+Person,John Farquharson,Letter,Person,Cannon,2
+Person,John McNaughton,Warrant,Person,Laird of Pollock,1
+Person,D. McDonald,Letter,Person,Cannon,1
+Person,Unknown,Letter,Group,Jacobites,2
+Person,Unknown,Report,Person,Melville,1
+Person,Thomas Dunbar,Letter,Person,Lt. Col. Wilson,1
+Person,Cannon,Letter,Person,Thomas Dunbar,1
+Person,Unknown,Report,Person,Melville,3
+Person,William Riach,Report,Person,Melville,1
+Person,Cameron of Lochiel,Letter,Person,Cannon,1
+Person,Alexander McDonald,Letter,Person,Glengarry,1
+Person,Buchan,Letter,Person,Cannon,2
+Person,John Boyd,Report,Group,Skelmorlie + Alexander Cunningham,1
+Person,McDougall of Dunolich,Letter,Person,McNaughton,1
+Person,Patrick Logan,Letter,Person,Buchan,1
+Person,McNaughton,Letter,Person,Cannon,1
+Person,Allan McDonald,Letter,Person,Cannon,1
+Person,James VII,Letter,Group,Jacobites,6
+Person,William McKay,Letter,Person,Livingston,2
+Person,John Buchan,Letter,Person,Unknown,1
+Person,Jameson,Letter,Person,Thomas Davidson,1
+Person,Alexander McDowall,Letter,Person,Aeneas Macpherson,1
+Person,John Grierson,Letter,Person,Melville,1
+Person,James Graham,Report,Person,Melville,1
+Person,Lt. Col. John Buchan,Letter,Person,Hamilton,1
+Person,Ribaut,Letter,Person,Melville,1
+Person,John Stewart,Letter,Person,McNaughton of McNaughton,1
+Person,Isobel McNaughton,Letter,Person,McNaughton,1
+Person,I. Campbell,Letter,Person,McNaughton of McNaughton,5
+Person,A. Kennedy,Letter,Person,Cannon,1
+Person,Cannon,Letter,Person,McNaughton of McNaughton,2
+Person,McLean of Duart,Letter,Person,Cannon,1
+Person,McLean of Duart,Letter,Person,James McLean,1
+Group,"John Chapel, John Price, Richard Morris",Report,Person,Melville,1
+Group,Highland Chieftains,Declaration,Person,Melville,1
+Person,Gordon,Declaration,Person,Unknown,1
+Person,Cannon,Letter,Person,Melfort,1
+Person,Balcarres,Report,Person,Unknown,1
+Group,"John Price, Richard Morris",Report,Person,Melville,1
+Person,John Chapel,Report,Person,Melville,1
+Person,John Macky,Letter,Person,Melville,24
+Person,Jacobite,Letter,Person,John Drummond,1
+Person,Melfort,Letter,Person,Captain Cole,1
+Person,Williamite Spy,Letter,Person,Melville,1
+Person,A. Gordon,Letter,Person,Aeneas Macpherson,1
+Person,Melfort,Letter,Person,Unknown,1
