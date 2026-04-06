@@ -20,7 +20,303 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link href="css/styles.css" rel="stylesheet" />
+       <style>
+#hamilton-graph {
+  position: relative;
+  width: min(1200px, 100%);
+  margin: 1.25rem auto;
+  background: #e5e6e9;
+  border-radius: 8px;
+  border: 1px solid #d8dae2;
+  overflow: hidden;
+}
+
+#hamilton-graph .brand {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10144a;
+  border: 1px solid #10144a;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-align: center;
+  z-index: 8;
+  pointer-events: none;
+}
+
+#hamilton-graph .brand h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #e2a9f1;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph .brand p {
+  margin: 4px 0 0;
+  font-size: 0.76rem;
+  color: #e2a9f1;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph .hcontrols {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: #10144a;
+  border: 1px solid #10144a;
+  border-radius: 6px;
+  color: #e2a9f1;
+  z-index: 8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  max-width: min(92%, 700px);
+}
+
+#hamilton-graph button {
+  background: transparent;
+  border: 1px solid #3d4276;
+  color: #d4b2e7;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph button:hover {
+  border-color: #e2a9f1;
+  color: #f0d4ff;
+}
+
+#hamilton-graph button.on,
+#hamilton-graph button.on2 {
+  border-color: #e2a9f1;
+  color: #f0d4ff;
+}
+
+#hamilton-graph .sep {
+  width: 1px;
+  height: 16px;
+  background: #3d4276;
+}
+
+#hamilton-graph input[type="text"] {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #3d4276;
+  color: #f1d9ff;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  font-family: Quattrocento, serif;
+  width: 150px;
+  outline: none;
+}
+
+#hamilton-graph input[type="text"]::placeholder {
+  color: #b4a1cc;
+}
+
+#hamilton-graph input[type="text"]:focus {
+  border-color: #e2a9f1;
+}
+
+#hamilton-graph .srow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #dcc1ef;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph input[type="range"] {
+  width: 68px;
+  accent-color: #e2a9f1;
+}
+
+#hamilton-graph #stage {
+  height: 680px;
+  position: relative;
+}
+
+#hamilton-graph svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#hamilton-graph .link {
+  stroke-opacity: 0.6;
+}
+
+#hamilton-graph .link.letter {
+  stroke: #5a4a2a;
+}
+
+#hamilton-graph .link.loc {
+  stroke: #3a3a2a;
+  stroke-dasharray: 2 4;
+  stroke-opacity: 0.4;
+}
+
+#hamilton-graph .link.geo {
+  stroke: #4f5a74;
+  stroke-dasharray: 6 3;
+  stroke-opacity: 0.35;
+}
+
+#hamilton-graph .link.other {
+  stroke: #7a4a4a;
+}
+
+#hamilton-graph .link.dimmed {
+  stroke-opacity: 0.05;
+}
+
+#hamilton-graph .node circle {
+  cursor: pointer;
+}
+
+#hamilton-graph .node text {
+  font-family: Quattrocento, serif;
+  pointer-events: none;
+  fill: #0d0d0f;
+  fill-opacity: 0.9;
+}
+
+#hamilton-graph .node.dimmed circle {
+  fill-opacity: 0.08;
+  stroke-opacity: 0.08;
+}
+
+#hamilton-graph .node.dimmed text {
+  fill-opacity: 0.08;
+}
+
+#hamilton-graph .node.hi circle {
+  stroke-width: 2.4 !important;
+}
+
+#hamilton-graph #tip {
+  position: absolute;
+  background: rgba(31, 31, 91, 0.92);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #10144a;
+  font-size: 13px;
+  pointer-events: none;
+  display: none;
+  max-width: 280px;
+  z-index: 20;
+  line-height: 1.5;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph #tip .tname {
+  font-size: 13px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+#hamilton-graph #tip .ttype,
+#hamilton-graph #tip .trels,
+#hamilton-graph #tip .tconn {
+  color: #f1d9ff;
+  font-size: 11px;
+}
+
+#hamilton-graph .flegend {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #10144a;
+  border: 1px solid #10144a;
+  border-radius: 6px;
+  color: #e2a9f1;
+  z-index: 8;
+  padding: 10px 12px;
+  display: grid;
+  gap: 5px;
+}
+
+#hamilton-graph .lg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-family: Quattrocento, serif;
+}
+
+#hamilton-graph .ld {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+#hamilton-graph .fhint,
+#hamilton-graph #fstats {
+  position: absolute;
+  left: 16px;
+  background: #10144a;
+  color: #e2a9f1;
+  border: 1px solid #10144a;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: Quattrocento, serif;
+  padding: 6px 9px;
+  z-index: 8;
+}
+
+#hamilton-graph .fhint {
+  bottom: 52px;
+}
+
+#hamilton-graph #fstats {
+  bottom: 16px;
+}
+
+@media (max-width: 992px) {
+  #hamilton-graph #stage {
+    height: 620px;
+  }
+
+  #hamilton-graph .flegend {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hamilton-graph #stage {
+    height: 560px;
+  }
+
+  #hamilton-graph .brand {
+    position: static;
+    transform: none;
+    border-radius: 0;
+  }
+
+  #hamilton-graph .flegend,
+  #hamilton-graph .hcontrols,
+  #hamilton-graph .fhint,
+  #hamilton-graph #fstats {
+    position: static;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  #hamilton-graph .hcontrols {
+    justify-content: flex-start;
+  }
+}
+</style>
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10144A;">
@@ -63,68 +359,58 @@
                         <p>His correspondence's physical manuscript lives at the National Records for Scotland <a class="link" href="https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?reference=GD406%2f1&st=1&tc=y&tl=n&tn=n&tp=n&k=&ko=a&r=GD406&ro=s&df=&dt=&di=y">National Records for Scotland</a> under the designator GD406/1. Within the greater GD406 or Papers of the Douglas Hamilton Family, Dukes of Hamilton and Brandon lie more correspondence in different pockets, including printed collections outside of the National Records. The collection contains 317 letters, 7 intercepted letters, warrants, orders, accounts, proclamations etc, between the years of 1688 and 1692. Hamilton’s position as President of the Privy Council and High Commissioner meant that he operated at the interplay of politics and security and, together with the Treasury and Secretary of State, he provides an important locus point for the this investigation. </p>
       <div class="row justify-content-center py-3"> 
     <div class="col-12">
-        <div id="graph-container" style="position: relative; width: min(1200px, 100%); height: 650px; margin: 0 auto; background: #f1f1f3; border-radius: 6px; overflow: hidden; font-family: Quattrocento, serif !important;">
-          <div id="graph-header" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: #10144A; border-bottom: 0.5px solid rgba(3, 3, 3, 0.18);">
-            <h3 style="font-size:15px; color:#e2a9f1; margin:0; font-family: Quattrocento, serif !important;">
-              Letters of the Revolution <span style="font-style:italic; font-size:14px; color:#e2a9f1;">c.1689–1692</span>
-            </h3>
-            <div style="display:flex; align-items:center; gap:12px; font-size:12px; color:#e2a9f1;">
-              <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
-                <input type="checkbox" id="cb-person" checked>
-                <span style="width:9px;height:9px;border-radius:50%;background:#5c8dd4;display:inline-block;border:1.5px solid #3a6cb2;"></span>People
-              </label>
-              <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
-                <input type="checkbox" id="cb-place" checked>
-                <span style="width:9px;height:9px;border-radius:50%;background:#3aa98a;display:inline-block;border:1.5px solid #1a7a5a;"></span>Places
-              </label>
-              <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
-                <input type="checkbox" id="cb-org" checked>
-                <span style="width:9px;height:9px;border-radius:3px;background:#d47a3a;display:inline-block;border:1.5px solid #a05a1a;"></span>Orgs
-              </label>
-              <span style="width:0.5px;height:18px;background:rgba(180,155,100,0.18);display:inline-block;"></span>
-              <span id="stats" style="font-size:11px;color:#e2a9f1;">— nodes · — edges</span>
-            </div>
-          </div>
+  <div id="hamilton-graph">
+  <div class="brand">
+    <h3>Hamilton Papers — GD406</h3>
+    <p>Dukes of Hamilton &amp; Brandon · 1688–1702 · Network Graph</p>
+  </div>
+  <div class="hcontrols">
+    <input type="text" id="search" placeholder="Search node…" />
+    <div class="sep"></div>
+    <button id="fn-all" class="on">All nodes</button>
+    <button id="fn-person">People</button>
+    <button id="fn-place">Places</button>
+    <button id="fn-org">Orgs/Groups</button>
+    <div class="sep"></div>
+    <button id="fe-all" class="on2">All edges</button>
+    <button id="fe-letter">Letters only</button>
+    <button id="fe-geo">Geographic</button>
+    <div class="sep"></div>
+    <div class="srow">Charge<input type="range" id="sl-charge" min="-900" max="-20" value="-280" step="10"></div>
+    <div class="srow">Link dist<input type="range" id="sl-dist" min="20" max="320" value="90" step="5"></div>
+    <div class="sep"></div>
+    <button id="btn-pause">Pause</button>
+    <button id="btn-reset">Reset view</button>
+  </div>
+<div id="stage">
+  <svg id="svg">
+    <defs>
+      <marker id="arr" viewBox="0 -4 8 8" refX="15" refY="0" markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M0,-4L8,0L0,4" fill="#7a6a9a" fill-opacity=".65"/>
+      </marker>
+    </defs>
+    <g id="root">
+      <g id="lg"></g>
+      <g id="ng"></g>
+    </g>
+  </svg>
+  <div id="tip"></div>
+</div>
 
-          <div id="graph-wrap" style="position:absolute;top:52px;bottom:30px;left:0;right:0;">
-            <svg id="graph-svg" style="width:100%;height:100%;display:block;"></svg>
-          </div>
-
-          <div id="tooltip" style="position:absolute; pointer-events:none; z-index:30;
-            background:#10144A;
-            border:0.5px solid rgba(180,155,100,0.18);
-            border-radius:6px; padding:10px 14px;
-            font-size:12px; line-height:1.6; color:#e2a9f1;
-            opacity:0; transition:opacity .12s; max-width:220px;">
-            <strong id="tip-name" style="font-size:14px;color:#e2a9f1;display:block;margin-bottom:2px;"></strong>
-            <em id="tip-info" style="font-style:italic;color:#e2a9f1;font-size:11px;"></em>
-          </div>
-
-          <div id="legend" style="
-            position:absolute; bottom:42px; right:12px; z-index:20;
-            background:#10144A;
-            border:0.5px solid rgba(180,155,100,0.18);
-            border-radius:6px; padding:10px 14px;
-            font-size:11px; color:#e2a9f1; line-height:1.9;">
-            <div style="font-size:12px;color:#e4dac7;margin-bottom:4px;">Edge types</div>
-            <div style="display:flex;align-items:center;gap:8px;"><div style="width:20px;height:0;border-bottom:2px solid #c8a96e;opacity:.6;"></div>Correspondence</div>
-            <div style="display:flex;align-items:center;gap:8px;"><div style="width:20px;height:0;border-bottom:2px dashed #5090b0;opacity:.6;"></div>Geographic origin</div>
-            <div style="font-size:12px;color:#e4dac7;margin-top:8px;margin-bottom:2px;">Node size</div>
-            <div style="color:#e2a9f1;font-size:10px;max-width:130px;line-height:1.5;">Proportional to total connections (degree)</div>
-          </div>
-
-          <div id="info-bar" style="
-            position:absolute; bottom:0; left:0; right:0; height:30px; z-index:20;
-            background:#10144A;
-            border-top:0.5px solid rgba(180,155,100,0.18);
-            display:flex; align-items:center; justify-content:space-between;
-            padding:0 16px; font-size:11px; color:#e2a9f1;">
-            <span id="info-node" style="color:#e2a9f1;">Hover a node to explore connections</span>
-            <span>Scroll to zoom · Drag nodes · Click to unpin</span>
-          </div>
-        </div>
-      </div>
+  <div class="flegend">
+    <div class="lg"><div class="ld" style="background:var(--c-person)"></div>Person</div>
+    <div class="lg"><div class="ld" style="background:var(--c-place)"></div>Place</div>
+    <div class="lg"><div class="ld" style="background:var(--c-org)"></div>Org</div>
+    <div class="lg"><div class="ld" style="background:var(--c-group)"></div>Group</div>
+    <div class="lg" style="gap:8px;margin-left:6px">
+      <span style="border-bottom:1px solid #7a6a9a">— letter</span>
+      <span style="border-bottom:1px dashed #3a6080">- geo</span>
+      <span style="border-bottom:1px dotted #3d6e50">· located</span>
     </div>
+  </div>
+  <div class="fhint">scroll=zoom · drag=pan · click=highlight · drag node=pin</div>
+  <div id="fstats"></div>
+  </div>
   </div>
             <div class="container my-5">
                 <div class="row justify-content-center">
@@ -189,261 +475,176 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
                 <!-- Core theme JS-->
                 <script src="js/scripts.js"></script>
-                <script>
-const RAW = {"nodes":[{"id":"Major General Kirk","type":"Person","degree":10},{"id":"Master of Forbes","type":"Person","degree":10},{"id":"Shrewsbury","type":"Person","degree":8},{"id":"Archibald Hamilton","type":"Person","degree":12},{"id":"George Skirving","type":"Person","degree":9},{"id":"Tweeddale","type":"Person","degree":15},{"id":"Schomberg","type":"Person","degree":12},{"id":"Perth","type":"Person","degree":37},{"id":"Hill","type":"Place","degree":17},{"id":"Melfort","type":"Person","degree":23},{"id":"David Nairne","type":"Person","degree":9},{"id":"John Summerville","type":"Person","degree":10},{"id":"Robert Webb","type":"Person","degree":8},{"id":"John Clark","type":"Person","degree":28},{"id":"London","type":"Place","degree":395},{"id":"Madam Harcourt","type":"Person","degree":35},{"id":"Fyvie","type":"Place","degree":9},{"id":"David Crawford","type":"Person","degree":71},{"id":"Hew Wood","type":"Person","degree":11},{"id":"Duart","type":"Place","degree":9},{"id":"Melville","type":"Person","degree":464},{"id":"Inverary","type":"Place","degree":13},{"id":"Countess of Sunderland","type":"Person","degree":8},{"id":"Kensington Court","type":"Place","degree":38},{"id":"Dunfermline","type":"Person","degree":25},{"id":"Dublin Castle","type":"Place","degree":15},{"id":"Duchess of Hamilton","type":"Person","degree":85},{"id":"Inverlochie","type":"Place","degree":32},{"id":"Kensington","type":"Place","degree":8},{"id":"James Hamilton","type":"Person","degree":11},{"id":"Hamilton","type":"Person","degree":706},{"id":"Privy Council","type":"Organization","degree":92},{"id":"Edward Hungerford","type":"Person","degree":10},{"id":"Mackay","type":"Person","degree":38},{"id":"R. Jevon","type":"Person","degree":8},{"id":"John Hamilton","type":"Person","degree":29},{"id":"Hampton Court","type":"Place","degree":31},{"id":"Breadalbane","type":"Person","degree":108},{"id":"Gilbert Eliot","type":"Person","degree":12},{"id":"William Hamilton","type":"Person","degree":35},{"id":"Countess of Arran","type":"Person","degree":12},{"id":"Buchan","type":"Place","degree":9},{"id":"Hague","type":"Place","degree":15},{"id":"Argyll","type":"Person","degree":41},{"id":"Lady Gerard","type":"Person","degree":62},{"id":"Kirke","type":"Person","degree":13},{"id":"Robert Darloe","type":"Person","degree":14},{"id":"Portland","type":"Person","degree":19},{"id":"Robert Murray","type":"Person","degree":8},{"id":"Nottingham","type":"Place","degree":10},{"id":"Canon","type":"Person","degree":30},{"id":"Captain George Rooke","type":"Person","degree":17},{"id":"Balcarres","type":"Person","degree":8},{"id":"Ross","type":"Person","degree":8},{"id":"Leven","type":"Person","degree":38},{"id":"Viscount Tarbat","type":"Person","degree":39},{"id":"Arran","type":"Person","degree":163},{"id":"Balloch","type":"Place","degree":31},{"id":"Edinburgh","type":"Place","degree":838},{"id":"Carwhin","type":"Place","degree":20},{"id":"Glasgow","type":"Place","degree":15},{"id":"John Dalrymple","type":"Person","degree":101},{"id":"Cardross","type":"Person","degree":39},{"id":"John Buchan","type":"Person","degree":8},{"id":"Feversham","type":"Person","degree":33},{"id":"Whitehall","type":"Place","degree":55},{"id":"Holyrood House","type":"Place","degree":192},{"id":"Dublin","type":"Place","degree":16},{"id":"Lockhart","type":"Person","degree":40},{"id":"Stirling","type":"Place","degree":11},{"id":"Carmichael","type":"Person","degree":9},{"id":"King William","type":"Person","degree":183},{"id":"Scrimgeour","type":"Person","degree":8},{"id":"Thomas Livingston","type":"Person","degree":19},{"id":"Queen Mary","type":"Person","degree":14},{"id":"Tarbat House","type":"Place","degree":22},{"id":"Lady Dunfermline","type":"Person","degree":14},{"id":"Dundee","type":"Person","degree":15},{"id":"Crawford","type":"Person","degree":98},{"id":"Sunderland","type":"Person","degree":21},{"id":"Major General Mackay","type":"Person","degree":23},{"id":"Selkirk","type":"Person","degree":78},{"id":"Atholl","type":"Person","degree":9},{"id":"Rooke","type":"Person","degree":17},{"id":"Robert Lloyd","type":"Person","degree":9},{"id":"Polwarth","type":"Person","degree":32},{"id":"Church of Scotland","type":"Organization","degree":11},{"id":"James Dalrymple","type":"Person","degree":21},{"id":"King James","type":"Person","degree":44},{"id":"Salisbury","type":"Place","degree":12},{"id":"Alexander McDowall","type":"Person","degree":18},{"id":"Stroan","type":"Place","degree":9}],"links":[{"source":"King James","target":"Dublin","weight":5,"types":["FROM_PLACE"]},{"source":"Lady Dunfermline","target":"Dunfermline","weight":7,"types":["WROTE LETTER TO"]},{"source":"Lady Dunfermline","target":"Fyvie","weight":7,"types":["FROM_PLACE"]},{"source":"King James","target":"Dundee","weight":3,"types":["Intercepted Letter","WROTE LETTER TO"]},{"source":"King James","target":"Dublin Castle","weight":7,"types":["FROM_PLACE"]},{"source":"Alexander McDowall","target":"Canon","weight":6,"types":["WROTE LETTER TO"]},{"source":"Alexander McDowall","target":"Dunfermline","weight":1,"types":["WROTE LETTER TO"]},{"source":"Alexander McDowall","target":"Duart","weight":3,"types":["FROM_PLACE"]},{"source":"Buchan","target":"Canon","weight":2,"types":["WROTE LETTER TO"]},{"source":"Buchan","target":"Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"Canon","target":"Melfort","weight":1,"types":["WROTE LETTER TO"]},{"source":"Balcarres","target":"King James","weight":1,"types":["Discourse"]},{"source":"Buchan","target":"Breadalbane","weight":1,"types":["Agreement"]},{"source":"Edinburgh","target":"Perth","weight":15,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"London","weight":2,"types":["Letter"]},{"source":"London","target":"Robert Murray","weight":1,"types":["FROM_PLACE"]},{"source":"Perth","target":"London","weight":1,"types":["Letter"]},{"source":"Holyrood House","target":"Hamilton","weight":42,"types":["FROM_PLACE"]},{"source":"Stroan","target":"Dundee","weight":6,"types":["FROM_PLACE"]},{"source":"Stirling","target":"Mackay","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Privy Council","weight":23,"types":["FROM_PLACE"]},{"source":"London","target":"John Dalrymple","weight":4,"types":["FROM_PLACE"]},{"source":"Dublin Castle","target":"King James","weight":4,"types":["FROM_PLACE"]},{"source":"Inverary","target":"Argyll","weight":2,"types":["FROM_PLACE"]},{"source":"London","target":"Glasgow","weight":1,"types":["Letter"]},{"source":"London","target":"Edinburgh","weight":4,"types":["Letter"]},{"source":"Balloch","target":"Edinburgh","weight":2,"types":["Letter"]},{"source":"Balloch","target":"Breadalbane","weight":25,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Carwhin","weight":13,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Breadalbane","weight":5,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"John Dalrymple","weight":38,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Argyll","weight":8,"types":["FROM_PLACE"]},{"source":"Perth","target":"Mackay","weight":1,"types":["FROM_PLACE"]},{"source":"London","target":"Breadalbane","weight":54,"types":["FROM_PLACE"]},{"source":"London","target":"Carwhin","weight":6,"types":["Letter"]},{"source":"Whitehall","target":"Nottingham","weight":10,"types":["FROM_PLACE"]},{"source":"Balloch","target":"Carwhin","weight":1,"types":["FROM_PLACE"]},{"source":"Hampton Court","target":"King William","weight":4,"types":["FROM_PLACE"]},{"source":"London","target":"James Dalrymple","weight":4,"types":["FROM_PLACE"]},{"source":"Hampton Court","target":"Portland","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Atholl","weight":3,"types":["FROM_PLACE"]},{"source":"Hampton Court","target":"James Dalrymple","weight":1,"types":["FROM_PLACE"]},{"source":"Whitehall","target":"Portland","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Hamilton","weight":3,"types":["FROM_PLACE"]},{"source":"London","target":"Melville","weight":30,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Crawford","weight":81,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Polwarth","weight":15,"types":["FROM_PLACE"]},{"source":"Tarbat House","target":"Viscount Tarbat","weight":11,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"David Nairne","weight":6,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Lockhart","weight":23,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Ross","weight":2,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Cardross","weight":11,"types":["FROM_PLACE"]},{"source":"Perth","target":"Cardross","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"James Dalrymple","weight":7,"types":["FROM_PLACE"]},{"source":"Whitehall","target":"Shrewsbury","weight":2,"types":["FROM_PLACE"]},{"source":"Glasgow","target":"Argyll","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Carmichael","weight":8,"types":["FROM_PLACE"]},{"source":"Kensington Court","target":"King William","weight":16,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Melville","weight":11,"types":["FROM_PLACE"]},{"source":"Whitehall","target":"King William","weight":1,"types":["FROM_PLACE"]},{"source":"Kensington Court","target":"Portland","weight":3,"types":["FROM_PLACE"]},{"source":"Dublin","target":"Hill","weight":1,"types":["FROM_PLACE"]},{"source":"Holyrood House","target":"Melville","weight":5,"types":["FROM_PLACE"]},{"source":"London","target":"Lockhart","weight":14,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Viscount Tarbat","weight":22,"types":["FROM_PLACE"]},{"source":"Whitehall","target":"Queen Mary","weight":5,"types":["FROM_PLACE"]},{"source":"Inverlochie","target":"Hill","weight":16,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Church of Scotland","weight":1,"types":["FROM_PLACE"]},{"source":"Edinburgh","target":"Thomas Livingston","weight":8,"types":["FROM_PLACE"]},{"source":"Hague","target":"John Dalrymple","weight":2,"types":["FROM_PLACE"]},{"source":"Whitehall","target":"Melville","weight":2,"types":["FROM_PLACE"]},{"source":"Crawford","target":"Hamilton","weight":2,"types":["WROTE LETTER TO","FROM_PLACE"]},{"source":"King William","target":"Leven","weight":9,"types":["Warrant","Commission","WROTE LETTER TO"]},{"source":"King William","target":"Melville","weight":9,"types":["Warrant","Memorandum","WROTE LETTER TO"]},{"source":"King James","target":"Canon","weight":2,"types":["WROTE LETTER TO"]},{"source":"Melville","target":"Mackay","weight":2,"types":["Warrant","Instructions"]},{"source":"King William","target":"Church of Scotland","weight":5,"types":["Remarks","WROTE LETTER TO"]},{"source":"Queen Mary","target":"Melville","weight":2,"types":["Attestation","WROTE LETTER TO"]},{"source":"Privy Council","target":"Glasgow","weight":1,"types":["Warrant"]},{"source":"Cardross","target":"Privy Council","weight":2,"types":["WROTE LETTER TO"]},{"source":"Crawford","target":"Privy Council","weight":1,"types":["WROTE LETTER TO"]},{"source":"King William","target":"Privy Council","weight":17,"types":["Letter","Draft Letter","WROTE LETTER TO"]},{"source":"Privy Council","target":"King William","weight":2,"types":["WROTE LETTER TO","Oath"]},{"source":"Privy Council","target":"Melville","weight":2,"types":["Representation","WROTE LETTER TO"]},{"source":"Melville","target":"Cardross","weight":1,"types":["Warrant"]},{"source":"Privy Council","target":"Leven","weight":4,"types":["Warrant","Order"]},{"source":"Tweeddale","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Leven","target":"Melville","weight":1,"types":["Notebook"]},{"source":"David Nairne","target":"Leven","weight":1,"types":["WROTE LETTER TO"]},{"source":"Scrimgeour","target":"Leven","weight":1,"types":["WROTE LETTER TO"]},{"source":"Church of Scotland","target":"Melville","weight":2,"types":["Proceedings","Memorial"]},{"source":"Church of Scotland","target":"King William","weight":2,"types":["Address","WROTE LETTER TO"]},{"source":"Crawford","target":"Melville","weight":5,"types":["WROTE LETTER TO"]},{"source":"Polwarth","target":"Melville","weight":2,"types":["WROTE LETTER TO"]},{"source":"Cardross","target":"Melville","weight":13,"types":["Letter","WROTE LETTER TO"]},{"source":"Melville","target":"Crawford","weight":1,"types":["WROTE LETTER TO"]},{"source":"Melville","target":"Hamilton","weight":74,"types":["Letter","WROTE LETTER TO"]},{"source":"Shrewsbury","target":"Melville","weight":2,"types":["WROTE LETTER TO"]},{"source":"David Nairne","target":"Melville","weight":2,"types":["WROTE LETTER TO"]},{"source":"Lockhart","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Argyll","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Master of Forbes","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Ross","target":"Melville","weight":2,"types":["WROTE LETTER TO"]},{"source":"John Dalrymple","target":"Melville","weight":7,"types":["Letter","WROTE LETTER TO"]},{"source":"Viscount Tarbat","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Scrimgeour","target":"Melville","weight":1,"types":["WROTE LETTER TO"]},{"source":"Melville","target":"Leven","weight":1,"types":["WROTE LETTER TO"]},{"source":"Crawford","target":"Cardross","weight":2,"types":["Letter"]},{"source":"Thomas Livingston","target":"Mackay","weight":2,"types":["Letter"]},{"source":"John Buchan","target":"Melville","weight":4,"types":["Letter"]},{"source":"Mackay","target":"Melville","weight":3,"types":["Letter"]},{"source":"Melville","target":"Scrimgeour","weight":2,"types":["Warrant"]},{"source":"Thomas Livingston","target":"Melville","weight":6,"types":["Letter"]},{"source":"Sunderland","target":"Arran","weight":8,"types":["WROTE LETTER TO"]},{"source":"Sunderland","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"Breadalbane","target":"Arran","weight":1,"types":["WROTE LETTER TO"]},{"source":"Breadalbane","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"John Hamilton","target":"Hamilton","weight":4,"types":["FROM_PLACE","WROTE LETTER TO"]},{"source":"John Hamilton","target":"Edinburgh","weight":2,"types":["FROM_PLACE"]},{"source":"Melfort","target":"Dublin Castle","weight":1,"types":["FROM_PLACE"]},{"source":"Feversham","target":"Major General Kirk","weight":2,"types":["WROTE LETTER TO"]},{"source":"Feversham","target":"Salisbury","weight":12,"types":["FROM_PLACE"]},{"source":"Feversham","target":"Arran","weight":10,"types":["Letter","WROTE LETTER TO"]},{"source":"Feversham","target":"London","weight":2,"types":["FROM_PLACE"]},{"source":"King James","target":"Feversham","weight":2,"types":["Letter","WROTE LETTER TO"]},{"source":"King James","target":"Whitehall","weight":3,"types":["FROM_PLACE"]},{"source":"Robert Webb","target":"Hamilton","weight":2,"types":["FROM_PLACE","WROTE LETTER TO"]},{"source":"Robert Webb","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"George Skirving","target":"Arran","weight":2,"types":["WROTE LETTER TO"]},{"source":"Robert Webb","target":"David Crawford","weight":4,"types":["WROTE LETTER TO"]},{"source":"James Hamilton","target":"Arran","weight":2,"types":["WROTE LETTER TO"]},{"source":"James Hamilton","target":"Edinburgh","weight":3,"types":["FROM_PLACE"]},{"source":"William Hamilton","target":"Arran","weight":13,"types":["WROTE LETTER TO"]},{"source":"William Hamilton","target":"Edinburgh","weight":8,"types":["FROM_PLACE"]},{"source":"Sunderland","target":"Hamilton","weight":3,"types":["WROTE LETTER TO"]},{"source":"Sunderland","target":"Whitehall","weight":2,"types":["FROM_PLACE"]},{"source":"Hamilton","target":"Sunderland","weight":1,"types":["WROTE LETTER TO"]},{"source":"Hamilton","target":"Holyrood House","weight":90,"types":["FROM_PLACE"]},{"source":"John Dalrymple","target":"Arran","weight":2,"types":["WROTE LETTER TO"]},{"source":"John Dalrymple","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Melfort","target":"Perth","weight":2,"types":["Intercepted Letter"]},{"source":"Melfort","target":"Dublin","weight":4,"types":["FROM_PLACE"]},{"source":"Tweeddale","target":"Hamilton","weight":5,"types":["Letter","WROTE LETTER TO"]},{"source":"Tweeddale","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"Shrewsbury","target":"Hamilton","weight":2,"types":["Letter","WROTE LETTER TO"]},{"source":"Shrewsbury","target":"London","weight":2,"types":["FROM_PLACE"]},{"source":"Viscount Tarbat","target":"Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"Viscount Tarbat","target":"Privy Council","weight":1,"types":["Petition"]},{"source":"Schomberg","target":"Hamilton","weight":4,"types":["Letter","WROTE LETTER TO"]},{"source":"Major General Kirk","target":"Hamilton","weight":3,"types":["WROTE LETTER TO"]},{"source":"Captain George Rooke","target":"Hamilton","weight":9,"types":["Instructions","WROTE LETTER TO"]},{"source":"James Dalrymple","target":"Hamilton","weight":4,"types":["Letter","WROTE LETTER TO"]},{"source":"James Dalrymple","target":"Hampton Court","weight":2,"types":["FROM_PLACE"]},{"source":"John Dalrymple","target":"Hamilton","weight":17,"types":["Letter","WROTE LETTER TO"]},{"source":"John Dalrymple","target":"London","weight":10,"types":["FROM_PLACE"]},{"source":"John Dalrymple","target":"Hague","weight":6,"types":["FROM_PLACE"]},{"source":"Argyll","target":"Hamilton","weight":12,"types":["Letter","WROTE LETTER TO"]},{"source":"Argyll","target":"Glasgow","weight":3,"types":["FROM_PLACE"]},{"source":"Argyll","target":"Inverary","weight":3,"types":["FROM_PLACE"]},{"source":"Master of Forbes","target":"Hamilton","weight":4,"types":["Letter","WROTE LETTER TO"]},{"source":"Polwarth","target":"Hamilton","weight":7,"types":["Letter","WROTE LETTER TO"]},{"source":"Polwarth","target":"Edinburgh","weight":7,"types":["FROM_PLACE"]},{"source":"Hamilton","target":"Melville","weight":64,"types":["Letter","WROTE LETTER TO"]},{"source":"Hamilton","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Major General Mackay","target":"Hamilton","weight":12,"types":["Paper","WROTE LETTER TO"]},{"source":"Major General Mackay","target":"Stirling","weight":2,"types":["FROM_PLACE"]},{"source":"Major General Mackay","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Melville","target":"London","weight":50,"types":["FROM_PLACE"]},{"source":"King William","target":"Hampton Court","weight":15,"types":["FROM_PLACE"]},{"source":"King William","target":"Hamilton","weight":17,"types":["Warrant","Letter","WROTE LETTER TO"]},{"source":"King William","target":"Whitehall","weight":3,"types":["FROM_PLACE"]},{"source":"Melville","target":"Hampton Court","weight":1,"types":["FROM_PLACE"]},{"source":"King William","target":"Kensington","weight":4,"types":["FROM_PLACE"]},{"source":"Melville","target":"Whitehall","weight":3,"types":["FROM_PLACE"]},{"source":"King William","target":"Hague","weight":1,"types":["FROM_PLACE"]},{"source":"John Hamilton","target":"David Crawford","weight":9,"types":["WROTE LETTER TO"]},{"source":"John Hamilton","target":"Arran","weight":1,"types":["FROM_PLACE"]},{"source":"Privy Council","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Arran","target":"David Crawford","weight":2,"types":["WROTE LETTER TO"]},{"source":"Robert Murray","target":"Arran","weight":2,"types":["WROTE LETTER TO"]},{"source":"Robert Murray","target":"London","weight":3,"types":["FROM_PLACE"]},{"source":"Robert Murray","target":"Selkirk","weight":1,"types":["WROTE LETTER TO"]},{"source":"Tweeddale","target":"Edinburgh","weight":5,"types":["FROM_PLACE"]},{"source":"Robert Darloe","target":"David Crawford","weight":7,"types":["WROTE LETTER TO"]},{"source":"Robert Darloe","target":"Hamilton","weight":7,"types":["FROM_PLACE"]},{"source":"Duchess of Hamilton","target":"Hamilton","weight":5,"types":["FROM_PLACE"]},{"source":"Hew Wood","target":"David Crawford","weight":6,"types":["WROTE LETTER TO"]},{"source":"Hew Wood","target":"Hamilton","weight":5,"types":["FROM_PLACE"]},{"source":"John Dalrymple","target":"David Crawford","weight":1,"types":["WROTE LETTER TO"]},{"source":"William Hamilton","target":"David Crawford","weight":7,"types":["WROTE LETTER TO"]},{"source":"John Hamilton","target":"Holyrood House","weight":4,"types":["FROM_PLACE"]},{"source":"Selkirk","target":"David Crawford","weight":1,"types":["WROTE LETTER TO"]},{"source":"Selkirk","target":"London","weight":31,"types":["FROM_PLACE"]},{"source":"John Hamilton","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"Gilbert Eliot","target":"Hamilton","weight":6,"types":["WROTE LETTER TO"]},{"source":"Gilbert Eliot","target":"Edinburgh","weight":6,"types":["FROM_PLACE"]},{"source":"William Hamilton","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"Hamilton","target":"John Dalrymple","weight":1,"types":["WROTE LETTER TO"]},{"source":"Hamilton","target":"King William","weight":15,"types":["Letter","WROTE LETTER TO"]},{"source":"Hamilton","target":"Duchess of Hamilton","weight":43,"types":["WROTE LETTER TO"]},{"source":"James Hamilton","target":"David Crawford","weight":1,"types":["WROTE LETTER TO"]},{"source":"James Hamilton","target":"Hamilton","weight":2,"types":["WROTE LETTER TO","FROM_PLACE"]},{"source":"Duchess of Hamilton","target":"Arran","weight":11,"types":["WROTE LETTER TO"]},{"source":"Hamilton","target":"Arran","weight":19,"types":["WROTE LETTER TO"]},{"source":"Arran","target":"Hamilton","weight":4,"types":["FROM_PLACE","WROTE LETTER TO"]},{"source":"Hamilton","target":"London","weight":39,"types":["FROM_PLACE"]},{"source":"Selkirk","target":"Arran","weight":10,"types":["WROTE LETTER TO"]},{"source":"Countess of Arran","target":"Arran","weight":8,"types":["WROTE LETTER TO"]},{"source":"Countess of Arran","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"Arran","target":"Duchess of Hamilton","weight":3,"types":["WROTE LETTER TO"]},{"source":"Countess of Sunderland","target":"Arran","weight":4,"types":["WROTE LETTER TO"]},{"source":"Duchess of Hamilton","target":"Holyrood House","weight":1,"types":["FROM_PLACE"]},{"source":"Archibald Hamilton","target":"Arran","weight":2,"types":["WROTE LETTER TO"]},{"source":"Archibald Hamilton","target":"London","weight":2,"types":["FROM_PLACE"]},{"source":"Arran","target":"Robert Murray","weight":1,"types":["WROTE LETTER TO"]},{"source":"Arran","target":"Whitehall","weight":2,"types":["FROM_PLACE"]},{"source":"Archibald Hamilton","target":"Duchess of Hamilton","weight":2,"types":["WROTE LETTER TO"]},{"source":"Argyll","target":"Arran","weight":1,"types":["WROTE LETTER TO"]},{"source":"King William","target":"London","weight":4,"types":["FROM_PLACE"]},{"source":"Countess of Arran","target":"Duchess of Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"Duchess of Hamilton","target":"Countess of Arran","weight":1,"types":["WROTE LETTER TO"]},{"source":"Schomberg","target":"Arran","weight":1,"types":["WROTE LETTER TO"]},{"source":"Melfort","target":"Balcarres","weight":2,"types":["Intercepted Letter","WROTE LETTER TO"]},{"source":"Melfort","target":"Dundee","weight":2,"types":["Intercepted Letter","WROTE LETTER TO"]},{"source":"John Summerville","target":"Hamilton","weight":4,"types":["FROM_PLACE","WROTE LETTER TO"]},{"source":"John Summerville","target":"Edinburgh","weight":2,"types":["FROM_PLACE"]},{"source":"John Summerville","target":"Perth","weight":2,"types":["WROTE LETTER TO"]},{"source":"Perth","target":"Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"Perth","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Thomas Livingston","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"David Crawford","target":"Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"David Crawford","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Robert Lloyd","target":"Madam Harcourt","weight":3,"types":["WROTE LETTER TO"]},{"source":"King James","target":"Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"Hamilton","target":"King James","weight":1,"types":["WROTE LETTER TO"]},{"source":"Queen Mary","target":"Hamilton","weight":2,"types":["Letter","WROTE LETTER TO"]},{"source":"Queen Mary","target":"Kensington","weight":2,"types":["FROM_PLACE"]},{"source":"Hamilton","target":"Queen Mary","weight":2,"types":["Letter","WROTE LETTER TO"]},{"source":"Crawford","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Melville","target":"Privy Council","weight":1,"types":["WROTE LETTER TO"]},{"source":"George Skirving","target":"Glasgow","weight":3,"types":["FROM_PLACE"]},{"source":"Portland","target":"Hamilton","weight":5,"types":["Letter","WROTE LETTER TO"]},{"source":"Portland","target":"Kensington","weight":1,"types":["FROM_PLACE"]},{"source":"Hamilton","target":"Portland","weight":3,"types":["WROTE LETTER TO"]},{"source":"Portland","target":"Whitehall","weight":1,"types":["FROM_PLACE"]},{"source":"Selkirk","target":"Hamilton","weight":28,"types":["WROTE LETTER TO"]},{"source":"Selkirk","target":"Kensington","weight":1,"types":["FROM_PLACE"]},{"source":"Selkirk","target":"Hague","weight":2,"types":["FROM_PLACE"]},{"source":"R. Jevon","target":"Lady Gerard","weight":4,"types":["WROTE LETTER TO"]},{"source":"Edward Hungerford","target":"Lady Gerard","weight":1,"types":["WROTE LETTER TO"]},{"source":"Edward Hungerford","target":"London","weight":1,"types":["FROM_PLACE"]},{"source":"R. Jevon","target":"London","weight":2,"types":["FROM_PLACE"]},{"source":"Robert Lloyd","target":"Lady Gerard","weight":2,"types":["WROTE LETTER TO"]},{"source":"Archibald Hamilton","target":"John Clark","weight":2,"types":["WROTE LETTER TO"]},{"source":"Archibald Hamilton","target":"Hamilton","weight":2,"types":["FROM_PLACE"]},{"source":"John Clark","target":"Hamilton","weight":1,"types":["FROM_PLACE"]},{"source":"William Hamilton","target":"John Clark","weight":1,"types":["WROTE LETTER TO"]},{"source":"William Hamilton","target":"Hamilton","weight":1,"types":["FROM_PLACE"]},{"source":"Countess of Sunderland","target":"Duchess of Hamilton","weight":1,"types":["WROTE LETTER TO"]},{"source":"King James","target":"Atholl","weight":1,"types":["WROTE LETTER TO"]},{"source":"King James","target":"Balcarres","weight":2,"types":["Intercepted Letter","WROTE LETTER TO"]},{"source":"George Skirving","target":"John Clark","weight":3,"types":["WROTE LETTER TO"]},{"source":"John Hamilton","target":"John Clark","weight":2,"types":["WROTE LETTER TO"]},{"source":"Mackay","target":"Hamilton","weight":10,"types":["Letter"]},{"source":"Mackay","target":"Stirling","weight":2,"types":["FROM_PLACE"]},{"source":"Mackay","target":"Edinburgh","weight":1,"types":["FROM_PLACE"]},{"source":"Rooke","target":"Hamilton","weight":6,"types":["Letter"]},{"source":"Kirke","target":"Hamilton","weight":3,"types":["Account","Letter"]},{"source":"Rooke","target":"Kirke","weight":2,"types":["Letter"]},{"source":"Feversham","target":"Kirke","weight":2,"types":["Letter"]}]};
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const G = {"nodes": [{"id": "p1", "label": "Duchess of Hamilton", "group": "Person", "degree": 83}, {"id": "p2", "label": "Sunderland", "group": "Person", "degree": 22}, {"id": "p3", "label": "Arran", "group": "Person", "degree": 147}, {"id": "p5", "label": "Charles Spencer", "group": "Person", "degree": 2}, {"id": "p7", "label": "George MacKenzie", "group": "Person", "degree": 4}, {"id": "p8", "label": "Breadalbane", "group": "Person", "degree": 2}, {"id": "p10", "label": "Hamilton", "group": "Person", "degree": 644}, {"id": "p11", "label": "John Hamilton", "group": "Person", "degree": 31}, {"id": "p12", "label": "Walter Cornwall", "group": "Person", "degree": 2}, {"id": "p14", "label": "J. Macleane", "group": "Person", "degree": 2}, {"id": "p15", "label": "Melfort", "group": "Person", "degree": 14}, {"id": "p17", "label": "Feversham", "group": "Person", "degree": 34}, {"id": "p18", "label": "Kirke", "group": "Person", "degree": 25}, {"id": "p21", "label": "Lichfield's regiment; Arran's regiment", "group": "Group", "degree": 1}, {"id": "p22", "label": "King James", "group": "Person", "degree": 22}, {"id": "p24", "label": "Madam Harcourt", "group": "Person", "degree": 19}, {"id": "p26", "label": "H. Peyre", "group": "Person", "degree": 6}, {"id": "p27", "label": "Mr. Billott", "group": "Person", "degree": 3}, {"id": "p28", "label": "Mrs. Martha Ward", "group": "Person", "degree": 1}, {"id": "p29", "label": "Thomas Moncrieffe", "group": "Person", "degree": 2}, {"id": "p30", "label": "W. Hamilton", "group": "Person", "degree": 7}, {"id": "p31", "label": "Cap. James Hamilton", "group": "Person", "degree": 1}, {"id": "p33", "label": "H", "group": "Person", "degree": 2}, {"id": "p34", "label": "Mr. Robert Craig", "group": "Person", "degree": 2}, {"id": "p36", "label": "Robert Webb", "group": "Person", "degree": 8}, {"id": "p37", "label": "Lt. Col. John Buchan", "group": "Person", "degree": 2}, {"id": "p38", "label": "Sir Charles Graham", "group": "Person", "degree": 1}, {"id": "p39", "label": "Alice Smith", "group": "Person", "degree": 2}, {"id": "p40", "label": "Lady Gerard", "group": "Person", "degree": 56}, {"id": "p41", "label": "George Skirving", "group": "Person", "degree": 9}, {"id": "p43", "label": "David Crawford", "group": "Person", "degree": 69}, {"id": "p45", "label": "James Hamilton", "group": "Person", "degree": 9}, {"id": "p46", "label": "William Hamilton", "group": "Person", "degree": 34}, {"id": "p47", "label": "Lady Belhaven", "group": "Person", "degree": 2}, {"id": "p49", "label": "Sir George Lockhart", "group": "Person", "degree": 2}, {"id": "p50", "label": "W. Chetwynd", "group": "Person", "degree": 7}, {"id": "p51", "label": "Edward Hungerford", "group": "Person", "degree": 10}, {"id": "p53", "label": "James Stewart", "group": "Person", "degree": 2}, {"id": "p54", "label": "W.W.", "group": "Person", "degree": 2}, {"id": "p55", "label": "J. Bourdenane", "group": "Person", "degree": 1}, {"id": "p56", "label": "Mr. Charles Roberts", "group": "Person", "degree": 1}, {"id": "p58", "label": "J. Duncan", "group": "Person", "degree": 2}, {"id": "p59", "label": "Mr. Crawford", "group": "Person", "degree": 2}, {"id": "p62", "label": "John Dalrymple", "group": "Person", "degree": 43}, {"id": "p63", "label": "D. Bellot", "group": "Person", "degree": 4}, {"id": "p64", "label": "Mrs. Astbury", "group": "Person", "degree": 1}, {"id": "p65", "label": "Robert Cunningham", "group": "Person", "degree": 2}, {"id": "p66", "label": "D. Nairne", "group": "Person", "degree": 2}, {"id": "p69", "label": "Perth", "group": "Person", "degree": 8}, {"id": "p70", "label": "Mr. Brodie", "group": "Person", "degree": 1}, {"id": "p71", "label": "George Middleton", "group": "Person", "degree": 2}, {"id": "p72", "label": "Major Robert Middleton", "group": "Person", "degree": 2}, {"id": "p75", "label": "A. Kennedy", "group": "Person", "degree": 2}, {"id": "p76", "label": "Balcarres", "group": "Person", "degree": 5}, {"id": "p77", "label": "Lord Drummond", "group": "Person", "degree": 2}, {"id": "p78", "label": "Servant, Lord Drummond", "group": "Person", "degree": 2}, {"id": "p79", "label": "David Cairnes", "group": "Person", "degree": 2}, {"id": "p80", "label": "Argyll", "group": "Person", "degree": 33}, {"id": "p82", "label": "Dugal Campbell", "group": "Person", "degree": 2}, {"id": "p83", "label": "John Campbell", "group": "Person", "degree": 2}, {"id": "p85", "label": "William Campbell", "group": "Person", "degree": 2}, {"id": "p86", "label": "Mr. Davgall Campbell", "group": "Person", "degree": 2}, {"id": "p89", "label": "Angus Campbell", "group": "Person", "degree": 1}, {"id": "p91", "label": "Glencairn", "group": "Person", "degree": 2}, {"id": "p93", "label": "Tweeddale", "group": "Person", "degree": 15}, {"id": "p94", "label": "Shrewsbury", "group": "Person", "degree": 5}, {"id": "p95", "label": "Viscount Tarbat", "group": "Person", "degree": 2}, {"id": "p96", "label": "Privy Council", "group": "Organization", "degree": 22}, {"id": "p97", "label": "Schomberg", "group": "Person", "degree": 11}, {"id": "p99", "label": "Swallow", "group": "Ship", "degree": 2}, {"id": "p102", "label": "George Walker & John Michelburn", "group": "Group", "degree": 6}, {"id": "p103", "label": "Robert Brotherson", "group": "Person", "degree": 1}, {"id": "p104", "label": "His cousin Thomas", "group": "Person", "degree": 1}, {"id": "p105", "label": "William Fullerton", "group": "Person", "degree": 5}, {"id": "p108", "label": "Protestant Subjects", "group": "Group", "degree": 1}, {"id": "p109", "label": "Rooke", "group": "Person", "degree": 34}, {"id": "p115", "label": "James Dalrymple", "group": "Person", "degree": 6}, {"id": "p123", "label": "Master of Forbes", "group": "Person", "degree": 8}, {"id": "p125", "label": "Polwarth", "group": "Person", "degree": 15}, {"id": "p126", "label": "Melville", "group": "Person", "degree": 225}, {"id": "p127", "label": "Mackay", "group": "Person", "degree": 44}, {"id": "p135", "label": "King William", "group": "Person", "degree": 84}, {"id": "p136", "label": "Convention of Estates", "group": "Organization", "degree": 6}, {"id": "p137", "label": "Parliament", "group": "Organization", "degree": 5}, {"id": "p138", "label": "Mr. James Graham", "group": "Person", "degree": 1}, {"id": "p141", "label": "Ester de Varengeville", "group": "Person", "degree": 1}, {"id": "p142", "label": "Dundonald", "group": "Person", "degree": 2}, {"id": "p145", "label": "J. Crawford", "group": "Person", "degree": 2}, {"id": "p147", "label": "James Marshall", "group": "Person", "degree": 2}, {"id": "p148", "label": "Dudley Vanbrugh", "group": "Person", "degree": 2}, {"id": "p149", "label": "Thomas Ailborne", "group": "Person", "degree": 2}, {"id": "p150", "label": "D.C.", "group": "Person", "degree": 1}, {"id": "p151", "label": "James Foulis", "group": "Person", "degree": 6}, {"id": "p153", "label": "William Stirling", "group": "Person", "degree": 2}, {"id": "p154", "label": "Lady Elizabeth Clancarty", "group": "Person", "degree": 7}, {"id": "p155", "label": "Robert Murray", "group": "Person", "degree": 9}, {"id": "p156", "label": "Selkirk", "group": "Person", "degree": 78}, {"id": "p157", "label": "John Anderson", "group": "Person", "degree": 2}, {"id": "p158", "label": "Charles Fielding", "group": "Person", "degree": 2}, {"id": "p160", "label": "Rupert Billingsley", "group": "Person", "degree": 3}, {"id": "p161", "label": "Daniel Hamilton", "group": "Person", "degree": 2}, {"id": "p162", "label": "W. Fanshawe", "group": "Person", "degree": 2}, {"id": "p163", "label": "Marie Macdonald", "group": "Person", "degree": 6}, {"id": "p165", "label": "Robert Darloe", "group": "Person", "degree": 14}, {"id": "p167", "label": "Saltoun", "group": "Person", "degree": 4}, {"id": "p168", "label": "John Munro", "group": "Person", "degree": 2}, {"id": "p169", "label": "John Caldwell", "group": "Person", "degree": 2}, {"id": "p170", "label": "Colonel Codrington", "group": "Person", "degree": 2}, {"id": "p171", "label": "Lords of Committee for Plantations", "group": "Organization", "degree": 2}, {"id": "p173", "label": "Colonel Kendall", "group": "Person", "degree": 2}, {"id": "p175", "label": "Hew Wood", "group": "Person", "degree": 11}, {"id": "p176", "label": "Archibald, Bishop of the Isles", "group": "Person", "degree": 2}, {"id": "p177", "label": "M. Fearn", "group": "Person", "degree": 1}, {"id": "p178", "label": "Count Leslie", "group": "Person", "degree": 2}, {"id": "p180", "label": "J. Smith", "group": "Person", "degree": 4}, {"id": "p181", "label": "Rothes", "group": "Person", "degree": 2}, {"id": "p182", "label": "James Ogilvie", "group": "Person", "degree": 2}, {"id": "p183", "label": "William Black", "group": "Person", "degree": 1}, {"id": "p184", "label": "George Simpson", "group": "Person", "degree": 2}, {"id": "p185", "label": "J. Bunteine", "group": "Person", "degree": 2}, {"id": "p186", "label": "Robert Johnston", "group": "Person", "degree": 2}, {"id": "p188", "label": "J. C.", "group": "Person", "degree": 2}, {"id": "p190", "label": "E.J.", "group": "Person", "degree": 1}, {"id": "p191", "label": "Susan Howard", "group": "Person", "degree": 2}, {"id": "p193", "label": "A. Naismith", "group": "Person", "degree": 2}, {"id": "p194", "label": "James Coltart", "group": "Person", "degree": 3}, {"id": "p196", "label": "Thomas Wilson", "group": "Person", "degree": 2}, {"id": "p197", "label": "John Saunders", "group": "Person", "degree": 2}, {"id": "p199", "label": "John Robertson", "group": "Person", "degree": 10}, {"id": "p200", "label": "John Laing", "group": "Person", "degree": 2}, {"id": "p201", "label": "John Baillie", "group": "Group", "degree": 9}, {"id": "p202", "label": "G. Hamilton", "group": "Person", "degree": 1}, {"id": "p204", "label": "Lilias Rutherford", "group": "Person", "degree": 2}, {"id": "p205", "label": "Carstares", "group": "Person", "degree": 4}, {"id": "p207", "label": "W. Annan", "group": "Person", "degree": 2}, {"id": "p209", "label": "Richard Beavvoir", "group": "Person", "degree": 2}, {"id": "p210", "label": "James Deanes", "group": "Person", "degree": 2}, {"id": "p211", "label": "Patrick Moray and Walter Cornwall", "group": "Group", "degree": 2}, {"id": "p212", "label": "John Hamilton of Bargany", "group": "Person", "degree": 2}, {"id": "p213", "label": "Gilbert Eliot", "group": "Person", "degree": 12}, {"id": "p214", "label": "Lady Katherine Ranelagh", "group": "Person", "degree": 1}, {"id": "p215", "label": "James Johnston", "group": "Person", "degree": 3}, {"id": "p216", "label": "W. J.", "group": "Person", "degree": 1}, {"id": "p217", "label": "Katherine Polat", "group": "Person", "degree": 6}, {"id": "p218", "label": "George Hamilton", "group": "Person", "degree": 7}, {"id": "p219", "label": "J. Parker", "group": "Person", "degree": 2}, {"id": "p220", "label": "Lady Anne Spencer", "group": "Person", "degree": 4}, {"id": "p221", "label": "Countess of Sutherland", "group": "Person", "degree": 2}, {"id": "p223", "label": "James St. Clair", "group": "Person", "degree": 2}, {"id": "p224", "label": "Frank", "group": "Person", "degree": 1}, {"id": "p226", "label": "Lord George Hamilton", "group": "Person", "degree": 2}, {"id": "p227", "label": "Robert Spencer", "group": "Person", "degree": 2}, {"id": "p228", "label": "Countess of Arran", "group": "Person", "degree": 12}, {"id": "p230", "label": "V. de Vallace", "group": "Person", "degree": 2}, {"id": "p231", "label": "James Hay", "group": "Person", "degree": 2}, {"id": "p233", "label": "Marquis of Hamilton", "group": "Person", "degree": 2}, {"id": "p234", "label": "Hamilton of Orbiston", "group": "Person", "degree": 1}, {"id": "p235", "label": "Countess of Cassillis", "group": "Person", "degree": 5}, {"id": "p236", "label": "Countess of Sunderland", "group": "Person", "degree": 8}, {"id": "p238", "label": "Atholl", "group": "Person", "degree": 2}, {"id": "p240", "label": "Archibald Hamilton", "group": "Person", "degree": 12}, {"id": "p241", "label": "Murray", "group": "Person", "degree": 2}, {"id": "p243", "label": "Clare", "group": "Person", "degree": 1}, {"id": "p244", "label": "George Clerk", "group": "Person", "degree": 1}, {"id": "p247", "label": "Marlborough", "group": "Person", "degree": 1}, {"id": "p248", "label": "W. Livingston", "group": "Person", "degree": 2}, {"id": "p250", "label": "Gilbert Burnet", "group": "Person", "degree": 1}, {"id": "p251", "label": "George Lockhart, Carnwarth", "group": "Group", "degree": 2}, {"id": "p252", "label": "Newsletter", "group": "Thing", "degree": 2}, {"id": "p253", "label": "Barrellon", "group": "Person", "degree": 1}, {"id": "p254", "label": "Dundee", "group": "Person", "degree": 4}, {"id": "p255", "label": "John Summerville", "group": "Person", "degree": 10}, {"id": "p258", "label": "Thomas Rokeby", "group": "Person", "degree": 4}, {"id": "p260", "label": "Bishop of Glasgow", "group": "Person", "degree": 1}, {"id": "p261", "label": "Thomas Livingston", "group": "Person", "degree": 2}, {"id": "p262", "label": "Lieutenant Colonel Hamilton", "group": "Person", "degree": 1}, {"id": "p263", "label": "Lieutenant Colonel Hamilton, Sir Thomas Livingston, Colonel Hill", "group": "Person", "degree": 1}, {"id": "p264", "label": "Countess of Dundonald", "group": "Person", "degree": 2}, {"id": "p265", "label": "Lord Ross; William Cochran of Kilmarnock", "group": "Group", "degree": 2}, {"id": "p266", "label": "William Bruce", "group": "Person", "degree": 2}, {"id": "p268", "label": "William Cleland", "group": "Person", "degree": 1}, {"id": "p269", "label": "Thomas Morton", "group": "Person", "degree": 2}, {"id": "p270", "label": "Sinkelton Richmond", "group": "Person", "degree": 0}, {"id": "p271", "label": "John Chetwynd", "group": "Person", "degree": 1}, {"id": "p272", "label": "Robert Lloyd", "group": "Person", "degree": 9}, {"id": "p274", "label": "J. Deverell", "group": "Person", "degree": 2}, {"id": "p275", "label": "Mr. Pulford", "group": "Person", "degree": 1}, {"id": "p276", "label": "J.B.", "group": "Person", "degree": 6}, {"id": "p277", "label": "J.V.", "group": "Person", "degree": 1}, {"id": "p278", "label": "E. Foden", "group": "Person", "degree": 3}, {"id": "p279", "label": "Mr. Emery", "group": "Person", "degree": 1}, {"id": "p280", "label": "Mr. George Skirving", "group": "Person", "degree": 2}, {"id": "p283", "label": "Queen Mary", "group": "Person", "degree": 6}, {"id": "p284", "label": "David Scrimseour", "group": "Person", "degree": 2}, {"id": "p285", "label": "Robert Rodman", "group": "Person", "degree": 3}, {"id": "p286", "label": "Patrick Mein", "group": "Person", "degree": 4}, {"id": "p289", "label": "Crawford", "group": "Person", "degree": 2}, {"id": "p290", "label": "John Lochore", "group": "Person", "degree": 2}, {"id": "p292", "label": "Lord Stair", "group": "Person", "degree": 1}, {"id": "p294", "label": "Arthur Naismith", "group": "Person", "degree": 5}, {"id": "p295", "label": "John Small", "group": "Person", "degree": 1}, {"id": "p297", "label": "Marie Arskin", "group": "Person", "degree": 2}, {"id": "p299", "label": "James Coull", "group": "Person", "degree": 1}, {"id": "p301", "label": "A. Crawford", "group": "Person", "degree": 2}, {"id": "p302", "label": "James Nisbit", "group": "Person", "degree": 3}, {"id": "p306", "label": "Portland", "group": "Person", "degree": 12}, {"id": "p307", "label": "Synod of Aberdeen", "group": "Organization", "degree": 2}, {"id": "p311", "label": "Mary Caren", "group": "Person", "degree": 4}, {"id": "p312", "label": "R. Jevon", "group": "Person", "degree": 8}, {"id": "p314", "label": "Jane Barker", "group": "Person", "degree": 2}, {"id": "p315", "label": "Elizabeth Barker", "group": "Person", "degree": 2}, {"id": "p317", "label": "Anthony Hungerford", "group": "Person", "degree": 1}, {"id": "p318", "label": "Mr. Milton", "group": "Person", "degree": 1}, {"id": "p319", "label": "Thomas Stringer", "group": "Person", "degree": 2}, {"id": "p321", "label": "Charles Roberts", "group": "Person", "degree": 4}, {"id": "p322", "label": "M. St Leger", "group": "Person", "degree": 5}, {"id": "p323", "label": "P. Muirhead", "group": "Person", "degree": 2}, {"id": "p325", "label": "Anne Ferrers", "group": "Person", "degree": 6}, {"id": "p326", "label": "S. Maxwell", "group": "Person", "degree": 2}, {"id": "p328", "label": "John Underwood", "group": "Person", "degree": 6}, {"id": "p329", "label": "R. Bristol", "group": "Person", "degree": 2}, {"id": "p331", "label": "G. Muirhead", "group": "Person", "degree": 2}, {"id": "p333", "label": "Archibald Rae", "group": "Person", "degree": 2}, {"id": "p335", "label": "John Atchinson", "group": "Person", "degree": 1}, {"id": "p337", "label": "J. Young", "group": "Person", "degree": 2}, {"id": "p339", "label": "Andrew Brown", "group": "Person", "degree": 2}, {"id": "p340", "label": "Laird of Spittell", "group": "Person", "degree": 2}, {"id": "p342", "label": "William Stewart", "group": "Person", "degree": 2}, {"id": "p344", "label": "E. Lake", "group": "Person", "degree": 2}, {"id": "p345", "label": "Viscount Bolingbroke", "group": "Person", "degree": 1}, {"id": "p346", "label": "F. K.", "group": "Person", "degree": 3}, {"id": "p347", "label": "F. Saunders", "group": "Person", "degree": 1}, {"id": "p348", "label": "Mr. Ward", "group": "Person", "degree": 4}, {"id": "p349", "label": "Mr. Bellott", "group": "Person", "degree": 2}, {"id": "p350", "label": "Abigail White", "group": "Person", "degree": 3}, {"id": "p351", "label": "Thomas Husband", "group": "Person", "degree": 2}, {"id": "p353", "label": "Miss Gilbert", "group": "Person", "degree": 1}, {"id": "p354", "label": "John V", "group": "Person", "degree": 1}, {"id": "p355", "label": "A. Brackin", "group": "Person", "degree": 2}, {"id": "p356", "label": "Edward Hungerford, younger", "group": "Person", "degree": 1}, {"id": "p357", "label": "Joseph Plymley", "group": "Person", "degree": 2}, {"id": "p358", "label": "Edward Pulford", "group": "Person", "degree": 2}, {"id": "p359", "label": "J. V.", "group": "Person", "degree": 1}, {"id": "p360", "label": "Fran Phillips", "group": "Person", "degree": 1}, {"id": "p361", "label": "Edmund Hector", "group": "Person", "degree": 2}, {"id": "p362", "label": "Edmund Sawtell", "group": "Person", "degree": 5}, {"id": "p363", "label": "Jonathan Norman", "group": "Person", "degree": 1}, {"id": "p364", "label": "Mr. Robert Kinearre", "group": "Person", "degree": 1}, {"id": "p365", "label": "John Locke", "group": "Person", "degree": 2}, {"id": "p366", "label": "Mrs. Lockhart", "group": "Person", "degree": 2}, {"id": "p368", "label": "David Masham", "group": "Person", "degree": 2}, {"id": "p369", "label": "Alexander Sauch", "group": "Person", "degree": 2}, {"id": "p370", "label": "A. B.", "group": "Person", "degree": 1}, {"id": "p371", "label": "Anthony Mayne", "group": "Person", "degree": 2}, {"id": "p372", "label": "Mr. Seargent Birch", "group": "Person", "degree": 1}, {"id": "p374", "label": "J. Nisbet", "group": "Person", "degree": 4}, {"id": "p375", "label": "John Clark", "group": "Person", "degree": 44}, {"id": "p376", "label": "William Crawford", "group": "Person", "degree": 2}, {"id": "p377", "label": "Charles Hamilton", "group": "Person", "degree": 3}, {"id": "p378", "label": "Patrick Bellenden", "group": "Person", "degree": 2}, {"id": "p381", "label": "John Clark, younger", "group": "Person", "degree": 9}, {"id": "p382", "label": "James", "group": "Person", "degree": 1}, {"id": "p383", "label": "David Marshall", "group": "Person", "degree": 2}, {"id": "p384", "label": "William Scott", "group": "Person", "degree": 1}, {"id": "p386", "label": "Patrick Cockburn", "group": "Person", "degree": 1}, {"id": "p387", "label": "Noblemen and Gentlemen of Scotland", "group": "Group", "degree": 1}, {"id": "p388", "label": "Commissioners of Supply Lanarkshire", "group": "Organization", "degree": 3}, {"id": "p390", "label": "Robert Naismith", "group": "Person", "degree": 1}, {"id": "p391", "label": "Baillie Clerk", "group": "Person", "degree": 1}, {"id": "p392", "label": "John Craig", "group": "Person", "degree": 4}, {"id": "p393", "label": "His wife", "group": "Person", "degree": 1}, {"id": "p394", "label": "Andrew Schaw", "group": "Person", "degree": 2}, {"id": "p396", "label": "John Naismith", "group": "Person", "degree": 2}, {"id": "p397", "label": "Alexander Smith", "group": "Person", "degree": 1}, {"id": "p398", "label": "Mrs. Tylor", "group": "Person", "degree": 1}, {"id": "p399", "label": "Sheriff Depute Lanark", "group": "Person", "degree": 2}, {"id": "p400", "label": "W.B.", "group": "Person", "degree": 1}, {"id": "p401", "label": "Major General Buchan", "group": "Person", "degree": 1}, {"id": "p403", "label": "Henry Farquar", "group": "Person", "degree": 2}, {"id": "p406", "label": "General of Irish Army", "group": "Person", "degree": 1}, {"id": "p407", "label": "Scottish Parliament", "group": "Organization", "degree": 2}, {"id": "p408", "label": "Litchfield's Regiment; Arran's Regiment", "group": "Group", "degree": 1}, {"id": "l4", "label": "London", "group": "Place", "degree": 292}, {"id": "l6", "label": "Althorpe", "group": "Place", "degree": 10}, {"id": "l9", "label": "Edinburgh", "group": "Place", "degree": 148}, {"id": "l13", "label": "Bonhard", "group": "Place", "degree": 1}, {"id": "l16", "label": "Dublin Castle", "group": "Place", "degree": 7}, {"id": "l19", "label": "Salisbury", "group": "Place", "degree": 12}, {"id": "l20", "label": "Beaconsfield", "group": "Place", "degree": 1}, {"id": "l23", "label": "Whitehall", "group": "Place", "degree": 19}, {"id": "l25", "label": "Sandon", "group": "Place", "degree": 8}, {"id": "l32", "label": "Nevis", "group": "Place", "degree": 2}, {"id": "l35", "label": "Aghabane, Ireland", "group": "Place", "degree": 2}, {"id": "l42", "label": "Kinneil", "group": "Place", "degree": 13}, {"id": "l44", "label": "Hamilton", "group": "Place", "degree": 73}, {"id": "l48", "label": "Beill", "group": "Place", "degree": 1}, {"id": "l52", "label": "Ingestre", "group": "Place", "degree": 2}, {"id": "l57", "label": "Holyrood House", "group": "Place", "degree": 219}, {"id": "l60", "label": "Kelso", "group": "Place", "degree": 2}, {"id": "l61", "label": "Holland House", "group": "Place", "degree": 2}, {"id": "l67", "label": "Dublin", "group": "Place", "degree": 9}, {"id": "l68", "label": "St. Foord, Nairne", "group": "Place", "degree": 2}, {"id": "l73", "label": "Killkenny", "group": "Place", "degree": 2}, {"id": "l74", "label": "Leith", "group": "Place", "degree": 2}, {"id": "l81", "label": "Campbeltown", "group": "Place", "degree": 2}, {"id": "l84", "label": "Inveraray", "group": "Place", "degree": 6}, {"id": "l87", "label": "Adventor, Margtilipanig Bay", "group": "Place", "degree": 2}, {"id": "l88", "label": "Glensadal", "group": "Place", "degree": 2}, {"id": "l90", "label": "Kilberry", "group": "Place", "degree": 1}, {"id": "l92", "label": "Glasgow", "group": "Place", "degree": 12}, {"id": "l98", "label": "Highlake Road", "group": "Place", "degree": 2}, {"id": "l100", "label": "Londonderry", "group": "Place", "degree": 9}, {"id": "l101", "label": "Bangor", "group": "Place", "degree": 2}, {"id": "l106", "label": "Portpatrick", "group": "Place", "degree": 2}, {"id": "l107", "label": "Isle of Inch", "group": "Place", "degree": 3}, {"id": "l110", "label": "Greenock", "group": "Place", "degree": 1}, {"id": "l111", "label": "Kintyre", "group": "Place", "degree": 6}, {"id": "l112", "label": "Carrickfergus", "group": "Place", "degree": 4}, {"id": "l113", "label": "Islay", "group": "Place", "degree": 2}, {"id": "l114", "label": "Donaghadee", "group": "Place", "degree": 2}, {"id": "l116", "label": "Hampton Court", "group": "Place", "degree": 34}, {"id": "l117", "label": "Hague", "group": "Place", "degree": 9}, {"id": "l118", "label": "Camp (Flanders)", "group": "Place", "degree": 2}, {"id": "l119", "label": "St. Gerard", "group": "Place", "degree": 3}, {"id": "l120", "label": "Rotterdam", "group": "Place", "degree": 1}, {"id": "l121", "label": "Camp (Scotland)", "group": "Place", "degree": 1}, {"id": "l122", "label": "Dumbarton", "group": "Place", "degree": 2}, {"id": "l124", "label": "Putachie", "group": "Place", "degree": 6}, {"id": "l128", "label": "Strathspey", "group": "Place", "degree": 2}, {"id": "l129", "label": "Inverness", "group": "Place", "degree": 2}, {"id": "l130", "label": "Fettercairn", "group": "Place", "degree": 3}, {"id": "l131", "label": "Stirling", "group": "Place", "degree": 4}, {"id": "l132", "label": "St. Johnston", "group": "Place", "degree": 4}, {"id": "l133", "label": "Forfar", "group": "Place", "degree": 3}, {"id": "l134", "label": "Aberdeen", "group": "Place", "degree": 3}, {"id": "l139", "label": "Dover", "group": "Place", "degree": 1}, {"id": "l140", "label": "Kensington", "group": "Place", "degree": 15}, {"id": "l143", "label": "Paisley", "group": "Place", "degree": 4}, {"id": "l144", "label": "Arran", "group": "Place", "degree": 1}, {"id": "l146", "label": "Berwick", "group": "Place", "degree": 8}, {"id": "l152", "label": "Harwich", "group": "Place", "degree": 0}, {"id": "l159", "label": "Athlone", "group": "Place", "degree": 1}, {"id": "l164", "label": "Elsick", "group": "Place", "degree": 1}, {"id": "l166", "label": "Fettersee", "group": "Place", "degree": 2}, {"id": "l172", "label": "Leeward Islands", "group": "Place", "degree": 1}, {"id": "l174", "label": "Barbados", "group": "Place", "degree": 1}, {"id": "l179", "label": "Graz", "group": "Place", "degree": 1}, {"id": "l187", "label": "Newgate Common", "group": "Place", "degree": 1}, {"id": "l189", "label": "Dumfries", "group": "Place", "degree": 1}, {"id": "l192", "label": "Panmure", "group": "Place", "degree": 1}, {"id": "l195", "label": "Crawfordjohn", "group": "Place", "degree": 1}, {"id": "l198", "label": "Newton", "group": "Place", "degree": 1}, {"id": "l203", "label": "Barnton", "group": "Place", "degree": 1}, {"id": "l206", "label": "Brussels", "group": "Place", "degree": 2}, {"id": "l208", "label": "Balderston", "group": "Place", "degree": 1}, {"id": "l222", "label": "Abby", "group": "Place", "degree": 1}, {"id": "l225", "label": "Windsor", "group": "Place", "degree": 3}, {"id": "l229", "label": "Turin", "group": "Place", "degree": 1}, {"id": "l232", "label": "Linplum", "group": "Place", "degree": 1}, {"id": "l237", "label": "Tunbridge Wells", "group": "Place", "degree": 1}, {"id": "l239", "label": "Richmond", "group": "Place", "degree": 1}, {"id": "l242", "label": "Tullibardine", "group": "Place", "degree": 1}, {"id": "l245", "label": "Doncaster", "group": "Place", "degree": 1}, {"id": "l246", "label": "Greenwich", "group": "Place", "degree": 1}, {"id": "l249", "label": "Cassillis", "group": "Place", "degree": 1}, {"id": "l256", "label": "Spittel", "group": "Place", "degree": 1}, {"id": "l257", "label": "Lanark", "group": "Place", "degree": 10}, {"id": "l259", "label": "York", "group": "Place", "degree": 3}, {"id": "l267", "label": "Kinross", "group": "Place", "degree": 1}, {"id": "l273", "label": "Lichfield", "group": "Place", "degree": 6}, {"id": "l281", "label": "Tower of London", "group": "Place", "degree": 2}, {"id": "l282", "label": "Copthall", "group": "Place", "degree": 3}, {"id": "l287", "label": "Plymouth", "group": "Place", "degree": 1}, {"id": "l288", "label": "Portsmouth", "group": "Place", "degree": 1}, {"id": "l291", "label": "Mason", "group": "Place", "degree": 2}, {"id": "l293", "label": "Fort William", "group": "Place", "degree": 1}, {"id": "l296", "label": "Culross", "group": "Place", "degree": 0}, {"id": "l298", "label": "Wishaw", "group": "Place", "degree": 4}, {"id": "l300", "label": "Edinburgh Castle", "group": "Place", "degree": 1}, {"id": "l303", "label": "Linlithgow", "group": "Place", "degree": 4}, {"id": "l304", "label": "Bo'ness", "group": "Place", "degree": 2}, {"id": "l305", "label": "Amsterdam", "group": "Place", "degree": 2}, {"id": "l308", "label": "Loo", "group": "Place", "degree": 2}, {"id": "l309", "label": "Breda", "group": "Place", "degree": 1}, {"id": "l310", "label": "Brousterland", "group": "Place", "degree": 1}, {"id": "l313", "label": "Harlington", "group": "Place", "degree": 2}, {"id": "l316", "label": "Stafford", "group": "Place", "degree": 2}, {"id": "l320", "label": "Durance", "group": "Place", "degree": 1}, {"id": "l324", "label": "Stingboun", "group": "Place", "degree": 1}, {"id": "l327", "label": "Kirkudbright", "group": "Place", "degree": 1}, {"id": "l330", "label": "Sher", "group": "Place", "degree": 1}, {"id": "l332", "label": "Lauchop", "group": "Place", "degree": 2}, {"id": "l334", "label": "Tannochside", "group": "Place", "degree": 2}, {"id": "l336", "label": "Broombie", "group": "Place", "degree": 1}, {"id": "l338", "label": "Netherfield", "group": "Place", "degree": 2}, {"id": "l341", "label": "Delphington", "group": "Place", "degree": 1}, {"id": "l343", "label": "Alanton", "group": "Place", "degree": 1}, {"id": "l352", "label": "Drayton", "group": "Place", "degree": 1}, {"id": "l367", "label": "Oates", "group": "Place", "degree": 2}, {"id": "l373", "label": "Shoerw", "group": "Place", "degree": 1}, {"id": "l379", "label": "Parckeind", "group": "Place", "degree": 1}, {"id": "l380", "label": "Woodside", "group": "Place", "degree": 2}, {"id": "l385", "label": "Spithead", "group": "Place", "degree": 1}, {"id": "l389", "label": "Lanarkshire", "group": "Place", "degree": 1}, {"id": "l395", "label": "Broomhill", "group": "Place", "degree": 2}, {"id": "l402", "label": "St. Germain", "group": "Place", "degree": 1}, {"id": "l404", "label": "Lochiel", "group": "Place", "degree": 1}, {"id": "l405", "label": "Gareloch", "group": "Place", "degree": 1}], "edges": [{"source": "p2", "target": "p3", "type": "Wrote Letter to", "weight": 8}, {"source": "p2", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p5", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p5", "target": "l6", "type": "located_at", "weight": 1}, {"source": "p7", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p8", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p8", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p11", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p11", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p12", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p12", "target": "l13", "type": "located_at", "weight": 1}, {"source": "p14", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p14", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p15", "target": "l16", "type": "located_at", "weight": 1}, {"source": "p17", "target": "p18", "type": "Wrote Letter to", "weight": 4}, {"source": "p17", "target": "l19", "type": "located_at", "weight": 12}, {"source": "p17", "target": "p3", "type": "Wrote Letter to", "weight": 10}, {"source": "p17", "target": "l20", "type": "located_at", "weight": 1}, {"source": "p17", "target": "p21", "type": "Wrote Letter to", "weight": 1}, {"source": "p17", "target": "l4", "type": "located_at", "weight": 3}, {"source": "p22", "target": "p17", "type": "Wrote Letter to", "weight": 2}, {"source": "p22", "target": "l23", "type": "located_at", "weight": 4}, {"source": "l23", "target": "l4", "type": "geographic_flow", "weight": 1}, {"source": "p24", "target": "l25", "type": "located_at", "weight": 1}, {"source": "p26", "target": "p27", "type": "Wrote Letter to", "weight": 1}, {"source": "p27", "target": "l25", "type": "located_at", "weight": 1}, {"source": "p28", "target": "l25", "type": "located_at", "weight": 1}, {"source": "p29", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p29", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p30", "target": "p31", "type": "Wrote Letter to", "weight": 1}, {"source": "p30", "target": "l32", "type": "located_at", "weight": 2}, {"source": "p30", "target": "p3", "type": "Account", "weight": 2}, {"source": "p33", "target": "p34", "type": "Wrote Letter to", "weight": 1}, {"source": "p33", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p34", "target": "l35", "type": "located_at", "weight": 1}, {"source": "l9", "target": "l35", "type": "geographic_flow", "weight": 1}, {"source": "p36", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p36", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p10", "target": "l9", "type": "located_at", "weight": 6}, {"source": "l4", "target": "l9", "type": "geographic_flow", "weight": 6}, {"source": "p37", "target": "p38", "type": "Wrote Letter to", "weight": 1}, {"source": "p37", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p39", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p39", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p41", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p41", "target": "l42", "type": "located_at", "weight": 1}, {"source": "p36", "target": "p43", "type": "Wrote Letter to", "weight": 4}, {"source": "p43", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p26", "target": "p40", "type": "Wrote Letter to", "weight": 5}, {"source": "p45", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p45", "target": "l9", "type": "located_at", "weight": 3}, {"source": "p46", "target": "p3", "type": "Wrote Letter to", "weight": 13}, {"source": "p46", "target": "l9", "type": "located_at", "weight": 8}, {"source": "p47", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p47", "target": "l48", "type": "located_at", "weight": 1}, {"source": "p49", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p49", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p50", "target": "p51", "type": "Wrote Letter to", "weight": 1}, {"source": "p50", "target": "l52", "type": "located_at", "weight": 2}, {"source": "p53", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p53", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p54", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p55", "target": "p56", "type": "Wrote Letter to", "weight": 1}, {"source": "p2", "target": "p10", "type": "Wrote Letter to", "weight": 3}, {"source": "p2", "target": "l23", "type": "located_at", "weight": 3}, {"source": "p10", "target": "l57", "type": "located_at", "weight": 134}, {"source": "l23", "target": "l57", "type": "geographic_flow", "weight": 1}, {"source": "p10", "target": "p2", "type": "Wrote Letter to", "weight": 1}, {"source": "l57", "target": "l23", "type": "geographic_flow", "weight": 1}, {"source": "p58", "target": "p59", "type": "Wrote Letter to", "weight": 1}, {"source": "p58", "target": "l60", "type": "located_at", "weight": 1}, {"source": "p59", "target": "l61", "type": "located_at", "weight": 1}, {"source": "l60", "target": "l61", "type": "geographic_flow", "weight": 1}, {"source": "p62", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p62", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p63", "target": "p64", "type": "Wrote Letter to", "weight": 1}, {"source": "p63", "target": "l25", "type": "located_at", "weight": 2}, {"source": "p50", "target": "p40", "type": "Wrote Letter to", "weight": 3}, {"source": "p63", "target": "p51", "type": "Wrote Letter to", "weight": 1}, {"source": "p65", "target": "p45", "type": "Wrote Letter to", "weight": 1}, {"source": "p65", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p10", "target": "l4", "type": "located_at", "weight": 44}, {"source": "l9", "target": "l4", "type": "geographic_flow", "weight": 5}, {"source": "p66", "target": "p15", "type": "Wrote Letter to", "weight": 1}, {"source": "p66", "target": "l67", "type": "located_at", "weight": 1}, {"source": "p15", "target": "l68", "type": "located_at", "weight": 1}, {"source": "l67", "target": "l68", "type": "geographic_flow", "weight": 1}, {"source": "p15", "target": "p69", "type": "Wrote Letter to", "weight": 2}, {"source": "p15", "target": "l67", "type": "located_at", "weight": 4}, {"source": "p15", "target": "p70", "type": "Wrote Letter to", "weight": 1}, {"source": "p71", "target": "p72", "type": "Wrote Letter to", "weight": 1}, {"source": "p71", "target": "l73", "type": "located_at", "weight": 1}, {"source": "p72", "target": "l74", "type": "located_at", "weight": 1}, {"source": "l73", "target": "l74", "type": "geographic_flow", "weight": 1}, {"source": "p75", "target": "p76", "type": "Wrote Letter to", "weight": 1}, {"source": "p75", "target": "l67", "type": "located_at", "weight": 1}, {"source": "p77", "target": "p69", "type": "Wrote Letter to", "weight": 1}, {"source": "p77", "target": "l67", "type": "located_at", "weight": 1}, {"source": "p78", "target": "p69", "type": "Wrote Letter to", "weight": 1}, {"source": "p78", "target": "l67", "type": "located_at", "weight": 1}, {"source": "p79", "target": "p80", "type": "Wrote Letter to", "weight": 1}, {"source": "p79", "target": "l81", "type": "located_at", "weight": 1}, {"source": "p82", "target": "p80", "type": "Wrote Letter to", "weight": 1}, {"source": "p82", "target": "l81", "type": "located_at", "weight": 1}, {"source": "p83", "target": "p80", "type": "Wrote Letter to", "weight": 1}, {"source": "p83", "target": "l84", "type": "located_at", "weight": 1}, {"source": "p85", "target": "p86", "type": "Wrote Letter to", "weight": 1}, {"source": "p85", "target": "l87", "type": "located_at", "weight": 1}, {"source": "p86", "target": "l88", "type": "located_at", "weight": 1}, {"source": "l87", "target": "l88", "type": "geographic_flow", "weight": 1}, {"source": "p89", "target": "l90", "type": "located_at", "weight": 1}, {"source": "p91", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p91", "target": "l92", "type": "located_at", "weight": 1}, {"source": "p93", "target": "p10", "type": "Wrote Letter to", "weight": 6}, {"source": "p93", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p94", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p94", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p95", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p95", "target": "p96", "type": "Petition", "weight": 1}, {"source": "p97", "target": "p10", "type": "Wrote Letter to", "weight": 4}, {"source": "p97", "target": "l98", "type": "located_at", "weight": 2}, {"source": "p99", "target": "p10", "type": "Memorandum", "weight": 1}, {"source": "p99", "target": "l100", "type": "located_at", "weight": 1}, {"source": "p97", "target": "l101", "type": "located_at", "weight": 2}, {"source": "p102", "target": "p18", "type": "Wrote Letter to", "weight": 2}, {"source": "p102", "target": "l100", "type": "located_at", "weight": 2}, {"source": "p103", "target": "p104", "type": "Wrote Letter to", "weight": 1}, {"source": "p105", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p105", "target": "l106", "type": "located_at", "weight": 2}, {"source": "p18", "target": "p10", "type": "Wrote Letter to", "weight": 7}, {"source": "p18", "target": "l100", "type": "located_at", "weight": 4}, {"source": "p18", "target": "l107", "type": "located_at", "weight": 3}, {"source": "p18", "target": "p108", "type": "Proclamation", "weight": 1}, {"source": "p109", "target": "p10", "type": "Wrote Letter to", "weight": 15}, {"source": "p109", "target": "l110", "type": "located_at", "weight": 1}, {"source": "p109", "target": "l111", "type": "located_at", "weight": 5}, {"source": "p109", "target": "l112", "type": "located_at", "weight": 4}, {"source": "p109", "target": "l113", "type": "located_at", "weight": 2}, {"source": "p109", "target": "l114", "type": "located_at", "weight": 2}, {"source": "p109", "target": "l100", "type": "located_at", "weight": 2}, {"source": "p115", "target": "p10", "type": "Wrote Letter to", "weight": 4}, {"source": "p115", "target": "l116", "type": "located_at", "weight": 2}, {"source": "p62", "target": "p10", "type": "Wrote Letter to", "weight": 18}, {"source": "p62", "target": "l4", "type": "located_at", "weight": 10}, {"source": "p62", "target": "l117", "type": "located_at", "weight": 6}, {"source": "p62", "target": "l118", "type": "located_at", "weight": 1}, {"source": "p62", "target": "l119", "type": "located_at", "weight": 1}, {"source": "p62", "target": "l120", "type": "located_at", "weight": 1}, {"source": "p80", "target": "p10", "type": "Wrote Letter to", "weight": 15}, {"source": "p80", "target": "l121", "type": "located_at", "weight": 1}, {"source": "p80", "target": "l92", "type": "located_at", "weight": 3}, {"source": "p80", "target": "l84", "type": "located_at", "weight": 4}, {"source": "p80", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p80", "target": "l122", "type": "located_at", "weight": 2}, {"source": "p123", "target": "p10", "type": "Wrote Letter to", "weight": 4}, {"source": "p123", "target": "l124", "type": "located_at", "weight": 4}, {"source": "p125", "target": "p10", "type": "Wrote Letter to", "weight": 7}, {"source": "p125", "target": "l9", "type": "located_at", "weight": 7}, {"source": "p10", "target": "p126", "type": "Wrote Letter to", "weight": 65}, {"source": "p127", "target": "p10", "type": "Wrote Letter to", "weight": 22}, {"source": "p127", "target": "l128", "type": "located_at", "weight": 2}, {"source": "p127", "target": "l129", "type": "located_at", "weight": 2}, {"source": "p127", "target": "l130", "type": "located_at", "weight": 2}, {"source": "p127", "target": "l131", "type": "located_at", "weight": 4}, {"source": "p127", "target": "l132", "type": "located_at", "weight": 4}, {"source": "p127", "target": "l133", "type": "located_at", "weight": 3}, {"source": "p127", "target": "l134", "type": "located_at", "weight": 2}, {"source": "p127", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p126", "target": "p10", "type": "Wrote Letter to", "weight": 73}, {"source": "p126", "target": "l4", "type": "located_at", "weight": 81}, {"source": "p135", "target": "p136", "type": "Wrote Letter to", "weight": 2}, {"source": "p135", "target": "l116", "type": "located_at", "weight": 19}, {"source": "p136", "target": "l9", "type": "located_at", "weight": 3}, {"source": "l116", "target": "l9", "type": "geographic_flow", "weight": 3}, {"source": "p135", "target": "p96", "type": "Wrote Letter to", "weight": 9}, {"source": "p135", "target": "p10", "type": "Wrote Letter to", "weight": 17}, {"source": "p135", "target": "l23", "type": "located_at", "weight": 3}, {"source": "p126", "target": "l116", "type": "located_at", "weight": 1}, {"source": "p135", "target": "p137", "type": "Wrote Letter to", "weight": 2}, {"source": "p138", "target": "l9", "type": "located_at", "weight": 1}, {"source": "l139", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p96", "target": "l9", "type": "located_at", "weight": 8}, {"source": "p135", "target": "l140", "type": "located_at", "weight": 4}, {"source": "l140", "target": "l9", "type": "geographic_flow", "weight": 2}, {"source": "p135", "target": "l119", "type": "located_at", "weight": 1}, {"source": "l119", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p126", "target": "l23", "type": "located_at", "weight": 3}, {"source": "p135", "target": "l117", "type": "located_at", "weight": 1}, {"source": "p137", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p141", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p142", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p142", "target": "l143", "type": "located_at", "weight": 1}, {"source": "l143", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p11", "target": "p43", "type": "Wrote Letter to", "weight": 9}, {"source": "p11", "target": "l144", "type": "located_at", "weight": 1}, {"source": "p96", "target": "p137", "type": "Warrant", "weight": 1}, {"source": "p145", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p145", "target": "l146", "type": "located_at", "weight": 1}, {"source": "p147", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p147", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p148", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p148", "target": "l146", "type": "located_at", "weight": 1}, {"source": "p149", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p149", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p150", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p3", "target": "p43", "type": "Wrote Letter to", "weight": 2}, {"source": "p151", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p151", "target": "l4", "type": "located_at", "weight": 3}, {"source": "p153", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p153", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p154", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p154", "target": "l6", "type": "located_at", "weight": 2}, {"source": "p155", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p155", "target": "l4", "type": "located_at", "weight": 3}, {"source": "p155", "target": "p156", "type": "Wrote Letter to", "weight": 1}, {"source": "p157", "target": "p125", "type": "Wrote Letter to", "weight": 1}, {"source": "p157", "target": "l92", "type": "located_at", "weight": 1}, {"source": "p158", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p158", "target": "l159", "type": "located_at", "weight": 1}, {"source": "p160", "target": "l146", "type": "located_at", "weight": 2}, {"source": "p2", "target": "l6", "type": "located_at", "weight": 5}, {"source": "p161", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p161", "target": "l42", "type": "located_at", "weight": 1}, {"source": "p162", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p162", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p163", "target": "p1", "type": "Wrote Letter to", "weight": 3}, {"source": "p163", "target": "l164", "type": "located_at", "weight": 1}, {"source": "p93", "target": "l9", "type": "located_at", "weight": 6}, {"source": "p36", "target": "l44", "type": "located_at", "weight": 2}, {"source": "p165", "target": "p43", "type": "Wrote Letter to", "weight": 7}, {"source": "p165", "target": "l44", "type": "located_at", "weight": 7}, {"source": "p163", "target": "l166", "type": "located_at", "weight": 2}, {"source": "p167", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p167", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p168", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p168", "target": "l84", "type": "located_at", "weight": 1}, {"source": "p169", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p169", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p1", "target": "l44", "type": "located_at", "weight": 5}, {"source": "p170", "target": "p171", "type": "Wrote Letter to", "weight": 1}, {"source": "p170", "target": "l172", "type": "located_at", "weight": 1}, {"source": "p173", "target": "p171", "type": "Wrote Letter to", "weight": 1}, {"source": "p173", "target": "l174", "type": "located_at", "weight": 1}, {"source": "p175", "target": "p43", "type": "Wrote Letter to", "weight": 6}, {"source": "p175", "target": "l44", "type": "located_at", "weight": 5}, {"source": "p176", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p176", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p177", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p62", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p46", "target": "p43", "type": "Wrote Letter to", "weight": 7}, {"source": "p178", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p178", "target": "l179", "type": "located_at", "weight": 1}, {"source": "p11", "target": "l57", "type": "located_at", "weight": 4}, {"source": "p180", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p180", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p181", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p181", "target": "l146", "type": "located_at", "weight": 1}, {"source": "p182", "target": "p183", "type": "Wrote Letter to", "weight": 1}, {"source": "p182", "target": "l130", "type": "located_at", "weight": 1}, {"source": "p184", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p184", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p185", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p185", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p186", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p186", "target": "l187", "type": "located_at", "weight": 1}, {"source": "p188", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p188", "target": "l189", "type": "located_at", "weight": 1}, {"source": "p190", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p191", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p191", "target": "l192", "type": "located_at", "weight": 1}, {"source": "p193", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p193", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p194", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p194", "target": "l195", "type": "located_at", "weight": 1}, {"source": "p196", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p196", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p197", "target": "p105", "type": "Wrote Letter to", "weight": 1}, {"source": "p197", "target": "l198", "type": "located_at", "weight": 1}, {"source": "p156", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p156", "target": "l4", "type": "located_at", "weight": 31}, {"source": "p199", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p200", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p200", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p11", "target": "l44", "type": "located_at", "weight": 5}, {"source": "p201", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p201", "target": "l44", "type": "located_at", "weight": 3}, {"source": "p202", "target": "l203", "type": "located_at", "weight": 1}, {"source": "p204", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p204", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p205", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p205", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p205", "target": "l206", "type": "located_at", "weight": 1}, {"source": "p207", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p207", "target": "l208", "type": "located_at", "weight": 1}, {"source": "p11", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p209", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p209", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p210", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p210", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p211", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p211", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p212", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p212", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p213", "target": "p10", "type": "Wrote Letter to", "weight": 6}, {"source": "p213", "target": "l9", "type": "located_at", "weight": 6}, {"source": "p214", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p46", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p10", "target": "p62", "type": "Wrote Letter to", "weight": 1}, {"source": "p10", "target": "p135", "type": "Wrote Letter to", "weight": 15}, {"source": "p10", "target": "l44", "type": "located_at", "weight": 8}, {"source": "p215", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p215", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p10", "target": "p215", "type": "Wrote Letter to", "weight": 1}, {"source": "p216", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p217", "target": "p3", "type": "Wrote Letter to", "weight": 6}, {"source": "p218", "target": "p3", "type": "Wrote Letter to", "weight": 4}, {"source": "p10", "target": "p1", "type": "Wrote Letter to", "weight": 43}, {"source": "p10", "target": "l42", "type": "located_at", "weight": 4}, {"source": "p219", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p219", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p45", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p45", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p154", "target": "p220", "type": "Wrote Letter to", "weight": 2}, {"source": "p221", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p1", "target": "p3", "type": "Wrote Letter to", "weight": 11}, {"source": "p1", "target": "l222", "type": "located_at", "weight": 1}, {"source": "p223", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p223", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p10", "target": "p3", "type": "Wrote Letter to", "weight": 20}, {"source": "p3", "target": "p10", "type": "Wrote Letter to", "weight": 3}, {"source": "p224", "target": "p220", "type": "Wrote Letter to", "weight": 1}, {"source": "p220", "target": "l225", "type": "located_at", "weight": 1}, {"source": "p226", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p226", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p156", "target": "p3", "type": "Wrote Letter to", "weight": 10}, {"source": "p3", "target": "l42", "type": "located_at", "weight": 1}, {"source": "p227", "target": "p228", "type": "Wrote Letter to", "weight": 1}, {"source": "p227", "target": "l229", "type": "located_at", "weight": 1}, {"source": "p230", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p230", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p231", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p231", "target": "l232", "type": "located_at", "weight": 1}, {"source": "p228", "target": "p3", "type": "Wrote Letter to", "weight": 8}, {"source": "p228", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p233", "target": "p234", "type": "Wrote Letter to", "weight": 1}, {"source": "p233", "target": "l116", "type": "located_at", "weight": 1}, {"source": "p235", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p3", "target": "p1", "type": "Wrote Letter to", "weight": 3}, {"source": "p236", "target": "p3", "type": "Wrote Letter to", "weight": 4}, {"source": "p1", "target": "l57", "type": "located_at", "weight": 1}, {"source": "p10", "target": "l237", "type": "located_at", "weight": 1}, {"source": "p3", "target": "p155", "type": "Wrote Letter to", "weight": 3}, {"source": "p3", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p3", "target": "p154", "type": "Wrote Letter to", "weight": 1}, {"source": "p236", "target": "l6", "type": "located_at", "weight": 2}, {"source": "p218", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p218", "target": "l239", "type": "located_at", "weight": 1}, {"source": "p240", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p240", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p241", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p241", "target": "l242", "type": "located_at", "weight": 1}, {"source": "p3", "target": "p243", "type": "Wrote Letter to", "weight": 1}, {"source": "p3", "target": "l23", "type": "located_at", "weight": 2}, {"source": "p10", "target": "p244", "type": "Order", "weight": 1}, {"source": "p10", "target": "l245", "type": "located_at", "weight": 1}, {"source": "p240", "target": "p1", "type": "Wrote Letter to", "weight": 2}, {"source": "p240", "target": "l246", "type": "located_at", "weight": 1}, {"source": "p247", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p80", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p248", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p248", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p235", "target": "p1", "type": "Wrote Letter to", "weight": 2}, {"source": "p135", "target": "l4", "type": "located_at", "weight": 4}, {"source": "p96", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p235", "target": "l249", "type": "located_at", "weight": 1}, {"source": "p228", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p221", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p1", "target": "p228", "type": "Wrote Letter to", "weight": 1}, {"source": "p250", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p251", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p251", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p252", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p97", "target": "p3", "type": "Wrote Letter to", "weight": 2}, {"source": "p97", "target": "l118", "type": "located_at", "weight": 1}, {"source": "p253", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p15", "target": "p76", "type": "Wrote Letter to", "weight": 2}, {"source": "p15", "target": "p254", "type": "Wrote Letter to", "weight": 2}, {"source": "p255", "target": "p10", "type": "Wrote Letter to", "weight": 3}, {"source": "p255", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p255", "target": "p69", "type": "Wrote Letter to", "weight": 2}, {"source": "p255", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p255", "target": "l256", "type": "located_at", "weight": 1}, {"source": "p255", "target": "l257", "type": "located_at", "weight": 1}, {"source": "p69", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p69", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p10", "target": "l257", "type": "located_at", "weight": 1}, {"source": "l9", "target": "l257", "type": "geographic_flow", "weight": 1}, {"source": "p258", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p258", "target": "l259", "type": "located_at", "weight": 2}, {"source": "p1", "target": "p258", "type": "Wrote Letter to", "weight": 1}, {"source": "l44", "target": "l259", "type": "geographic_flow", "weight": 1}, {"source": "p260", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p261", "target": "p262", "type": "Wrote Letter to", "weight": 1}, {"source": "p261", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p62", "target": "p263", "type": "Wrote Letter to", "weight": 1}, {"source": "p264", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p264", "target": "l143", "type": "located_at", "weight": 1}, {"source": "p265", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p265", "target": "l143", "type": "located_at", "weight": 1}, {"source": "p11", "target": "p201", "type": "Wrote Letter to", "weight": 1}, {"source": "p266", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p266", "target": "l267", "type": "located_at", "weight": 1}, {"source": "p201", "target": "p268", "type": "Wrote Letter to", "weight": 1}, {"source": "p43", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p43", "target": "l9", "type": "located_at", "weight": 1}, {"source": "l9", "target": "l42", "type": "geographic_flow", "weight": 1}, {"source": "p269", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p269", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p271", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p272", "target": "p24", "type": "Wrote Letter to", "weight": 3}, {"source": "p272", "target": "l273", "type": "located_at", "weight": 4}, {"source": "p274", "target": "p275", "type": "Wrote Letter to", "weight": 1}, {"source": "p274", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p276", "target": "p24", "type": "Wrote Letter to", "weight": 6}, {"source": "p277", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p278", "target": "p279", "type": "Wrote Letter to", "weight": 1}, {"source": "p3", "target": "p280", "type": "Wrote Letter to", "weight": 1}, {"source": "p3", "target": "l281", "type": "located_at", "weight": 1}, {"source": "p280", "target": "l42", "type": "located_at", "weight": 1}, {"source": "l281", "target": "l42", "type": "geographic_flow", "weight": 1}, {"source": "p22", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p10", "target": "p22", "type": "Wrote Letter to", "weight": 1}, {"source": "l57", "target": "l116", "type": "geographic_flow", "weight": 4}, {"source": "l116", "target": "l57", "type": "geographic_flow", "weight": 4}, {"source": "p135", "target": "l282", "type": "located_at", "weight": 2}, {"source": "l282", "target": "l57", "type": "geographic_flow", "weight": 1}, {"source": "p283", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p283", "target": "l140", "type": "located_at", "weight": 2}, {"source": "p10", "target": "p283", "type": "Wrote Letter to", "weight": 2}, {"source": "p284", "target": "p285", "type": "Wrote Letter to", "weight": 1}, {"source": "p284", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p285", "target": "l146", "type": "located_at", "weight": 2}, {"source": "l9", "target": "l146", "type": "geographic_flow", "weight": 1}, {"source": "p286", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p286", "target": "l287", "type": "located_at", "weight": 1}, {"source": "p286", "target": "l288", "type": "located_at", "weight": 1}, {"source": "p45", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p289", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p289", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p290", "target": "p201", "type": "Wrote Letter to", "weight": 1}, {"source": "p290", "target": "l291", "type": "located_at", "weight": 1}, {"source": "l291", "target": "l44", "type": "geographic_flow", "weight": 1}, {"source": "p292", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p160", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p126", "target": "p96", "type": "Wrote Letter to", "weight": 1}, {"source": "p18", "target": "l293", "type": "located_at", "weight": 1}, {"source": "p294", "target": "p295", "type": "Wrote Letter to", "weight": 1}, {"source": "p151", "target": "p10", "type": "Wrote Letter to", "weight": 2}, {"source": "p297", "target": "p3", "type": "Wrote Letter to", "weight": 1}, {"source": "p297", "target": "l298", "type": "located_at", "weight": 1}, {"source": "p46", "target": "l298", "type": "located_at", "weight": 3}, {"source": "p299", "target": "l300", "type": "located_at", "weight": 1}, {"source": "p41", "target": "l92", "type": "located_at", "weight": 3}, {"source": "p301", "target": "p302", "type": "Wrote Letter to", "weight": 1}, {"source": "p301", "target": "l303", "type": "located_at", "weight": 1}, {"source": "p302", "target": "l304", "type": "located_at", "weight": 1}, {"source": "l303", "target": "l304", "type": "geographic_flow", "weight": 1}, {"source": "p2", "target": "l305", "type": "located_at", "weight": 1}, {"source": "l305", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p306", "target": "p10", "type": "Wrote Letter to", "weight": 5}, {"source": "p306", "target": "l140", "type": "located_at", "weight": 3}, {"source": "l140", "target": "l57", "type": "geographic_flow", "weight": 1}, {"source": "p10", "target": "p306", "type": "Wrote Letter to", "weight": 3}, {"source": "l57", "target": "l140", "type": "geographic_flow", "weight": 2}, {"source": "p306", "target": "l23", "type": "located_at", "weight": 1}, {"source": "p307", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p307", "target": "l134", "type": "located_at", "weight": 1}, {"source": "p156", "target": "p10", "type": "Wrote Letter to", "weight": 28}, {"source": "p156", "target": "l140", "type": "located_at", "weight": 1}, {"source": "p156", "target": "l117", "type": "located_at", "weight": 2}, {"source": "p156", "target": "l308", "type": "located_at", "weight": 2}, {"source": "p156", "target": "l309", "type": "located_at", "weight": 1}, {"source": "p156", "target": "l206", "type": "located_at", "weight": 1}, {"source": "p180", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p180", "target": "l310", "type": "located_at", "weight": 1}, {"source": "p311", "target": "p40", "type": "Wrote Letter to", "weight": 3}, {"source": "p312", "target": "p40", "type": "Wrote Letter to", "weight": 4}, {"source": "p312", "target": "l313", "type": "located_at", "weight": 2}, {"source": "p314", "target": "p315", "type": "Wrote Letter to", "weight": 1}, {"source": "p314", "target": "l316", "type": "located_at", "weight": 1}, {"source": "p315", "target": "l25", "type": "located_at", "weight": 1}, {"source": "l316", "target": "l25", "type": "geographic_flow", "weight": 1}, {"source": "p317", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p40", "target": "p318", "type": "Wrote Letter to", "weight": 1}, {"source": "p319", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p319", "target": "l320", "type": "located_at", "weight": 1}, {"source": "p321", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p321", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p322", "target": "p51", "type": "Wrote Letter to", "weight": 1}, {"source": "p40", "target": "l25", "type": "located_at", "weight": 1}, {"source": "p323", "target": "p43", "type": "Wrote Letter to", "weight": 1}, {"source": "p323", "target": "l324", "type": "located_at", "weight": 1}, {"source": "p325", "target": "p24", "type": "Wrote Letter to", "weight": 3}, {"source": "p325", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p326", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p326", "target": "l327", "type": "located_at", "weight": 1}, {"source": "p325", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p328", "target": "p40", "type": "Wrote Letter to", "weight": 4}, {"source": "p329", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p329", "target": "l330", "type": "located_at", "weight": 1}, {"source": "p331", "target": "p199", "type": "Wrote Letter to", "weight": 1}, {"source": "p331", "target": "l332", "type": "located_at", "weight": 1}, {"source": "p199", "target": "l257", "type": "located_at", "weight": 3}, {"source": "l332", "target": "l257", "type": "geographic_flow", "weight": 1}, {"source": "p333", "target": "p199", "type": "Wrote Letter to", "weight": 1}, {"source": "p333", "target": "l334", "type": "located_at", "weight": 1}, {"source": "l334", "target": "l257", "type": "geographic_flow", "weight": 1}, {"source": "p335", "target": "p199", "type": "Wrote Letter to", "weight": 1}, {"source": "p199", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p11", "target": "p199", "type": "Wrote Letter to", "weight": 1}, {"source": "p11", "target": "l336", "type": "located_at", "weight": 1}, {"source": "p337", "target": "p199", "type": "Wrote Letter to", "weight": 1}, {"source": "p337", "target": "l338", "type": "located_at", "weight": 1}, {"source": "l338", "target": "l257", "type": "geographic_flow", "weight": 1}, {"source": "p339", "target": "p340", "type": "Wrote Letter to", "weight": 1}, {"source": "p339", "target": "l341", "type": "located_at", "weight": 1}, {"source": "p342", "target": "p340", "type": "Wrote Letter to", "weight": 1}, {"source": "p342", "target": "l343", "type": "located_at", "weight": 1}, {"source": "p344", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p344", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p51", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p51", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p50", "target": "p24", "type": "Wrote Letter to", "weight": 1}, {"source": "p345", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p278", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p346", "target": "p10", "type": "Report", "weight": 1}, {"source": "p346", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p347", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p278", "target": "p348", "type": "Wrote Letter to", "weight": 1}, {"source": "p51", "target": "p349", "type": "Wrote Letter to", "weight": 2}, {"source": "p350", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p350", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p328", "target": "p348", "type": "Wrote Letter to", "weight": 1}, {"source": "p351", "target": "p348", "type": "Wrote Letter to", "weight": 1}, {"source": "p351", "target": "l352", "type": "located_at", "weight": 1}, {"source": "p321", "target": "p27", "type": "Wrote Letter to", "weight": 1}, {"source": "p353", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p354", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p355", "target": "p24", "type": "Wrote Letter to", "weight": 1}, {"source": "p355", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p322", "target": "p40", "type": "Wrote Letter to", "weight": 3}, {"source": "p51", "target": "p356", "type": "Wrote Letter to", "weight": 1}, {"source": "p357", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p312", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p358", "target": "p51", "type": "Wrote Letter to", "weight": 1}, {"source": "p358", "target": "l273", "type": "located_at", "weight": 1}, {"source": "p359", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p360", "target": "p24", "type": "Wrote Letter to", "weight": 1}, {"source": "p361", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p361", "target": "l273", "type": "located_at", "weight": 1}, {"source": "p362", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p362", "target": "l4", "type": "located_at", "weight": 2}, {"source": "p362", "target": "p24", "type": "Wrote Letter to", "weight": 2}, {"source": "p51", "target": "p328", "type": "Wrote Letter to", "weight": 1}, {"source": "p322", "target": "p24", "type": "Wrote Letter to", "weight": 1}, {"source": "p363", "target": "p364", "type": "Wrote Letter to", "weight": 1}, {"source": "p365", "target": "p366", "type": "Wrote Letter to", "weight": 1}, {"source": "p365", "target": "l367", "type": "located_at", "weight": 1}, {"source": "p368", "target": "p366", "type": "Wrote Letter to", "weight": 1}, {"source": "p368", "target": "l367", "type": "located_at", "weight": 1}, {"source": "p369", "target": "p294", "type": "Wrote Letter to", "weight": 1}, {"source": "p369", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p294", "target": "l42", "type": "located_at", "weight": 1}, {"source": "l44", "target": "l42", "type": "geographic_flow", "weight": 1}, {"source": "p370", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p371", "target": "p40", "type": "Wrote Letter to", "weight": 1}, {"source": "p371", "target": "l4", "type": "located_at", "weight": 1}, {"source": "p40", "target": "p372", "type": "Wrote Letter to", "weight": 1}, {"source": "p311", "target": "l373", "type": "located_at", "weight": 1}, {"source": "p272", "target": "p40", "type": "Wrote Letter to", "weight": 2}, {"source": "p374", "target": "p375", "type": "Wrote Letter to", "weight": 2}, {"source": "p374", "target": "l42", "type": "located_at", "weight": 1}, {"source": "p376", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p376", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p377", "target": "p11", "type": "Wrote Letter to", "weight": 2}, {"source": "p377", "target": "l92", "type": "located_at", "weight": 1}, {"source": "l92", "target": "l44", "type": "geographic_flow", "weight": 1}, {"source": "p378", "target": "p302", "type": "Wrote Letter to", "weight": 1}, {"source": "p378", "target": "l379", "type": "located_at", "weight": 1}, {"source": "p240", "target": "p375", "type": "Wrote Letter to", "weight": 2}, {"source": "p240", "target": "l44", "type": "located_at", "weight": 2}, {"source": "p375", "target": "l9", "type": "located_at", "weight": 15}, {"source": "l44", "target": "l9", "type": "geographic_flow", "weight": 9}, {"source": "p201", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p201", "target": "l380", "type": "located_at", "weight": 1}, {"source": "l380", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p375", "target": "p381", "type": "Wrote Letter to", "weight": 4}, {"source": "p375", "target": "l44", "type": "located_at", "weight": 5}, {"source": "p30", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p30", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p46", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p46", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p382", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p383", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p383", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p384", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p381", "target": "l9", "type": "located_at", "weight": 4}, {"source": "p381", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "l9", "target": "l44", "type": "geographic_flow", "weight": 1}, {"source": "p240", "target": "l385", "type": "located_at", "weight": 1}, {"source": "p236", "target": "p1", "type": "Wrote Letter to", "weight": 1}, {"source": "p236", "target": "l225", "type": "located_at", "weight": 1}, {"source": "p194", "target": "p386", "type": "Wrote Letter to", "weight": 1}, {"source": "p22", "target": "p238", "type": "Wrote Letter to", "weight": 2}, {"source": "p22", "target": "l16", "type": "located_at", "weight": 6}, {"source": "p22", "target": "p76", "type": "Wrote Letter to", "weight": 2}, {"source": "p22", "target": "p254", "type": "Wrote Letter to", "weight": 2}, {"source": "p136", "target": "p135", "type": "Wrote Letter to", "weight": 1}, {"source": "p135", "target": "p387", "type": "Wrote Letter to", "weight": 1}, {"source": "p93", "target": "p388", "type": "Wrote Letter to", "weight": 1}, {"source": "p388", "target": "p93", "type": "Wrote Letter to", "weight": 1}, {"source": "p388", "target": "l389", "type": "located_at", "weight": 1}, {"source": "p41", "target": "p375", "type": "Wrote Letter to", "weight": 3}, {"source": "p390", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p294", "target": "p391", "type": "Wrote Letter to", "weight": 1}, {"source": "p294", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p11", "target": "p375", "type": "Wrote Letter to", "weight": 2}, {"source": "p392", "target": "p393", "type": "Wrote Letter to", "weight": 1}, {"source": "p392", "target": "l9", "type": "located_at", "weight": 2}, {"source": "p394", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p394", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p11", "target": "l395", "type": "located_at", "weight": 1}, {"source": "l395", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p374", "target": "l303", "type": "located_at", "weight": 1}, {"source": "l303", "target": "l9", "type": "geographic_flow", "weight": 1}, {"source": "p392", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "l92", "target": "l9", "type": "geographic_flow", "weight": 2}, {"source": "p396", "target": "p375", "type": "Wrote Letter to", "weight": 1}, {"source": "p396", "target": "l44", "type": "located_at", "weight": 1}, {"source": "p397", "target": "p398", "type": "Wrote Letter to", "weight": 1}, {"source": "p7", "target": "p399", "type": "Wrote Letter to", "weight": 1}, {"source": "p399", "target": "l257", "type": "located_at", "weight": 1}, {"source": "p400", "target": "p348", "type": "Wrote Letter to", "weight": 1}, {"source": "p22", "target": "p401", "type": "Wrote Letter to", "weight": 1}, {"source": "p22", "target": "l402", "type": "located_at", "weight": 1}, {"source": "p135", "target": "p94", "type": "Wrote Letter to", "weight": 1}, {"source": "p135", "target": "l225", "type": "located_at", "weight": 1}, {"source": "p403", "target": "p80", "type": "Confession", "weight": 1}, {"source": "p403", "target": "l404", "type": "located_at", "weight": 1}, {"source": "p80", "target": "l405", "type": "located_at", "weight": 1}, {"source": "p18", "target": "p406", "type": "Proclamation", "weight": 1}, {"source": "p109", "target": "p18", "type": "Wrote Letter to", "weight": 2}, {"source": "p102", "target": "p109", "type": "Account", "weight": 1}, {"source": "p102", "target": "l111", "type": "located_at", "weight": 1}, {"source": "l57", "target": "l4", "type": "geographic_flow", "weight": 31}, {"source": "l4", "target": "l57", "type": "geographic_flow", "weight": 30}, {"source": "p127", "target": "p126", "type": "Wrote Letter to", "weight": 1}, {"source": "p135", "target": "p407", "type": "Wrote Letter to", "weight": 1}, {"source": "p407", "target": "l9", "type": "located_at", "weight": 1}, {"source": "p7", "target": "p10", "type": "Wrote Letter to", "weight": 1}, {"source": "p7", "target": "p96", "type": "Petition", "weight": 1}, {"source": "l124", "target": "l57", "type": "geographic_flow", "weight": 2}, {"source": "l9", "target": "l57", "type": "geographic_flow", "weight": 3}, {"source": "p17", "target": "p408", "type": "Wrote Letter to", "weight": 1}]};
 
-const COLOR  = { Person:'#5c8dd4', Place:'#3aa98a', Organization:'#d47a3a' };
-const STROKE = { Person:'#3a6cb2', Place:'#1a7a5a', Organization:'#a05a1a' };
+const LETTER = new Set(['Wrote Letter to']);
+const GEO    = new Set(['geographic_flow']);
+const LOC    = new Set(['located_at']);
 
-function recomputeGraphData(raw) {
-  const baseNodes = Array.isArray(raw?.nodes) ? raw.nodes : [];
-  const baseLinks = Array.isArray(raw?.links) ? raw.links : [];
-  const nodeMap = new Map();
-
-  // Seed with known metadata, but recompute degree from full link list.
-  baseNodes.forEach(n => {
-    nodeMap.set(n.id, {
-      id: n.id,
-      type: n.type || 'Unknown',
-      degree: 0
-    });
-  });
-
-  const links = [];
-  baseLinks.forEach(l => {
-    const s = l.source?.id || l.source;
-    const t = l.target?.id || l.target;
-    if (!s || !t || s === t) return;
-
-    if (!nodeMap.has(s)) nodeMap.set(s, { id: s, type: 'Unknown', degree: 0 });
-    if (!nodeMap.has(t)) nodeMap.set(t, { id: t, type: 'Unknown', degree: 0 });
-
-    nodeMap.get(s).degree += 1;
-    nodeMap.get(t).degree += 1;
-
-    const types = Array.isArray(l.types) ? l.types : [];
-    if (types.includes('FROM_PLACE')) {
-      if (nodeMap.get(s).type === 'Unknown') nodeMap.get(s).type = 'Place';
-      if (nodeMap.get(t).type === 'Unknown') nodeMap.get(t).type = 'Person';
-    }
-
-    links.push({ ...l, source: s, target: t });
-  });
-
-  // Keep unknowns visible by assigning a default semantic type.
-  const nodes = Array.from(nodeMap.values()).map(n => ({
-    ...n,
-    type: n.type === 'Unknown' ? 'Person' : n.type
-  }));
-
-  return { nodes, links };
+const maxDeg = d3.max(G.nodes, d => d.degree || 0) || 1;
+function nodeColor(d){
+  if(d.group==='Place') return '#5a8a7a';
+  if(d.group==='Organization') return '#6a6a9a';
+  if(d.group==='Group' || d.group==='Ship' || d.group==='Thing') return '#7a6a9a';
+  const ratio = (d.degree || 0) / maxDeg;
+  if(ratio > 0.4) return '#c8a84a';
+  if(ratio > 0.15) return '#d4844a';
+  return '#9a7a5a';
 }
+function edgeCls(t){if(LOC.has(t))return'loc';if(GEO.has(t))return'geo';if(LETTER.has(t))return'letter';return'other'}
+function nodeR(d){return Math.max(4,Math.min(26,3.5+Math.pow(d.degree||1,.36)*1.7))}
 
-const GRAPH = recomputeGraphData(RAW);
-const MAX_DEGREE = Math.max(1, ...GRAPH.nodes.map(n => n.degree || 0));
+const svg  = d3.select('#svg');
+const root = svg.select('#root');
+const lg   = root.select('#lg');
+const ng   = root.select('#ng');
+const tip  = document.getElementById('tip');
+const stage= document.getElementById('stage');
 
-function expandLinksForDisplay(links) {
-  const expanded = [];
-  for (const link of links) {
-    const types = Array.isArray(link.types) ? link.types : [];
-    const geoTypes = types.filter(t => t === 'FROM_PLACE');
-    const edgeTypes = types.filter(t => t !== 'FROM_PLACE');
+let W=stage.clientWidth, H=stage.clientHeight;
+window.addEventListener('resize',()=>{W=stage.clientWidth;H=stage.clientHeight;sim.force('center',d3.forceCenter(W/2,H/2)).alpha(.2).restart()});
 
-    if (geoTypes.length) {
-      expanded.push({ ...link, vizType: 'geo', vizLabel: 'FROM_PLACE' });
-    }
-    if (edgeTypes.length) {
-      expanded.push({
-        ...link,
-        vizType: 'edge',
-        vizLabel: edgeTypes.join(', '),
-        vizTypeCount: edgeTypes.length
-      });
-    }
+const zoom=d3.zoom().scaleExtent([.03,10]).on('zoom',e=>root.attr('transform',e.transform));
+svg.call(zoom).on('dblclick.zoom',null);
 
-    // Fallback: keep odd records visible even if they have no type metadata.
-    if (!geoTypes.length && !edgeTypes.length) {
-      expanded.push({ ...link, vizType: 'edge', vizLabel: 'Unspecified' });
-    }
-  }
-  return expanded;
-}
+// Build sim
+const sim=d3.forceSimulation(G.nodes)
+  .force('link',d3.forceLink(G.edges).id(d=>d.id)
+    .distance(+document.getElementById('sl-dist').value)
+    .strength(d=>LOC.has(d.type)?.25:GEO.has(d.type)?.12:.55))
+  .force('charge',d3.forceManyBody().strength(+document.getElementById('sl-charge').value))
+  .force('center',d3.forceCenter(W/2,H/2))
+  .force('collide',d3.forceCollide().radius(d=>nodeR(d)+2))
+  .alphaDecay(.014);
 
-let visTypes = new Set(['Person','Place','Organization']);
-let simulation, svg, g, linkSel, nodeG;
+// Edges
+let lSel=lg.selectAll('line').data(G.edges).enter().append('line')
+  .attr('class',d=>'link '+edgeCls(d.type))
+  .attr('stroke-width',d=>LOC.has(d.type)||GEO.has(d.type)?.7:Math.min(4.5,.6+Math.log(d.weight||1)*.6))
+  .attr('marker-end',d=>LETTER.has(d.type)?'url(#arr)':null);
 
-function r(d) {
-  const maxDeg = MAX_DEGREE;
-  return Math.max(5, Math.min(30, 5 + 25 * Math.sqrt(d.degree / maxDeg)));
-}
+// Nodes
+const drag=d3.drag()
+  .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.15).restart();d.fx=d.x;d.fy=d.y})
+  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y})
+  .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null});
 
-function build() {
-  const container = document.getElementById('graph-container');
-  const W = container.clientWidth;
-  const H = container.clientHeight - 52 - 30;
+let nSel=ng.selectAll('g').data(G.nodes).enter().append('g')
+  .attr('class','node').call(drag)
+  .on('click',(e,d)=>{e.stopPropagation();setHL(d.id===hl?null:d.id)})
+  .on('mouseover',(e,d)=>showTip(e,d))
+  .on('mousemove',e=>moveTip(e))
+  .on('mouseout',()=>{tip.style.display='none'});
 
-  d3.select('#graph-svg').selectAll('*').remove();
-  svg = d3.select('#graph-svg');
+nSel.append('circle')
+  .attr('r',d=>nodeR(d))
+  .attr('fill',d=>nodeColor(d))
+  .attr('stroke',d=>d3.color(nodeColor(d)).darker(.9))
+  .attr('stroke-width',1.2);
 
-  const activeIds = new Set(GRAPH.nodes.filter(n => visTypes.has(n.type)).map(n => n.id));
-  const nodes = GRAPH.nodes.filter(n => activeIds.has(n.id)).map(n => ({...n}));
-  const nodeById = new Map(nodes.map(n => [n.id, n]));
-  const simLinks = GRAPH.links.filter(l => {
-    const s = l.source?.id || l.source, t = l.target?.id || l.target;
-    return activeIds.has(s) && activeIds.has(t) && s !== t;
-  }).map(l => ({...l}));
+nSel.append('text')
+  .attr('dy',d=>nodeR(d)+9)
+  .attr('text-anchor','middle')
+  .attr('font-size',d=>Math.max(8,Math.min(12,nodeR(d)*.82)))
+  .text(d=>d.label.length>20?d.label.slice(0,19)+'…':d.label);
 
-  const links = expandLinksForDisplay(simLinks);
+svg.on('click',()=>setHL(null));
 
-  const geoEdgeCount = links.filter(l => l.vizType === 'geo').length;
-  const typedEdgeCount = links.filter(l => l.vizType === 'edge').length;
-  document.getElementById('stats').textContent = `${nodes.length} nodes · ${geoEdgeCount} geographic + ${typedEdgeCount} edge-type links`;
-
-  g = svg.append('g');
-
-  const zoom = d3.zoom().scaleExtent([0.2, 5])
-    .on('zoom', e => g.attr('transform', e.transform));
-  svg.call(zoom).call(zoom.transform, d3.zoomIdentity.translate(W/2, H/2));
-
-  linkSel = g.append('g').attr('class','links')
-    .selectAll('line').data(links).join('line')
-    .attr('stroke', d => d.vizType === 'geo' ? 'rgba(80,130,170,0.45)' : 'rgba(200,170,100,0.35)')
-    .attr('stroke-dasharray', d => d.vizType === 'geo' ? '3 3' : null)
-    .attr('stroke-width', d => {
-      const base = Math.max(0.5, Math.min(4, 0.4 + d.weight * 0.14));
-      return d.vizType === 'edge' ? Math.max(base, 1) : base;
-    });
-
-  nodeG = g.append('g').attr('class','nodes')
-    .selectAll('g').data(nodes).join('g')
-    .attr('cursor','pointer')
-    .call(d3.drag()
-      .on('start', (e,d) => { if(!e.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
-      .on('drag',  (e,d) => { d.fx=e.x; d.fy=e.y; })
-      .on('end',   (e,d) => { if(!e.active) simulation.alphaTarget(0); }))
-    .on('click', (e,d) => { if(d.fx!=null){d.fx=null;d.fy=null;} })
-    .on('mouseover', (e,d) => showTip(e,d,links))
-    .on('mousemove', moveTip)
-    .on('mouseout',  hideTip);
-
-  nodeG.append('circle')
-    .attr('r', d => r(d) + 3)
-    .attr('fill', d => COLOR[d.type] || '#888')
-    .attr('opacity', 0.15);
-
-  nodeG.append('circle')
-    .attr('r', r)
-    .attr('fill', d => COLOR[d.type] || '#888')
-    .attr('stroke', d => STROKE[d.type] || '#555')
-    .attr('stroke-width', 1);
-
-  nodeG.append('text')
-    .attr('dy','0.32em').attr('text-anchor','middle')
-    .style('font-size', d => Math.min(10, r(d) * 0.7) + 'px')
-    .style('font-family', 'Source Serif 4, Georgia, serif')
-    .style('fill','#fff').style('pointer-events','none').style('font-weight','600')
-    .text(d => {
-      const ri = r(d);
-      if (ri < 11) return '';
-      const name = d.id.split(' ').pop();
-      return name.length > 9 ? name.slice(0,8)+'…' : name;
-    });
-
-  g.append('g').attr('class','labels')
-    .selectAll('text').data(nodes.filter(n => n.degree > 60)).join('text')
-    .style('font-size','11px').style('font-family','Playfair Display, Georgia, serif')
-    .style('fill','rgba(200,170,100,0.85)').style('pointer-events','none')
-    .attr('dy','-0.7em').attr('text-anchor','middle')
-    .text(d => d.id);
-
-  if (simulation) simulation.stop();
-  simulation = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(simLinks).id(d=>d.id).distance(d => 55 + 70/(d.weight+1)))
-    .force('charge', d3.forceManyBody().strength(d => -100 - d.degree * 0.55))
-    .force('collide', d3.forceCollide().radius(d => r(d)+5))
-    .force('x', d3.forceX(0).strength(0.04))
-    .force('y', d3.forceY(0).strength(0.04))
-    .on('tick', () => {
-      linkSel
-        .attr('x1', d => {
-          const s = d.source?.id || d.source;
-          return nodeById.get(s)?.x ?? 0;
-        })
-        .attr('y1', d => {
-          const s = d.source?.id || d.source;
-          return nodeById.get(s)?.y ?? 0;
-        })
-        .attr('x2', d => {
-          const t = d.target?.id || d.target;
-          return nodeById.get(t)?.x ?? 0;
-        })
-        .attr('y2', d => {
-          const t = d.target?.id || d.target;
-          return nodeById.get(t)?.y ?? 0;
-        });
-      nodeG.attr('transform', d=>`translate(${d.x},${d.y})`);
-      g.selectAll('.labels text').attr('x',d=>d.x).attr('y',d=>d.y);
-    });
-}
-
-function showTip(e, d, links) {
-  const connectedIds = new Set();
-  links.forEach(l => {
-    const s = l.source?.id||l.source, t = l.target?.id||l.target;
-    if (s===d.id) connectedIds.add(t);
-    if (t===d.id) connectedIds.add(s);
-  });
-  const edgeCount = connectedIds.size;
-  document.getElementById('tip-name').textContent = d.id;
-  document.getElementById('tip-info').textContent = `${d.type} · Degree: ${d.degree} · ${edgeCount} connection${edgeCount!==1?'s':''}`;
-  document.getElementById('tooltip').style.opacity = '1';
-  document.getElementById('info-node').textContent = `${d.id} — ${d.type} — degree ${d.degree}`;
-  linkSel
-    .attr('stroke-opacity', l => {
-      const s=l.source?.id||l.source, t=l.target?.id||l.target;
-      return (s===d.id||t===d.id) ? 0.95 : 0.05;
-    })
-    .attr('stroke-width', l => {
-      const s=l.source?.id||l.source, t=l.target?.id||l.target;
-      return (s===d.id||t===d.id) ? Math.max(1.5, Math.min(5, 0.5+l.weight*0.2)) : 0.3;
-    });
-  nodeG.selectAll('circle:nth-child(2)')
-    .attr('opacity', nd => nd.id===d.id||connectedIds.has(nd.id) ? 1 : 0.2);
-}
-
-function moveTip(e) {
-  const tip = document.getElementById('tooltip');
-  const rect = document.getElementById('graph-container').getBoundingClientRect();
-  let x = e.clientX - rect.left + 14;
-  let y = e.clientY - rect.top + 14;
-  if (x + 230 > rect.width) x = e.clientX - rect.left - 235;
-  if (y + 100 > rect.height) y = e.clientY - rect.top - 100;
-  tip.style.left = x + 'px';
-  tip.style.top = y + 'px';
-}
-
-function hideTip() {
-  document.getElementById('tooltip').style.opacity='0';
-  document.getElementById('info-node').textContent='Hover a node to explore connections';
-  if (!linkSel) return;
-  linkSel.attr('stroke-opacity', d => d.vizType === 'geo' ? 0.3 : 0.35)
-         .attr('stroke-width', d => {
-           const base = Math.max(0.5, Math.min(4, 0.4 + d.weight * 0.14));
-           return d.vizType === 'edge' ? Math.max(base, 1) : base;
-         });
-  nodeG.selectAll('circle:nth-child(2)').attr('opacity',1);
-}
-
-['cb-person','cb-place','cb-org'].forEach(id => {
-  document.getElementById(id).addEventListener('change', e => {
-    const map = {'cb-person':'Person','cb-place':'Place','cb-org':'Organization'};
-    e.target.checked ? visTypes.add(map[id]) : visTypes.delete(map[id]);
-    build();
-  });
+sim.on('tick',()=>{
+  lSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+  nSel.attr('transform',d=>`translate(${d.x},${d.y})`);
 });
 
-window.addEventListener('resize', build);
-build();
+// Highlight
+let hl=null;
+function setHL(id){
+  hl=id;
+  if(!id){nSel.classed('dimmed',false).classed('hi',false);lSel.classed('dimmed',false);return}
+  const nb=new Set([id]);
+  lSel.each(d=>{
+    const s=typeof d.source==='object'?d.source.id:d.source;
+    const t=typeof d.target==='object'?d.target.id:d.target;
+    if(s===id||t===id){nb.add(s);nb.add(t)}
+  });
+  nSel.classed('dimmed',d=>!nb.has(d.id)).classed('hi',d=>d.id===id);
+  // Highlight circle stroke colour
+  nSel.select('circle').attr('stroke',d=>d.id===id?'#c9a05a':d3.color(nodeColor(d)).darker(.9));
+  lSel.classed('dimmed',d=>{
+    const s=typeof d.source==='object'?d.source.id:d.source;
+    const t=typeof d.target==='object'?d.target.id:d.target;
+    return !nb.has(s)||!nb.has(t);
+  });
+}
+
+// Tooltip
+function showTip(e,d){
+  const conns=G.edges.filter(x=>{
+    const s=typeof x.source==='object'?x.source.id:x.source;
+    const t=typeof x.target==='object'?x.target.id:x.target;
+    return s===d.id||t===d.id;
+  });
+  const tc={};conns.forEach(c=>{tc[c.type]=(tc[c.type]||0)+1});
+  const summ=Object.entries(tc).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([t,c])=>`${t}:${c}`).join(' · ');
+  tip.innerHTML=`<span class="tname">${d.label}</span><div class="ttype">${d.group}</div><div class="tconn">${conns.length} connection${conns.length!==1?'s':''}</div><div class="trels">${summ}</div>`;
+  tip.style.display='block';moveTip(e);
+}
+function moveTip(e){
+  const r=stage.getBoundingClientRect();
+  let x=e.clientX-r.left+16,y=e.clientY-r.top-10;
+  if(x+270>r.width)x=e.clientX-r.left-276;
+  tip.style.left=x+'px';tip.style.top=y+'px';
+}
+
+// Node filter
+let nf='all',ef='all';
+function applyVis(){
+  const gmap={person:['Person'],place:['Place'],org:['Organization','Group','Ship','Thing']};
+  const vg=nf==='all'?null:gmap[nf];
+  nSel.style('display',d=>!vg||vg.includes(d.group)?null:'none');
+  const vi=new Set();G.nodes.forEach(n=>{if(!vg||vg.includes(n.group))vi.add(n.id)});
+  lSel.style('display',d=>{
+    const s=typeof d.source==='object'?d.source.id:d.source;
+    const t=typeof d.target==='object'?d.target.id:d.target;
+    if(!vi.has(s)||!vi.has(t))return'none';
+    if(ef==='letter'&&!LETTER.has(d.type))return'none';
+    if(ef==='geo'&&!GEO.has(d.type)&&!LOC.has(d.type))return'none';
+    return null;
+  });
+}
+function nBtn(id,val){document.getElementById(id).onclick=()=>{nf=val;['fn-all','fn-person','fn-place','fn-org'].forEach(b=>document.getElementById(b).classList.remove('on'));document.getElementById(id).classList.add('on');applyVis()}}
+function eBtn(id,val){document.getElementById(id).onclick=()=>{ef=val;['fe-all','fe-letter','fe-geo'].forEach(b=>document.getElementById(b).classList.remove('on2'));document.getElementById(id).classList.add('on2');applyVis()}}
+nBtn('fn-all','all');nBtn('fn-person','person');nBtn('fn-place','place');nBtn('fn-org','org');
+eBtn('fe-all','all');eBtn('fe-letter','letter');eBtn('fe-geo','geo');
+
+// Sliders
+document.getElementById('sl-charge').oninput=function(){sim.force('charge',d3.forceManyBody().strength(+this.value));sim.alpha(.4).restart()};
+document.getElementById('sl-dist').oninput=function(){sim.force('link').distance(+this.value);sim.alpha(.4).restart()};
+
+// Pause / Reset
+let paused=false;
+document.getElementById('btn-pause').onclick=function(){paused=!paused;this.textContent=paused?'Resume':'Pause';paused?sim.stop():sim.alpha(.3).restart()};
+document.getElementById('btn-reset').onclick=()=>{svg.transition().duration(500).call(zoom.transform,d3.zoomIdentity);setHL(null)};
+
+// Search
+document.getElementById('search').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  if(!q){setHL(null);return}
+  const found=G.nodes.find(n=>n.label.toLowerCase().includes(q));
+  if(found){
+    setHL(found.id);
+    const t=d3.zoomTransform(svg.node());
+    svg.transition().duration(700).call(zoom.translateBy,(W/2-found.x*t.k-t.x)/t.k,(H/2-found.y*t.k-t.y)/t.k);
+  }
+});
+
+// Stats
+const np=G.nodes.filter(n=>n.group==='Person').length;
+const nl=G.nodes.filter(n=>n.group==='Place').length;
+const no=G.nodes.filter(n=>!['Person','Place'].includes(n.group)).length;
+const nlet=G.edges.filter(e=>LETTER.has(e.type)).length;
+document.getElementById('fstats').textContent=`${G.nodes.length} nodes (${np} people · ${nl} places · ${no} orgs/groups) · ${G.edges.length} edges · ${nlet} letter links · 938 source records`;
 </script>
             </body>
         </html>
