@@ -200,11 +200,85 @@ const RAW = {"nodes":[{"id":"Major General Kirk","type":"Person","degree":10},{"
 const COLOR  = { Person:'#5c8dd4', Place:'#3aa98a', Organization:'#d47a3a' };
 const STROKE = { Person:'#3a6cb2', Place:'#1a7a5a', Organization:'#a05a1a' };
 
+function recomputeGraphData(raw) {
+  const baseNodes = Array.isArray(raw?.nodes) ? raw.nodes : [];
+  const baseLinks = Array.isArray(raw?.links) ? raw.links : [];
+  const nodeMap = new Map();
+
+  // Seed with known metadata, but recompute degree from full link list.
+  baseNodes.forEach(n => {
+    nodeMap.set(n.id, {
+      id: n.id,
+      type: n.type || 'Unknown',
+      degree: 0
+    });
+  });
+
+  const links = [];
+  baseLinks.forEach(l => {
+    const s = l.source?.id || l.source;
+    const t = l.target?.id || l.target;
+    if (!s || !t || s === t) return;
+
+    if (!nodeMap.has(s)) nodeMap.set(s, { id: s, type: 'Unknown', degree: 0 });
+    if (!nodeMap.has(t)) nodeMap.set(t, { id: t, type: 'Unknown', degree: 0 });
+
+    nodeMap.get(s).degree += 1;
+    nodeMap.get(t).degree += 1;
+
+    const types = Array.isArray(l.types) ? l.types : [];
+    if (types.includes('FROM_PLACE')) {
+      if (nodeMap.get(s).type === 'Unknown') nodeMap.get(s).type = 'Place';
+      if (nodeMap.get(t).type === 'Unknown') nodeMap.get(t).type = 'Person';
+    }
+
+    links.push({ ...l, source: s, target: t });
+  });
+
+  // Keep unknowns visible by assigning a default semantic type.
+  const nodes = Array.from(nodeMap.values()).map(n => ({
+    ...n,
+    type: n.type === 'Unknown' ? 'Person' : n.type
+  }));
+
+  return { nodes, links };
+}
+
+const GRAPH = recomputeGraphData(RAW);
+const MAX_DEGREE = Math.max(1, ...GRAPH.nodes.map(n => n.degree || 0));
+
+function expandLinksForDisplay(links) {
+  const expanded = [];
+  for (const link of links) {
+    const types = Array.isArray(link.types) ? link.types : [];
+    const geoTypes = types.filter(t => t === 'FROM_PLACE');
+    const edgeTypes = types.filter(t => t !== 'FROM_PLACE');
+
+    if (geoTypes.length) {
+      expanded.push({ ...link, vizType: 'geo', vizLabel: 'FROM_PLACE' });
+    }
+    if (edgeTypes.length) {
+      expanded.push({
+        ...link,
+        vizType: 'edge',
+        vizLabel: edgeTypes.join(', '),
+        vizTypeCount: edgeTypes.length
+      });
+    }
+
+    // Fallback: keep odd records visible even if they have no type metadata.
+    if (!geoTypes.length && !edgeTypes.length) {
+      expanded.push({ ...link, vizType: 'edge', vizLabel: 'Unspecified' });
+    }
+  }
+  return expanded;
+}
+
 let visTypes = new Set(['Person','Place','Organization']);
 let simulation, svg, g, linkSel, nodeG;
 
 function r(d) {
-  const maxDeg = 838;
+  const maxDeg = MAX_DEGREE;
   return Math.max(5, Math.min(30, 5 + 25 * Math.sqrt(d.degree / maxDeg)));
 }
 
@@ -216,14 +290,19 @@ function build() {
   d3.select('#graph-svg').selectAll('*').remove();
   svg = d3.select('#graph-svg');
 
-  const activeIds = new Set(RAW.nodes.filter(n => visTypes.has(n.type)).map(n => n.id));
-  const nodes = RAW.nodes.filter(n => activeIds.has(n.id)).map(n => ({...n}));
-  const links = RAW.links.filter(l => {
+  const activeIds = new Set(GRAPH.nodes.filter(n => visTypes.has(n.type)).map(n => n.id));
+  const nodes = GRAPH.nodes.filter(n => activeIds.has(n.id)).map(n => ({...n}));
+  const nodeById = new Map(nodes.map(n => [n.id, n]));
+  const simLinks = GRAPH.links.filter(l => {
     const s = l.source?.id || l.source, t = l.target?.id || l.target;
     return activeIds.has(s) && activeIds.has(t) && s !== t;
   }).map(l => ({...l}));
 
-  document.getElementById('stats').textContent = `${nodes.length} nodes · ${links.length} edges`;
+  const links = expandLinksForDisplay(simLinks);
+
+  const geoEdgeCount = links.filter(l => l.vizType === 'geo').length;
+  const typedEdgeCount = links.filter(l => l.vizType === 'edge').length;
+  document.getElementById('stats').textContent = `${nodes.length} nodes · ${geoEdgeCount} geographic + ${typedEdgeCount} edge-type links`;
 
   g = svg.append('g');
 
@@ -233,9 +312,12 @@ function build() {
 
   linkSel = g.append('g').attr('class','links')
     .selectAll('line').data(links).join('line')
-    .attr('stroke', d => d.types?.includes('FROM_PLACE') ? 'rgba(80,130,170,0.4)' : 'rgba(180,150,90,0.3)')
-    .attr('stroke-dasharray', d => d.types?.includes('FROM_PLACE') ? '3 3' : null)
-    .attr('stroke-width', d => Math.max(0.5, Math.min(4, 0.4 + d.weight * 0.14)));
+    .attr('stroke', d => d.vizType === 'geo' ? 'rgba(80,130,170,0.45)' : 'rgba(200,170,100,0.35)')
+    .attr('stroke-dasharray', d => d.vizType === 'geo' ? '3 3' : null)
+    .attr('stroke-width', d => {
+      const base = Math.max(0.5, Math.min(4, 0.4 + d.weight * 0.14));
+      return d.vizType === 'edge' ? Math.max(base, 1) : base;
+    });
 
   nodeG = g.append('g').attr('class','nodes')
     .selectAll('g').data(nodes).join('g')
@@ -281,14 +363,29 @@ function build() {
 
   if (simulation) simulation.stop();
   simulation = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(links).id(d=>d.id).distance(d => 55 + 70/(d.weight+1)))
+    .force('link', d3.forceLink(simLinks).id(d=>d.id).distance(d => 55 + 70/(d.weight+1)))
     .force('charge', d3.forceManyBody().strength(d => -100 - d.degree * 0.55))
     .force('collide', d3.forceCollide().radius(d => r(d)+5))
     .force('x', d3.forceX(0).strength(0.04))
     .force('y', d3.forceY(0).strength(0.04))
     .on('tick', () => {
-      linkSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
-             .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+      linkSel
+        .attr('x1', d => {
+          const s = d.source?.id || d.source;
+          return nodeById.get(s)?.x ?? 0;
+        })
+        .attr('y1', d => {
+          const s = d.source?.id || d.source;
+          return nodeById.get(s)?.y ?? 0;
+        })
+        .attr('x2', d => {
+          const t = d.target?.id || d.target;
+          return nodeById.get(t)?.x ?? 0;
+        })
+        .attr('y2', d => {
+          const t = d.target?.id || d.target;
+          return nodeById.get(t)?.y ?? 0;
+        });
       nodeG.attr('transform', d=>`translate(${d.x},${d.y})`);
       g.selectAll('.labels text').attr('x',d=>d.x).attr('y',d=>d.y);
     });
@@ -334,8 +431,11 @@ function hideTip() {
   document.getElementById('tooltip').style.opacity='0';
   document.getElementById('info-node').textContent='Hover a node to explore connections';
   if (!linkSel) return;
-  linkSel.attr('stroke-opacity', d => d.types?.includes('FROM_PLACE') ? 0.3 : 0.35)
-         .attr('stroke-width', d => Math.max(0.5, Math.min(4, 0.4+d.weight*0.14)));
+  linkSel.attr('stroke-opacity', d => d.vizType === 'geo' ? 0.3 : 0.35)
+         .attr('stroke-width', d => {
+           const base = Math.max(0.5, Math.min(4, 0.4 + d.weight * 0.14));
+           return d.vizType === 'edge' ? Math.max(base, 1) : base;
+         });
   nodeG.selectAll('circle:nth-child(2)').attr('opacity',1);
 }
 
