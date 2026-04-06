@@ -59,94 +59,98 @@
   font-family: Quattrocento, serif;
 }
 
-#hamilton-graph .hcontrols {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
+.hcontrols {
+  position: relative;
   background: #10144a;
   border: 1px solid #10144a;
-  border-radius: 6px;
+  border-radius: 5px;
   color: #e2a9f1;
-  z-index: 8;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
-  padding: 10px 12px;
-  max-width: min(92%, 700px);
+  gap: 0.45rem;
+  padding: 0.5rem 0.65rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
 }
 
-#hamilton-graph button {
+.hcontrols button {
+  padding: 0.28rem 0.52rem;
+  border: 1px solid var(--viz-accent, #e2a9f1);
+  border-radius: 999px;
   background: transparent;
-  border: 1px solid #3d4276;
-  color: #d4b2e7;
-  padding: 3px 8px;
-  font-size: 11px;
+  color: var(--viz-accent, #e2a9f1);
+  font-size: 0.77rem;
+  line-height: 1.1;
+  font-family: Quattrocento, serif;
   cursor: pointer;
-  border-radius: 3px;
-  font-family: Quattrocento, serif;
 }
 
-#hamilton-graph button:hover {
+.hcontrols button:hover {
   border-color: #e2a9f1;
   color: #f0d4ff;
 }
 
-#hamilton-graph button.on,
-#hamilton-graph button.on2 {
+.hcontrols button.on,
+.hcontrols button.on2 {
+  background: #e2a9f1;
+  color: #10144a;
   border-color: #e2a9f1;
-  color: #f0d4ff;
 }
 
-#hamilton-graph .sep {
+.hcontrols .button-row,
+.hcontrols .action-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hcontrols .sep {
   width: 1px;
-  height: 16px;
-  background: #3d4276;
+  height: 18px;
+  background: rgba(226, 169, 241, 0.4);
 }
 
-#hamilton-graph input[type="text"] {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid #3d4276;
-  color: #f1d9ff;
-  padding: 3px 8px;
-  font-size: 11px;
-  border-radius: 3px;
+.hcontrols input[type="text"] {
+  min-width: 140px;
+  padding: 0.32rem 0.58rem;
+  border: 1px solid #10144a;
+  border-radius: 999px;
+  background: #fff;
+  color: #10144a;
+  font-size: 0.82rem;
   font-family: Quattrocento, serif;
-  width: 150px;
   outline: none;
 }
 
-#hamilton-graph input[type="text"]::placeholder {
-  color: #b4a1cc;
+.hcontrols input[type="text"]::placeholder {
+  color: #6f6f84;
 }
 
-#hamilton-graph input[type="text"]:focus {
+.hcontrols input[type="text"]:focus {
   border-color: #e2a9f1;
 }
 
-#hamilton-graph .srow {
+.hcontrols .slider-row {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 11px;
+  gap: 0.35rem;
+  min-width: 132px;
+}
+
+.hcontrols .slider-row span {
+  min-width: 46px;
+  font-size: 0.76rem;
   color: #dcc1ef;
   font-family: Quattrocento, serif;
 }
 
-#hamilton-graph input[type="range"] {
-  width: 68px;
+.hcontrols .slider-row input[type="range"] {
+  width: 86px;
   accent-color: #e2a9f1;
-}
-
-#hamilton-graph #stage {
-  height: 680px;
-  position: relative;
-}
-
-#hamilton-graph svg {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
 #hamilton-graph .link {
@@ -256,8 +260,8 @@
 
 #hamilton-graph .ld {
   width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  height: 18px;
+  background: rgba(226, 169, 241, 0.4);
 }
 
 #hamilton-graph .fhint,
@@ -282,6 +286,24 @@
   bottom: 16px;
 }
 
+#hamilton-graph #stage {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+#hamilton-graph #svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+#hamilton-graph #svg:active {
+  cursor: grabbing;
+}
+
 @media (max-width: 992px) {
   #hamilton-graph #stage {
     height: 620px;
@@ -304,7 +326,7 @@
   }
 
   #hamilton-graph .flegend,
-  #hamilton-graph .hcontrols,
+  .hcontrols,
   #hamilton-graph .fhint,
   #hamilton-graph #fstats {
     position: static;
@@ -312,8 +334,10 @@
     max-width: 100%;
   }
 
-  #hamilton-graph .hcontrols {
+  .hcontrols {
     justify-content: flex-start;
+    gap: 0.35rem;
+    padding: 0.45rem 0.5rem;
   }
 }
 </style>
@@ -364,24 +388,6 @@
     <h3>Hamilton Papers — GD406</h3>
     <p>Dukes of Hamilton &amp; Brandon · 1688–1702 · Network Graph</p>
   </div>
-  <div class="hcontrols">
-    <input type="text" id="search" placeholder="Search node…" />
-    <div class="sep"></div>
-    <button id="fn-all" class="on">All nodes</button>
-    <button id="fn-person">People</button>
-    <button id="fn-place">Places</button>
-    <button id="fn-org">Orgs/Groups</button>
-    <div class="sep"></div>
-    <button id="fe-all" class="on2">All edges</button>
-    <button id="fe-letter">Letters only</button>
-    <button id="fe-geo">Geographic</button>
-    <div class="sep"></div>
-    <div class="srow">Charge<input type="range" id="sl-charge" min="-900" max="-20" value="-280" step="10"></div>
-    <div class="srow">Link dist<input type="range" id="sl-dist" min="20" max="320" value="90" step="5"></div>
-    <div class="sep"></div>
-    <button id="btn-pause">Pause</button>
-    <button id="btn-reset">Reset view</button>
-  </div>
 <div id="stage">
   <svg id="svg">
     <defs>
@@ -396,7 +402,6 @@
   </svg>
   <div id="tip"></div>
 </div>
-
   <div class="flegend">
     <div class="lg"><div class="ld" style="background:var(--c-person)"></div>Person</div>
     <div class="lg"><div class="ld" style="background:var(--c-place)"></div>Place</div>
@@ -410,6 +415,37 @@
   </div>
   <div class="fhint">scroll=zoom · drag=pan · click=highlight · drag node=pin</div>
   <div id="fstats"></div>
+  </div>
+  <div class="hcontrols">
+    <input type="text" id="search" placeholder="Search…" />
+    <div class="sep"></div>
+    <div class="button-row">
+      <button id="fn-all" class="on">All</button>
+      <button id="fn-person">People</button>
+      <button id="fn-place">Places</button>
+      <button id="fn-org">Orgs</button>
+    </div>
+    <div class="sep"></div>
+    <div class="button-row">
+      <button id="fe-all" class="on2">All edges</button>
+      <button id="fe-letter">Letters</button>
+      <button id="fe-geo">Geographic</button>
+    </div>
+    <div class="sep"></div>
+    <div class="slider-row">
+      <span>Charge</span>
+      <input type="range" id="sl-charge" min="-900" max="-20" value="-280" step="10">
+    </div>
+    <div class="slider-row">
+      <span>Link dist</span>
+      <input type="range" id="sl-dist" min="20" max="320" value="90" step="5">
+    </div>
+    <div class="sep"></div>
+    <div class="action-row">
+      <button id="btn-pause">Pause</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+  </div>
   </div>
   </div>
             <div class="container my-5">
