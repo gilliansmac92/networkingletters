@@ -4,7 +4,7 @@
     <!-- Add icon library -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <!-- The website JavaScript file -->
     <script src="../script.js" defer></script>
         <meta charset="utf-8" />
@@ -19,7 +19,118 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../style.css" rel="stylesheet" />
+    <style>
+      #viz-container {
+        position: relative;
+        width: 1200px;
+        height: 650px;
+        background: #e5e6e9;
+        border-radius: 8px;
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      #canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #tooltip {
+        position: fixed;
+        background: rgba(31, 31, 91, 0.92);
+        color: #ffffff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 13px;
+        line-height: 1.5;
+        pointer-events: none;
+        opacity: 0;
+        max-width: 240px;
+        z-index: 100;
+        font-family: Quattrocento, serif;
+        border: 1px solid #10144A;
+        transition: opacity 0.1s;
+      }
+      #title-block {
+        position: absolute;
+        background: #10144A;
+        padding: 8px 12px;
+        border-radius: 4px;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #10144A;
+        pointer-events: none;
+        z-index: 5;
+        white-space: nowrap;
+      }
+      #title-block h3 {
+        font-size: 1.1rem;
+        margin: 0 0 4px;
+        color: #e2a9f1;
+      }
+      #title-block p {
+        font-size: 0.75rem;
+        margin: 0;
+        color: #e2a9f1;
+      }
+      #legend {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: #10144A;
+        color: #e2a9f1;
+        padding: 12px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 5;
+        border: 1px solid #10144A;
+      }
+      #legend h4 {
+        font-size: 0.8rem;
+        margin: 0 0 8px;
+        color: #e2a9f1;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+      }
+      .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      #controls {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: #10144A;
+        color: #e2a9f1;
+        padding: 12px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 5;
+        border: 1px solid #10144A;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      #controls h4 {
+        font-size: 0.8rem;
+        margin: 0 0 4px;
+        color: #e2a9f1;
+      }
+      #controls label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+    </style>
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10144A;">
@@ -58,7 +169,31 @@
                 <div class="col-lg-10" style="font-family: Quattrocento, serif !important;">
                         <h4>Jacobite Letters</h4>
                         <p>Of the extant Jacobite letters, 120 are in the National Records of Scotland's collections, these are contained within the Leven and Melville papers (GD26). The letters are primarily in English and French, a number of the letters are unsigned or unaddressed which one would assume was for anonymity purposes or they were passed between spies or couriers without addresses.</p>
-                        <iframe src="https://graphcommons.com/graphs/bed69f2d-7c68-4425-a456-7c2fdc381239" width="1200" height="750"></iframe>
+                        <div id="viz-container">
+                            <svg id="canvas"></svg>
+                            <div id="tooltip"></div>
+                            <div id="title-block">
+                                <h3>Jacobite Correspondence Network</h3>
+                                <p>1688–1692 · Scotland &amp; Ireland · Drag to pan · Scroll to zoom</p>
+                            </div>
+                            <div id="legend">
+                                <h4>Node Type</h4>
+                                <div class="legend-item"><div class="legend-dot" style="background:#c8a84a;"></div><span>Person (high degree)</span></div>
+                                <div class="legend-item"><div class="legend-dot" style="background:#d4844a;"></div><span>Person (mid degree)</span></div>
+                                <div class="legend-item"><div class="legend-dot" style="background:#9a7a5a;"></div><span>Person (low degree)</span></div>
+                                <div class="legend-item"><div class="legend-dot" style="background:#5a8a7a;border-radius:2px;"></div><span>Place</span></div>
+                                <div class="legend-item"><div class="legend-dot" style="background:#6a6a9a;"></div><span>Group / Organization</span></div>
+                            </div>
+                            <div id="controls">
+                                <h4>Controls</h4>
+                                <label>Link strength
+                                    <input type="range" id="linkStrength" min="-300" max="-20" value="-120" step="10">
+                                </label>
+                                <label>Show labels
+                                    <input type="checkbox" id="showLabels" checked>
+                                </label>
+                            </div>
+                        </div>
                         <br></br>
                         <br></br>
                         <p class="lead" style="font-family: Quattrocento, serif;">Under construction, stay tuned for updates...</p>
@@ -70,8 +205,7 @@
                         </div>
                         </div>
                         </section>
-
-<footer class="py-4 bg-dark" style="background-color: #10144A  !important;">
+                    <footer class="py-4 bg-dark" style="background-color: #10144A  !important;">
                     <div class="container">
                         <!-- Separator Line -->
                         <hr style="border: 1px solid #ffffff; margin-bottom: 20px;">
@@ -90,6 +224,610 @@
                     </div>
                 </footer>
                 <!-- Bootstrap core JS-->
+                <script>
+const rawCSV = `From Type,From Place,From Name,Edge Type,To Type,To Place,To Name,Date,Weight,Identifier,
+Person,Edinburgh,Unknown,WROTE LETTER TO,Person,UNKNOWN,Dunfermline,"1689, Jan 20",1,GD26/8/1,
+Person,Elgin,Robert Gordon,WROTE LETTER TO,Person,UNKNOWN,Countess Dunfermline,"1689, Feb 2",1,GD26/8/2,
+Person,Edinburgh,Alexander Innes,WROTE LETTER TO,Person,UNKNOWN,Dunfermline,"1689, Feb 14",1,GD26/8/3,
+Person,Unknown,David Burnet,WROTE LETTER TO,Person,UNKNOWN,Dunfermline,"1689, Feb 19",1,GD26/8/4,
+Person,Fyvie,G. Gordon,WROTE LETTER TO,Person,UNKNOWN,Dunfermline,"1689, Mar 23",1,GD26/8/5,
+Person,Dublin,King James,Proclamation,Group,UNKNOWN,Subjects,"1689, Apr 1",1,GD26/8/6,
+Person,Edinburgh,Charles Oliphant,WROTE LETTER TO,Person,UNKNOWN,Dunfermline,"1689, Apr 8",1,GD26/8/7,
+Person,Aberdeen,George Milne,WROTE LETTER TO,Person,UNKNOWN,Unknown,"1689, Apr 13",1,GD26/8/8,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Apr 20",1,GD26/8/9,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Apr 23",1,GD26/8/10,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Apr 28",1,GD26/8/11,
+Person,Unknown,Unknown,WROTE LETTER TO,Person,Unknown,Unknown,"1689, May 2",1,GD26/8/12,
+Person,Castle Grant,Janet Brodie,WROTE LETTER TO,Person,Unknown,Alexander Chisholm,"1689, May 3",1,GD26/8/13,
+Person,Dublin,King James,Proclamation,Organization,UNKNOWN,Parliament,"1689, May 4",1,GD26/8/14,
+Person,Dublin Castle,King James,WROTE LETTER TO,Person,Unknown,Dundee,"1689, May 17",1,GD26/8/15,
+Person,Chilham Castle,Viscount Massereene,WROTE LETTER TO,Person,"Wellbrook, County Tyrone",John How,"1689, May 31",1,GD26/8/16,
+Person,Unknown,J. Hay,WROTE LETTER TO,Person,Unknown,Melville,"1689, Jun 1",1,GD26/8/17,
+Person,Unknown,McNaughton younger,WROTE LETTER TO,Person,Unknown,Mrs. McNaughton,"1689, Jun 25",1,GD26/8/19,
+Person,Lochaber,Alexander McLean,WROTE LETTER TO,Person,Unknown,McNaughton,"1689, Jun 27",1,GD26/8/20,
+Person,Inverary,Lt. Col. James Auchenbruck,Warrant,Person,Unknown,Lt. Colin Fairfull,"1689, Jul 5",1,GD26/8/21,
+Person,Fyvie,Countess of Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Jul 18",1,GD26/8/23,
+Person,London,Adam Blair,WROTE LETTER TO,Person,Edinburgh,Mr. Graham,"1689, Jul 23",1,GD26/8/24,
+Person,Blair Atholl,Alexander Stewart,WROTE LETTER TO,Person,Unknown,Lt. General of H.M. Forces in Scotland,"1689, Jul 31",1,GD26/8/25,
+Person,Castle Kilchurn,I. Campbell,WROTE LETTER TO,Person,Unknown,Her husband,"1689, Aug 5",1,GD26/8/26,
+Group,Unknown,Lord Strathallan; Perth,Examination,Person,Unknown,Colin Campbell,"1689, Aug 6",1,GD26/8/27,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Aug 10",1,GD26/8/28,
+Group,Unknown,Highland Chieftains,Agreement,Group,Unknown,Highland Chieftains,"1689, Aug 24",1,GD26/8/30,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Aug 24",1,GD26/8/31,
+Person,Blair Atholl,James Hamilton,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Aug 24",1,GD26/8/32,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Aug 27",1,GD26/8/33,
+Person,Edinburgh,Gibert Elliot,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Aug 27",1,GD26/8/34,
+Person,Brae of Rannoch,Lord Drummond,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Aug 29",1,GD26/8/35,
+Person,Brae of Rannoch,Colin Mackenzie,WROTE LETTER TO,Person,Unknown,Melfort,"1689, Aug 29",1,GD26/8/36,
+Person,Brae of Rannoch,Colin Mackenzie,WROTE LETTER TO,Person,Unknown,Seaforth,"1689, Aug 29",1,GD26/8/37,
+Group,Cardross,Tenants of Cardross,WROTE LETTER TO,Person,Unknown,Lord Cardross,"1689, Sep 6",1,GD26/8/38,
+Person,Duart,McLean,WROTE LETTER TO,Person,Dublin,Melfort,"1689, Sep 12",1,GD26/8/39,
+Person,Duart,McLean,WROTE LETTER TO,Person,Antrim,Countess Antrim,"1689, Sep 12",1,GD26/8/40,
+Person,Perth,David Graham,WROTE LETTER TO,Person,Unknown,Canon,"1689, Sep 19",1,GD26/8/41,
+Person,Aros,McNaughton,WROTE LETTER TO,Person,Unknown,Cornet James Crawford,"1689, Sep 19",1,GD26/8/42,
+Person,Unknown,Unknown,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Sep 24",1,GD26/8/43,
+Person,Invergarry,Alexander McDowall,WROTE LETTER TO,Person,Unknown,John McNaughton,"1689, Sep",1,GD26/8/44,
+Person,Unknown,Hugh Campbell of Cawdor,Letter,Person,Unknown,Alexander Kennedy,"1689, Oct 3",1,GD26/8/45,
+Group,Inverlochy,Highland Chieftains,Declaration,Person,Dublin,King James,"1689, Oct 3",1,GD26/8/46,
+Person,Perth,David Graham,WROTE LETTER TO,Person,Unknown,Canon,"1689, Oct 12",1,GD26/8/47,
+Group,Duart,James Fountain; William Douglas,WROTE LETTER TO,Person,Unknown,Canon,"1689, Oct 12",1,GD26/8/48,
+Person,"Paris, France",Thomas Bass,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Oct 15",1,GD26/8/49,
+Person,Unknown,Peter McCulloch,WROTE LETTER TO,Person,Unknown,John McCulloch,"1689, Oct 18",1,GD26/8/50,
+Person,Calgarry,McLean,WROTE LETTER TO,Person,Unknown,Canon,"1689, Oct 29",1,GD26/8/51,
+Person,Perth,David Graham,WROTE LETTER TO,Person,Unknown,Canon,"1689, Oct 30",1,GD26/8/52,
+Person,Invergarry,James Winchester,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Oct 31",1,GD26/8/53,
+Person,Invergarry,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Canon,"1689, Nov 11",1,GD26/8/54,
+Person,Ballindaloch Castle,John Grant,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Nov 16",1,GD26/8/55,
+Person,Unknown,Lindsay,WROTE LETTER TO,Person,Unknown,Anderson,"1689, Nov 21",1,GD26/8/56,
+Person,Unknown,Unknown,WROTE LETTER TO,Person,Unknown,Langton,"1689, Nov 28",1,GD26/8/57,
+Person,London,Jacobite Agent,WROTE LETTER TO,Person,Unknown,Doctor Fall,"1689, Nov 28",1,GD26/8/58,
+Person,Monymusk,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Unknown,"1689, Dec 2",1,GD26/8/59,
+Person,Dunollie,McDougal of Dunolych,WROTE LETTER TO,Person,Unknown,Canon,"1689, Dec 3",1,GD26/8/60,
+Person,Kilmuir,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Canon,"1689, Dec 6",1,GD26/8/61,
+Person,Aberfoyle,L. McGregor,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Dec 16",1,GD26/8/62,
+Person,Aros,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Dec 18",1,GD26/8/63,
+Person,Milgavie,Robert Stewart,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Dec 21",1,GD26/8/64,
+Person,Carlisle,Jane Wallace,Information,Person,Carlisle,Mayor of Carlisle,"1689, Dec 26",1,GD26/8/65,
+Person,Unknown,John Farquarson,WROTE LETTER TO,Person,Unknown,Canon,"1689, Dec 29",1,GD26/8/66,
+Person,Unknown,John McNaughton,Warrant,Place,Unknown,Duart Castle,"1689, Dec 31",1,GD26/8/67,
+Person,Unknown,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Canon,"1689, Dec 30",1,GD26/8/68,
+Person,Bornseitack,D. McDonald,WROTE LETTER TO,Person,Unknown,Canon,"1689, Dec 30",1,GD26/8/69,
+Group,Unknown,Highland Clans,Military Report,Person,Unknown,Unknown,c. 1689,1,GD26/8/71,
+Person,Huntly,Unknown,WROTE LETTER TO,Person,Unknown,Dunfermline,c. 1689,1,GD26/8/72,
+Person,Edinburgh Tollbooth,Thomas Dunbar,WROTE LETTER TO,Person,Edinburgh Castle,Lt. Col. Wilson,c. 1689,2,GD26/8/73,
+Person,Strathdon,James Winchester,WROTE LETTER TO,Person,Unknown,Dunfermline,c. 1689,1,GD26/8/75,
+Person,Unknown,William Riach,Information,Person,Unknown,Melville,c. 1689,1,GD26/8/76,
+Person,Lochiel,Ewan Cameron,WROTE LETTER TO,Person,Unknown,Canon,"1690, Jan 18",1,GD26/8/78,
+Person,Brae of Mar,John Farquarson,WROTE LETTER TO,Person,Unknown,Canon,"1690, Jan 26",1,GD26/8/79,
+Person,Duart,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Canon,"1690, Jan 26",1,GD26/8/80,
+Person,Duart,Alexander McLean,WROTE LETTER TO,Person,Unknown,Canon,"1690, Jan 28",1,GD26/8/81,
+Person,Inverlochy,Alexander McDonald,WROTE LETTER TO,Person,Unknown,Glengarry,"1690, Feb 1",1,GD26/8/82,
+Person,Mull,Buchan,WROTE LETTER TO,Person,Lochaber,Canon,"1690, Feb 3",1,GD26/8/83,
+Person,Belfast,John Boyd,Deposition,Group,"Irvine,Skelmorlie,Provost of Irvine","1690, Feb 5",1,GD26/8/84,
+Person,Duart,Alexander McDowall,WROTE LETTER TO,Person,Lochaber,Canon,"1690, Feb 27",1,GD26/8/85,
+Person,Dunollie,A. McDougall,WROTE LETTER TO,Person,Unknown,Laird McNaughton,"1690, Mar 2",1,GD26/8/86,
+Person,Unknown,Patrick Logan,WROTE LETTER TO,Person,Unknown,Buchan,"1690, Mar 5",1,GD26/8/87,
+Person,Unknown,McNaughton,WROTE LETTER TO,Person,Unknown,Canon,"1690, Mar 8",1,GD26/8/88,
+Person,Moidart,Allan McDonald,WROTE LETTER TO,Person,Unknown,Canon,"1690, Mar 8",1,GD26/8/89,
+Person,Fyvie,Lady Dunfermline,WROTE LETTER TO,Person,Unknown,Dunfermline,"1689, Mar 18",1,GD26/8/90,
+Person,Dublin,King James,Commission,Organization,Unknown,Parliament,"1690, Mar",1,GD26/8/91,
+Person,Dublin,King James,Plan for Invasion,Group,Unknown,Jacobites,"1690, Mar",1,GD26/8/91,
+Person,Thurso,William McKay,WROTE LETTER TO,Person,Inverness,Thomas Livingston,c. 1690,2,GD26/8/92,
+Person,Aberdeen,John Buchan,WROTE LETTER TO,Person,Unknown,Unknown,"1690, Apr 7",1,GD26/8/93,
+Person,London,Unknown,WROTE LETTER TO,Person,Edinburgh,Melville,"1690, May 30",1,GD26/8/94,
+Person,France,Jameson,WROTE LETTER TO,Person,Unknown,Thomas Davidson,"1690, Jun 29",1,GD26/8/95,
+Person,Duart,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Aeneas Macpherson,"1690, Jul 18",1,GD26/8/96,
+Person,Dumfries,John Grierson,WROTE LETTER TO,Person,Unknown,Melville,"1690, Aug 6",1,GD26/8/97,
+Person,Edinurgh,James Graham,Passes,Group,Unknown,Bellenden,"1690, Sep 2",1,GD26/8/98,
+Person,Fedderate,Buchan,WROTE LETTER TO,Person,Unknown,Hamilton,"1690, Sep 18",1,GD26/8/99,
+Person,Essex,J. Ribault,WROTE LETTER TO,Person,Unknown,Melville,"1690, Dec 9",1,GD26/8/101,
+Person,Ardsheal,John Stewart,Information,Person,Unknown,Laird McNaughton,c. 1690,1,GD26/8/102,
+Person,Unknown,Isobel McNaughton,WROTE LETTER TO,Person,Unknown,McNaughton,c. 1690,1,GD26/8/103,
+Person,Castle Kilchurn,I. Campbell,WROTE LETTER TO,Person,Unknown,Laird McNaughton,c. 1690,5,GD26/8/104,
+Person,Unknown,A. Kennedy,WROTE LETTER TO,Person,Unknown,Canon,c. 1690,1,GD26/8/105,
+Person,Strathdon,James Winchester,WROTE LETTER TO,Person,Unknown,Dunfermline,c. 1690,1,GD26/8/106,
+Person,Unknown,Alexander Canon,WROTE LETTER TO,Person,Unknown,Laird McNaughton,c. 1690,1,GD26/8/107,
+Person,Unknown,Alexander Canon,WROTE LETTER TO,Person,Unknown,Laird McNaughton,c. 1690,1,GD26/8/108,
+Person,Duart,McLean of Duart,WROTE LETTER TO,Person,Unknown,Canon,c. 1690,1,GD26/8/109,
+Person,Duart,McLean of Duart,WROTE LETTER TO,Person,Unknown,James McLean,c. 1690,1,GD26/8/110,
+Person,Unknown,Alexander McDowall,WROTE LETTER TO,Person,Unknown,Canon,c. 1690,1,GD26/8/112,
+Group,Unknown,"John Chapel, John Price, Richard Morris",Report,Person,Unknown,Melville,c. 1690,1,GD26/8/114,
+Group,Unknown,Highland Chieftains,Declaration,Person,Unknown,Parliament,c. 1690,1,GD26/8/115,
+Person,Unknown,Gordon,Declaration,Person,Unknown,c. 1690,1,GD26/8/116,
+Person,Lochaber,Canon,WROTE LETTER TO,Person,Dublin,Melfort,c. 1690,1,GD26/8/117,
+Person,Edinburgh Castle,Balcarres,Letter,Person,Unknown,King James,c. 1690,1,GD26/8/118,
+Group,Edinburgh,"John Price, Richard Morris",Report,Person,Unknown,Melville,c. 1690,1,GD26/8/119,
+Person,Isle of Skye,Buchan,WROTE LETTER TO,Person,Unknown,Canon,c. 1690,1,GD26/8/120,
+Person,Unknown,John Chapel,Information,Person,Unknown,Melville,"1691, Feb",1,GD26/8/121,
+Person,Edinburgh,John Mackie,WROTE LETTER TO,Person,London,Melville,1690-1691,24,GD26/8/122,
+Person,Unknown,Unknown,Papers,Person,Unknown,Melville,1690-1703,9,GD26/8/123,
+Person,"Mallow, Cork",Jacobite Agent,WROTE LETTER TO,Person,Unknown,Jacobite Agent,"1691, Jan 17",2,GD26/8/124,
+Person,London,Unknown,WROTE LETTER TO,Person,Unknown,John Drummond,"1691, Apr 14",1,GD26/8/125,
+Person,"Rome,Italy",Melfort,WROTE LETTER TO,Person,Livorno,Cap. Cole,"1691, Aug 12",1,GD26/8/126,
+Person,St. Germaine,Unknown,WROTE LETTER TO,Person,London,Melville,"1691, Aug 30",1,GD26/8/127,
+Person,St. Germaine,Melfort,Letter,Person,Unknown,Unknown,1692,1,GD26/8/131,
+Person,Stirling Castle,Perth,Letter,Person,Unknown,Countess Errol,"1688 Dec 29,", Perth Letters,
+Person,Stirling Castle,Perth,Letter,Person,Unknown,Countess Errol,"1689, Jan 13",1,Perth Letters,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Atholl,"1688, Oct 16",1,Atholl Letters,
+Person,Edinburgh,Marchioness of Atholl,Letter,Person,London,Lord Murray,"1689, Jan 3",1,Atholl Letters,
+Person,London,Robert Murray,Letter,Person,Unknown,Marquis Atholl,"1689, March 5",1,Atholl Letters,
+Person,Unknown,Perth,Letter,Person,London,Lord Murray,"1689, May 2",1,Atholl Letters,
+Person,Calvin,Do. Robertson,Letter,Person,Unknown,Alexander Robertson of Strowan,"1689, May 25",1,Atholl Letters,
+Person,Cari,Mari Baillie,Letter,Person,London,Lord Murray,"1689, May 29",1,Atholl Letters,
+Person,Holyrood House,Hamilton,Letter,Person,Unknown,Lord Murray,"1689, May 30",1,Atholl Letters,
+Person,Unknown,Haldane of Gleneagles,Letter,Person,Unknown,Lord Murray,"1689, June 16",1,Atholl Letters,
+Person,Unknown,Haldane of Gleneagles,Letter,Person,Unknown,Lord Murray,"1689, June 21",1,Atholl Letters,
+Person,Unknown,Haldane of Gleneagles,Letter,Person,Unknown,Lord Murray,"1689, June 30",1,Atholl Letters,
+Person,Stroan,Dundee,Letter,Group,Unknown,Leonard Robertson of Strathloch; John Robertson of Blatton,"1689, July 10",1,Atholl Letters,
+Person,Unknown,Leonard Robertson,Letter,Person,Unknown,Lord Murray,"1689, July 14",1,Atholl Letters,
+Person,Stirling,Mackay,Letter,Person,Unknown,Lord Murray,"1689, July 25",1,Atholl Letters,
+Person,Unknown,Patrick Stuart of Ballechin,Letter,Person,Unknown,Lord Murray,"1689, July 25",1,Atholl Letters,
+Person,Perth,Unknown,Letter,Person,Unknown,Lord Murray,"1689, July 26",1,Atholl Letters,
+Person,Dunkeld,Mackay,Letter,Person,Unknown,Lord Murray,"1689, July 26",1,Atholl Letters,
+Person,Blair Castle,Patrick Stuart of Ballechin,Letter,Person,Unknown,Lord Murray,"1689, July 27",1,Atholl Letters,
+Person,Tullimet,Lord Murray,Letter,Person,Unknown,Lord James Murray of Dowally,"1689, July 28",1,Atholl Letters,
+Person,Tullimet,Thomas Stuart of Stenton,Letter,Person,Unknown,Lord Murray,"1689, July 29",1,Atholl Letters,
+Person,Chesthill,R. Campbell of Glenlyon,Letter,Person,Unknown,Lord Murray,"1689, July 29",1,Atholl Letters,
+Person,St. Johnston,Mackay,Letter,Person,Unknown,Lord Murray,"1689, Aug 4",1,Atholl Letters,
+Person,Unknown,Lord Murray,Letter,Person,Unknown,James Stewart of Kinrorie,"1689, Aug 6",1,Atholl Letters,
+Person,Binvrakkie,Leonard Robertson,Letter,Person,Unknown,Lord Murray,"1689, Aug 7",1,Atholl Letters,
+Person,Dunkeld,C. Graham,Letter,Person,Unknown,Marchioness of Atholl,"1689, Aug 7",1,Atholl Letters,
+Person,Balgarie,John Robertson,Letter,Person,Unknown,Lord Murray,"1689, Aug 8",1,Atholl Letters,
+Person,Foulis,Patrick Moray of Ochertyre,Letter,Person,Unknown,Lord Murray,"1689, Sep 3",1,Atholl Letters,
+Person,Unknown,Lord Murray,Letter,Person,Unknown,Unknown,"1689, May 29",1,Atholl Letters,
+Group,Edinburgh,"Perth, Dumbarton, Tarbat",Letter,Person,Unknown,Mar,"1688, May 23",1,Kellie and Mar Papers,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Aug 15",1,Kellie and Mar Papers,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Oct 31",1,Kellie and Mar Papers,
+Organization,Edinburgh,Privy Council,Letter,Person,Unknown,Mar,"1688, Nov 16",1,Kellie and Mar Papers,
+Organization,Edinburgh,Privy Council,Order,Person,Unknown,Mar,"1688, Nov 28",1,Kellie and Mar Papers,
+Person,Unknown,Arthur Forbes of Brux,Letter,Person,Unknown,Mar,c.1688,1,Kellie and Mar Papers,
+Person,St. James,King William,Letter,Person,Unknown,Mar,"1689, Feb 5",1,Kellie and Mar Papers,
+Organization,Edinburgh,Estates of Scotland,Order,Person,Unknown,Mar,"1689, April 12",1,Kellie and Mar Papers,
+Person,Dumfries,Annandale,Letter,Person,Unknown,Lord Chancellor Perth,"1688, June 29",1,Annandale Papers,
+Person,Elgin,Mackay,Order,Person,Unknown,Commander Colonel Langton's regiment,"1689, May 8",1,Annandale Papers,
+Group,Birss,Highland Chieftains,Letter,Person,Unknown,Mackay,"1689, Aug 17",1,Annandale Papers,
+Person,London,John Dalrymple,Letter,Person,Unknown,Thomas Livingston,"1691, April 28",1,Annandale Papers,
+Person,London,John Dalrymple,Letter,Person,Unknown,Thomas Livingston,"1691, May 4",1,Annandale Papers,
+Person,London,John Dalrymple,Letter,Person,Unknown,Thomas Livingston,"1691, May 6",1,Annandale Papers,
+Person,Unknown,William Hamilton of Whitelaw,Letter,Person,Unknown,Annandale,"1691, July 9",1,Annandale Papers,
+Person,Unknown,William Hamilton of Whitelaw,Letter,Person,Unknown,Annandale,"1691, July 30",1,Annandale Papers,
+Person,Unknown,Alexander Johnstone,Letter,Person,Unknown,Annandale,"1691, Aug 7",1,Annandale Papers,
+Person,Unknown,Alexander Johnstone,Letter,Person,Unknown,Annandale,"1692, Oct 25",1,Annandale Papers,
+Person,Westminster,John Fairholme of Craigiehall,Letter,Person,Unknown,Annandale,"1692, Dec 1",1,Annandale Papers,
+Person,Edinburgh,Archibald Sinclair,Letter,Person,Unknown,Annandale,"1692, Feb 23",1,Annandale Papers,
+Person,Unknown,John Dalrymple,Letter,Person,Unknown,Sir Patrick Murray,"1692, Feb 27",1,Annandale Papers,
+Person,Unknown,Dundee,Letter,Person,Unknown,Dunfermline,"1689, April 21",1,NRS,
+Person,Stroan,Dundee,Letter,Person,Unknown,Unknown,"1689, April 21",1,NRS,
+Person,Dublin Castle,King James,Letter,Person,Unknown,Dundee,"1689, May 17",1,NRS,
+Person,Unknown,Dunfermline,Letter,Person,Unknown,Melfort,"1689, Aug 29",1,NRS,
+Person,Unknown,Breadalbane,Letter,Person,Unknown,Perth,c.1687-1691,1,NRS,
+Person,Unknown,C. Campbell,Letter,Person,Unknown,Perth,c.1687-1691,1,NRS,
+Person,Unknown,Kilbride,Letter,Person,Unknown,Perth,c.1687-1691,1,NRS,
+Person,St. Germaine,Wigtown,Letter,Person,Unknown,Perth,"1691, Sep 7",1,NRS,
+Person,Inverary,Argyll,Letter,Person,Unknown,Dugal Campbell of Melfort,"1691, Jul 8",1,NRS,
+Person,Unknown,George Drummond,Petition,Organization,Edinburgh,Privy Council,"1689, Mar 30",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Edinburgh Castle,Mar,"1688, May 21",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Aug 15",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Oct 1",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Oct 15",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Oct 19",1,NRS,
+Person,Edinburgh,Perth,Letter,Person,Unknown,Mar,"1688, Oct 31",1,NRS,
+Person,London,William Bennett,Letter,Person,London,Robert Boyle,1689,1,NRS,
+Person,London,William Bennett,Letter,Person,London,William Bruce,1689,1,NRS,
+Person,London,William Bennett,Letter,Person,London,William Bruce,1690,1,NRS,
+Person,London,William Bennett,Letter,Person,Glasgow,Robert Macky,1690,2,NRS,
+Person,London,William Bennett,Letter,Person,Unknown,Helen Maxwell,1690,1,NRS,
+Person,London,William Bennett,Letter,Person,Edinburgh,John Aitkine,1692,2,NRS,
+Person,Edinburgh,George Drummond,Letter,Person,Unknown,Breadalbane,"1691, Dec 19",1,NRS,
+Person,Unknown,Breadalbane,Letter,Person,Unknown,Carwhin,1690 Feb,1,NRS,
+Person,Unknown,Breadalbane,Letter,Person,Unknown,Atholl,undated,1,NRS,
+Person,Balloch,John Campbell of Invergeldie,Letter,Person,Unknown,Breadalbane,"1688, Dec 3",1,NRS,
+Person,Unknown,Breadalbane,Letter,Person,Unknown,Alexander Campbell of Barcaldine,"1692, May 26",1,NRS,
+Person,Unknown,Carwhin,Letter,Person,Unknown,Breadalbane,"1688, Jan 4",1,NRS,
+Person,Balloch,Breadalbane,Letter,Person,Edinburgh,Mr. Hamilton,"1688, Jan 9",1,NRS,
+Person,Edinburgh,Carwhin,Letter,Person,Unknown,Breadalbane,"1688, Feb 11",1,NRS,
+Person,Balloch,Breadalbane,Letter,Person,Glenurchy,Duncan Campbell,"1688, Mar 16",2,NRS,
+Person,London,John Campbell of Mamore,Letter,Person,Unknown,Breadalbane,"1688, Mar 17",1,NRS,
+Person,Edinburgh,David Forbes,Letter,Person,Unknown,Breadalbane,"1688, April 30",1,NRS,
+Person,Edinburgh,Archbishop of St. Andrews,Letter,Person,Unknown,Breadalbane,"1688, May 3",1,NRS,
+Person,Unknown,Atholl,Letter,Person,Unknown,Breadalbane,"1688, May 3",1,NRS,
+Person,Edinburgh,William Paterson,Letter,Person,Unknown,Breadalbane,"1688, Oct 2",1,NRS,
+Person,Edinburgh,John Dalrymple,Letter,Person,,Breadalbane,"1688, Dec 14",1,NRS,
+Person,Balloch,Breadalbane,Letter,Person,Edinburgh,Mr. Hamilton,"1689, Mar 14",1,NRS,
+Person,Edinburgh,Archibald Campbell,Letter,Person,Unknown,Breadalbane,"1689, Apr 23",1,NRS,
+Person,Edinburgh,Argyll,Letter,Person,Unknown,Breadalbane,"1689, Apr 25",1,NRS,
+Person,Inverary,Duncan Campbell of Auchenbreck,Letter,Person,Unknown,Breadalbane,"1689, May 23",1,NRS,
+Person,Blair Castle,Dunfermline,Letter,Person,Unknown,Breadalbane,"1689, Jul 29",1,NRS,
+Person,Dunkeld,Canon,Letter,Person,Unknown,Breadalbane,undated,1,NRS,
+Person,Perth,Mackay,Letter,Person,Unknown,Breadalbane,"1689, Oct 7",1,NRS,
+Person,Edinburgh,John Dalrymple,Letter,Person,Unknown,Breadalbane,"1689, Dec 21",1,NRS,
+Person,Edinburgh,Alexander Hamilton,Letter,Person,Unknown,Breadalbane,"1690, Jan 7",1,NRS,
+Person,Edinburgh,John Dalrymple,Letter,Person,Unknown,Breadalbane,"1690, Jan 7",1,NRS,
+Person,Unknown,Mary Countess of Caithness,Letter,Person,Unknown,Breadalbane,"1690, Aug 26",1,NRS,
+Person,London,Linlithgow,Letter,Person,Unknown,Breadalbane,"1690, Dec 4",1,NRS,
+Person,Unknown,Balcarres,Letter,Person,Unknown,Breadalbane,undated,1,NRS,
+Person,Unknown,Glenorchy,Letter,Person,Unknown,Breadalbane,undated,1,NRS,
+Person,Killean,Argyll,Letter,Person,Unknown,Breadalbane,"1691, Jun 4",1,NRS,
+Person,Dumbarton,Lord Neill Campbell,Letter,Group,Unknown,Breadalbane and his nephew,"1691, Jun 25",1,NRS,
+Person,Unknown,Colonel A Canon,Letter,Person,Unknown,Breadalbane,c. Jun 1691,1,NRS,
+Person,Hague,Colonel Fergus O'Farrell,Letter,Person,Unknown,Breadalbane,"1691, Nov 9",1,NRS,
+Person,Fortwilliam,Colonel John Hill,Letter,Person,Unknown,Breadalbane,"1691, Oct 17",1,NRS,
+Person,Hamburg,Glenorchy,Letter,Person,Unknown,Breadalbane,"1691, Oct 23",1,NRS,
+Person,Balloch,Breadalbane,Letter,Person,Unknown,Countess Caithness,"1691, Oct 31",1,NRS,
+Person,Glenurchy,Breadalbane,Letter,Person,Unknown,Major General Buchan,"1691, Nov 16",1,NRS,
+Person,Paris,Dunfermline,Letter,Person,Unknown,Breadalbane,"1691, Dec 10",1,NRS,
+Person,Edinburgh,MacIntosh of Torcastle,Letter,Person,London,Breadalbane,"1691, Dec 26",1,NRS,
+Person,Inverary,James Campbell,Letter,Person,Unknown,Breadalbane,"1691, Dec 29",1,NRS(),
+Person,Lochaber,Cameron of Lochiel,Letter,Person,Unknown,Breadalbane,undated,1,NRS,
+Person,London,Breadalbane,Letter,Person,Unknown,Ewan Cameron of Lochiel,undated,1,NRS,
+Person,Unknown,Patrick Birnie,Letter,Person,Unknown,Alexander Campbell of Barcaldine,"1692, Jan 13",1,NRS,
+Person,Edinburgh,J Sinclaire,Letter,Person,Unknown,Breadalbane,"1692, Jan 16",1,NRS,
+Person,Edinburgh,Mungo Campbell of Kenloch,Letter,Person,Unknown,Breadalbane,"1692, Jan 23",1,NRS,
+Person,Edinburgh,Carwhin,Letter,Person,Unknown,Breadalbane,"1692, Jan 28",1,NRS,
+Person,Cairdnys,Major Duncan Menzies,Letter,Person,Unknown,Breadalbane,"1692, Feb 17",1,NRS,
+Person,Unknown,Sir James Foulis,Letter,Person,Unknown,Breadalbane,c. 1692,1,NRS,
+Person,Edinburgh,Dugall Campbell,Letter,Person,Unknown,Breadalbane,"1692, Oct 20",1,NRS,
+Person,Edinburgh,Carwhin,Letter,Person,Unknown,Breadalbane,"1692, Oct 22",1,NRS(),
+Person,Dublin Castle,King James,Letter,Person,Unknown,Breadalbane,"1689, Nov 30",1,NRS,
+Person,Unknown,George Barclay,Letter,Person,Unknown,Alexander Campbell of Barcaldine,"1691, Aug 5",1,NRS,
+Person,Unknown,Ewan Cameron of Lochiel,Letter,Person,Unknown,Alexander Campbell of Barcaldine,"1691, Dec 2",1,NRS,
+Person,Unknown,Tarbat,Letter,Person,Unknown,Glengarrie,"1691, Oct 4",1,NRS,
+Person,Hague,Glenorchy,Letter,Person,Unknown,Breadalbane,"1691, Oct 6",1,NRS,
+Person,Whitehall,Nottingham,Letter,Person,Unknown,Breadalbane,"1691, Oct 13",1,NRS,
+Person,Inverary,Argyll,Letter,Person,Dumbarton,Lord Neill Campbell,"1691, Oct 21",1,NRS,
+Person,Unknown,Ann Bell,Letter,Person,Unknown,Breadalbane,"1692, Jun 10",1,NRS,
+Person,London,Duncan McGregor,Letter,Person,Unknown,Breadalbane,"1692, Jul 2",1,NRS,
+Person,Edinburgh,Carwhin,Letter,Person,Unknown,Breadalbane,"1692, Sep 20",1,NRS,
+Person,Edinburgh,Breadalbane,Letter,Person,Unknown,Barcaldine,"1691, Dec 10",1,NRS,
+Person,London,Breadalbane,Letter,Person,Unknown,Barcaldine,"1692, Jan 5",1,NRS,
+Person,London,Breadalbane,Letter,Person,Unknown,Barcaldine,"1692, Apr 1",1,NRS,
+Person,Unknown,Alexander McDonald,Letter,Person,Unknown,Alexander Campbell of Barcaldine,"1692, Jan 17",1,NRS,
+Person,Camp Oppebrora,King William,Commission,Person,Unknown,Breadalbane,"1691, Jun 15-25",1,NRS,
+Person,Dublin Castle,James VII,Warrant,Person,Unknown,Perth,"1689, Mar 10",1,NRS,
+Person,Unknown,Anna Countess Erroll,Petition,Person,Unknown,King William,undated,1,NRS,
+Person,Dublin,James VII,Letter,Person,Unknown,Perth,"1689, Mar 10",2,NRS,
+Person,Unknown James VII,Letter,Person,Unknown,Cameron of Lochiel,"1689, Mar 29",1,Memoirs of Lochiel,
+Person,Unknown,Mackay,Letter,Person,Unknown,Cameron of Lochiel,1689,4,Memoirs of Lochiel,
+Person,Unknown,Mackay,Letter,Person,Unknown,Colonel Ramsay,1689,2,Memoirs of Lochiel,
+Person,Unknown,Queen Mary,Letter,Person,Unknown,Dunmore,"1688, Dec 10",1,Dunmore Papers,
+Person,St James,King William,Letter,Person,Unknown,Dunmore,"1688, Dec 21",1,Dunmore Papers,
+Person,London,Andrew Ross,Letter,Person,Unknown,Dunmore,"1689, Jan 8",1,Dunmore Papers,
+Person,St. Germaine,Queen Mary,Letter,Person,Unknown,Dunmore,"1689, Jan 20",1,Dunmore Papers,
+Person,Unknown,King William,Letter,Person,Unknown,Dunmore,"1689, Feb 5",1,Dunmore Papers,
+Person,Unknown,Shrewsbury,Letter,Person,Unknown,Dunmore,1690,1,Dunmore Papers,
+Person,Unknown,Katherine Lady Ranelagh,Letter,Person,Unknown,Earl of Panmure,1690-1691,5,Dalhousie,
+Person,Unknown,John Dalrymple,Letter,Person,Unknown,Lady Panmure,"1691, Nov 14",1,Dalhousie,
+Person,Unknown,Lieu. Col. Buchan,Letter,Person,Unknown,Hamilton,1690,1,NRS GD103,
+Person,Edinburgh Castle,Perth,Letter,Person,Unknown,Blair Drummond,"1691, July 26-27",2,NRS,
+Person,Unknown,Jean Kerr,Letter,Person,Unknown,Lady Lothian,"1690, July 18",1,NRS Lothian,
+`;
+
+const rows = d3.csvParse(rawCSV.trim());
+
+// Build nodes and edges
+const nodeMap = new Map();
+const edges = [];
+const edgeMap = new Map();
+
+// Determine node type from CSV type field
+function getNodeCategory(typeStr) {
+  const t = (typeStr || '').toLowerCase().trim();
+  if (t === 'place') return 'place';
+  if (t === 'organization' || t === 'org') return 'org';
+  if (t === 'group') return 'group';
+  return 'person';
+}
+
+function clean(v) {
+  return (v || '').trim();
+}
+
+function isKnown(v) {
+  const t = clean(v);
+  return t !== '' && t.toLowerCase() !== 'unknown';
+}
+
+function getEntityId(name, typeStr) {
+  const label = clean(name);
+  if (!label) return null;
+  const category = getNodeCategory(typeStr);
+  return `${category}:${label}`;
+}
+
+function getPlaceId(place) {
+  const label = clean(place);
+  if (!label) return null;
+  return `place:${label}`;
+}
+
+function ensureNode(id, label, category) {
+  if (!id || !label) return null;
+  if (!nodeMap.has(id)) {
+    nodeMap.set(id, {
+      id,
+      label,
+      category,
+      places: new Set(),
+      degree: 0
+    });
+  }
+  return nodeMap.get(id);
+}
+
+function addEdge(source, target, kind, relation, date, weight) {
+  if (!source || !target || source === target) return;
+  const safeWeight = Number.isFinite(+weight) && +weight > 0 ? +weight : 1;
+  const key = `${source}|${target}|${kind}|${relation}`;
+
+  if (!edgeMap.has(key)) {
+    edgeMap.set(key, {
+      source,
+      target,
+      kind,
+      type: relation,
+      date: date || '',
+      weight: 0,
+      count: 0
+    });
+  }
+
+  const e = edgeMap.get(key);
+  e.weight += safeWeight;
+  e.count += 1;
+  if (!e.date && date) e.date = date;
+}
+
+for (const row of rows) {
+  const fromType = row['From Type'] || 'Person';
+  const fromPlace = row['From Place'] || '';
+  const fromName = row['From Name'] || '';
+  const edgeType = row['Edge Type'] || '';
+  const toType = row['To Type'] || 'Person';
+  const toPlace = row['To Place'] || '';
+  const toName = row['To Name'] || '';
+  const date = row['Date'] || '';
+  const weight = parseInt(row['Weight'], 10) || 1;
+
+  const fromId = getEntityId(fromName, fromType);
+  const toId = getEntityId(toName, toType);
+  const fromPlaceId = isKnown(fromPlace) ? getPlaceId(fromPlace) : null;
+  const toPlaceId = isKnown(toPlace) ? getPlaceId(toPlace) : null;
+
+  if (fromId) ensureNode(fromId, clean(fromName), getNodeCategory(fromType));
+  if (toId) ensureNode(toId, clean(toName), getNodeCategory(toType));
+  if (fromPlaceId) ensureNode(fromPlaceId, clean(fromPlace), 'place');
+  if (toPlaceId) ensureNode(toPlaceId, clean(toPlace), 'place');
+
+  if (fromId && fromPlaceId) nodeMap.get(fromId).places.add(clean(fromPlace));
+  if (fromId && toPlaceId) nodeMap.get(fromId).places.add(clean(toPlace));
+  if (toId && toPlaceId) nodeMap.get(toId).places.add(clean(toPlace));
+  if (toId && fromPlaceId) nodeMap.get(toId).places.add(clean(fromPlace));
+
+  if (fromId && toId) {
+    addEdge(fromId, toId, 'edge-type', edgeType || 'Letter', date, weight);
+  }
+
+  // Geographic edges from each letter row.
+  if (fromId && fromPlaceId) addEdge(fromId, fromPlaceId, 'geographic', 'sent from', date, 1);
+  if (fromId && toPlaceId) addEdge(fromId, toPlaceId, 'geographic', 'sent to', date, 1);
+  if (toId && fromPlaceId) addEdge(toId, fromPlaceId, 'geographic', 'received from', date, 1);
+  if (toId && toPlaceId) addEdge(toId, toPlaceId, 'geographic', 'received at', date, 1);
+  if (fromPlaceId && toPlaceId) addEdge(fromPlaceId, toPlaceId, 'geographic', 'route', date, 1);
+}
+
+edges.push(...edgeMap.values());
+
+function isPersonNodeId(id) {
+  return typeof id === 'string' && id.startsWith('person:');
+}
+
+// Integrity pass: keep only place nodes adjacent to at least one person.
+const connectedNodeIds = new Set();
+const placeHasPersonNeighbor = new Set();
+
+for (const e of edges) {
+  const sourceId = typeof e.source === 'string' ? e.source : e.source.id;
+  const targetId = typeof e.target === 'string' ? e.target : e.target.id;
+  connectedNodeIds.add(sourceId);
+  connectedNodeIds.add(targetId);
+
+  if (sourceId.startsWith('place:') && isPersonNodeId(targetId)) placeHasPersonNeighbor.add(sourceId);
+  if (targetId.startsWith('place:') && isPersonNodeId(sourceId)) placeHasPersonNeighbor.add(targetId);
+}
+
+for (const [id, n] of nodeMap) {
+  if (n.category !== 'place') continue;
+  if (!connectedNodeIds.has(id) || !placeHasPersonNeighbor.has(id)) {
+    nodeMap.delete(id);
+  }
+}
+
+// Drop edges that reference nodes removed above.
+const validNodeIds = new Set(nodeMap.keys());
+for (let i = edges.length - 1; i >= 0; i--) {
+  const sourceId = typeof edges[i].source === 'string' ? edges[i].source : edges[i].source.id;
+  const targetId = typeof edges[i].target === 'string' ? edges[i].target : edges[i].target.id;
+  if (!validNodeIds.has(sourceId) || !validNodeIds.has(targetId)) {
+    edges.splice(i, 1);
+  }
+}
+
+const nodes = Array.from(nodeMap.values());
+
+// Recompute degree from finalized edge list.
+for (const n of nodes) n.degree = 0;
+for (const e of edges) {
+  const sourceId = typeof e.source === 'string' ? e.source : e.source.id;
+  const targetId = typeof e.target === 'string' ? e.target : e.target.id;
+  if (!nodeMap.has(sourceId) || !nodeMap.has(targetId)) continue;
+  const inc = e.kind === 'geographic' ? 0.25 : 1;
+  nodeMap.get(sourceId).degree += inc;
+  nodeMap.get(targetId).degree += inc;
+}
+
+function isPlaceRelation(type) {
+  return type === 'sent from' || type === 'sent to' || type === 'received from' || type === 'received at' || type === 'route';
+}
+
+// Degree thresholds for size/color
+const maxDeg = Math.max(...nodes.map(d => d.degree));
+
+function nodeColor(d) {
+  if (d.category === 'place') return '#5a8a7a';
+  if (d.category === 'org') return '#6a6a9a';
+  if (d.category === 'group') return '#7a6a9a';
+  const ratio = d.degree / maxDeg;
+  if (ratio > 0.4) return '#c8a84a';
+  if (ratio > 0.15) return '#d4844a';
+  return '#9a7a5a';
+}
+
+function nodeRadius(d) {
+  if (d.category === 'place') return 5 + Math.min(d.degree * 0.4, 10);
+  const ratio = d.degree / maxDeg;
+  return 4 + ratio * 22;
+}
+
+// SVG setup
+const svg = d3.select('#canvas');
+const W = window.innerWidth, H = window.innerHeight;
+
+const g = svg.append('g');
+
+// Zoom/pan
+const zoom = d3.zoom().scaleExtent([0.05, 5]).on('zoom', e => g.attr('transform', e.transform));
+svg.call(zoom);
+
+// Arrow markers for links
+svg.append('defs').selectAll('marker')
+  .data(['letter', 'proclamation', 'warrant', 'default'])
+  .join('marker')
+    .attr('id', d => 'arrow-' + d)
+    .attr('viewBox', '0 -4 8 8')
+    .attr('refX', 14)
+    .attr('refY', 0)
+    .attr('markerWidth', 4)
+    .attr('markerHeight', 4)
+    .attr('orient', 'auto')
+  .append('path')
+    .attr('d', 'M0,-3L8,0L0,3')
+    .attr('fill', d => d === 'letter' ? '#6a5a3a' : d === 'proclamation' ? '#7a5a3a' : '#5a5a6a');
+
+// Force simulation
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(edges).id(d => d.id).distance(d => {
+    if (isPlaceRelation(d.type)) return 60;
+    return 80 + (1 / (d.weight || 1)) * 20;
+  }).strength(d => isPlaceRelation(d.type) ? 0.5 : 0.4))
+  .force('charge', d3.forceManyBody().strength(-120))
+  .force('center', d3.forceCenter(W / 2, H / 2))
+  .force('collision', d3.forceCollide().radius(d => nodeRadius(d) + 4));
+
+// Draw links
+const link = g.append('g').attr('class', 'links')
+  .selectAll('line')
+  .data(edges)
+  .join('line')
+    .attr('class', 'link')
+    .attr('stroke', d => {
+      if (isPlaceRelation(d.type)) return '#3a3a2a';
+      const t = d.type.toLowerCase();
+      if (t.includes('proclamation') || t.includes('commission') || t.includes('warrant')) return '#8a5a2a';
+      if (t.includes('declaration')) return '#7a4a4a';
+      return '#5a4a2a';
+    })
+    .attr('stroke-width', d => {
+      if (isPlaceRelation(d.type)) return 0.3;
+      return 0.4 + Math.min(d.weight * 0.2, 2);
+    })
+    .attr('stroke-dasharray', d => isPlaceRelation(d.type) ? '2,4' : null)
+    .attr('marker-end', d => isPlaceRelation(d.type) ? null : 'url(#arrow-default)');
+
+// Draw nodes
+const node = g.append('g').attr('class', 'nodes')
+  .selectAll('g')
+  .data(nodes)
+  .join('g')
+    .attr('class', 'node')
+    .call(d3.drag()
+      .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; })
+    )
+    .on('mouseover', showTooltip)
+    .on('mousemove', moveTooltip)
+    .on('mouseout', hideTooltip);
+
+node.append('circle')
+  .attr('r', d => nodeRadius(d))
+  .attr('fill', d => nodeColor(d))
+  .attr('fill-opacity', 0.85)
+  .attr('stroke', d => d3.color(nodeColor(d)).darker(0.5))
+  .attr('stroke-width', d => d.category === 'place' ? 0.5 : 1);
+
+node.append('text')
+  .attr('class', 'label')
+  .attr('x', d => nodeRadius(d) + 3)
+  .attr('y', 4)
+  .attr('font-size', d => {
+    const ratio = d.degree / maxDeg;
+    return d.category === 'place' ? '9px' : ratio > 0.3 ? '11px' : '9px';
+  })
+  .attr('fill', '#0d0d0f')
+  .attr('stroke-width', '2.5px')
+  .text(d => d.label.length > 22 ? d.label.slice(0, 20) + '…' : d.label);
+
+// Simulation tick
+sim.on('tick', () => {
+  link
+    .attr('x1', d => d.source.x)
+    .attr('y1', d => d.source.y)
+    .attr('x2', d => d.target.x)
+    .attr('y2', d => d.target.y);
+  node.attr('transform', d => `translate(${d.x},${d.y})`);
+});
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+function showTooltip(e, d) {
+  const placeList = Array.from(d.places).filter(p => p && p.toLowerCase() !== 'unknown').slice(0, 4).join(', ');
+  const connections = edges.filter(l =>
+    (l.source.id || l.source) === d.id || (l.target.id || l.target) === d.id
+  );
+  const types = [...new Set(connections.map(l => l.type).filter(t => t && !isPlaceRelation(t)))].slice(0, 3);
+  tooltip.innerHTML = `<strong>${d.label}</strong>
+    Type: ${d.category}<br>
+    Connections: ${Math.round(d.degree)}<br>
+    ${placeList ? 'Places: ' + placeList + '<br>' : ''}
+    ${types.length ? 'Relations: ' + types.join(', ') : ''}`;
+  tooltip.style.opacity = '1';
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  tooltip.style.left = (e.clientX + 14) + 'px';
+  tooltip.style.top = (e.clientY - 10) + 'px';
+}
+function hideTooltip() {
+  tooltip.style.opacity = '0';
+}
+
+// Controls
+document.getElementById('linkStrength').addEventListener('input', function() {
+  sim.force('charge').strength(+this.value);
+  sim.alpha(0.3).restart();
+});
+document.getElementById('showLabels').addEventListener('change', function() {
+  node.selectAll('text').style('display', this.checked ? null : 'none');
+});
+
+// Initial zoom to fit
+setTimeout(() => {
+  svg.transition().duration(800).call(
+    zoom.transform,
+    d3.zoomIdentity.translate(W * 0.05, H * 0.05).scale(0.9)
+  );
+}, 1200);
+</script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
