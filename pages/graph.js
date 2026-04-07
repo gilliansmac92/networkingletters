@@ -422,13 +422,18 @@ function renderFullNetwork() {
 // ══════════════════════════════════════════════════════════
 // DATA LOADING
 // ══════════════════════════════════════════════════════════
+const PRIMARY_CSV_PATH = 'letters-raw.csv';
+
 const CSV_PATHS = [
+  './letters-raw.csv',
+  'letters-raw.csv',
+  '/letters-raw.csv',
+  '../letters-raw.csv',
   '/_data/letters-raw.csv',
   '_data/letters-raw.csv',
   '/data/letters-raw.csv',
   './data/letters-raw.csv',
   'data/letters-raw.csv',
-  'letters-raw.csv',
 ];
 
 function hideLoadingOverlay() {
@@ -505,4 +510,4 @@ function parseCsvWithFallback(paths, index = 0) {
   });
 }
 
-parseCsvWithFallback(CSV_PATHS);
+parseCsvWithFallback([PRIMARY_CSV_PATH, ...CSV_PATHS]);
