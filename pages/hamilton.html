@@ -23,7 +23,7 @@
        <style>
 #hamilton-graph {
   position: relative;
-  width: min(1200px, 100%);
+  width: min(100%);
   margin: 1.25rem auto;
   background: #e5e6e9;
   border-radius: 8px;
@@ -70,8 +70,8 @@
   align-items: center;
   gap: 0.45rem;
   padding: 0.5rem 0.65rem;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 0.55rem;
   font-size: 0.82rem;
 }
@@ -379,21 +379,20 @@
             <div class="col-12" style="font-family: Quattrocento, serif !important; text-align: center;"></div>
                     <h3 class="text-center" style="font-family: Quattrocento, serif !important;">The Hamilton Correspondence</h3>
               <div class="col-12" style="font-family: Quattrocento, serif !important; text-align: left;">
-                        <p>William Douglas-Hamilton occupied a unique position in the Scottish Revolution of 1689. Unlike many of his peers, he navigated the transition from the Stuart to the Williamite regime without losing either his offices or his influence. Network analysis of his surviving correspondence reveals how he managed this: not through loyalty to any single political sphere, but through his structural position as a bridge between them — connecting the monarchy, parliament, the Privy Council, his own family network, and regional power in Scotland simultaneously. Where Melville's network was institutional and state-heavy, Hamilton's was heterogeneous, mixing formal governance with personal patronage, family obligation, and regional authority in ways that made him indispensable to the new regime.</p>
-
-<p>William Douglas-Hamilton served under both Charles II and James II before becoming one of the first Scottish noblemen to reach out to the future William III and Mary II. Under the Williamite administration he held two of the most powerful offices in Scotland simultaneously: High Commissioner to the Scottish Parliament and President of the Privy Council. He presided over the Convention of Estates — summoned at his own request — which formally offered the Scottish crown to William and Mary in March 1689 after declaring that James VII had forfeited it under the Claim of Right. Anne Shukman has argued that Hamilton was an experienced and wily politician who sat on vitally important committees, including those for preparing acts and granting supply. Hamilton was also willing to remain staunchly loyal to the monarch no matter who he or she was.<sup>1</sup> He also presided over the Convention of Estates in Scotland, that was summoned at his request, and eventually offered the Scottish crown (which James had according to the Claim of Right "forefaulted") to William and Mary in March 1689.</p>
+                <p>William Douglas-Hamilton occupied a unique position in the Scottish Revolution of 1689. Unlike many of his peers, he navigated the transition from the Stuart to the Williamite regime without losing either his offices or his influence. Network analysis of his surviving correspondence reveals how he managed this: not through loyalty to any single political sphere, but through his structural position as a bridge between them — connecting the monarchy, parliament, the Privy Council, his own family network, and regional power in Scotland simultaneously. Where Melville's network was institutional and state-heavy, Hamilton's was heterogeneous, mixing formal governance with personal patronage, family obligation, and regional authority in ways that made him indispensable to the new regime.</p>
+                <p>Hamilton served under both Charles II and James II before becoming one of the first Scottish noblemen to reach out to the future William III and Mary II. Under the Williamite administration he held two of the most powerful offices in Scotland simultaneously: High Commissioner to the Scottish Parliament and President of the Privy Council. He presided over the Convention of Estates — summoned at his own request — which formally offered the Scottish crown to William and Mary in March 1689 after declaring that James VII had forfeited it under the Claim of Right. Anne Shukman has argued that Hamilton was an experienced and wily politician who sat on vitally important committees, including those for preparing acts and granting supply. Hamilton was also willing to remain staunchly loyal to the monarch no matter who he or she was.<sup>1</sup> He also presided over the Convention of Estates in Scotland, that was summoned at his request, and eventually offered the Scottish crown (which James had according to the Claim of Right "forefaulted") to William and Mary in March 1689.</p>
 <h4>The Collection</h4>
-<p> Hamilton's correspondence is dense and varied. Unlike the <i>Leven and Melville Papers</i> during the Revolution it is not all neatly published in one place or in one collection but scattered. The analysis on this collection is incomplete but telling. Hamilton's correspondence is scattered across multiple repositories and collections, and the analysis presented here is ongoing. The core dataset draws on GD406/1 at the <a class="link" href="https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?reference=GD406%2f1&st=1&tc=y&tl=n&tn=n&tp=n&k=&ko=a&r=GD406&ro=s&df=&dt=&di=y">National Records for Scotland</a>. The Papers of the Douglas Hamilton Family, Dukes of Hamilton and Brandon — and contains 317 letters, 7 intercepted letters, warrants, orders, accounts, and proclamations spanning 1688 to 1692. Additional correspondence exists in other pockets of the wider GD406 collection and in printed collections held elsewhere, and this material is being incorporated as the project develops. Readers should treat the findings below as a work in progress: the patterns identified are robust, but the full picture will become clearer as the dataset expands. Hamilton’s position as President of the Privy Council and High Commissioner meant that he operated at the interplay of politics and security and, together with the Treasury and Secretary of State, he provides an important locus point for this investigation. Named individuals were disambiguated and classified by role, allegiance, and institutional affiliation, yielding 408 nodes (264 people, 126 places, 18 orgs/groups), 664 edges with 312 letter links from a total of 938 source records. Edge weights were assigned to reflect the volume of correspondence between nodes. The resulting dataset was then analyzed using standard network metrics — degree centrality, betweenness centrality, and clustering coefficients — computed in Python, with both a network produced in D3.js and mapped using Leaflet.js.</p>
+<p>Hamilton's correspondence is dense and varied. Unlike the <i>Leven and Melville Papers</i> during the Revolution it is not all neatly published in one place or in one collection but scattered. The analysis on this collection is incomplete but telling. Hamilton's correspondence is scattered across multiple repositories and collections, and the analysis presented here is ongoing. The core dataset draws on GD406/1 at the <a class="link" href="https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?reference=GD406%2f1&st=1&tc=y&tl=n&tn=n&tp=n&k=&ko=a&r=GD406&ro=s&df=&dt=&di=y">National Records for Scotland</a>. The Papers of the Douglas Hamilton Family, Dukes of Hamilton and Brandon — and contains 317 letters, 7 intercepted letters, warrants, orders, accounts, and proclamations spanning 1688 to 1692. Additional correspondence exists in other pockets of the wider GD406 collection and in printed collections held elsewhere, and this material is being incorporated as the project develops. Readers should treat the findings below as a work in progress: the patterns identified are robust, but the full picture will become clearer as the dataset expands. Hamilton’s position as President of the Privy Council and High Commissioner meant that he operated at the interplay of politics and security and, together with the Treasury and Secretary of State, he provides an important locus point for this investigation. Named individuals were disambiguated and classified by role, allegiance, and institutional affiliation, yielding 408 nodes (264 people, 126 places, 18 orgs/groups), 664 edges with 312 letter links from a total of 938 source records. Edge weights were assigned to reflect the volume of correspondence between nodes. The resulting dataset was then analyzed using standard network metrics — degree centrality, betweenness centrality, and clustering coefficients — computed in Python, with both a network produced in D3.js and mapped using Leaflet.js.</p>
 <br></br>
 <h4>Hamilton’s Network</h4>
 <p>Before reading the analysis below, explore the network graph. Several features are immediately visible: Hamilton sits at the center of a dense cluster, but unlike Melville's predominantly institutional hub, Hamilton's network radiates outward into distinct spheres — family, secretarial, parliamentary, and royal — that overlap only through him. His secretary David Crawford appears as a major secondary node, handling the volume of day-to-day correspondence that flowed through Hamilton House. Look also for the clusters around the Earl of Arran, Lady Gerard, and the Duchess of Hamilton — personal relationships that have no equivalent in Melville's more state-focused correspondence.</p>
-      <div class="row justify-content-center py-3"> 
+  <div class="row justify-content-center py-3"> 
     <div class="col-12">
-  <div id="hamilton-graph">
-  <div class="brand">
-    <h3>Hamilton Papers — GD406</h3>
-    <p>Dukes of Hamilton &amp; Brandon · 1688–1702 · Network Graph</p>
-  </div>
+      <div id="hamilton-graph">
+        <div class="brand">
+          <h3>Hamilton Papers — GD406</h3>
+            <p>Dukes of Hamilton &amp; Brandon · 1688–1702 · Network Graph</p>
+        </div>
 <div id="stage">
   <svg id="svg">
     <defs>
@@ -454,7 +453,6 @@
   </div>
   </div>
   </div>
-<br></br>
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12" style="font-family: Quattrocento, serif !important; text-align: left;">
