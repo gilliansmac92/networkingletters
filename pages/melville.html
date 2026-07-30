@@ -355,19 +355,7 @@ let H = document.getElementById('viz-container').clientHeight;
 
 svg.attr('width', W).attr('height', H);
 
-const defs = svg.append('defs');
-defs.append('marker')
-  .attr('id', 'arrow')
-  .attr('viewBox', '0 -4 8 8')
-  .attr('refX', 15).attr('refY', 0)
-  .attr('markerWidth', 5).attr('markerHeight', 5)
-  .attr('orient', 'auto')
-  .append('path')
-    .attr('d', 'M0,-4L8,0L0,4')
-    .attr('fill', '#7a6a9a')
-    .attr('fill-opacity', .65);
-
-
+// Root group that pan/zoom moves, with sub-groups so links render under nodes
 const root = svg.append('g');
 const linksG = root.append('g').attr('class', 'links');
 const nodesG = root.append('g').attr('class', 'nodes');
@@ -384,8 +372,7 @@ let linkSel = linksG.selectAll('line')
   .data(GRAPH.edges)
   .enter().append('line')
     .attr('class', d => 'link ' + edgeClass(d.type))
-    .attr('stroke-width', d => Math.max(0.6, Math.min(6, Math.sqrt(d.weight || 1))))
-    .attr('marker-end', d => LETTER_TYPES.has(d.type) ? 'url(#arrow)' : null);
+    .attr('stroke-width', d => Math.max(0.6, Math.min(6, Math.sqrt(d.weight || 1))));
 
 let sim = d3.forceSimulation(GRAPH.nodes)
   .force('link', d3.forceLink(GRAPH.edges).id(d=>d.id).distance(90).strength(d => {
