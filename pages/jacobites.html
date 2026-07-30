@@ -19,316 +19,117 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-           <style>
-          :root {
-            --c-person: #6fa8d4;
-            --c-place: #5db385;
-            --c-org: #d4894a;
-            --c-group: #a87cc4;
-            --viz-ink: #10144a;
-            --viz-accent: #e2a9f1;
-            --viz-panel: #10144a;
-            --viz-line: #10144a;
-            --viz-canvas: #e5e6e9;
-          }
-
-          .viz-shell {
-            margin: 2rem 0 1rem;
-            padding: 0;
-            border: 0;
-            background: transparent;
-            box-shadow: none;
-          }
-
-          .brand {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 0 16px;
-            background: var(--viz-panel);
-            z-index: 4;
-            border-bottom: 0.5px solid rgba(3, 3, 3, 0.18);
-          }
-
-          .brand-copy h1 {
-            margin: 0;
-            font-size: 15px;
-            color: var(--viz-accent);
-          }
-
-          .brand-copy span {
-            font-style: italic;
-            font-size: 14px;
-            color: var(--viz-accent);
-          }
-
-          #stats {
-            font-size: 11px;
-            color: var(--viz-accent);
-            white-space: nowrap;
-          }
-
-          .controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.45rem;
-            align-items: center;
-            padding: 0.5rem 0.65rem;
-            border-radius: 5px;
-            background: var(--viz-panel);
-            color: var(--viz-accent);
-            border: 1px solid var(--viz-line);
-            margin-top: 0.55rem;
-            font-size: 0.82rem;
-          }
-
-          .controls input[type="text"] {
-            min-width: 140px;
-            padding: 0.32rem 0.58rem;
-            border: 1px solid #10144a;
-            border-radius: 999px;
-            background: #fff;
-            color: var(--viz-ink);
-            font-size: 0.82rem;
-          }
-
-          .controls button {
-            padding: 0.28rem 0.52rem;
-            border: 1px solid var(--viz-accent);
-            border-radius: 999px;
-            background: transparent;
-            color: var(--viz-accent);
-            font-size: 0.77rem;
-            line-height: 1.1;
-          }
-
-          .controls button.on {
-            background: var(--viz-accent);
-            color: var(--viz-ink);
-            border-color: var(--viz-accent);
-          }
-
-          .controls .button-row,
-          .controls .action-row {
-            display: flex;
-            gap: 4px;
-            flex-wrap: wrap;
-            align-items: center;
-          }
-
-          .slider-row {
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            min-width: 132px;
-          }
-
-          .slider-row span {
-            min-width: 46px;
-            font-size: 0.76rem;
-            color: var(--viz-accent);
-          }
-
-          .slider-row input[type="range"] {
-            width: 86px;
-          }
-
-          .sep {
-            width: 1px;
-            height: 18px;
-            background: rgba(226, 169, 241, 0.4);
-          }
-
-          #stage {
-            position: relative;
-            width: 1200px, 100%;
-            height: 650px;
-            margin: 0 0 0.9rem;
-            border: 1px solid var(--viz-line);
-            border-radius: 8px;
-            overflow: hidden;
-            background: var(--viz-canvas);
-          }
-
-          #svg {
-            position: absolute;
-            top: 52px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            height: calc(100% - 52px);
-            cursor: grab;
-          }
-
-          #svg:active {
-            cursor: grabbing;
-          }
-
-          #tip {
-            position: absolute;
-            display: none;
-            max-width: 260px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            background: rgba(31, 31, 91, 0.92);
-            color: #fff;
-            pointer-events: none;
-            border: 1px solid #10144a;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
-            z-index: 3;
-          }
-
-          #tip .name {
-            display: block;
-            font-weight: 700;
-          }
-
-          #tip .typ,
-          #tip .loc,
-          #tip .conn,
-          #tip .edges-list {
-            font-size: 0.85rem;
-            margin-top: 0.2rem;
-          }
-
-          .legend,
-          .hint {
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 0.9rem;
-            align-items: center;
-            color: var(--viz-accent);
-            font-size: 0.85rem;
-            background: var(--viz-panel);
-            border: 1px solid var(--viz-line);
-            border-radius: 6px;
-            padding: 10px 14px;
-          }
-
-          .legend {
-            position: absolute;
-            top: 68px;
-            right: 16px;
-            z-index: 4;
-          }
-
-          .hint {
-            position: absolute;
-            left: 16px;
-            bottom: 16px;
-            z-index: 4;
-            max-width: 320px;
-          }
-
-          .lg {
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
-          }
-
-          .ld {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-          }
-
-          .link {
-            stroke-opacity: 0.7;
-          }
-
-          .link.letter,
-          .link.other {
-            stroke: #5a4a2a;
-          }
-
-          .link.geo {
-            stroke: #3a3a2a;
-            stroke-dasharray: 2 4;
-          }
-
-          .link.loc {
-            stroke: #3a3a2a;
-            stroke-dasharray: 2 4;
-          }
-
-          .node text {
-            fill: #000000;
-            paint-order: stroke;
-            pointer-events: none;
-          }
-
-          .node.dimmed,
-          .link.dimmed {
-            opacity: 0.15;
-          }
-
-          .node.highlighted circle {
-            stroke: #10144a;
-            stroke-width: 2.5px;
-          }
-
-          @media (max-width: 1200px) {
-            #stage {
-              height: 560px;
-            }
-
-            .brand {
-              height: auto;
-              min-height: 52px;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: center;
-              padding: 10px 16px;
-            }
-
-            #svg {
-              top: 72px;
-              height: calc(100% - 72px);
-            }
-
-            .legend {
-              top: auto;
-              bottom: 16px;
-              left: 16px;
-              right: 16px;
-            }
-
-            .controls {
-              width: auto;
-            }
-
-            .hint {
-              display: none;
-            }
-
-            .sep {
-              display: none;
-            }
-          }
-
-          @media (max-width: 768px) {
-            .controls {
-              padding: 0.45rem 0.5rem;
-              gap: 0.35rem;
-            }
-
-            .controls input[type="text"] {
-              min-width: 120px;
-            }
-
-            .slider-row {
-              min-width: 120px;
-            }
-          }
-          </style>
+    <style>
+      #viz-container {
+        position: relative;
+        width: 1200px, 100%;
+        height: 650px;
+        background: #e5e6e9;
+        border-radius: 8px;
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      #canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #tooltip {
+        position: fixed;
+        background: rgba(31, 31, 91, 0.92);
+        color: #ffffff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 13px;
+        line-height: 1.5;
+        pointer-events: none;
+        opacity: 0;
+        max-width: 240px;
+        z-index: 100;
+        font-family: Quattrocento, serif;
+        border: 1px solid #10144A;
+        transition: opacity 0.1s;
+      }
+      #title-block {
+        position: absolute;
+        background: #10144A;
+        padding: 8px 12px;
+        border-radius: 4px;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #10144A;
+        pointer-events: none;
+        z-index: 5;
+        white-space: nowrap;
+      }
+      #title-block h3 {
+        font-size: 1.1rem;
+        margin: 0 0 4px;
+        color: #e2a9f1;
+      }
+      #title-block p {
+        font-size: 0.75rem;
+        margin: 0;
+        color: #e2a9f1;
+      }
+      #legend {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: #10144A;
+        color: #e2a9f1;
+        padding: 12px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 5;
+        border: 1px solid #10144A;
+      }
+      #legend h4 {
+        font-size: 0.8rem;
+        margin: 0 0 8px;
+        color: #e2a9f1;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+      }
+      .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      #controls {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: #10144A;
+        color: #e2a9f1;
+        padding: 12px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 5;
+        border: 1px solid #10144A;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      #controls h4 {
+        font-size: 0.8rem;
+        margin: 0 0 4px;
+        color: #e2a9f1;
+      }
+      #controls label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+    </style>
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10144A;">
