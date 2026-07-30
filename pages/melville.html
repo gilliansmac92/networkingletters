@@ -22,7 +22,7 @@
         <style>
       #viz-container {
         position: relative;
-        width: 1200px, 100%;
+        width: 100%;
         height: 650px;
         background: #e5e6e9;
         border-radius: 8px;
@@ -91,6 +91,34 @@
         margin: 0 0 8px;
         color: #e2a9f1;
       }
+       .link {
+            stroke-opacity: 0.7;
+          }
+          .link.letter,
+          .link.other {
+            stroke: #5a4a2a;
+          }
+          .link.geo {
+            stroke: #3a3a2a;
+            stroke-dasharray: 2 4;
+          }
+          .link.loc {
+            stroke: #3a3a2a;
+            stroke-dasharray: 2 4;
+          }
+          .node text {
+            fill: #000000;
+            paint-order: stroke;
+            pointer-events: none;
+          }
+          .node.dimmed,
+          .link.dimmed {
+            opacity: 0.15;
+          }
+          .node.highlighted circle {
+            stroke: #10144a;
+            stroke-width: 2.5px;
+          }
       .legend-item {
         display: flex;
         align-items: center;
@@ -117,6 +145,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        max-width: 220px;
       }
       #controls h4 {
         font-size: 0.8rem;
@@ -129,8 +158,27 @@
         gap: 8px;
         cursor: pointer;
       }
+      .filter-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .filter-btn {
+        background: #1c2266;
+        color: #e2a9f1;
+        border: 1px solid #7a6a9a;
+        border-radius: 4px;
+        padding: 3px 8px;
+        font-size: 11px;
+        cursor: pointer;
+        font-family: Quattrocento, serif;
+      }
+      .filter-btn.on {
+        background: #e2a9f1;
+        color: #10144A;
+        border-color: #e2a9f1;
+      }
     </style>
-        </style>
     </head>
     <body>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10144A;">
@@ -197,6 +245,19 @@
                                 <label>Show labels
                                     <input type="checkbox" id="showLabels" checked>
                                 </label>
+                                <h4>Filter Nodes</h4>
+                                <div class="filter-row">
+                                    <button id="f-all" class="filter-btn on">All</button>
+                                    <button id="f-person" class="filter-btn">People</button>
+                                    <button id="f-place" class="filter-btn">Places</button>
+                                    <button id="f-org" class="filter-btn">Orgs</button>
+                                </div>
+                                <h4>Filter Links</h4>
+                                <div class="filter-row">
+                                    <button id="e-all" class="filter-btn on">All</button>
+                                    <button id="e-letter" class="filter-btn">Letters</button>
+                                    <button id="e-geo" class="filter-btn">Geo</button>
+                                </div>
                             </div>
                         </div>
 <br></br>
@@ -288,14 +349,12 @@ function edgeClass(type){
 
 const svg = d3.select('#canvas');
 const tip = document.getElementById('tooltip');
-const stageEl = document.getElementById('viz-container');
 
-let W = stageEl.clientWidth;
-let H = stageEl.clientHeight;
+let W = document.getElementById('viz-container').clientWidth;
+let H = document.getElementById('viz-container').clientHeight;
 
 svg.attr('width', W).attr('height', H);
 
-// Build the missing SVG structure (defs/marker + root/link/node groups)
 const defs = svg.append('defs');
 defs.append('marker')
   .attr('id', 'arrow')
@@ -308,13 +367,25 @@ defs.append('marker')
     .attr('fill', '#7a6a9a')
     .attr('fill-opacity', .65);
 
-const root = svg.append('g').attr('id', 'root');
-const linksG = root.append('g').attr('id', 'links-g');
-const nodesG = root.append('g').attr('id', 'nodes-g');
+
+const root = svg.append('g');
+const linksG = root.append('g').attr('class', 'links');
+const nodesG = root.append('g').attr('class', 'nodes');
 
 // Zoom
 const zoom = d3.zoom().scaleExtent([.05, 8]).on('zoom', e => root.attr('transform', e.transform));
 svg.call(zoom).on('dblclick.zoom', null);
+
+// Index nodes
+const nodeById = {};
+GRAPH.nodes.forEach(n => nodeById[n.id] = n);
+
+let linkSel = linksG.selectAll('line')
+  .data(GRAPH.edges)
+  .enter().append('line')
+    .attr('class', d => 'link ' + edgeClass(d.type))
+    .attr('stroke-width', d => Math.max(0.6, Math.min(6, Math.sqrt(d.weight || 1))))
+    .attr('marker-end', d => LETTER_TYPES.has(d.type) ? 'url(#arrow)' : null);
 
 let sim = d3.forceSimulation(GRAPH.nodes)
   .force('link', d3.forceLink(GRAPH.edges).id(d=>d.id).distance(90).strength(d => {
@@ -329,17 +400,6 @@ let sim = d3.forceSimulation(GRAPH.nodes)
 
 function nodeR(d){ return Math.max(4, Math.min(24, 3.5 + Math.pow(d.degree||1, .38)*1.6)); }
 function nodeColor(d){ return COLOR[d.group]||'#888'; }
-
-let linkSel = linksG.selectAll('line').data(GRAPH.edges).enter().append('line')
-  .attr('class', d => 'link ' + edgeClass(d.type))
-  .attr('stroke', d => {
-    const c = edgeClass(d.type);
-    return c==='loc' ? '#3a3a2a' : c==='geo' ? '#4f5a74' : c==='letter' ? '#7a6a9a' : '#7a4a4a';
-  })
-  .attr('stroke-opacity', d => LOC_TYPES.has(d.type)||GEO_TYPES.has(d.type) ? 0.35 : 0.6)
-  .attr('stroke-dasharray', d => LOC_TYPES.has(d.type) ? '2 4' : GEO_TYPES.has(d.type) ? '6 3' : null)
-  .attr('stroke-width', d => LOC_TYPES.has(d.type)||GEO_TYPES.has(d.type) ? .8 : Math.min(4, .7 + Math.log(d.weight||1)*.5))
-  .attr('marker-end', d => LETTER_TYPES.has(d.type) ? 'url(#arrow)' : null);
 
 let nodeSel = nodesG.selectAll('g').data(GRAPH.nodes).enter().append('g')
   .attr('class', 'node')
@@ -414,6 +474,45 @@ function moveTip(e){
   tip.style.top = (e.clientY - 10) + 'px';
 }
 
+let nodeFilter = 'all', edgeFilter = 'all';
+const filterBtns = {all:'f-all', person:'f-person', place:'f-place', org:'f-org'};
+Object.entries(filterBtns).forEach(([k,id])=>{
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.onclick = () => {
+    nodeFilter=k;
+    Object.values(filterBtns).forEach(bid=>{ const b=document.getElementById(bid); if(b) b.classList.remove('on'); });
+    el.classList.add('on');
+    applyVisibility();
+  };
+});
+[['e-all','all'],['e-letter','letter'],['e-geo','geo']].forEach(([id,val])=>{
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.onclick = () => {
+    edgeFilter = val;
+    ['e-all','e-letter','e-geo'].forEach(bid=>{ const b=document.getElementById(bid); if(b) b.classList.remove('on'); });
+    el.classList.add('on');
+    applyVisibility();
+  };
+});
+
+function applyVisibility(){
+  const groupMap = {person:['Person'], place:['Place'], org:['Organization','Group']};
+  const visGroups = nodeFilter==='all' ? null : groupMap[nodeFilter];
+  nodeSel.style('display', d => !visGroups || visGroups.includes(d.group) ? null : 'none');
+  const visNodeIds = new Set();
+  GRAPH.nodes.forEach(n=>{ if(!visGroups||visGroups.includes(n.group)) visNodeIds.add(n.id); });
+  linkSel.style('display', d=>{
+    const si=typeof d.source==='object'?d.source.id:d.source;
+    const ti=typeof d.target==='object'?d.target.id:d.target;
+    if(!visNodeIds.has(si)||!visNodeIds.has(ti)) return 'none';
+    if(edgeFilter==='letter' && !LETTER_TYPES.has(d.type)) return 'none';
+    if(edgeFilter==='geo' && !GEO_TYPES.has(d.type) && !LOC_TYPES.has(d.type)) return 'none';
+    return null;
+  });
+}
+
 document.getElementById('linkStrength').oninput = function(){
   sim.force('charge', d3.forceManyBody().strength(+this.value));
   sim.alpha(.4).restart();
@@ -423,13 +522,14 @@ document.getElementById('showLabels').onchange = function(){
   labelSel.style('display', this.checked ? null : 'none');
 };
 
+let vizContainerEl = document.getElementById('viz-container');
+
 window.addEventListener('resize', ()=>{
-  W = stageEl.clientWidth;
-  H = stageEl.clientHeight;
+  W = vizContainerEl.clientWidth;
+  H = vizContainerEl.clientHeight;
   svg.attr('width', W).attr('height', H);
   sim.force('center', d3.forceCenter(W/2, H/2)).alpha(.2).restart();
 });
 </script>                
-<script src="js/scripts.js"></script>
             </body>
         </html>
