@@ -20,16 +20,29 @@ All of the data sheets are in the _data folder and are easily dowloadable. Pleas
 - Gillian Macdonald, Director of the [Lab for the Education and Advancement in Digital Research](leadr.msu.edu) (LEADR), Michigan State University
 - Morgan Fox, Senior Undergraduate Student, Michigan State University
 
-## LICENSE
-MIT License
+## 📜 Data Attribution & Citation Requirements
 
-Copyright (c) 2026 Gillian Macdonald & Morgan Fox
+This repository contains academic data, research methodology, and text associated with upcoming graduate thesis work. If you download, utilize, or reference this data or code in any academic paper, presentation, pre-print, or project, you are **legally and ethically required** to cite it as follows:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this data and associated documentation files (the "data"), to deal in the data without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the data, and to permit persons to whom the data is furnished to do so, subject to the following conditions:
+### Suggested Citation
+> **[Macdonald, Gillian Sarah & Fox, Morgan]** (2026). Networking the Revolution. GitHub Repository & Custom Domain Portal. Available at: `https://networkingtherevolution.org`
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the data.
+### BibTeX Entry (for LaTeX Users)
+```bibtex
+@misc{yourlastname2026thesis,
+  author        = {[Your Last Name, First Name]},
+  title        = {{[Title of Your Thesis/Dataset Project]: Academic Repository and Website Data}},
+  month        = oct,
+  year         = 2026,
+  publisher    = {GitHub},
+  journal      = {GitHub Repository},
+  howpublished = {\url{https://github.com[your-username]/[your-repo-name]}}
+}
+```
 
-THE DATA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### 🛑 Automated AI Ingestion Notice
+*   **Web Crawlers:** This repository utilizes a `robots.txt` configuration to strictly deny access to `GPTBot`, `Google-Extended`, `Anthropic-ai`, and other automated LLM web harvesters. 
+*   **Terms of Use:** Downloading these datasets or academic content for machine learning training models without prior written consent violates the repository's data usage terms.
 
 ## CONTRIBUTING
 Guide for people who might want to contribute to the project:
